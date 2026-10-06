@@ -58,7 +58,8 @@
     }
   },
   "env": {
-    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+    "ORT_DISABLE_TELEMETRY": "1"
   },
   "hooks": {
     "SessionStart": [

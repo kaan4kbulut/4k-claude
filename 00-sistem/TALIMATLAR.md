@@ -135,3 +135,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: .claude/hooks/ayar-denetimi.py (yeni); değişen: settings.json (ConfigChange, PermissionDenied, SessionStart), kapanis-kaydi.py, SISTEM (0.4), CLAUDE.md, DEGISIKLIKLER
 - Kapanış notu: 17 durumluk izole test doğru; gerçek oturumda dışarıdan diske yazılan sandbox kapatma ayarı yüklenmedi, ev dizinine yazma reddedildi, engelleme GUNLUK'te. İlk gerçek testte sandbox'ın 0 baytlık yer tutucusu "geçersiz JSON" diye engellenip 2 gürültü satırı yazdı (GUNLUK 00:48); boş dosya artık "ayar yok" sayılıyor, farksız değişiklik yazılmıyor. Açık: IMZA-MATRISI'ne imzalı istisna satırı eklemek sahibinin işi (norm).
+
+## T-012 — Gelen kutusu besleme: belge ve web → 01-gelen (öncelik 5)
+- Tarih: 2026-10-07
+- Niyet: 10-yenilikci-teknolojiler öncelik 5: PDF/DOCX/PPTX/XLSX/HTML ve URL'yi yerelde markdown'a çevirip şablona uygun ham not olarak 01-gelen'e koyan `al.py`; Obsidian Web Clipper şablonu. Dönüştürücü kanıtla seçilir (önce hafif markitdown; Türkçe PDF'te yetmezse docling).
+- Başarı ölçütü: gerçek bir Türkçe PDF ve bir DOCX/HTML örneği dönüşür, Türkçe karakter ve tablo korunur (örnek satırlar kanıt); üretilen not kontrol.py'den geçer; kötü niyetli meta veri (başlıkta YAML kırıcı karakter) frontmatter'ı bozmaz; içerik ara.py dizinine girmez.
+- Sınırlar: Dönüşen içerik okunmaz/özetlenmez (okuyucu işi). Web Clipper kurulumu ve telefon eşlemesi (Syncthing) sahibinin insan noktası; yalnız şablon ve talimat hazırlanır. URL alma ağ ister: sandbox içinde alan adı onayı gerekir.
+- Kat: 0
+- Kapı: cift-yonlu · yerel araç (B7); sahibinin sıra onayı 2026-10-07
+- Durum: acik
+- Doğurduğu dosyalar:
+- Kapanış notu:

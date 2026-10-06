@@ -148,3 +148,16 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 00:51 [degisti] CLAUDE.md — T-011 ayar denetimi
 2026-10-07 00:51 [degisti] 00-sistem/DEGISIKLIKLER.md — T-011 ayar denetimi
 2026-10-07 00:51 [oturum] T-011 — kapandı — ayar denetimi; gerçek oturumda sandbox kapatma girişimi engellendi
+2026-10-07 00:51 [degisti] T-012 — talimat açıldı: gelen kutusu besleme (öncelik 5)
+2026-10-07 00:55 [oturum] 260e64bc-71e — kapandı (other); tur=1 in=18 out=494 cache_okuma=55493 usd≈0.0328
+2026-10-07 00:58 [yeni] 00-sistem/scripts/al.py — dış belge/URL → 01-gelen ham not (markitdown)
+2026-10-07 00:58 [yeni] 00-sistem/sablonlar/web-clipper-gelen.json — Obsidian Web Clipper şablonu
+2026-10-07 00:58 [degisti] 00-sistem/scripts/kontrol.py — T-012 gelen kutusu besleme
+2026-10-07 00:58 [degisti] 00-sistem/scripts/graf.py — T-012 gelen kutusu besleme
+2026-10-07 00:58 [degisti] .claude/settings.json — T-012 gelen kutusu besleme
+2026-10-07 00:58 [degisti] 10-insan/araclar/ARAC-KAYDI.md — T-012 gelen kutusu besleme
+2026-10-07 00:58 [degisti] 00-sistem/SISTEM.md — T-012 gelen kutusu besleme
+2026-10-07 00:58 [degisti] CLAUDE.md — T-012 gelen kutusu besleme
+2026-10-07 00:58 [degisti] 00-sistem/DEGISIKLIKLER.md — T-012 gelen kutusu besleme
+2026-10-07 00:58 [hata] .venv/onnxruntime — onnxruntime 1.30 Microsoft 1DS telemetrisi açık geldi: cihaz kimliği + olay kuyruğu ~/.cache/Microsoft/DeveloperTools/.onnxruntime/; ORT_DISABLE_TELEMETRY=1 ile kapatıldı (T-012)
+2026-10-07 00:58 [oturum] T-012 — kapandı — al.py + Web Clipper şablonu; onnxruntime telemetrisi kapatıldı

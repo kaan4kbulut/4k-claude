@@ -70,7 +70,8 @@ def main():
     if surum != SABIT_SURUM:
         uyarilar.append(f"graphifyy {surum} kurulu, sınanan sürüm {SABIT_SURUM}; çıktı farklı olabilir")
 
-    sayfalar = [(y, fm, g) for y, fm, g, h in yc.sayfalari_tara(kok) if fm and not h]
+    # ham notlar (01-gelen) grafa girmez: geçici ve güvenilmeyen içerik, bağ üretmesin (T-012)
+    sayfalar = [(y, fm, g) for y, fm, g, h in yc.sayfalari_tara(kok) if fm and not h and fm.get("tur") != "ham"]
     G = nx.Graph()
     for y, fm, _ in sayfalar:
         G.add_node(yc.normalize_yol(y), label=fm.get("ad") or os.path.basename(y), source_file=y,

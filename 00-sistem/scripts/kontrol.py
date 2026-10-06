@@ -164,6 +164,11 @@ def main():
             # frontmatter'sız .md sayfası taranan klasörde
             hata(yol, "frontmatter yok (her sayfa şablonla doğar)")
             continue
+        if fm.get("tur") == "ham":
+            # Web Clipper boş liste özelliğini boş değer yazabilir; ham not hiçbir sayfaya bağlanmaz (T-012)
+            for alan in ("dayandigi", "besledigi"):
+                if fm.get(alan) is None:
+                    fm[alan] = []
         fm_map[yol] = fm
         govde_map[yol] = govde
 
@@ -250,8 +255,8 @@ def main():
                     g = govde_map.get(ust_n, "")
                     if f"[[{yc.normalize_yol(yol)}" not in g:
                         hata(ust_n, f"MOC bu sayfayı listelemiyor: {yol}")
-        # gövde wikilinkleri
-        for m in re.finditer(r"\[\[([^\]|#]+)", govde_map.get(yol, "")):
+        # gövde wikilinkleri (01-gelen ham notları hariç: dış içeriktir, güvenilmeyen metin bütünlüğü kıramaz — T-012)
+        for m in re.finditer(r"\[\[([^\]|#]+)", "" if fm.get("tur") == "ham" else govde_map.get(yol, "")):
             h = m.group(1).strip()
             if h.startswith("http") or "..." in h or h.endswith("/") or "/" not in h:
                 continue  # dış link, yer tutucu ("[[hedef]]", "[[yol]]") ya da kök dışı örnek
