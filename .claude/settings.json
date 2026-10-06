@@ -69,6 +69,11 @@
             "type": "command",
             "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/oturum-basi.py\"",
             "timeout": 30
+          },
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/ayar-denetimi.py\"",
+            "timeout": 15
           }
         ]
       }
@@ -145,7 +150,18 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/kapanis-kaydi.py\"",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/ayar-denetimi.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PermissionDenied": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/ayar-denetimi.py\"",
             "timeout": 15
           }
         ]

@@ -124,3 +124,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/ara.py, 00-sistem/scripts/ara-olcum.py, 40-ic-ses/arastirma-notlari/qmd-turkce-isabet.md (yeni), .araclar/ (git dışı); değişen: şema + SEMA (0.3) + kontrol.py (sonuc türleri), ARAC-KAYDI (0.4), MOC-ic-ses (0.2), arastirma/10 (1.2), settings.json, CLAUDE.md, HARITA, DEGISIKLIKLER
 - Kapanış notu: Vektör arama Türkçe çalışıyor (%75@1, %90@3, 4.5 sn); kelime araması Türkçe cümlede %0; hibrit daha kötü. MCP eklenmedi (30 sayfada gereksiz; 100 sayfada yeniden ölç). Yan etki: not araştırma 10'a dayandığı için 40-ic-ses kopuk kümesi bağlandı (graf: 1 bileşen). T-005 kalıntısı sonuc şema uyumsuzluğu düzeltildi.
+
+## T-011 — Ayar denetimi hook'u (öncelik 4)
+- Tarih: 2026-10-07
+- Niyet: 10-yenilikci-teknolojiler öncelik 4: `.claude` ayarlarının kendisine "kural ile engel ayrıdır" ilkesini uygulamak. Güvenlik değişmezlerini (sandbox, deny kuralları, koruma hook'ları, izin kipi) bozan ayar değişikliği oturum içinde engellenir; oturum açılışında diskteki ihlal uyarılır; her geçerli değişiklik anahtar düzeyinde GUNLUK'e yazılır; auto kipte izin reddi kaydedilir.
+- Başarı ölçütü: değişmez listesi tek yerde; örnek girdilerle (geçerli, ihlal, imzalı istisna, geçersiz JSON, skills, izin reddi, açılış uyarısı) beklenen karar; gerçek oturumda dışarıdan yapılan sandbox kapatma girişimi engellenir ve kaydedilir; kontrol.py sıfır hata.
+- Sınırlar: Değişen dosya geri alınmaz (yalnız oturuma yüklenmesi engellenir, sahibine bildirilir). policy_settings engellenemez (belge). Kullanıcı ayarına yazılmaz.
+- Kat: 0
+- Kapı: cift-yonlu · sahibinin sıra onayı 2026-10-07
+- Durum: kapali
+- Doğurduğu dosyalar: .claude/hooks/ayar-denetimi.py (yeni); değişen: settings.json (ConfigChange, PermissionDenied, SessionStart), kapanis-kaydi.py, SISTEM (0.4), CLAUDE.md, DEGISIKLIKLER
+- Kapanış notu: 17 durumluk izole test doğru; gerçek oturumda dışarıdan diske yazılan sandbox kapatma ayarı yüklenmedi, ev dizinine yazma reddedildi, engelleme GUNLUK'te. İlk gerçek testte sandbox'ın 0 baytlık yer tutucusu "geçersiz JSON" diye engellenip 2 gürültü satırı yazdı (GUNLUK 00:48); boş dosya artık "ayar yok" sayılıyor, farksız değişiklik yazılmıyor. Açık: IMZA-MATRISI'ne imzalı istisna satırı eklemek sahibinin işi (norm).

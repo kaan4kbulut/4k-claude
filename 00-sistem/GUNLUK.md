@@ -134,3 +134,17 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 00:41 [ayar] .araclar — qmd 2.8.3 + modeller (embeddinggemma, Qwen3-Embedding-0.6B, reranker, sorgu genişletme) indirildi; git dışı
 2026-10-07 00:41 [oturum] T-010 — kapandı — ara.py (qmd); graf tek bileşen
 2026-10-07 00:42 [degisti] 10-insan/araclar/ARAC-KAYDI.md — qmd satırı: boyut 2.8 → 3.6 GB (du ile ölçüldü)
+2026-10-07 00:46 [degisti] T-011 — talimat açıldı: ayar denetimi hook'u (öncelik 4)
+2026-10-07 00:48 [oturum] d174a20b-26f — kapandı (other); tur=2 in=4 out=588 cache_okuma=82245 usd≈0.1878
+2026-10-07 00:48 [hata] .claude/settings.local.json — ayar değişikliği ENGELLENDİ — .claude/settings.local.json: geçersiz JSON: Expecting value: line 1 column 1 (char 0)
+2026-10-07 00:48 [ayar] .claude/settings.local.json — local_settings değişti: anlamlı fark yok; değişmezler tamam
+2026-10-07 00:48 [oturum] 90f58040-2b0 — kapandı (other); tur=1 in=26 out=684 cache_okuma=93028 usd≈0.0376
+2026-10-07 00:50 [hata] .claude/settings.local.json — ayar değişikliği ENGELLENDİ (+sandbox.enabled) — Bash sandbox kapalı ya da tanımsız
+2026-10-07 00:50 [oturum] fb242612-c51 — kapandı (other); tur=1 in=26 out=470 cache_okuma=93000 usd≈0.0364
+2026-10-07 00:51 [yeni] .claude/hooks/ayar-denetimi.py — ayar değişmezleri hook'u (ConfigChange/SessionStart/PermissionDenied)
+2026-10-07 00:51 [degisti] .claude/settings.json — T-011 ayar denetimi
+2026-10-07 00:51 [degisti] .claude/hooks/kapanis-kaydi.py — T-011 ayar denetimi
+2026-10-07 00:51 [degisti] 00-sistem/SISTEM.md — T-011 ayar denetimi
+2026-10-07 00:51 [degisti] CLAUDE.md — T-011 ayar denetimi
+2026-10-07 00:51 [degisti] 00-sistem/DEGISIKLIKLER.md — T-011 ayar denetimi
+2026-10-07 00:51 [oturum] T-011 — kapandı — ayar denetimi; gerçek oturumda sandbox kapatma girişimi engellendi

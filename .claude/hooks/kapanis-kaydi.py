@@ -7,7 +7,7 @@ SessionEnd        → 00-sistem/MALIYET.csv'ye satır: token toplamları transcr
                     (<oturum>/subagents/*.jsonl) varsa eklenir.
 StopFailure       → GUNLUK.md'ye "[hata] oturum — <hata türü>" (bir sonraki oturum neden öldüğünü okur)
 PostToolUseFailure→ GUNLUK.md'ye "[hata] <araç> — <hata özeti>"
-ConfigChange      → GUNLUK.md'ye "[ayar] <kaynak> — ayar değişti" (denetim izi)
+ConfigChange      → artık ayar-denetimi.py (T-011)
 
 Hiçbir zaman engellemez; yalnız yazar. Alan adları Claude Code sürümüne göre değişebildiği için savunmacı okur.
 Maliyet tahmini: fiyatlar 30-devlet/normlar/MODEL-POLITIKASI.md fiyat tablosundan okunur (tek kaynak); önbellek yazımı
@@ -142,8 +142,6 @@ def main():
         ozet = err.get("type") if isinstance(err, dict) else str(err)
         gunluk_yaz(kok, f"{simdi} [hata] {arac} — {str(ozet)[:200]}")
 
-    elif olay == "ConfigChange":
-        gunluk_yaz(kok, f"{simdi} [ayar] {girdi.get('source', '?')} — ayar değişti (denetim izi)")
 
     sys.exit(0)
 

@@ -2,10 +2,10 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar.
 
-aktif_talimat: yok — T-010 kapandı (sahibinin onayladığı sıra tamamlandı: sandbox → graf.py → qmd)
+aktif_talimat: T-011 (kapandı) — sıradaki T-012 gelen kutusu besleme (docling + Web Clipper, öncelik 5)
 kapi: yok
 acik_soru: F-0001 yazıcı türü · cynefin onayı · hafif yol önerisi · sıradaki öncelikler (araştırma 10: 4 ayar denetimi hook'u, 5 docling + Web Clipper, 6 lychee/ccusage/agent-scan, 7 ses)
-siradaki: sahibi araştırma 10 öncelik 4-7 arasından seçer; sahibi klasörü bir kez etkileşimli açıp güven onayı vermeli; T-002..T-004 açık
+siradaki: T-012 öncelik 5; sonra 6 (lychee, ccusage, agent-scan), 7 (ses); sahibi klasörü bir kez etkileşimli açıp güven onayı vermeli; T-002..T-004 açık
 
 ## T-005 (2026-10-06)
 - [x] calistir.sh --bare · durus-kapisi dosya izi · yikici-koruma 35 test · MALIYET transcript · şema belirlenmedi · gunluk.py · git

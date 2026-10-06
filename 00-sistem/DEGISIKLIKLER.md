@@ -4,6 +4,12 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 
+## [0.6.0] — 2026-10-07 (T-011)
+### Eklendi
+- `ayar-denetimi.py` (ConfigChange, SessionStart, PermissionDenied): güvenlik değişmezlerini bozan ayar değişikliği oturuma yüklenmez; açılışta diskteki ihlal uyarılır; geçerli değişiklik anahtar düzeyinde GUNLUK'e; auto kipte izin reddi kaydı. İmzalı istisna: KP (go) + `.claude/ayar-imzasi.json`.
+### Değişti
+- `kapanis-kaydi.py`: ConfigChange kaydı ayar-denetimi'ne taşındı (çift kayıt yok).
+
 ## [0.5.0] — 2026-10-07 (T-010)
 ### Eklendi
 - `ara.py`: qmd 2.8.3 ile yerel anlamsal arama (varsayılan vektör; `--hibrit`, `--kelime`, `--yenile`, `--mcp`). Dizin ve modeller proje içinde (`.araclar/`, git dışı) ki sandbox içinden güncellenebilsin. 01-gelen, şablonlar ve günlükler dizin dışı.
