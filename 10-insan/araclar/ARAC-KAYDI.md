@@ -59,7 +59,7 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | git | CLI | kayıt, geri alma | 2026-10-06 | T-000 |
 | graphifyy 0.9.77 (sabit; `.venv/`) | Python kütüphanesi | `00-sistem/scripts/graf.py`: Leiden topluluk, merkez düğüm, sınır aşan bağ, vis.js HTML. LLM yok, ağ yok (kaynak incelendi, sha256 eşleşti). `graphify install`, git hook'ları ve `--mode deep` YASAK. graf.html açılınca vis-network'ü unpkg.com'dan indirir | 2026-10-06 | T-009 |
 | Bash sandbox (bubblewrap + socat) | Claude Code yerleşik | Bash komutları; kimlik bilgisi klasörleri okunamaz, ağ izin listesi boş | 2026-10-06 | T-008, KP-001 |
-| qmd 2.8.3 (sabit; `.araclar/qmd`, dizin ve modeller `.araclar/onbellek`, ~2.8 GB) | Yerel CLI (node-llama-cpp) | `00-sistem/scripts/ara.py`: wiki'de anlamsal arama (Qwen3-Embedding-0.6B); 01-gelen ve günlükler dizin dışı. Ağ yalnız ilk model indirmede (HuggingFace). MCP eklenmedi. Ölçüm: [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] | 2026-10-07 | T-010 |
+| qmd 2.8.3 (sabit; `.araclar/qmd`, dizin ve modeller `.araclar/onbellek`; .araclar toplam 3.6 GB, ölçüldü 2026-10-07) | Yerel CLI (node-llama-cpp) | `00-sistem/scripts/ara.py`: wiki'de anlamsal arama (Qwen3-Embedding-0.6B); 01-gelen ve günlükler dizin dışı. Ağ yalnız ilk model indirmede (HuggingFace). MCP eklenmedi. Ölçüm: [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] | 2026-10-07 | T-010 |
 | (MCP yok) | — | ilk gerçek işte A10 ile | — | — |
 
 ### C. İnsan noktası türleri (kartlarda HP-xxx)

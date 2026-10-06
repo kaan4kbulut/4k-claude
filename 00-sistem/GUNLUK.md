@@ -133,3 +133,4 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 00:41 [degisti] .gitignore — T-010 qmd / ara.py
 2026-10-07 00:41 [ayar] .araclar — qmd 2.8.3 + modeller (embeddinggemma, Qwen3-Embedding-0.6B, reranker, sorgu genişletme) indirildi; git dışı
 2026-10-07 00:41 [oturum] T-010 — kapandı — ara.py (qmd); graf tek bileşen
+2026-10-07 00:42 [degisti] 10-insan/araclar/ARAC-KAYDI.md — qmd satırı: boyut 2.8 → 3.6 GB (du ile ölçüldü)
