@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "yeni-sistem/kapi-raporu.schema.json",
+  "$id": "4k-claude/kapi-raporu.schema.json",
   "title": "Gozetimsiz kosu kapi raporu",
   "description": "calistir.sh ile yapilan her gozetimsiz kosunun yapili ciktisi. claude -p --json-schema ile zorlanir; Stop ve Denetim bu bicimi okur.",
   "type": "object",

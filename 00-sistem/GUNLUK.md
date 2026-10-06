@@ -57,3 +57,24 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-06 23:46 [degisti] 00-sistem/DEGISIKLIKLER.md — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
 2026-10-06 23:46 [yeni] 00-sistem/scripts/gunluk.py — T-005: GUNLUK satırını sistem saatiyle yazan yardımcı
 2026-10-06 23:46 [oturum] T-005 — kapandı — 7 eksik düzeltildi; kontrol.py 0
+2026-10-06 23:48 [degisti] T-006 — talimat açıldı: ad değişikliği Yeni Sistem → 4k-claude (sahibinin isteği)
+2026-10-06 23:48 [karar] 30-devlet/kararlar/K-003-ad-degisikligi-4k-claude.md — kabul: sistemin adı 4k-claude (sahibinin kararı)
+2026-10-06 23:48 [degisti] 30-devlet/normlar/ANAYASA.md — 1.1: giriş, Amaç ve Madde 1'de ad 4k-claude (Madde 14 usulü, K-003)
+2026-10-06 23:48 [degisti] 00-sistem/SISTEM.md — 0.2: ad 4k-claude (K-003)
+2026-10-06 23:48 [degisti] 00-sistem/TALIMATLAR.md — T-002/T-003 planlanan karar numarası K-003 → K-004 (K-003 ad kararına verildi)
+2026-10-06 23:48 [degisti] 00-sistem/KARARLAR.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] 30-devlet/MOC-devlet.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] 00-sistem/HARITA.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] README.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] CLAUDE.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] AGENTS.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] 00-sistem/scripts/kontrol.py — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] 00-sistem/sema/sayfa.schema.json — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] 00-sistem/sema/kapi-raporu.schema.json — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] .claude/agents/denetci.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] .claude/agents/okuyucu.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] .claude/hooks/durus-kapisi.py — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] .claude/hooks/oturum-basi.py — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] .claude/hooks/sikistirma-oncesi.py — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] .claude/skills/degistir/SKILL.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:48 [degisti] .claude/skills/yeni-parca/SKILL.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude

@@ -1,6 +1,6 @@
 ---
 name: degistir
-description: Var olan bir Yeni Sistem sayfasını değiştirirken kullan (içerik düzeltme, alan güncelleme, bağ ekleme/çıkarma, durum değişikliği, supersede). Sürümü artırır, iki günlüğe satır düşer, bağları iki yönlü tutar. Sahibi "şunu güncelle", "düzelt", "şu kararı geçersiz kıl" dediğinde kullan.
+description: Var olan bir 4k-claude sayfasını değiştirirken kullan (içerik düzeltme, alan güncelleme, bağ ekleme/çıkarma, durum değişikliği, supersede). Sürümü artırır, iki günlüğe satır düşer, bağları iki yönlü tutar. Sahibi "şunu güncelle", "düzelt", "şu kararı geçersiz kıl" dediğinde kullan.
 argument-hint: [yol] [ne-degisecek]
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: yeni-parca
-description: Yeni Sistem'e yeni bir sayfa (gözlem, fikir, karar, görev, kural, kaynak vb.) eklerken kullan. Bir parçanın doğuşunun altı adımını sırayla yürütür ve kontrol.py ile kapatır. Sahibi "not al", "kaydet", "yeni görev aç", "karar yaz" gibi bir şey istediğinde proaktif olarak kullan.
+description: 4k-claude'a yeni bir sayfa (gözlem, fikir, karar, görev, kural, kaynak vb.) eklerken kullan. Bir parçanın doğuşunun altı adımını sırayla yürütür ve kontrol.py ile kapatır. Sahibi "not al", "kaydet", "yeni görev aç", "karar yaz" gibi bir şey istediğinde proaktif olarak kullan.
 argument-hint: [tur] [kat] [baslik]
 ---
 

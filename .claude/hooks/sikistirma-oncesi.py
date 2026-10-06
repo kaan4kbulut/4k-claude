@@ -41,7 +41,7 @@ def main():
     kok = os.environ.get("CLAUDE_PROJECT_DIR") or girdi.get("cwd") or os.getcwd()
     ilerleme = os.path.join(kok, "00-sistem", "ILERLEME.md")
     if not os.path.exists(ilerleme):
-        sys.stderr.write("Yeni Sistem: 00-sistem/ILERLEME.md yok. Sıkıştırmadan önce aktif talimat, kapı, açık soru, değişen dosyalar ve sıradaki adımı yaz.\n")
+        sys.stderr.write("4k-claude: 00-sistem/ILERLEME.md yok. Sıkıştırmadan önce aktif talimat, kapı, açık soru, değişen dosyalar ve sıradaki adımı yaz.\n")
         sys.exit(2)
     en, yol_en = en_yeni_md(kok)
     try:
@@ -50,7 +50,7 @@ def main():
         ilerleme_m = 0
     if en - ilerleme_m > 90:
         sys.stderr.write(
-            "Yeni Sistem: ILERLEME.md, son değişen dosyadan eski (" + os.path.relpath(yol_en, kok) + "). "
+            "4k-claude: ILERLEME.md, son değişen dosyadan eski (" + os.path.relpath(yol_en, kok) + "). "
             "Sıkıştırmadan önce ILERLEME.md'yi güncelle: aktif_talimat, kapi, acik_soru, degisen_dosyalar, siradaki.\n"
         )
         sys.exit(2)

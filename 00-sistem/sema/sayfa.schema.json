@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "yeni-sistem/sayfa.schema.json",
-  "title": "Yeni Sistem sayfa frontmatter semasi",
+  "$id": "4k-claude/sayfa.schema.json",
+  "title": "4k-claude sayfa frontmatter semasi",
   "description": "SEMA.md'nin makine okur karsiligi. kontrol.py her .md sayfasinin frontmatter'ini bu semaya gore dogrular. Turlere gore kosullu zorunlu alanlar 'allOf' altinda.",
   "type": "object",
   "required": ["id", "ad", "tur", "kat", "surum", "durum", "amac", "olusturma", "yazar", "talimat", "dayandigi", "besledigi"],

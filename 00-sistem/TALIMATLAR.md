@@ -28,8 +28,8 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 
 ## T-002 — "Önce pazar araştırması yapılacak" kararını kat 3'e kaydet
 - Tarih: 2026-10-06
-- Niyet: Deneme 2/4. F-0001'e dayanan bir karar kaydı (K-003) açmak; MADR-mini alanları dolu; F-0001 ile iki yönlü bağ.
-- Başarı ölçütü: `30-devlet/kararlar/K-003-yazici-pazar-arastirmasi.md` var; durum onerildi; KARARLAR.md satırı; F-0001.besledigi içinde K-003; kontrol.py sıfır hata.
+- Niyet: Deneme 2/4. F-0001'e dayanan bir karar kaydı (K-004) açmak; MADR-mini alanları dolu; F-0001 ile iki yönlü bağ.
+- Başarı ölçütü: `30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md` var; durum onerildi; KARARLAR.md satırı; F-0001.besledigi içinde K-004; kontrol.py sıfır hata.
 - Sınırlar: Karar sahibi onaylamadan `kabul` olmaz.
 - Kat: 3
 - Kapı: cift-yonlu
@@ -39,8 +39,8 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 
 ## T-003 — Pazar araştırması görev kartını kat 2'ye aç
 - Tarih: 2026-10-06
-- Niyet: Deneme 3/4. K-003'e dayanan görev kartı (G-001); 12 alan dolu; insan noktaları beyan edilmiş; kanıt boş olduğu için kanban `bekliyor`.
-- Başarı ölçütü: `20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md` var; K-003.besledigi içinde G-001; kontrol.py sıfır hata; kanıtsız `tamam` denemesi kontrol.py tarafından reddedilir (bunu bilerek dene ve raporla).
+- Niyet: Deneme 3/4. K-004'e dayanan görev kartı (G-001); 12 alan dolu; insan noktaları beyan edilmiş; kanıt boş olduğu için kanban `bekliyor`.
+- Başarı ölçütü: `20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md` var; K-004.besledigi içinde G-001; kontrol.py sıfır hata; kanıtsız `tamam` denemesi kontrol.py tarafından reddedilir (bunu bilerek dene ve raporla).
 - Sınırlar: Araştırma yapılmaz; yalnız kart.
 - Kat: 2
 - Kapı: cift-yonlu
@@ -69,3 +69,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/gunluk.py (yeni); değişen: calistir.sh, durus-kapisi.py, oturum-basi.py, yikici-koruma.py, kapanis-kaydi.py, settings.json, yscommon.py, kontrol.py, sayfa.schema.json, SEMA.md, MALIYET.csv, CLAUDE.md, rules/00-sistem.md, DEGISIKLIKLER.md
 - Kapanış notu: Yedi eksik kök nedenden düzeltildi ve testlerle doğrulandı. Açık kalanlar: hafif yol önerisi (sahibinin kararı); sandbox hâlâ kapalı (bubblewrap + socat kurulumu sahibinde); omitClaudeMd alanı belgelerde doğrulanamadı.
+
+## T-006 — Sistemin adını "Yeni Sistem"den "4k-claude"a değiştir
+- Tarih: 2026-10-06
+- Niyet: Sahibinin isteğiyle sistemin adı 4k-claude olur. Canlı dosyalardaki ad (kurallar, hook iletileri, şema, README, SISTEM, ANAYASA) ve klasör adı değişir; tarihî kayıtlar (GUNLUK satırları, 00-sistem/arastirma raporları, kapanmış talimat başlıkları) olduğu gibi kalır.
+- Başarı ölçütü: canlı dosyalarda "Yeni Sistem" geçmiyor (grep); ANAYASA 1.1 ve sayfa günlüğünde çerçeve ifade; K-003 karar kaydı ve KARARLAR satırı; kontrol.py sıfır hata; klasör ~/Downloads/4k-claude.
+- Sınırlar: Anlam değişmez, yalnız ad. Arşiv niteliğindeki metin yeniden yazılmaz. T-002/T-003'ün planladığı karar numarası K-003'ten K-004'e kayar (numara sırası kuralı).
+- Kat: 0
+- Kapı: cift-yonlu (git ile geri alınabilir)
+- Durum: acik
+- Doğurduğu dosyalar:
+- Kapanış notu:

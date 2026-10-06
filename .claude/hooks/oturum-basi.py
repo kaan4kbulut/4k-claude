@@ -41,7 +41,7 @@ def main():
     kok = os.environ.get("CLAUDE_PROJECT_DIR") or girdi.get("cwd") or os.getcwd()
     kaynak = girdi.get("source", "startup")
 
-    parcalar = [f"# Yeni Sistem — oturum açılışı ({kaynak})"]
+    parcalar = [f"# 4k-claude — oturum açılışı ({kaynak})"]
 
     ilerleme = oku(os.path.join(kok, "00-sistem", "ILERLEME.md"))
     parcalar.append("## ILERLEME.md\n" + (ilerleme or "(yok — ilk oturum; T-000 ile başla)"))

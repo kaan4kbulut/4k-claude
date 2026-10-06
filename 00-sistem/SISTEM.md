@@ -3,9 +3,9 @@ id: 20261006-2100-sistem
 ad: sistem
 tur: referans
 kat: 0
-surum: 0.1
+surum: 0.2
 durum: aktif
-amac: Yeni Sistem'in kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir.
+amac: 4k-claude'un kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir.
 olusturma: 2026-10-06
 guncelleme: 2026-10-06
 yazar: claude
@@ -15,10 +15,10 @@ besledigi: [CLAUDE.md, 00-sistem/SEMA.md]
 saklama: S
 ---
 
-# Yeni Sistem — kök harita
+# 4k-claude — kök harita
 
 ## Ne olduğu
-Yeni Sistem bir şirket, bir devlet ya da bir kişi değil; **bir insan modelidir**. Düşünceyle yaratan, her şeye ulaşabilen, dijital olarak her şeyi yapabilen ve yaptırabilen bir insan. Bir fikrin ya da bir sohbetin sonucunu alıp gerçek hayatta bir şeyi değiştirene kadar taşıyan çalışma modelidir. Sahibi (Kaan) hem devlet başkanı hem halktır: sistem onun fikirleri için çalışır. Fiziksel adımları ve ödemeleri sahibi yapar; dijital olan her şey sonuna kadar sistemin işidir ve hiçbir iş sessizce yarım kalmaz.
+4k-claude bir şirket, bir devlet ya da bir kişi değil; **bir insan modelidir**. Düşünceyle yaratan, her şeye ulaşabilen, dijital olarak her şeyi yapabilen ve yaptırabilen bir insan. Bir fikrin ya da bir sohbetin sonucunu alıp gerçek hayatta bir şeyi değiştirene kadar taşıyan çalışma modelidir. Sahibi (Kaan) hem devlet başkanı hem halktır: sistem onun fikirleri için çalışır. Fiziksel adımları ve ödemeleri sahibi yapar; dijital olan her şey sonuna kadar sistemin işidir ve hiçbir iş sessizce yarım kalmaz.
 
 Bu dosya anayasa değildir. Anayasa `30-devlet/normlar/ANAYASA.md`'dedir ve yalnız sahibi değiştirir. Bu dosya haritadır: nerede ne var, nasıl gezilir.
 
@@ -44,7 +44,7 @@ Her kat bir altındakinin üstüne eklenir, yerine geçmez. Fikir yukarıdan aş
 
 ## Klasör ağacı
 ```
-yeni-sistem/
+4k-claude/
 ├── CLAUDE.md                      çekirdek kurallar (<200 satır)
 ├── .claude/                       settings.json · hooks/ · rules/ · skills/ · agents/
 ├── 00-sistem/
@@ -71,7 +71,7 @@ yeni-sistem/
 Her iş üç halden biriyle biter: kanıtla kapanır; beyan edilmiş bir kapıda durup tek bir soru sorar (ASK.md); ya da engelini kayda yazar (GUNLUK `[durdu]`). Dördüncü hal yoktur. Her oturum `ILERLEME.md`'den kaldığı yeri okur. Bilinmeyen bir alanda sistem "yapamıyoruz" demez; araştırma fazı açar ve alan paketi üretir.
 
 ## Kurulum notları (sahibi için)
-- Claude Code'u bu klasörde aç: `cd yeni-sistem && claude`. Hook'lar `.claude/settings.json`'dan yüklenir; python3 gerekir.
+- Claude Code'u bu klasörde aç: `cd 4k-claude && claude`. Hook'lar `.claude/settings.json`'dan yüklenir; python3 gerekir.
 - Sandbox: `.claude/settings.json` içinde `sandbox.enabled` varsayılan `false`. CachyOS'ta `bubblewrap` ve `socat` kurulduktan sonra `true` yapılabilir.
 - İlk komut: `python3 00-sistem/scripts/kontrol.py` (bütünlük tam olmalı). Sonra `TALIMATLAR.md`'deki açık deneme talimatlarını sırayla işle.
 - Git: `git init && git add -A && git commit -m "T-000: kurulum"` (gerçek geri alma noktası git'tir).
@@ -84,3 +84,4 @@ Her iş üç halden biriyle biter: kanıtla kapanır; beyan edilmiş bir kapıda
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
+| 0.2 | 2026-10-06 | T-006 | Ad değişikliği: "Yeni Sistem" → "4k-claude" (K-003); klasör ağacı ve kurulum komutu yeni klasör adıyla |

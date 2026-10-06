@@ -1,10 +1,12 @@
-# Yeni Sistem
+# 4k-claude
+
+> Eski adı: Yeni Sistem (ad değişikliği: `30-devlet/kararlar/K-003-ad-degisikligi-4k-claude.md`).
 
 Fikirden gerçek dünyaya giden her işi aynı yoldan geçiren, Claude Code ile işletilen bir çalışma düzeni. Dört kat (İç Ses, Devlet, Şirket, İnsan) ve bir omurga; her sayfa aynı şemayla doğar, haritada ve günlükte görünür; hiçbir iş sessizce yarım kalmaz.
 
 ## Başlangıç
 ```bash
-cd yeni-sistem
+cd 4k-claude
 python3 00-sistem/scripts/kontrol.py      # bütünlük tam olmalı
 git init && git add -A && git commit -m "T-000: kurulum"
 claude                                     # Claude Code'u bu klasörde aç
@@ -16,7 +18,7 @@ claude                                     # Claude Code'u bu klasörde aç
 - `00-sistem/` SISTEM (kök harita), SEMA (alanlar), HARITA (dizin), GUNLUK, ILERLEME, TALIMATLAR, KARARLAR, şablonlar, betikler, araştırma
 - `40-ic-ses/` zihin · `30-devlet/` irade · `20-sirket/` örgütleme · `10-insan/` eller · `01-gelen/` gelen kutusu · `90-arsiv/`
 
-Ayrıntı: `00-sistem/SISTEM.md`. Mimari belgesi: Yeni Sistem Mimarisi v2.0 (Claude Docs).
+Ayrıntı: `00-sistem/SISTEM.md`. Mimari belgesi: 4k-claude Mimarisi v2.0 (4k-claude'un ilk adı) (Claude Docs).
 
 ## Gereksinimler
 python3 (hook'lar ve betikler standart kütüphaneyle çalışır; PyYAML varsa kullanılır), git, Claude Code. Sandbox için (isteğe bağlı) bubblewrap + socat.

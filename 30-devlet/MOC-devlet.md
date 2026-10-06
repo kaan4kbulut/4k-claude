@@ -36,6 +36,7 @@ Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 2 (1 kabul, 1 öner
 ### Kararlar
 - [[30-devlet/kararlar/K-001-pilotta-kadro-yok]] — pilotta rol ajanı yok; okuyucu + denetci (kabul)
 - [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Danışman ayrı ajan değil, zihin katı işlevi (önerildi; sahibi onayı bekliyor)
+- [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — sistemin adı 4k-claude (kabul)
 
 ### Kapılar (KP-xxx)
 - Açık kapı yok. ASK.md yok.

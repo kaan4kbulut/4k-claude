@@ -4,7 +4,7 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 
 ## 00-sistem
 - [[00-sistem/SEMA]] — Her sayfanin frontmatter alanlarini, turlerini, durum degerlerini, bag turlerini, adlandirma ve saklama kurallarini tek yerde tam olarak tanimlar; kontrol.py bu dosyaya gore denetler. · referans · kat 0 · 2026-10-06
-- [[00-sistem/SISTEM]] — Yeni Sistem'in kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir. · referans · kat 0 · 2026-10-06
+- [[00-sistem/SISTEM]] — 4k-claude'un kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir. · referans · kat 0 · 2026-10-06
 - [[00-sistem/arastirma/01-claude-code-mekanikleri]] — Claude Code'un CLAUDE.md, hafiza, alt ajan, hook, skill, izin ve oturum mekaniklerini resmi belgelerden dogrulanmis haliyle tek yerde toplamak; sistemin hicbir kurali var olmayan bir ozellige dayanmasin. · kaynak · kat 0 · 2026-10-06
 - [[00-sistem/arastirma/02-hafiza-ve-wiki-duzenleri]] — Yapay zeka ajan hafiza sistemlerinin ve kisisel bilgi/wiki yontemlerinin, duz Markdown ve frontmatter ile isletilen bir ajan wiki'sine donusturulebilecek kurallarini toplamak. · kaynak · kat 0 · 2026-10-06
 - [[00-sistem/arastirma/03-cok-ajanli-isleyis-ve-yonetisim]] — Cok ajanli mimari desenlerini, insan-dongude yonetisim araclarini (kapilar, karar haklari, karar kayitlari, brifing bicimleri), orgut tasarimi kurallarini ve fikir olgunlastirma yontemlerini isletim kurallarina donusturmek. · kaynak · kat 0 · 2026-10-06
@@ -24,7 +24,8 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 - [[30-devlet/MOC-devlet]] — Bu icerik haritasi, irade katindaki normlari, kararlari, kapilari ve denetim kayitlarini gruplayip nedenli baglarla tek bakista gosterir. · moc · kat 3 · 2026-10-06
 - [[30-devlet/kararlar/K-001-pilotta-kadro-yok]] — Bu karar kaydi, pilot asamasinda rol (bakanlik) ajanlari acilmamasini, yalniz okuyucu ve denetci alt ajanlarinin bulunmasini ve nedenini kalici olarak tutar. · karar · kat 3 · 2026-10-06
 - [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Bu karar kaydi, Danisman rolunun ayri bir ajan olarak degil zihin katinin bir islevi (yonlendirme notu + steelman/pre-mortem degerlendirmesi) olarak tanimlanmasi onerisini ve alternatifleri tutar. · karar · kat 3 · 2026-10-06
-- [[30-devlet/normlar/ANAYASA]] — Yeni Sistem'in degistirilemez cekirdegini kurar; katlari, ilkeleri, yetkinin kaynagini, denetimin bagimsizligini ve insan noktasi ilkesini tanimlar; tum alt normlar buna uyar. · anayasa · kat 3 · 2026-10-06
+- [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — Bu karar kaydi, sistemin adinin sahibinin istegiyle Yeni Sistem yerine 4k-claude olmasini ve Anayasa'daki ad degisikliginin Madde 14 usulune dayanagini kalici olarak tutar. · karar · kat 3 · 2026-10-06
+- [[30-devlet/normlar/ANAYASA]] — 4k-claude'un degistirilemez cekirdegini kurar; katlari, ilkeleri, yetkinin kaynagini, denetimin bagimsizligini ve insan noktasi ilkesini tanimlar; tum alt normlar buna uyar. · anayasa · kat 3 · 2026-10-06
 - [[30-devlet/normlar/HAKEM-KURALLARI]] — Bir modelin baska bir modelin ciktisini yargiladigi her yerde (denetci, kapi yargisi, eval) onyargilari azaltan kurallari koyar. · referans · kat 3 · 2026-10-06
 - [[30-devlet/normlar/IMZA-MATRISI]] — Hangi kararin kimin imzasini istedigini, yetki devrinin kurallarini ve kayitlarini tek tabloda tutar; orkestrator her kararda buraya bakar. · referans · kat 3 · 2026-10-06
 - [[30-devlet/normlar/MODEL-POLITIKASI]] — Hangi isin hangi modele ve cabaya gidecegini, tur ve butce tavanlarini, onbellek ve maliyet disiplinini belirler; alt ajan tanimlari ve calistir.sh buna uyar. · referans · kat 3 · 2026-10-06

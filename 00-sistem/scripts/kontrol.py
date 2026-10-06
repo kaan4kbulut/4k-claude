@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""kontrol.py — Yeni Sistem bütünlük denetimi (yalnız okur, hiçbir şeyi düzeltmez).
+"""kontrol.py — 4k-claude bütünlük denetimi (yalnız okur, hiçbir şeyi düzeltmez).
 
 Kullanım:
   python3 00-sistem/scripts/kontrol.py            tam rapor (≤ 40 satır yapılı özet + hata listesi)

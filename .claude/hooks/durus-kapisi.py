@@ -165,7 +165,7 @@ def main():
     )
     print(json.dumps({
         "decision": "block",
-        "reason": "Yeni Sistem: bu turda değişiklik var; kanıt, kapı ya da engel kaydı olmadan kapanamaz.\n\n"
+        "reason": "4k-claude: bu turda değişiklik var; kanıt, kapı ya da engel kaydı olmadan kapanamaz.\n\n"
                   + "\n".join(sebep) + "\n\n" + yol,
     }, ensure_ascii=False))
     sys.exit(0)
