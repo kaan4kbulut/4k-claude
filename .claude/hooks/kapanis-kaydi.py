@@ -1,20 +1,28 @@
 #!/usr/bin/env python3
 """Çok olaylı kayıt hook'u — kapanis-kaydi.
 
-SessionEnd        → 00-sistem/MALIYET.csv'ye satır (session_id, tarih, tur, token girdi/çıktı, neden, usd_tahmin)
+SessionEnd        → 00-sistem/MALIYET.csv'ye satır: token toplamları transcript'ten (transcript_path) okunur,
+                    çünkü SessionEnd girdisi token taşımaz. Aynı API mesajı transcript'e birden çok satır yazılır ve her
+                    satır aynı usage'ı tekrarlar: message.id ile tekilleştirilir. Alt ajan transcript'leri
+                    (<oturum>/subagents/*.jsonl) varsa eklenir.
 StopFailure       → GUNLUK.md'ye "[hata] oturum — <hata türü>" (bir sonraki oturum neden öldüğünü okur)
 PostToolUseFailure→ GUNLUK.md'ye "[hata] <araç> — <hata özeti>"
 ConfigChange      → GUNLUK.md'ye "[ayar] <kaynak> — ayar değişti" (denetim izi)
 
 Hiçbir zaman engellemez; yalnız yazar. Alan adları Claude Code sürümüne göre değişebildiği için savunmacı okur.
-Maliyet tahmini: MODEL-POLITIKASI.md'deki Sonnet 5.5 fiyatı varsayılır (2 / 10 USD per M token); gerçek maliyet
-`/usage` veya OTel ile ölçülür; buradaki değer yalnız sıra büyüklüğü içindir.
+Maliyet tahmini: fiyatlar 30-devlet/normlar/MODEL-POLITIKASI.md fiyat tablosundan okunur (tek kaynak); önbellek yazımı
+giriş fiyatının 1.25 katı varsayılır (5 dk TTL; 1 saat TTL'de 2 kat — tahmin düşük kalır). Abonelikte gerçek fatura
+farklıdır; buradaki değer sıra büyüklüğü içindir.
 """
 import csv
+import glob
 import json
 import os
+import re
 import sys
 from datetime import datetime
+
+BASLIK = ["session_id", "tarih", "tur", "tokens_in", "tokens_out", "cache_okuma", "cache_yazma", "model", "neden", "usd_tahmin"]
 
 
 def gunluk_yaz(kok, satir):
@@ -24,6 +32,76 @@ def gunluk_yaz(kok, satir):
             f.write(satir.rstrip("\n") + "\n")
     except Exception:  # noqa: BLE001
         pass
+
+
+def fiyatlar(kok):
+    """MODEL-POLITIKASI.md fiyat tablosu → {"opus 5.5": (giris, cikis, onbellek_okuma)}."""
+    f = {}
+    try:
+        with open(os.path.join(kok, "30-devlet", "normlar", "MODEL-POLITIKASI.md"), encoding="utf-8") as fh:
+            for s in fh:
+                m = re.match(r"^\|\s*([A-Za-z]+ \d+(?:\.\d+)?)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)\s*\|\s*([\d.]+)\s*\|", s)
+                if m:
+                    f[m.group(1).lower()] = (float(m.group(2)), float(m.group(3)), float(m.group(4)))
+    except Exception:  # noqa: BLE001
+        pass
+    return f
+
+
+def model_adi(model_id):
+    """claude-opus-5-5 → "opus 5.5"; claude-haiku-4-5-20251001 → "haiku 4.5"."""
+    m = re.match(r"^claude-([a-z]+)-(\d+)(?:-(\d{1,2}))?(?:-|$)", model_id or "")
+    if not m:
+        return None
+    return f"{m.group(1)} {m.group(2)}" + (f".{m.group(3)}" if m.group(3) else "")
+
+
+def transcript_ozeti(yol):
+    """(tur, {message.id: (model, in, out, cache_okuma, cache_yazma)}) — tekilleştirilmiş."""
+    mesajlar, tur = {}, 0
+    dosyalar = [yol] + sorted(glob.glob(os.path.join(yol[:-6] if yol.endswith(".jsonl") else yol, "subagents", "*.jsonl")))
+    for i, d in enumerate(dosyalar):
+        try:
+            fh = open(d, encoding="utf-8")
+        except OSError:
+            continue
+        with fh:
+            for satir in fh:
+                try:
+                    k = json.loads(satir)
+                except Exception:  # noqa: BLE001
+                    continue
+                m = k.get("message") if isinstance(k.get("message"), dict) else {}
+                if i == 0 and k.get("type") == "user" and not k.get("isSidechain"):
+                    icerik = m.get("content")
+                    if isinstance(icerik, str) or (isinstance(icerik, list) and any(
+                            isinstance(b, dict) and b.get("type") == "text" for b in icerik)):
+                        tur += 1
+                u = m.get("usage")
+                if k.get("type") == "assistant" and isinstance(u, dict) and m.get("model") != "<synthetic>":
+                    mesajlar[m.get("id") or k.get("requestId") or f"{d}:{len(mesajlar)}"] = (
+                        m.get("model") or "", u.get("input_tokens") or 0, u.get("output_tokens") or 0,
+                        u.get("cache_read_input_tokens") or 0, u.get("cache_creation_input_tokens") or 0)
+    return tur, mesajlar
+
+
+def maliyet_satiri(kok, girdi):
+    tur, mesajlar = transcript_ozeti(girdi.get("transcript_path") or "")
+    fy = fiyatlar(kok)
+    top = [0, 0, 0, 0]
+    usd, bilinmeyen, modeller = 0.0, set(), {}
+    for model, gi, co, cr, cw in mesajlar.values():
+        for j, v in enumerate((gi, co, cr, cw)):
+            top[j] += v
+        modeller[model] = modeller.get(model, 0) + co
+        p = fy.get(model_adi(model) or "")
+        if p is None:
+            bilinmeyen.add(model)
+            continue
+        usd += (gi * p[0] + co * p[1] + cr * p[2] + cw * p[0] * 1.25) / 1_000_000
+    baskin = max(modeller, key=modeller.get) if modeller else ""
+    usd_yazi = f"{usd:.4f}" + (f" (fiyatsız: {','.join(sorted(bilinmeyen))})" if bilinmeyen else "")
+    return tur, top, baskin, usd_yazi
 
 
 def main():
@@ -37,24 +115,22 @@ def main():
     sid = str(girdi.get("session_id", ""))[:12]
 
     if olay == "SessionEnd":
-        tur = girdi.get("total_turns") or girdi.get("turns") or ""
-        gi = girdi.get("total_tokens_input") or girdi.get("input_tokens") or girdi.get("tokens_input") or 0
-        co = girdi.get("total_tokens_output") or girdi.get("output_tokens") or girdi.get("tokens_output") or 0
         try:
-            usd = round((float(gi) * 2 + float(co) * 10) / 1_000_000, 4)
-        except Exception:  # noqa: BLE001
-            usd = ""
+            tur, (gi, co, cr, cw), model, usd = maliyet_satiri(kok, girdi)
+        except Exception as e:  # noqa: BLE001
+            tur, (gi, co, cr, cw), model, usd = "", (0, 0, 0, 0), "", f"okunamadı: {e}"
         yol = os.path.join(kok, "00-sistem", "MALIYET.csv")
         yeni = not os.path.exists(yol)
         try:
             with open(yol, "a", newline="", encoding="utf-8") as f:
                 w = csv.writer(f)
                 if yeni:
-                    w.writerow(["session_id", "tarih", "tur", "tokens_in", "tokens_out", "neden", "usd_tahmin_sonnet"])
-                w.writerow([sid, simdi, tur, gi, co, girdi.get("reason", ""), usd])
+                    w.writerow(BASLIK)
+                w.writerow([sid, simdi, tur, gi, co, cr, cw, model, girdi.get("reason", ""), usd])
         except Exception:  # noqa: BLE001
             pass
-        gunluk_yaz(kok, f"{simdi} [oturum] {sid} — kapandı ({girdi.get('reason', '')}); tur={tur} in={gi} out={co}")
+        gunluk_yaz(kok, f"{simdi} [oturum] {sid} — kapandı ({girdi.get('reason', '')}); tur={tur} "
+                        f"in={gi} out={co} cache_okuma={cr} usd≈{usd}")
 
     elif olay == "StopFailure":
         hata = girdi.get("error_type") or girdi.get("error") or "bilinmeyen"

@@ -20,7 +20,7 @@ Bu klasör bir çalışma düzenidir: fikirden gerçek dünyaya giden her iş ay
 ## On sert kural
 1. Şablonsuz dosya yok: her sayfa `00-sistem/sablonlar/<tur>.md` ile doğar, frontmatter tam doldurulur; bilinmeyen alan "belirlenmedi" olur, boş kalmaz.
 2. Haritasız dosya yok: her yeni sayfa aynı adımda HARITA.md'ye tek satır olarak girer.
-3. Günlüksüz değişiklik yok: her oluşturma ve değişiklik GUNLUK.md'ye ve sayfanın kendi günlük tablosuna satır düşer; sürüm artar.
+3. Günlüksüz değişiklik yok: her oluşturma ve değişiklik GUNLUK.md'ye ve sayfanın kendi günlük tablosuna satır düşer; sürüm artar. GUNLUK satırı elle değil `gunluk.py` ile yazılır (saati sistem basar).
 4. Kanıtsız bitti yok: kanıt = çalıştırılmış komut + çıkış kodu + çıktı özeti. "Tekrar okudum, doğru" kanıt değildir. Görev kartı `kanit` boşken `tamam` olamaz.
 5. Uydurma yok: emin olmadığın yere "belirlenmedi" ya da UNCONFIRMED yaz ve ASK.md ile tek soru bırak. Web'den gelen her olgu URL ve tarih taşır.
 6. Kapsam genişletme yok: talimatta yazmayan işi yapma; gereklilik görürsen yeni talimat öner.
@@ -52,6 +52,7 @@ KAYIT (TALIMATLAR.md'ye T-xxx) → AMAÇ + KAT → YER + AD → ŞABLON → BAĞ
 - `python3 00-sistem/scripts/kontrol.py --kisa` bütünlük (çıkış 0 = temiz)
 - `python3 00-sistem/scripts/bayat.py` bayat sayfalar
 - `python3 00-sistem/scripts/harita.py --dogrula` harita doğrulama
+- `python3 00-sistem/scripts/gunluk.py <tur> <yol|T-xxx> "<not>"` GUNLUK satırı (zaman damgası otomatik)
 - `/yeni-parca` · `/degistir` · `/kapat` · `/brifing` · `/kapi` · `/karar` · `/uyku` · `/alan-paketi` · `/haftalik` · `/inbox-triage`
 
 ## Compact instructions

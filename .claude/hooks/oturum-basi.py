@@ -93,6 +93,26 @@ def main():
     except Exception:  # noqa: BLE001
         pass
 
+    # durus-kapisi için taban iz: bu oturumda neyin değiştiği buna göre ölçülür
+    try:
+        sys.path.insert(0, os.path.join(kok, "00-sistem", "scripts"))
+        import yscommon as yc  # noqa: E402
+        iz_yol = os.path.join(kok, "00-sistem", ".kosu", "durus-izi.json")
+        try:
+            with open(iz_yol, encoding="utf-8") as f:
+                tum = json.load(f)
+        except Exception:  # noqa: BLE001
+            tum = {}
+        sid = str(girdi.get("session_id") or "bilinmeyen")
+        if kaynak in ("startup", "clear") or sid not in tum:
+            from datetime import datetime
+            tum[sid] = {"zaman": datetime.now().strftime("%Y-%m-%d %H:%M"), "iz": yc.dosya_izi(kok)}
+            os.makedirs(os.path.dirname(iz_yol), exist_ok=True)
+            with open(iz_yol, "w", encoding="utf-8") as f:
+                json.dump(tum, f)
+    except Exception as e:  # noqa: BLE001
+        parcalar.append(f"## Uyarı\ndurus-izi yazılamadı: {e}")
+
     parcalar.append("## Hatırlatma\nOturumda tek talimat. Kapanış /kapat ile: Kanıt bloğu ya da ASK.md olmadan oturum kapanamaz (durus-kapisi).")
 
     cikti = {

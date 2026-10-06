@@ -4,6 +4,20 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 
+## [0.2.0] — 2026-10-06 (T-005)
+### Düzeltildi
+- `calistir.sh`: `--bare` kaldırıldı; gözetimsiz koşuda hook'lar ve CLAUDE.md yükleniyor.
+- `durus-kapisi`: metin araması yerine dosya izi; sohbet turu serbest, yalnız wiki değişikliği kontrol.py ile geçer, diğer değişiklik gerçek kanıt (`komut` + çıkış kodu), ASK.md ya da bu oturumda yazılmış [durdu] satırı ister; ikinci denemede kanıtsız durma GUNLUK'e [hata] olarak yazılır.
+- `yikici-koruma`: commit mesajı/heredoc/grep deseni yanlış pozitifleri giderildi; find -delete, rmtree, +refspec push, kabukla ANAYASA/normlar yazımı, göreli proje dışı yönlendirme, sembolik bağ ve NotebookEdit açıkları kapatıldı; tek dosya rm sahibine sorulur.
+- `kapanis-kaydi`: MALIYET.csv token ve maliyeti transcript'ten okur (message.id tekilleştirme, alt ajanlar dahil); fiyatlar MODEL-POLITIKASI'ndan. CSV'ye cache_okuma, cache_yazma, model sütunları eklendi.
+- `yscommon`: PyYAML'ın döndürdüğü tüm tarih nesneleri metne çevrilir (sabit alan listesi kaldırıldı).
+- `settings.json`: belgelenmemiş `CLAUDE_CODE_STOP_HOOK_BLOCK_CAP` kaldırıldı; PreToolUse eşleyicisine NotebookEdit eklendi.
+### Değişti
+- Şema: `kapi` ve `sonuc` enum'larına `belirlenmedi`; kontrol.py 14. denetim: belirlenmedi yalnız taslakta / M4 öncesi fikirde.
+### Eklendi
+- `gunluk.py`: GUNLUK satırını sistem saatiyle yazar. kontrol.py 15. denetim: GUNLUK zaman sırası (uyarı).
+- Git deposu (temel commit e39a086).
+
 ## [0.1.0] — 2026-10-06
 ### Eklendi
 - Dört katlı klasör düzeni (00-sistem, 01-gelen, 10-insan, 20-sirket, 30-devlet, 40-ic-ses, 90-arsiv).

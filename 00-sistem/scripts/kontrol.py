@@ -363,6 +363,34 @@ def main():
             if not k:
                 hata(yol, "kanıtsız tamam: kanban tamam ama kanit boş")
 
+    # 14 belirlenmedi yalnız taslakta: karar alanı bilinmeden sayfa ilerleyemez
+    for yol, fm in fm_map.items():
+        t = fm.get("tur")
+        if t in ("karar", "kural", "kapi", "gorev") and fm.get("kapi") == "belirlenmedi" and fm.get("durum") != "taslak":
+            hata(yol, f"kapi belirlenmedi ama durum {fm.get('durum')} (taslak dışında kapı tipi belli olmalı)")
+        if t == "fikir" and fm.get("kapi") == "belirlenmedi" and isinstance(fm.get("merdiven"), int) and fm["merdiven"] >= 4:
+            hata(yol, f"kapi belirlenmedi ama merdiven {fm['merdiven']} (M4'te kapı tipi belirlenir)")
+        if t == "fikir" and fm.get("cynefin") == "belirlenmedi" and isinstance(fm.get("merdiven"), int) and fm["merdiven"] >= 1:
+            hata(yol, f"cynefin belirlenmedi ama merdiven {fm['merdiven']} (SEMA §1.2: merdiven ≥ 1)")
+        if t == "kapi" and fm.get("sonuc") == "belirlenmedi":
+            hata(yol, "kapı kaydında sonuc belirlenmedi olamaz; karar çıkana kadar bekliyor kullan")
+
+    # 15 GUNLUK zaman sırası (uyarı): elle yazılan damga sırayı bozar; gunluk.py saati kendisi basar.
+    # "[ayar] 00-sistem/GUNLUK.md — sira-onaylandi" satırından önceki bilinen sapmalar sayılmaz.
+    gun_satirlar = gunluk.splitlines()
+    bas = 0
+    for i, s in enumerate(gun_satirlar):
+        if "[ayar] 00-sistem/GUNLUK.md — sira-onaylandi" in s:
+            bas = i + 1
+    onceki = None
+    for i, s in enumerate(gun_satirlar[bas:], start=bas + 1):
+        m = re.match(r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}) \[", s)
+        if not m:
+            continue
+        if onceki and m.group(1) < onceki:
+            uyari("00-sistem/GUNLUK.md", f"satır {i} zaman sırası dışı ({m.group(1)} < {onceki}); damgayı gunluk.py bassın")
+        onceki = max(onceki or m.group(1), m.group(1))
+
     # ---------- rapor ----------
     bag_sayisi = sum(len(liste(fm.get("dayandigi"))) for fm in fm_map.values())
     ciktikod = 1 if hatalar or (strict and uyarilar) else 0

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Ortak yardımcılar: frontmatter ayrıştırma (PyYAML varsa onu, yoksa yerleşik mini ayrıştırıcı),
 sayfa tarama, yol çözümleme. kontrol.py, bayat.py ve harita.py bunu kullanır. Yalnız standart kütüphane zorunludur."""
+import datetime
 import os
 import re
 import sys
@@ -123,6 +124,18 @@ def mini_yaml(metin):
     return d
 
 
+def _tarihleri_metne(v):
+    if isinstance(v, datetime.datetime):
+        return v.strftime("%Y-%m-%d %H:%M")
+    if isinstance(v, datetime.date):
+        return v.isoformat()
+    if isinstance(v, dict):
+        return {k: _tarihleri_metne(x) for k, x in v.items()}
+    if isinstance(v, list):
+        return [_tarihleri_metne(x) for x in v]
+    return v
+
+
 def frontmatter_oku(yol):
     """(frontmatter dict | None, govde str, hata str | None)"""
     try:
@@ -143,9 +156,9 @@ def frontmatter_oku(yol):
             # sürüm sayıları metne
             if isinstance(fm.get("surum"), float):
                 fm["surum"] = f"{fm['surum']:.1f}"
-            for anahtar in ("olusturma", "guncelleme", "son_gozden_gecirme", "alindi", "sunset", "gecerli_bitis", "gecerli_baslangic", "gozden_gecir", "yururluk", "islenecek_son"):
-                if anahtar in fm and fm[anahtar] is not None and not isinstance(fm[anahtar], str):
-                    fm[anahtar] = str(fm[anahtar])
+            # PyYAML tırnaksız YYYY-MM-DD'yi date nesnesine çevirir; mini ayrıştırıcı metin bırakır.
+            # Alan listesi tutmak yerine tüm tarihleri metne çevir (yeni şablon alanı eklenince kırılmasın).
+            fm = _tarihleri_metne(fm)
             return fm, govde, None
         except Exception as e:  # noqa: BLE001
             return None, govde, f"YAML hatası: {e}"
@@ -195,3 +208,40 @@ def hedef_var(kok, hedef):
 def normalize_yol(h):
     h = h.split("#")[0].split("|")[0].strip()
     return h[:-3] if h.endswith(".md") else h
+
+
+# ---------- dosya izi (durus-kapisi: bu turda ne değişti?) ----------
+IZ_KOKLER = ("CLAUDE.md", "AGENTS.md", ".claude", "00-sistem", "01-gelen", "10-insan", "20-sirket", "30-devlet", "40-ic-ses", "90-arsiv")
+# Hook'ların kendi yazdığı dosyalar iş sayılmaz.
+IZ_HARIC = ("00-sistem/.kosu/", "00-sistem/GUNLUK.md", "00-sistem/MALIYET.csv", ".claude/settings.local.json")
+
+
+def dosya_izi(kok):
+    """{goreli_yol: [mtime_ns, boyut]} — izlenen köklerdeki tüm dosyalar (__pycache__ hariç)."""
+    iz = {}
+    for k in IZ_KOKLER:
+        p = os.path.join(kok, k)
+        if os.path.isfile(p):
+            adaylar = [p]
+        elif os.path.isdir(p):
+            adaylar = []
+            for dirpath, dirs, files in os.walk(p):
+                dirs[:] = [d for d in dirs if d != "__pycache__"]
+                adaylar.extend(os.path.join(dirpath, f) for f in files)
+        else:
+            continue
+        for a in adaylar:
+            g = os.path.relpath(a, kok).replace(os.sep, "/")
+            if any(g == h or g.startswith(h) for h in IZ_HARIC):
+                continue
+            try:
+                st = os.stat(a)
+            except OSError:
+                continue
+            iz[g] = [st.st_mtime_ns, st.st_size]
+    return iz
+
+
+def iz_farki(eski, yeni):
+    """Eklenen, silinen ya da değişen göreli yollar (sıralı)."""
+    return sorted(k for k in set(eski) | set(yeni) if eski.get(k) != yeni.get(k))

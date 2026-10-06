@@ -58,3 +58,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: acik
 - Doğurduğu dosyalar:
 - Kapanış notu:
+
+## T-005 — Analizde bulunan eksiklerin kök neden düzeltmesi
+- Tarih: 2026-10-06
+- Niyet: 2026-10-06 analizinde bulunan eksikleri kapatmak: calistir.sh'ta hook'ları kapatan --bare; git deposu yok; durus-kapisi'nin metne dayalı (sahte kanıtla geçilebilen) kontrolü ve İç Ses sohbetiyle çatışması; yikici-koruma'nın yanlış pozitifleri ve açıkları; MALIYET.csv'nin hep 0 yazması; şablon/şema uyumsuzluğu (belirlenmedi enum dışı, tarih alanları); GUNLUK'te elle yazılan zaman damgaları.
+- Başarı ölçütü: her düzeltme için çalıştırılmış test (komut + çıkış kodu); kontrol.py sıfır hata; hook'lar örnek girdilerle beklenen kararı veriyor; git'te temel commit (e39a086) ve düzeltme commit'i.
+- Sınırlar: Anayasa, imza matrisi ve "altı adım" kuralı değiştirilmez (sahibinin kararı; öneri olarak sunulur). F-0001 içeriğine dokunulmaz (T-004 denemesi için korunur). T-002..T-004 açık kalır.
+- Kat: 0
+- Kapı: cift-yonlu (git ile geri alınabilir)
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/scripts/gunluk.py (yeni); değişen: calistir.sh, durus-kapisi.py, oturum-basi.py, yikici-koruma.py, kapanis-kaydi.py, settings.json, yscommon.py, kontrol.py, sayfa.schema.json, SEMA.md, MALIYET.csv, CLAUDE.md, rules/00-sistem.md, DEGISIKLIKLER.md
+- Kapanış notu: Yedi eksik kök nedenden düzeltildi ve testlerle doğrulandı. Açık kalanlar: hafif yol önerisi (sahibinin kararı); sandbox hâlâ kapalı (bubblewrap + socat kurulumu sahibinde); omitClaudeMd alanı belgelerde doğrulanamadı.

@@ -2,10 +2,14 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar.
 
-aktif_talimat: T-001 (kapandı) — sıradaki T-002
+aktif_talimat: T-005 (kapandı) — sıradaki T-006 (ad değişikliği: Yeni Sistem → 4k-claude)
 kapi: yok
-acik_soru: F-0001 yazıcı türü (3D mi, kâğıt/baskı mı)? · cynefin 'kompleks' onayı · şablon/şema uyumsuzluğu için yeni talimat açılsın mı?
-siradaki: T-002 (K-003 pazar araştırması kararı); öncesinde sahibi /kapat ile oturumu kapatır (commit)
+acik_soru: F-0001 yazıcı türü (3D mi, kâğıt/baskı mı)? · cynefin 'kompleks' onayı · hafif yol (kat 4 için 6 adım yerine 2 adım) sahibine öneri olarak sunuldu, karar bekliyor
+siradaki: T-006 ad değişikliği (sahibi istedi); ardından T-007 yenilikçi teknoloji araştırmasının kaynak sayfası; T-002..T-004 denemeleri açık
+
+## T-005 (2026-10-06)
+- [x] calistir.sh --bare · durus-kapisi dosya izi · yikici-koruma 35 test · MALIYET transcript · şema belirlenmedi · gunluk.py · git
+- Değişen: bkz. DEGISIKLIKLER 0.2.0; commit e39a086 sonrası
 
 ## T-001 (2026-10-06)
 - [x] KAYIT (T-001 zaten açıktı) · AMAÇ+KAT (4) · YER+AD (40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md) · ŞABLON · BAĞLAR (MOC M1 + park) · KAPANIŞ (HARITA, GUNLUK, TALIMATLAR)

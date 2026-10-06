@@ -3,7 +3,7 @@ id: 20261006-2101-sema
 ad: sema
 tur: referans
 kat: 0
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Her sayfanin frontmatter alanlarini, turlerini, durum degerlerini, bag turlerini, adlandirma ve saklama kurallarini tek yerde tam olarak tanimlar; kontrol.py bu dosyaya gore denetler.
 olusturma: 2026-10-06
@@ -49,8 +49,8 @@ Her Markdown sayfası `---` ile açılan YAML frontmatter taşır. Alan adları 
 | `guven` | enum | fikir, kaynak, yansima, arastirma-notu, alan-paketi | `dusuk`, `orta`, `yuksek`. |
 | `onem` | int 1-10 | gozlem, yansima | Generative Agents önem puanı; yansıma eşiği hesabında kullanılır. |
 | `merdiven` | int 0-5 | fikir | Olgunluk basamağı. |
-| `cynefin` | enum | fikir (merdiven ≥ 1) | `acik`, `karmasik`, `kompleks`, `kaotik`, `karisik`. |
-| `kapi` | enum | karar, kural, kapi, gorev | `tek-yonlu`, `cift-yonlu`. |
+| `cynefin` | enum | fikir (merdiven ≥ 1) | `acik`, `karmasik`, `kompleks`, `kaotik`, `karisik`, `belirlenmedi`. |
+| `kapi` | enum | karar, kural, kapi, gorev | `tek-yonlu`, `cift-yonlu`, `belirlenmedi`. `belirlenmedi` yalnız `taslak` sayfada ve M4 öncesi fikirde geçerlidir (kontrol.py). |
 | `karar_veren` | string | karar, kural, kapi | Tek kişi/rol (DACI tek Approver). |
 | `sunset` | date | kural, yonerge | Gözden geçirme/son geçerlilik tarihi (varsayılan +90 gün). |
 | `dayanak` | path | yonerge | Dayandığı kural. |
@@ -59,7 +59,7 @@ Her Markdown sayfası `---` ile açılan YAML frontmatter taşır. Alan adları 
 | `kanit` | list[object] | gorev | `{komut, cikis, ozet}`; `durum: tamam` için boş olamaz. |
 | `insan_noktalari` | list[object] | gorev, sop, alan-paketi | `{id, tur, kosul, kanit, bekleyen_adim}`. |
 | `bekci` | string | kapi | Tek bekçi. |
-| `sonuc` | enum | kapi | `bekliyor`, `go`, `kill`, `hold`, `recycle`. |
+| `sonuc` | enum | kapi, arastirma-notu | `bekliyor`, `go`, `kill`, `hold`, `recycle`, `belirlenmedi`. Kapı kaydında karar çıkana kadar `bekliyor` kullanılır. |
 | `saklama` | enum | kat 3 sayfaları, kaynak, cikti | `S` sürekli, `K` kurum (plan dönemi + denetim), `B` birim (görev + 1 çevrim), `I` imha adayı. |
 
 ### 1.3 İsteğe bağlı
@@ -152,3 +152,4 @@ CLAUDE.md ≤ 200 satır; her SKILL.md ≤ 500 satır; HARITA.md ≤ 200 sayfa s
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
+| 0.2 | 2026-10-06 | T-005 | kapi ve sonuc enum'larına `belirlenmedi` eklendi (eski: yalnız karar değerleri); cynefin satırı şemayla eşitlendi; belirlenmedi'nin taslak sınırı yazıldı |

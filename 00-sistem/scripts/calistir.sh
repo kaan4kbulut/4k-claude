@@ -4,7 +4,9 @@
 # Örnek:    00-sistem/scripts/calistir.sh T-007 "/uyku tam" 30 2
 #
 # İlkeler (arastirma/04 §2.6):
-#  - --bare: repo hook'ları ve MCP yalnız güvenilir klasörde; güven iletişim kutuları -p'de kapalı olduğundan dikkat.
+#  - --bare KULLANILMAZ: hook'ları ve CLAUDE.md'yi atlar; durus-kapisi ve yikici-koruma çalışmaz, kurallar yüklenmez.
+#    Gözetimsiz koşu en az korumalı mod olamaz (T-005).
+#  - --permission-prompts none: soru sorulacak her izin reddedilir; izin kuralları ve hook'lar yine önce uygulanır.
 #  - --max-turns ve --max-budget-usd: kaçak koşu yok. Alt ajan harcaması da sayılır.
 #  - --fallback-model: model yoksa Sonnet'e düş.
 #  - --json-schema: çıktı kapi-raporu şemasına uyar; durum gecti|bekliyor|durdu.
@@ -27,7 +29,7 @@ CIKTI="$CIKTI_DIR/${T}-$(date +%Y%m%d-%H%M%S).json"
 echo "$ZAMAN [oturum] $T — gözetimsiz koşu başladı: $ISTEM (turn<=$MAX_TURNS, usd<=$MAX_USD)" >> 00-sistem/GUNLUK.md
 
 set +e
-claude -p --bare \
+claude -p \
   --max-turns "$MAX_TURNS" \
   --max-budget-usd "$MAX_USD" \
   --fallback-model sonnet \

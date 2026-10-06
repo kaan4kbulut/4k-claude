@@ -20,7 +20,7 @@ Kanıt, çalıştırılmış bir dış kontrolün izidir: komut, çıkış kodu,
 - Üst düzey sistem dosyaları BÜYÜK HARF: SISTEM, SEMA, HARITA, GUNLUK, ILERLEME, TALIMATLAR, KARARLAR, DEGISIKLIKLER, ASK, MALIYET.
 
 ## Günlük satır biçimi
-`YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, karar, kapi, hata, durdu, ayar, oturum, uyku. Satır tek satırdır; ayrıştırılabilir kalır.
+`YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, karar, kapi, hata, durdu, ayar, oturum, uyku. Satır tek satırdır; ayrıştırılabilir kalır. Satırı `python3 00-sistem/scripts/gunluk.py <tur> <yol> "<not>"` yazar: model saati bilmez, elle yazılan damga uydurmadır ve kontrol.py sıra dışı damgayı uyarır.
 
 ## Sürüm kuralı
 - Sayfa sürümü `surum`: 0.1 ile doğar; her değişiklikte +0.1; durum `kabul` olunca 1.0; kabulden sonra yalnız `yerine_gecen` değişir.

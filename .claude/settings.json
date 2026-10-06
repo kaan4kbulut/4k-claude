@@ -4,6 +4,7 @@
       "Bash(python3 00-sistem/scripts/kontrol.py*)",
       "Bash(python3 00-sistem/scripts/bayat.py*)",
       "Bash(python3 00-sistem/scripts/harita.py*)",
+      "Bash(python3 00-sistem/scripts/gunluk.py*)",
       "Bash(git status*)",
       "Bash(git log*)",
       "Bash(git diff*)",
@@ -34,8 +35,7 @@
     "enabled": false
   },
   "env": {
-    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
-    "CLAUDE_CODE_STOP_HOOK_BLOCK_CAP": "10"
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
   },
   "hooks": {
     "SessionStart": [
@@ -63,7 +63,7 @@
     ],
     "PreToolUse": [
       {
-        "matcher": "Bash|Edit|Write|MultiEdit",
+        "matcher": "Bash|Edit|Write|MultiEdit|NotebookEdit",
         "hooks": [
           {
             "type": "command",

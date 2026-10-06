@@ -39,3 +39,21 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-06 21:51 [oturum] d061ab4c-b1f — kapandı (other); tur= in=0 out=0
 2026-10-06 21:52 [hata] oturum 9630e132-c06 — durma hatası: rate_limit
 2026-10-06 21:53 [oturum] 9630e132-c06 — kapandı (other); tur= in=0 out=0
+2026-10-06 23:41 [degisti] T-005 — talimat açıldı: analiz eksiklerinin kök neden düzeltmesi
+2026-10-06 23:46 [ayar] 00-sistem/GUNLUK.md — sira-onaylandi: T-000 satırlarındaki 22:50-22:55 damgaları elle yazılmış (yeni-sistem.zip 21:40'ta oluştu, gerçek saat daha erken); satırlar değiştirilmedi, bu satırdan sonrası sıra denetimine girer (T-005)
+2026-10-06 23:46 [degisti] 00-sistem/scripts/calistir.sh — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] .claude/hooks/durus-kapisi.py — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] .claude/hooks/oturum-basi.py — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] .claude/hooks/yikici-koruma.py — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] .claude/hooks/kapanis-kaydi.py — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] .claude/settings.json — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] 00-sistem/scripts/yscommon.py — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] 00-sistem/scripts/kontrol.py — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] 00-sistem/sema/sayfa.schema.json — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] 00-sistem/SEMA.md — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] 00-sistem/MALIYET.csv — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] CLAUDE.md — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] .claude/rules/00-sistem.md — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [degisti] 00-sistem/DEGISIKLIKLER.md — T-005 kök neden düzeltmesi (ayrıntı DEGISIKLIKLER 0.2.0)
+2026-10-06 23:46 [yeni] 00-sistem/scripts/gunluk.py — T-005: GUNLUK satırını sistem saatiyle yazan yardımcı
+2026-10-06 23:46 [oturum] T-005 — kapandı — 7 eksik düzeltildi; kontrol.py 0
