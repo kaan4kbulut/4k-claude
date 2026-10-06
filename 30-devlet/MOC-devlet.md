@@ -23,7 +23,7 @@ Bu içerik haritası, irade katındaki normları, kararları, kapıları ve dene
 
 ## İçerik
 ### Durum özeti
-Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 2 (1 kabul, 1 önerildi) · Açık kapı: 0 · Açık bulgu: 0
+Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 3 (2 kabul, 1 önerildi) · Açık kapı: 0 · Kapanmış kapı: 1 · Açık bulgu: 0
 
 ### Normlar (üstten alta)
 - [[30-devlet/normlar/ANAYASA]] — en üst norm; yalnız sahibi değiştirir
@@ -39,6 +39,7 @@ Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 2 (1 kabul, 1 öner
 - [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — sistemin adı 4k-claude (kabul)
 
 ### Kapılar (KP-xxx)
+- [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — Bash sandbox'ının açılışı (go, sahibi)
 - Açık kapı yok. ASK.md yok.
 
 ### Denetim

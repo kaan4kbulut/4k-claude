@@ -89,3 +89,14 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-06 23:50 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 0.2: dayandigi += 10-yenilikci-teknolojiler (T-007)
 2026-10-06 23:50 [degisti] 00-sistem/HARITA.md — harita.py --uret (T-007)
 2026-10-06 23:51 [oturum] T-007 — kapandı — araştırma 10 kaydedildi; kontrol.py 0
+2026-10-06 23:53 [degisti] T-008 — talimat açıldı: Bash sandbox (öncelik 1)
+2026-10-06 23:53 [kapi] 30-devlet/kapilar/KP-001-sandbox-acilisi.md — go: sahibi sandbox açılışını onayladı
+2026-10-06 23:53 [degisti] .claude/settings.json — T-008 sandbox açılışı
+2026-10-06 23:53 [degisti] 30-devlet/MOC-devlet.md — T-008 sandbox açılışı
+2026-10-06 23:53 [degisti] 00-sistem/arastirma/10-yenilikci-teknolojiler.md — T-008 sandbox açılışı
+2026-10-06 23:53 [degisti] 00-sistem/HARITA.md — T-008 sandbox açılışı
+2026-10-06 23:53 [oturum] 6ca05128-a92 — kapandı (other); tur=1 in=18 out=864 cache_okuma=51230 usd≈0.0398
+2026-10-06 23:54 [oturum] 0d963eb8-d66 — kapandı (other); tur=1 in=18 out=795 cache_okuma=55232 usd≈0.0341
+2026-10-06 23:54 [degisti] 00-sistem/SISTEM.md — 0.3: sandbox kurulum notu (T-008)
+2026-10-06 23:54 [degisti] 00-sistem/DEGISIKLIKLER.md — 0.3.0 sandbox (T-008)
+2026-10-06 23:54 [oturum] T-008 — kapandı — sandbox açık; 7 yoklama, 2 test oturumu (0.11 USD)

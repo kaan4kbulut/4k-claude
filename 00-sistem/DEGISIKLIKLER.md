@@ -4,6 +4,10 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 
+## [0.3.0] — 2026-10-06 (T-008)
+### Değişti
+- Bash sandbox açıldı (`.claude/settings.json` → `sandbox`): `enabled`, `failIfUnavailable`, `allowUnsandboxedCommands: false`, `autoAllowBashIfSandboxed`, kimlik bilgisi klasörleri `denyRead`, boş ağ izin listesi. Onay: KP-001.
+
 ## [0.2.0] — 2026-10-06 (T-005)
 ### Düzeltildi
 - `calistir.sh`: `--bare` kaldırıldı; gözetimsiz koşuda hook'lar ve CLAUDE.md yükleniyor.

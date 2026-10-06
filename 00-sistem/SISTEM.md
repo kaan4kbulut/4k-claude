@@ -3,7 +3,7 @@ id: 20261006-2100-sistem
 ad: sistem
 tur: referans
 kat: 0
-surum: 0.2
+surum: 0.3
 durum: aktif
 amac: 4k-claude'un kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir.
 olusturma: 2026-10-06
@@ -72,7 +72,7 @@ Her iş üç halden biriyle biter: kanıtla kapanır; beyan edilmiş bir kapıda
 
 ## Kurulum notları (sahibi için)
 - Claude Code'u bu klasörde aç: `cd 4k-claude && claude`. Hook'lar `.claude/settings.json`'dan yüklenir; python3 gerekir.
-- Sandbox: `.claude/settings.json` içinde `sandbox.enabled` varsayılan `false`. CachyOS'ta `bubblewrap` ve `socat` kurulduktan sonra `true` yapılabilir.
+- Sandbox: `.claude/settings.json` içinde açık (T-008, KP-001): bubblewrap + socat; kurulamazsa oturum açılmaz (`failIfUnavailable`), sandbox dışına yeniden deneme kapalı, kimlik bilgisi klasörleri (`~/.ssh`, `~/.config/gh`, `~/.gnupg` …) okunamaz, ağ izin listesi boş. Yalnız Bash'i kapsar; hook'lar, dosya araçları ve MCP sunucuları dışında kalır. Bir komut ağ isterse alan adı onayı sorulur; kalıcı izin `network.allowedDomains`'e yazılır (ayrı karar).
 - İlk komut: `python3 00-sistem/scripts/kontrol.py` (bütünlük tam olmalı). Sonra `TALIMATLAR.md`'deki açık deneme talimatlarını sırayla işle.
 - Git: `git init && git add -A && git commit -m "T-000: kurulum"` (gerçek geri alma noktası git'tir).
 
@@ -85,3 +85,4 @@ Her iş üç halden biriyle biter: kanıtla kapanır; beyan edilmiş bir kapıda
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
 | 0.2 | 2026-10-06 | T-006 | Ad değişikliği: "Yeni Sistem" → "4k-claude" (K-003); klasör ağacı ve kurulum komutu yeni klasör adıyla |
+| 0.3 | 2026-10-06 | T-008 | Kurulum notu: sandbox açık (KP-001) |

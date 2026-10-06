@@ -3,7 +3,7 @@ id: 20261006-2355-arastirma-10
 ad: yenilikci-teknolojiler
 tur: kaynak
 kat: 0
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: 4k-claude'a eklenebilecek yenilikçi YZ araç ve teknolojilerini (bilgi grafı, yerel arama, ses hattı, belge alma, gözlemlenebilirlik, değerlendirme, otomasyon, sandbox, eller, görselleştirme) Ekim 2026 durumuyla taramak; 09-github-taramasi'nda verilen kararları tekrar etmeden yalnız yeni olanı ve durumu değişeni etiketlemek.
 olusturma: 2026-10-06
@@ -11,7 +11,7 @@ guncelleme: 2026-10-06
 yazar: claude
 talimat: T-007
 dayandigi: [00-sistem/arastirma/09-github-taramasi.md, 00-sistem/arastirma/02-hafiza-ve-wiki-duzenleri.md, 00-sistem/arastirma/04-guvenilirlik-ve-kalite-teknikleri.md, 00-sistem/arastirma/05-eller-ve-alan-paketi-3d.md, 00-sistem/arastirma/08-ic-ses-yontemleri.md]
-besledigi: [10-insan/araclar/ARAC-KAYDI.md]
+besledigi: [10-insan/araclar/ARAC-KAYDI.md, 30-devlet/kapilar/KP-001-sandbox-acilisi.md]
 kaynaklar: ["https://github.com/Graphify-Labs/graphify", "https://pypi.org/project/graphifyy/", "https://github.com/tobi/qmd", "https://code.claude.com/docs/en/sandboxing", "https://code.claude.com/docs/en/hooks", "https://code.claude.com/docs/en/voice-dictation", "https://github.com/docling-project/docling", "https://github.com/lycheeverse/lychee", "https://github.com/snyk/agent-scan", "https://docs.livekit.io/agents/logic/turns/turn-detector/", "https://github.com/resemble-ai/chatterbox"]
 alindi: 2026-10-06
 guven: orta
@@ -208,6 +208,7 @@ saklama: K
 - [[00-sistem/arastirma/05-eller-ve-alan-paketi-3d]] — eller ve MCP kararları (Türkiye'ye özgü araçlar)
 - [[00-sistem/arastirma/08-ic-ses-yontemleri]] — ses hattı kararları (whisper, Smart Turn, Handy)
 ### Beslediği
+- [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — öncelik 1 (sandbox) bu raporla kapıya geldi
 - [[10-insan/araclar/ARAC-KAYDI]] — benimsenecek araçların kayda girmeden önceki dayanağı
 ### Gelen
 
@@ -215,3 +216,4 @@ saklama: K
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 1.0 | 2026-10-06 | T-007 | Araştırma alt ajanının raporu sisteme alındı; ad, yol ve gövde yapısı (Amaç/İçerik/Bağlar) düzeltildi |
+| 1.1 | 2026-10-06 | T-008 | besledigi += KP-001 (öncelik 1 uygulamaya alındı) |

@@ -91,3 +91,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/arastirma/10-yenilikci-teknolojiler.md (yeni); değişen: arastirma 02/04/05/08/09 (besledigi, 1.1), ARAC-KAYDI (0.2), HARITA
 - Kapanış notu: 10 öncelikli öneri kayıtlı; hiçbiri kurulmadı. Sahibinin seçimi bekleniyor (öncelik 1 sandbox imza ister). Ara hata: backlink betiği 5 raporu boşalttı, git HEAD'den geri yüklenip yeniden uygulandı.
+
+## T-008 — Bash sandbox'ını aç (öncelik 1)
+- Tarih: 2026-10-06
+- Niyet: 10-yenilikci-teknolojiler öncelik 1: Claude Code Bash sandbox'ı (bubblewrap + socat) proje ayarında açılır; sandbox kurulamazsa oturum açılmaz, sandbox dışına kaçış kapalıdır, kimlik bilgisi klasörleri okunamaz.
+- Başarı ölçütü: settings.json'da sandbox bloğu; gerçek bir Claude Code oturumunda (claude -p) beş yoklama beklenen sonucu verir: ev dizinine yazma reddedilir, proxy dışı ağ çözülemez, ~/.ssh okunamaz, .claude/hooks'a yazma reddedilir, kontrol.py çalışır; kontrol.py sıfır hata.
+- Sınırlar: Ağ izin listesi boş başlar (alan adı eklemek ayrı karar). Kullanıcı ayarına (~/.claude/settings.json) dokunulmaz; yalnız bu proje.
+- Kat: 0
+- Kapı: cift-yonlu (ayar geri alınabilir) · imza: sahibi (KP-001)
+- Durum: kapali
+- Doğurduğu dosyalar: 30-devlet/kapilar/KP-001-sandbox-acilisi.md (yeni); değişen: .claude/settings.json, SISTEM (0.3), MOC-devlet, arastirma/10 (1.1), HARITA, DEGISIKLIKLER
+- Kapanış notu: Sandbox açık ve gerçek oturumda doğrulandı (ev dizinine yazma, proxy dışı ağ, .claude/hooks yazma reddedildi; ~/.config/gh ve keyrings boş göründü; kontrol.py çalıştı). Açık: klasör yeni adıyla güvenilir değil (sahibi bir kez etkileşimli claude açıp onaylamalı); maliyet tahmini gerçek faturadan ~%30 düşük (1 saatlik önbellek yazımı 2× fiyatlanıyor) → ccusage mutabakatı (öncelik 7).

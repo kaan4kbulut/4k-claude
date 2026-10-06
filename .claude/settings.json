@@ -32,7 +32,24 @@
     ]
   },
   "sandbox": {
-    "enabled": false
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "autoAllowBashIfSandboxed": true,
+    "filesystem": {
+      "denyRead": [
+        "~/.ssh",
+        "~/.gnupg",
+        "~/.aws",
+        "~/.config/gh",
+        "~/.netrc",
+        "~/.docker/config.json",
+        "~/.local/share/keyrings"
+      ]
+    },
+    "network": {
+      "allowedDomains": []
+    }
   },
   "env": {
     "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet"
