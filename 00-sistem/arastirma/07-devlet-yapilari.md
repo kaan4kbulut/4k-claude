@@ -3,16 +3,16 @@ id: 20261006-1906-arastirma-07
 ad: devlet-yapilari
 tur: kaynak
 kat: 0
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: Gercek devlet teskilatlarinin (bakanlik anatomisi, norm hiyerarsisi, imza/onay, denetim, kayit yonetimi, stratejik planlama, kriz, anti-kaliplar) devlet katina aktarilabilir kurallarini toplamak.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: []
 besledigi: [00-sistem/SISTEM.md, 30-devlet/normlar/ANAYASA.md, 30-devlet/normlar/IMZA-MATRISI.md]
-kaynaklar: ["https://normkararlarbilgibankasi.anayasa.gov.tr/Dosyalar/Kararlar/KararPDF/2024-51-nrm.pdf", "https://www.csgb.gov.tr/Media/owdne1xk/_ek-1-bakanlik-hizmet-birimleri-teskilat-yapisi-ve-gorev-tanimlari-yonergesi_15-04-2026.pdf", "https://www.lexpera.com.tr/mevzuat/kanunlar/sayistay-kanunu-6085", "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_21072009_O11313012.htm", "https://www.theiia.org/globalassets/site/communication/2020/three-lines-model-updated.pdf", "https://www.iso.org/standard/62542.html"]
+kaynaklar: ["https://www.lexpera.com.tr/resmi-gazete/metin/anayasa-mahkemesinin-22-2-2024-tarihli-ve-e-2021-131-k-2024-51-sayili-karari-32568", "https://www.csgb.gov.tr/Media/owdne1xk/_ek-1-bakanlik-hizmet-birimleri-teskilat-yapisi-ve-gorev-tanimlari-yonergesi_15-04-2026.pdf", "https://www.lexpera.com.tr/mevzuat/kanunlar/sayistay-kanunu-6085", "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_21072009_O11313012.htm", "https://www.theiia.org/globalassets/site/communication/2020/three-lines-model-updated.pdf", "https://www.iso.org/standard/62542.html"]
 alindi: 2026-10-06
 guven: orta
 kaynak_turu: mevzuat-ve-literatur-taramasi
@@ -23,7 +23,7 @@ saklama: K
 
 ## 1. Bakanlik anatomisi
 ### Turkiye (Cumhurbaskanligi Hukumet Sistemi)
-- Anayasa md. 106/11: bakanliklarin kurulmasi ve teskilati CBK ile; personel ozluk/kadro kanunla (AYM 2024/51). CBK No.1 (RG 10.07.2018/30474): md. 503 Bakan, 504 Bakan yardimcilari, 506/508 imza yetkisi ve yetki devri dayanagi. CBK No.3: bakan yardimcilari ust kademe, Cumhurbaskani kararinla atanir. https://normkararlarbilgibankasi.anayasa.gov.tr/Dosyalar/Kararlar/KararPDF/2024-51-nrm.pdf
+- Anayasa md. 106/11: bakanliklarin kurulmasi ve teskilati CBK ile; personel ozluk/kadro kanunla (AYM 2024/51; resmi AYM bilgi bankası bağlantısı 2026-10-07'de 404, metin Resmî Gazete 32568 kaydı olarak Lexpera'da). CBK No.1 (RG 10.07.2018/30474): md. 503 Bakan, 504 Bakan yardimcilari, 506/508 imza yetkisi ve yetki devri dayanagi. CBK No.3: bakan yardimcilari ust kademe, Cumhurbaskani kararinla atanir. https://www.lexpera.com.tr/resmi-gazete/metin/anayasa-mahkemesinin-22-2-2024-tarihli-ve-e-2021-131-k-2024-51-sayili-karari-32568
 - Sayilar: 17 bakanlik (2021 sonrasi); bakan yardimcisi CBK'da sabit sayi yok, uygulamada **bakanlik basina 4**; mustesarlik kaldirildi. Ornek CSGB (2024 yonergesi): 7 genel mudurluk/baskanlik, 48 daire baskanligi, GM basina 4-10 daire; daire baskanligi Bakan onayiyla kurulur/kaldirilir. https://www.csgb.gov.tr/Media/owdne1xk/_ek-1-bakanlik-hizmet-birimleri-teskilat-yapisi-ve-gorev-tanimlari-yonergesi_15-04-2026.pdf
 - Turetilen kontrol araligi: Bakan -> 4 BY + 3-4 dogrudan birim (Ozel Kalem, Basin, Teftis, Ic Denetim) ~ 6-8; BY -> 2-4 GM; GM -> 4-10 daire; Daire -> 3-6 sube (UNCONFIRMED).
 - Cumhurbaskanligi merkezi: Idari Isler Baskanligi (4 GM), 9 Politika Kurulu, 4 Ofis, SBB, **Devlet Denetleme Kurulu** (Anayasa 108), Devlet Arsivleri. Koordinasyon: Kabine, Politika Kurullari, zorunlu gorus, SBB butce kapisi.
@@ -42,7 +42,7 @@ saklama: K
 
 ## 3. Karar ve onay
 - Imza Yetkileri ve Yetki Devri Yonergeleri (ETKB, Saglik, MEB, ASHB, GSB): yetki devri **yazili, sinirli, sureli**; devreden gozetim sorumlulugunu korur; **devredilen yetki tekrar devredilemez**; devralan "cekimserlik gostermeden" kullanir ve **donemsel bilgi verir**; politika niteligi tasiyan konuda imzadan once uste bilgi + alternatif; "Bakan a." ibaresi. Paraf: ilk hazirlayanin parafi esas, en az imza; paraf edenler duzeltir, son soz imza sahibinde.
-- Bakanin bizzat imzaladiklari: kanunen bakan imzasi gerekenler; Cumhurbaskanligi/TBMM yazilari; uluslararasi anlasma; **politika/ilke belirleyen genelge ve stratejik kararlar**; butce ve mali raporlar; **teftis/sorusturma onaylari**; ust duzey atama; yurt disi gorevlendirme. Bakan yardimcisi: yoklukta bakan isleri, gizli yazisma, izin onaylari. GM/daire: rutin; bilgi yazilari sube mudurune kadar devredilebilir. https://enerji.gov.tr//Media/Dizin/HIGM/tr/Mevzuat/ETKB_Yonergeler/ETKB-EYS-YNG-002_Imza_Yetkileri_Yonergesi.pdf
+- Bakanin bizzat imzaladiklari: kanunen bakan imzasi gerekenler; Cumhurbaskanligi/TBMM yazilari; uluslararasi anlasma; **politika/ilke belirleyen genelge ve stratejik kararlar**; butce ve mali raporlar; **teftis/sorusturma onaylari**; ust duzey atama; yurt disi gorevlendirme. Bakan yardimcisi: yoklukta bakan isleri, gizli yazisma, izin onaylari. GM/daire: rutin; bilgi yazilari sube mudurune kadar devredilebilir. https://enerji.gov.tr//Media/Dizin/HIGM/tr/Mevzuat/ETKB_Yonergeler/ETKB-EYS-YNG-002_%C4%B0mza_Yetkileri_Y%C3%B6nergesi.pdf
 - Resmi Yazisma Yonetmeligi (2020): belge = delil + gozetim zinciri; sayi = DETSIS + Standart Dosya Plani kodu; e-imza esas. https://alomaliye.com/2020/06/10/resmi-yazismalarda-uygulanacak-usul-ve-esaslar/
 - Avustralya Cabinet Handbook: Exposure Draft >= 10 is gunu once; koordinasyon gorusleri **yarim sayfa**; submission icerigi: istenen karar, oncelige uyum, fayda/risk, mali etki, uygulama plani; kabineye gidecekler: stratejik oncelik, kamuoyu, mali, birden cok bakan, yeni mevzuat; acil "Late Notice" yalniz Basbakan. https://www.pmc.gov.au/sites/default/files/resource/download/cabinet-handbook-16th-edition.pdf
 - UK Cabinet Manual: kolektif karar baglar; komiteye gidecekler (birden fazla departman, cozulmemis ihtilaf); write-round >= 6 is gunu. https://assets.publishing.service.gov.uk/media/5a79d5d7e5274a18ba50f2b6/cabinet-manual.pdf
@@ -122,3 +122,10 @@ Bulgu dongusu: bulgu (kriter, durum, neden, etki, oneri) -> 30 gun/3 cevrimde ce
 - Saklama: Anayasa, kurallar, Baskan kararlari, denetim raporlari, eylem planlari -> **S (surekli)**; kaldirilanlar `superseded` etiketiyle; yonergeler S (surum gecmisiyle); gorev talimatlari K (plan donemi + denetim kapanana kadar); taslaklar B (gorev + 1 cevrim, sonra I); gecici loglar B 7 gun; sikayet K bulgu kapanana kadar.
 - Imha: yalniz Ayiklama-Imha Komisyonu analoğu (orkestrator arsiv sorumlusu + bakanlik + Denetim gozlemci) liste hazirlar, Baskan onaylar; acik bulgu, suren ihtilaf, aktif kullanimda belge imha edilemez.
 - Erisim: Denetim her seye okuma; bakanlik yalniz kendi + normlar; Baskan muzakere dosyalari ayri erisim kaydi.
+
+## Günlük
+| Sürüm | Tarih | Talimat | Değişiklik |
+| --- | --- | --- | --- |
+| 1.0 | 2026-10-06 | T-000 | Oluşturuldu (araştırma raporu) |
+| 1.1 | 2026-10-07 | T-014 | Ölü kaynak (404): AYM 2024/51 (eski: `https://normkararlarbilgibankasi.anayasa.gov.tr/Dosyalar/Kararlar/KararPDF/2024-51-nrm.pdf`) → Lexpera Resmî Gazete metni (başlık E:2021/131 K:2024/51 doğrulandı) |
+| 1.1 | 2026-10-07 | T-014 | Bozuk kaynak (404): ETKB imza yetkileri yönergesi, Türkçe karakterler ASCII'ye çevrilmişti (eski: `https://enerji.gov.tr//Media/Dizin/HIGM/tr/Mevzuat/ETKB_Yonergeler/ETKB-EYS-YNG-002_Imza_Yetkileri_Yonergesi.pdf`) → özgün adres; belge başlığı ETKB-EYS-YNG-002 Rev.02 doğrulandı |

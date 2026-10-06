@@ -188,3 +188,7 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 01:54 [oturum] T-003 — kapandı — G-001 bekliyor; kanıtsız tamam reddedildi
 2026-10-07 02:01 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — 0.2: Cynefin bölümüne K-004/G-001 cümlesi (T-004)
 2026-10-07 02:01 [oturum] T-004 — kapandı — /degistir denemesi; deneme talimatları 4/4 tamam
+2026-10-07 02:01 [degisti] T-014 — talimat açıldı: 3 ölü kaynak bağlantısı
+2026-10-07 02:07 [degisti] 00-sistem/arastirma/03-cok-ajanli-isleyis-ve-yonetisim.md — 1.1: ölü ADP 6-0 bağlantısı → FAS kopyası (UNCONFIRMED)
+2026-10-07 02:07 [degisti] 00-sistem/arastirma/07-devlet-yapilari.md — 1.1: AYM 2024/51 → Lexpera RG metni; ETKB yönergesi özgün Türkçe adres
+2026-10-07 02:07 [oturum] T-014 — kapandı — 3 ölü kaynak bağlantısı çözüldü (1 UNCONFIRMED)

@@ -157,3 +157,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/canli.py, 00-sistem/scripts/maliyet.py (yeni), .araclar/lychee, .araclar/ccusage (git dışı); değişen: kapanis-kaydi.py, settings.json, CLAUDE.md, haftalik SKILL.md, ARAC-KAYDI (0.6), arastirma/10 (1.3), DEGISIKLIKLER
 - Kapanış notu: canli.py ilk rapor: 414 bağlantı, 401 canlı, 3 kesin ölü (404: arastirma/03 ADP 6-0 PDF; arastirma/07 enerji.gov.tr imza yönergesi ve anayasa.gov.tr norm kararı PDF'leri), 6 belirsiz. maliyet.py: T-013 öncesi 9 satır ccusage'in %27-34 altında (kök neden: önbellek yazımı tek tip 1.25×); kapanis-kaydi TTL ayrımıyla düzeltildi, yeni satır %0.0 fark. Sandbox içinde maliyet.py çalışıyor; canli.py ağ istediği için sahibi çalıştırır. agent-scan kurulmadı (veri Snyk'e gider). Ara hata: geçici sunucuları kapatan pkill kendi kabuğunu da öldürdü; kayıt ikinci denemede yazıldı. Açık: 3 ölü bağlantının sayfaları (kaynak) /degistir ile güncellenmeli ya da UNCONFIRMED işaretlenmeli — sahibinin onayıyla.
+
+## T-014 — Ölü kaynak bağlantılarının düzeltilmesi
+- Tarih: 2026-10-07
+- Niyet: canli.py'nin T-013'te bulduğu 3 kesin ölü (404) bağlantıyı (arastirma/03: ADP 6-0 PDF; arastirma/07: ETKB imza yetkileri yönergesi, AYM norm kararı 2024/51) resmi güncel adresleriyle değiştirmek; bulunamazsa UNCONFIRMED işaretlemek.
+- Başarı ölçütü: her bağlantı için ya doğrulanmış yeni adres (canlı + belge kimliği eşleşiyor) ya da UNCONFIRMED notu; eski adres sayfa günlüğünde; canli.py'de bu üçü ölü listesinde yok; kontrol.py sıfır hata.
+- Sınırlar: Raporların içeriği (iddialar) değiştirilmez; yalnız kaynak adresi ve gerekirse doğrulanamayan iddiaya UNCONFIRMED etiketi.
+- Kat: 0
+- Kapı: cift-yonlu
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: 00-sistem/arastirma/03-cok-ajanli-isleyis-ve-yonetisim.md (1.1), 00-sistem/arastirma/07-devlet-yapilari.md (1.1); ikisine sayfa günlüğü eklendi
+- Kapanış notu: ETKB yönergesi düzeltildi (sorun Türkçe karakterlerin ASCII'ye çevrilmesiydi; belge kimliği doğrulandı). AYM 2024/51 resmi bağlantısı kaldırılmış; Lexpera Resmî Gazete metniyle değiştirildi (başlık doğrulandı). ADP 6-0 resmi PDF'i kaldırılmış, yeni baskının adresi bulunamadı; FAS kopyası bot koruması yüzünden doğrulanamadı → UNCONFIRMED. canli.py iki sayfada 0 ölü. Eski adresler sayfa günlüklerinde kod olarak duruyor (canlılık denetimine girmesin diye).

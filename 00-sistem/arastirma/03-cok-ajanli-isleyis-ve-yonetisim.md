@@ -3,11 +3,11 @@ id: 20261006-1902-arastirma-03
 ad: cok-ajanli-isleyis-ve-yonetisim
 tur: kaynak
 kat: 0
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: Cok ajanli mimari desenlerini, insan-dongude yonetisim araclarini (kapilar, karar haklari, karar kayitlari, brifing bicimleri), orgut tasarimi kurallarini ve fikir olgunlastirma yontemlerini isletim kurallarina donusturmek.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: []
@@ -45,7 +45,7 @@ saklama: K
 - Amazon: tek yonlu kapi (geri alinamaz, yavas) vs cift yonlu (hizli, %70 bilgiyle); disagree and commit; PR/FAQ; iki pizza takimi. https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders
 - Gorevler ayriligi, dort goz, IIA Uc Hat (3. hat bagimsiz denetim, yonetim kuruluna hesap verir). https://en.wikipedia.org/wiki/Three_lines_of_defence
 - Karar kayitlari: Nygard ADR, MADR 4.0 (`status, date, decision-makers, consulted, informed`; dogrulama bolumu), karar gunlugu (Farnam Street: durum, cerceve, alternatifler, beklenen sonuc + olasilik, zihinsel durum), pre-mortem (Klein, +%30 neden tespiti). https://adr.github.io/madr/ https://fs.blog/decision-journal/ https://hbr.org/2007/09/performing-a-project-premortem
-- Brifing: BLUF (ACTION/INFO/DECISION), SBAR, komutan niyeti (amac + kilit gorevler + son durum; "ne ve neden, nasil degil"), AAR (ne planlandi/ne oldu/neden/ne surdurulur). https://en.wikipedia.org/wiki/BLUF_(communication) https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN34403-ADP_6-0-000-WEB-3.pdf
+- Brifing: BLUF (ACTION/INFO/DECISION), SBAR, komutan niyeti (amac + kilit gorevler + son durum; "ne ve neden, nasil degil"), AAR (ne planlandi/ne oldu/neden/ne surdurulur). https://en.wikipedia.org/wiki/BLUF_(communication) https://irp.fas.org/doddir/army/adp6_0.pdf (UNCONFIRMED: resmi armypubs PDF'i 2026-10-07'de 404; ADP 6-0'ın Change 1-2 içeren yeni baskısı var, güncel resmi adresi doğrulanamadı; bu FAS kopyası bot koruması nedeniyle otomatik doğrulanamadı)
 
 ## C. Orgut tasarimi (kadro yoneticisi icin)
 - Team Topologies: akis-hizali, etkinlestirici, karmasik-alt-sistem, platform; etkilesim: isbirligi (pahali, sureli), hizmet, kolaylastirma; her parcanin tek sahibi; bilissel yuk asinca bol; takim 5-9. https://teamtopologies.com/learn
@@ -65,3 +65,9 @@ saklama: K
 6. **Fikir olgunluk basamaklari**: M0 ucucu (48 saatte islenir/atilir), M1 netlestirilmis (eyleme donusur mu; sonraki adim tek cumle), M2 kalici not (soguk okur anlar), M3 problem cercevelenmis, M4 secenek + pre-mortem (>=2 secenek, geri alinabilirlik, maliyet; tek yonluler karar gunlugune), M5 brif (12 alan dolu, INVEST gecer). Yalniz M5 sirket katina girer. Oldurme/bekletme her basamakta normal cikis; haftalik gozden gecirme M1-M4'u yeniden eler.
 7. **Ajan sayisi ve maliyet**: varsayilan tek ajan; ikinciyi yalniz yalitim, temiz baglamli inceleme veya gercek paralellik icin ekle. Caba katmanlari (1 / 2-4 / 10+). Takim 3-5, isci basina 5-6 gorev. Butce: cok ajan ~15x sohbet; isciler Sonnet/Haiku, mimar/inceleme Opus; her brife maxTurns ve butce; bos isciyi kapat. Orkestrator 3-6 es zamanli isciyi dogrudan yonetir; derinlik <=2.
 8. **Hata modlari listesi** (pre-mortem ve AAR'da): spesifikasyon (hedef/bicim/sinir eksik, rol karisikligi, olcut yok, bitis kosulu yok, dongu); koordinasyon (cakisan brif, paralel celisen kararlar, ayni dosya, devirde kayip baglam, soru sormama, raydan cikma, bilgi saklama, aktarilan "onay"); dogrulama (erken bitti, test silme, ucten uca kontrol yok, inceleyici = yazar, hakem onyargisi, kapi hook yerine duz yazi); ekonomi (basit ise cok ajan, sirali/paralel yanlisligi, butcesiz kosu, bos isci, her seyi tek oturuma yigma, 2'den fazla duzeltme); yonetisim (cift yonluye agir kapi, tek yonluye kapi yok, kayitsiz karar, bagimsiz denetim yok, sisirilmis CLAUDE.md).
+
+## Günlük
+| Sürüm | Tarih | Talimat | Değişiklik |
+| --- | --- | --- | --- |
+| 1.0 | 2026-10-06 | T-000 | Oluşturuldu (araştırma raporu) |
+| 1.1 | 2026-10-07 | T-014 | Ölü kaynak (404): ADP 6-0 resmi PDF (eski: `https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN34403-ADP_6-0-000-WEB-3.pdf`) → FAS kopyası, UNCONFIRMED işaretli |
