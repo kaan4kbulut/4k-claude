@@ -175,3 +175,14 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 01:26 [degisti] 00-sistem/DEGISIKLIKLER.md — T-013 lychee/ccusage
 2026-10-07 01:26 [ayar] .araclar — lychee 0.24.2 (sha256 doğrulandı) ve ccusage 20.0.26 kuruldu; git dışı
 2026-10-07 01:26 [oturum] T-013 — kapandı — canli.py + maliyet.py; maliyet tahmini kök nedenden düzeltildi
+2026-10-07 01:53 [karar] 30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md — önerildi: yazıcı işinde önce pazar araştırması (sahibi onayı bekliyor)
+2026-10-07 01:53 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — T-002 K-004 bağı
+2026-10-07 01:53 [degisti] 00-sistem/KARARLAR.md — T-002 K-004 bağı
+2026-10-07 01:53 [degisti] 30-devlet/MOC-devlet.md — T-002 K-004 bağı
+2026-10-07 01:53 [degisti] 00-sistem/HARITA.md — T-002 K-004 bağı
+2026-10-07 01:53 [oturum] T-002 — kapandı — K-004 önerildi
+2026-10-07 01:54 [yeni] 20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md — pazar araştırması görev kartı; kanban bekliyor (HP-001, HP-002)
+2026-10-07 01:54 [degisti] 30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md — T-003 G-001 bağı
+2026-10-07 01:54 [degisti] 20-sirket/MOC-sirket.md — T-003 G-001 bağı
+2026-10-07 01:54 [degisti] 00-sistem/HARITA.md — T-003 G-001 bağı
+2026-10-07 01:54 [oturum] T-003 — kapandı — G-001 bekliyor; kanıtsız tamam reddedildi

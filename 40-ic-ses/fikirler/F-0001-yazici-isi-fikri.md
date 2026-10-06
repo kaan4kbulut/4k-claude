@@ -7,11 +7,11 @@ surum: 0.1
 durum: taslak
 amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: kaan
 talimat: T-001
 dayandigi: []
-besledigi: []
+besledigi: [30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md]
 ust: 40-ic-ses/MOC-ic-ses.md
 merdiven: 1
 cynefin: kompleks
@@ -68,9 +68,10 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 ### Dayandığı
 - yok (tetikleyen gözlem kaydı yok)
 ### Beslediği
-- yok (T-002 ile K-003 gelmesi bekleniyor)
+- [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — önce pazar araştırması kararı (önerildi)
 ### Gelen
 - ← [[40-ic-ses/MOC-ic-ses]] — merdiven tablosu, M1
+- ← [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — bu fikre dayanan karar
 
 ## Günlük
 | Sürüm | Tarih | Talimat | Değişiklik |

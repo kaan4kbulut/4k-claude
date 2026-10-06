@@ -7,7 +7,7 @@ surum: 0.1
 durum: aktif
 amac: Bu icerik haritasi, orgutleme katindaki rolleri, acik gorev kartlarini (Kanban), SOP'lari, alan paketlerini, scorecard'i ve ritmi tek bakista gosterir.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: []
@@ -22,9 +22,10 @@ Bu içerik haritası, örgütleme katındaki rolleri, açık görev kartlarını
 
 ## İçerik
 ### Durum özeti
-Roller: 0 (K-001: pilotta yok) · Görev kartları: 0 (T-003 ile G-001 gelecek) · SOP: 0 · Alan paketi: 1 · WIP tavanı: 3
+Roller: 0 (K-001: pilotta yok) · Görev kartları: 1 (bekliyor: 1) · SOP: 0 · Alan paketi: 1 · WIP tavanı: 3
 
 ### Kanban
+- [[20-sirket/gorevler/G-001-yazici-pazar-arastirmasi]] — yazıcı işi pazar araştırması · bekliyor (HP-001 K-004 onayı, HP-002 yazıcı türü)
 | bekliyor | basladi | fiziksel-adim-bekliyor | kontrol | tamam |
 | --- | --- | --- | --- | --- |
 | — | — | — | — | — |

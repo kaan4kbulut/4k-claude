@@ -33,9 +33,9 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Sınırlar: Karar sahibi onaylamadan `kabul` olmaz.
 - Kat: 3
 - Kapı: cift-yonlu
-- Durum: acik
-- Doğurduğu dosyalar:
-- Kapanış notu:
+- Durum: kapali
+- Doğurduğu dosyalar: 30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md; değişen: F-0001 (besledigi, sürüm değişmez — bağ eklemek içerik değişikliği değil), KARARLAR, MOC-devlet
+- Kapanış notu: K-004 önerildi; MADR-mini alanları dolu, F-0001 ile iki yönlü bağ. Sahibi onaylamadan kabul olmaz. Sapma: talimat kurulumda K-003 numarasını öngörüyordu; K-003 ad değişikliğine verildi, bu karar K-004.
 
 ## T-003 — Pazar araştırması görev kartını kat 2'ye aç
 - Tarih: 2026-10-06
@@ -44,9 +44,9 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Sınırlar: Araştırma yapılmaz; yalnız kart.
 - Kat: 2
 - Kapı: cift-yonlu
-- Durum: acik
-- Doğurduğu dosyalar:
-- Kapanış notu:
+- Durum: kapali
+- Doğurduğu dosyalar: 20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md; değişen: K-004 (besledigi, sürüm değişmez), MOC-sirket, HARITA
+- Kapanış notu: G-001 12 alanla açıldı, kanban bekliyor; insan noktaları HP-001 (K-004 onayı) ve HP-002 (yazıcı türü). Kanıtsız tamam denemesi kontrol.py tarafından reddedildi (karalama kopyasında kanban: tamam → "kanıtsız tamam: kanban tamam ama kanit boş", çıkış 1). Sapma: talimat K-003 öngörüyordu, karar K-004.
 
 ## T-004 — F-0001'e bir cümle ekle (değiştirme kuralı denemesi)
 - Tarih: 2026-10-06

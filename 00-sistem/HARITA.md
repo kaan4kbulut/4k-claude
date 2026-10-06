@@ -4,7 +4,7 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 
 ## 00-sistem
 - [[00-sistem/SEMA]] — Her sayfanin frontmatter alanlarini, turlerini, durum degerlerini, bag turlerini, adlandirma ve saklama kurallarini tek yerde tam olarak tanimlar; kontrol.py bu dosyaya gore denetler. · referans · kat 0 · 2026-10-07
-- [[00-sistem/SISTEM]] — 4k-claude'un kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir. · referans · kat 0 · 2026-10-06
+- [[00-sistem/SISTEM]] — 4k-claude'un kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir. · referans · kat 0 · 2026-10-07
 - [[00-sistem/arastirma/01-claude-code-mekanikleri]] — Claude Code'un CLAUDE.md, hafiza, alt ajan, hook, skill, izin ve oturum mekaniklerini resmi belgelerden dogrulanmis haliyle tek yerde toplamak; sistemin hicbir kurali var olmayan bir ozellige dayanmasin. · kaynak · kat 0 · 2026-10-06
 - [[00-sistem/arastirma/02-hafiza-ve-wiki-duzenleri]] — Yapay zeka ajan hafiza sistemlerinin ve kisisel bilgi/wiki yontemlerinin, duz Markdown ve frontmatter ile isletilen bir ajan wiki'sine donusturulebilecek kurallarini toplamak. · kaynak · kat 0 · 2026-10-06
 - [[00-sistem/arastirma/03-cok-ajanli-isleyis-ve-yonetisim]] — Cok ajanli mimari desenlerini, insan-dongude yonetisim araclarini (kapilar, karar haklari, karar kayitlari, brifing bicimleri), orgut tasarimi kurallarini ve fikir olgunlastirma yontemlerini isletim kurallarina donusturmek. · kaynak · kat 0 · 2026-10-06
@@ -19,7 +19,7 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 ## 40-ic-ses
 - [[40-ic-ses/MOC-ic-ses]] — Bu icerik haritasi, zihin katindaki fikirlerin merdiven durumunu, gozlemleri, yansimalari, kavramlari, park listesini ve haftalik metrikleri tek bakista gosterir. · moc · kat 4 · 2026-10-07
 - [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] — Bu arastirma notu, arastirma 10'un "qmd yerel aramanin Turkce isabeti olculmeli" sorusuna dogruluyor cevabini 20 sorguluk olcumle verir. · arastirma-notu · kat 4 · 2026-10-07
-- [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var. · fikir · kat 4 · 2026-10-06
+- [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var. · fikir · kat 4 · 2026-10-07
 - [[40-ic-ses/nerede-kaldik]] — Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir. · referans · kat 4 · 2026-10-06
 
 ## 30-devlet
@@ -28,16 +28,18 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 - [[30-devlet/kararlar/K-001-pilotta-kadro-yok]] — Bu karar kaydi, pilot asamasinda rol (bakanlik) ajanlari acilmamasini, yalniz okuyucu ve denetci alt ajanlarinin bulunmasini ve nedenini kalici olarak tutar. · karar · kat 3 · 2026-10-06
 - [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Bu karar kaydi, Danisman rolunun ayri bir ajan olarak degil zihin katinin bir islevi (yonlendirme notu + steelman/pre-mortem degerlendirmesi) olarak tanimlanmasi onerisini ve alternatifleri tutar. · karar · kat 3 · 2026-10-06
 - [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — Bu karar kaydi, sistemin adinin sahibinin istegiyle Yeni Sistem yerine 4k-claude olmasini ve Anayasa'daki ad degisikliginin Madde 14 usulune dayanagini kalici olarak tutar. · karar · kat 3 · 2026-10-06
+- [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — Bu karar kaydi, yazici isi fikri (F-0001) icin yazici satin almadan once pazar arastirmasi yapilmasi secenegini neden onerdigimizi, alternatifleri ve dogrulama yolunu kalici olarak tutmak icin var. · karar · kat 3 · 2026-10-07
 - [[30-devlet/normlar/ANAYASA]] — 4k-claude'un degistirilemez cekirdegini kurar; katlari, ilkeleri, yetkinin kaynagini, denetimin bagimsizligini ve insan noktasi ilkesini tanimlar; tum alt normlar buna uyar. · anayasa · kat 3 · 2026-10-06
 - [[30-devlet/normlar/HAKEM-KURALLARI]] — Bir modelin baska bir modelin ciktisini yargiladigi her yerde (denetci, kapi yargisi, eval) onyargilari azaltan kurallari koyar. · referans · kat 3 · 2026-10-06
 - [[30-devlet/normlar/IMZA-MATRISI]] — Hangi kararin kimin imzasini istedigini, yetki devrinin kurallarini ve kayitlarini tek tabloda tutar; orkestrator her kararda buraya bakar. · referans · kat 3 · 2026-10-06
 - [[30-devlet/normlar/MODEL-POLITIKASI]] — Hangi isin hangi modele ve cabaya gidecegini, tur ve butce tavanlarini, onbellek ve maliyet disiplinini belirler; alt ajan tanimlari ve calistir.sh buna uyar. · referans · kat 3 · 2026-10-06
 
 ## 20-sirket
-- [[20-sirket/MOC-sirket]] — Bu icerik haritasi, orgutleme katindaki rolleri, acik gorev kartlarini (Kanban), SOP'lari, alan paketlerini, scorecard'i ve ritmi tek bakista gosterir. · moc · kat 2 · 2026-10-06
+- [[20-sirket/MOC-sirket]] — Bu icerik haritasi, orgutleme katindaki rolleri, acik gorev kartlarini (Kanban), SOP'lari, alan paketlerini, scorecard'i ve ritmi tek bakista gosterir. · moc · kat 2 · 2026-10-07
 - [[20-sirket/RITIM]] — Gunluk, haftalik, aylik, ceyreklik ve yillik operasyon ritmini; her toplantinin gundemini ve ajanin onceden hazirladiklarini belirler. · referans · kat 2 · 2026-10-06
 - [[20-sirket/SCORECARD]] — Haftalik 5-15 KPI'yi sahipli ve hedefli tutar; off-track olan gosterge Issues listesine duser ve haftalik L10'da ele alinir. · referans · kat 2 · 2026-10-06
 - [[20-sirket/alan-paketleri/3d-uretim]] — Bu alan paketi, 3D baski mikro-uretim alaninda sistemin dijital tarafi ucten uca yurutebilmesi icin gereken tum bilgiyi tek yerde toplar; sistemin bilinmeyen bir alani ogrenme yetenegini sinayan ornektir, gercek plan degildir. · alan-paketi · kat 2 · 2026-10-06
+- [[20-sirket/gorevler/G-001-yazici-pazar-arastirmasi]] — Bu gorev, yazici isi fikri icin yazici turu ve ilk musteri kitlesi seceneklerini kanitla karsilastiran bir pazar arastirmasi uretmek uzere var (komutan niyeti, alim kararini kaniyla vermek). · gorev · kat 2 · 2026-10-07
 
 ## 10-insan
 - [[10-insan/MOC-insan]] — Bu icerik haritasi, eller katindaki ciktilari, degismez kaynaklari ve arac kaydini tek bakista gosterir. · moc · kat 1 · 2026-10-06
