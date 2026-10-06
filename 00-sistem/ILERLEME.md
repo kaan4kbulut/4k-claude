@@ -2,10 +2,10 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar.
 
-aktif_talimat: T-013 (kapandı) — sıradaki T-014 İç Ses ses hattı (öncelik 7)
+aktif_talimat: yok — T-015 kapandı (deneme talimatları T-001..T-004 tamam; ölü bağlantılar çözüldü)
 kapi: yok
-acik_soru: agent-scan (veri Snyk'e gider) · telemetri kuyruğu silinsin mi · 3 ölü kaynak bağlantısı nasıl işaretlensin · F-0001 yazıcı türü · hafif yol
-siradaki: T-014 öncelik 7 (ses: /voice Türkçe + yerel TTS denemesi); sahibi: güven onayı, Web Clipper; T-002..T-004 açık
+acik_soru: agent-scan (veri Snyk'e gider) · telemetri kuyruğu silinsin mi · K-002 ve K-004 onayı · F-0001 yazıcı türü (G-001 HP-002) · hafif yol
+siradaki: sahibin katılımıyla ses hattı 2. kısım (/voice denemesi, yerel TTS örnekleri); sahibi: güven onayı, Web Clipper, K-004 kararı
 
 ## T-005 (2026-10-06)
 - [x] calistir.sh --bare · durus-kapisi dosya izi · yikici-koruma 35 test · MALIYET transcript · şema belirlenmedi · gunluk.py · git

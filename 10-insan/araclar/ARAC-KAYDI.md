@@ -3,7 +3,7 @@ id: 20261006-2251-arac-kaydi
 ad: arac-kaydi
 tur: referans
 kat: 1
-surum: 0.6
+surum: 0.7
 durum: aktif
 amac: Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz.
 olusturma: 2026-10-06
@@ -67,6 +67,7 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | lychee 0.24.2 (`.araclar/lychee`, sha256 doğrulandı) | Yerel CLI (Rust) | `00-sistem/scripts/canli.py`: wiki'deki http(s) bağlantıların canlılığı; yalnız 404/410 ölü, 403/429/5xx/ağ belirsiz; 01-gelen denetlenmez. Ağ ister (sandbox'ta alan adı onayı; /haftalik'te sahibi `!` ile) | 2026-10-07 | T-013 |
 | ccusage 20.0.26 (`.araclar/ccusage`) | Yerel CLI (node) | `00-sistem/scripts/maliyet.py`: MALIYET.csv ↔ Claude Code oturum kayıtları; `--offline` (ağ yok). Sınır: çevrimdışı fiyat tablosunda olmayan model (claude-sonnet-5-5) 0 USD sayılır, "fiyatsız" işaretlenir | 2026-10-07 | T-013 |
 | Snyk agent-scan | — | KURULMADI: skill içeriği, MCP ayarı ve araç açıklamalarını Snyk API'sine gönderir, hesap ve SNYK_TOKEN ister, çevrimdışı kipi yok (resmi README, 2026-10-07). Araştırma 10'daki "yerel" bilgisi yanlıştı. Karar sahibinin (A6/A10) | 2026-10-07 | T-013 |
+| Claude Code /voice (dikte) | Yerleşik | Proje ayarı `language: turkish` (T-015). **Veri dışarı:** ses transkripsiyon için Anthropic sunucularına gider, yerelde işlenmez; claude.ai girişi ister; token tüketmez; 15 sn sessizlik ya da 2 dk sınırı. Etkinleştirme (/voice) sahibinde | 2026-10-07 | T-015 |
 | (MCP yok) | — | ilk gerçek işte A10 ile | — | — |
 
 ### C. İnsan noktası türleri (kartlarda HP-xxx)
@@ -97,3 +98,4 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | 0.4 | 2026-10-07 | T-010 | B tablosuna qmd (ara.py) |
 | 0.5 | 2026-10-07 | T-012 | B tablosuna markitdown (telemetri kapalı), docling kararı, Web Clipper ve Syncthing insan noktaları |
 | 0.6 | 2026-10-07 | T-013 | B tablosuna lychee, ccusage; agent-scan kurulmadı (veri dışarı gider) |
+| 0.7 | 2026-10-07 | T-015 | B tablosuna /voice (Türkçe; ses Anthropic'e gider) |

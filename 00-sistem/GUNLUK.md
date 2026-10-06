@@ -192,3 +192,6 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 02:07 [degisti] 00-sistem/arastirma/03-cok-ajanli-isleyis-ve-yonetisim.md — 1.1: ölü ADP 6-0 bağlantısı → FAS kopyası (UNCONFIRMED)
 2026-10-07 02:07 [degisti] 00-sistem/arastirma/07-devlet-yapilari.md — 1.1: AYM 2024/51 → Lexpera RG metni; ETKB yönergesi özgün Türkçe adres
 2026-10-07 02:07 [oturum] T-014 — kapandı — 3 ölü kaynak bağlantısı çözüldü (1 UNCONFIRMED)
+2026-10-07 02:08 [degisti] .claude/settings.json — language: turkish (dikte ve yanıt dili; T-015)
+2026-10-07 02:08 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 0.7: /voice satırı (T-015)
+2026-10-07 02:08 [oturum] T-015 — kapandı — dikte dili Türkçe; etkinleştirme sahibinde

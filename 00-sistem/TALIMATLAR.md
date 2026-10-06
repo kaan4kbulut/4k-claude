@@ -168,3 +168,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: 00-sistem/arastirma/03-cok-ajanli-isleyis-ve-yonetisim.md (1.1), 00-sistem/arastirma/07-devlet-yapilari.md (1.1); ikisine sayfa günlüğü eklendi
 - Kapanış notu: ETKB yönergesi düzeltildi (sorun Türkçe karakterlerin ASCII'ye çevrilmesiydi; belge kimliği doğrulandı). AYM 2024/51 resmi bağlantısı kaldırılmış; Lexpera Resmî Gazete metniyle değiştirildi (başlık doğrulandı). ADP 6-0 resmi PDF'i kaldırılmış, yeni baskının adresi bulunamadı; FAS kopyası bot koruması yüzünden doğrulanamadı → UNCONFIRMED. canli.py iki sayfada 0 ölü. Eski adresler sayfa günlüklerinde kod olarak duruyor (canlılık denetimine girmesin diye).
+
+## T-015 — İç Ses ses hattı, 1. kısım: /voice Türkçe (öncelik 7)
+- Tarih: 2026-10-07
+- Niyet: 10-yenilikci-teknolojiler öncelik 7'nin sahibin katılımını gerektirmeyen kısmı: Claude Code dikte dilini Türkçe yapmak (`language` ayarı; aynı ayar yanıt dilini de belirler). Etkinleştirme (/voice, mikrofon denetimi) ve yerel TTS denemesi sahibinin katılımıyla ayrı talimatta.
+- Başarı ölçütü: proje ayarında `language: turkish`; ayar-denetimi değişmezleri bozulmuyor; ARAC-KAYDI'nda "ses Anthropic'e gider" notu; kontrol.py sıfır hata.
+- Sınırlar: /voice burada açılmaz; kullanıcı ayarına ve tuş atamalarına dokunulmaz; TTS kurulmaz.
+- Kat: 0
+- Kapı: cift-yonlu
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: .claude/settings.json (language), 10-insan/araclar/ARAC-KAYDI.md (0.7)
+- Kapanış notu: Dikte dili Türkçe (belge: Türkçe `tr` destekli; language yanıt dilini de belirler). Ayar denetimi değişmezleri tamam. Sıradaki (sahibin katılımıyla): /voice ile mikrofon denetimi ve deneme dikte; yerel TTS (FreyaTTS hafif / Chatterbox GPU) ses örnekleri.
