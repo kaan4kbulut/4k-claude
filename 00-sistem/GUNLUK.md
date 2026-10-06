@@ -78,3 +78,4 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-06 23:48 [degisti] .claude/hooks/sikistirma-oncesi.py — T-006 ad değişikliği: Yeni Sistem → 4k-claude
 2026-10-06 23:48 [degisti] .claude/skills/degistir/SKILL.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
 2026-10-06 23:48 [degisti] .claude/skills/yeni-parca/SKILL.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
+2026-10-06 23:49 [oturum] T-006 — kapandı — ad 4k-claude, klasör ~/Downloads/4k-claude
