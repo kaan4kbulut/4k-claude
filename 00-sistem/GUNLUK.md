@@ -186,3 +186,5 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 01:54 [degisti] 20-sirket/MOC-sirket.md — T-003 G-001 bağı
 2026-10-07 01:54 [degisti] 00-sistem/HARITA.md — T-003 G-001 bağı
 2026-10-07 01:54 [oturum] T-003 — kapandı — G-001 bekliyor; kanıtsız tamam reddedildi
+2026-10-07 02:01 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — 0.2: Cynefin bölümüne K-004/G-001 cümlesi (T-004)
+2026-10-07 02:01 [oturum] T-004 — kapandı — /degistir denemesi; deneme talimatları 4/4 tamam

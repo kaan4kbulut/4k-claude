@@ -3,7 +3,7 @@ id: 20261006-2144-yazici-isi-fikri
 ad: yazici-isi-fikri
 tur: fikir
 kat: 4
-surum: 0.1
+surum: 0.2
 durum: taslak
 amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
 olusturma: 2026-10-06
@@ -39,6 +39,7 @@ belirlenmedi — tetikleyen gözlem kaydı yok.
 
 ### Cynefin ataması
 `kompleks` — Claude'un ilk ataması, sahibinin onayını bekliyor. Gerekçe: yeni bir işte talebin ve müşteri tepkisinin önceden analizle bilinemeyeceği, ancak küçük denemelerle (dene-gör) öğrenilebileceği varsayıldı. Sahibi farklı görürse `/degistir` ile düzeltilir.
+Bu atamaya uygun olarak [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] alım öncesi zaman kutulu bir pazar araştırması öneriyor; buna dayanan görev kartı [[20-sirket/gorevler/G-001-yazici-pazar-arastirmasi]] sahibinin onayını ve yazıcı türü cevabını bekliyor.
 
 ### Kanıt
 - henüz yok (merdiven 1; kanıt araması M2'de)
@@ -77,3 +78,4 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-001 | Oluşturuldu (merdiven 1) |
+| 0.2 | 2026-10-07 | T-004 | Cynefin ataması bölümüne K-004/G-001'e işaret eden bir cümle eklendi (eski: cümle yoktu) |

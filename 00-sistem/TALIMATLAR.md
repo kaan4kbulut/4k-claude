@@ -55,9 +55,9 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Sınırlar: Başka alan değişmez.
 - Kat: 4
 - Kapı: cift-yonlu
-- Durum: acik
-- Doğurduğu dosyalar:
-- Kapanış notu:
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md (0.1 → 0.2), HARITA
+- Kapanış notu: /degistir ile tek cümle eklendi; sürüm 0.2, sayfa günlüğünde ikinci satır, GUNLUK [degisti]; başka alan değişmedi (git diff ile doğrulandı). Not: T-002/T-003 bağ eklemeleri sürümü artırmadı (yeni-parca ADIM 5.2), bu yüzden ölçütteki 0.2 tuttu.
 
 ## T-005 — Analizde bulunan eksiklerin kök neden düzeltmesi
 - Tarih: 2026-10-06
