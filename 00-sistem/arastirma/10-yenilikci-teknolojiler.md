@@ -3,7 +3,7 @@ id: 20261006-2355-arastirma-10
 ad: yenilikci-teknolojiler
 tur: kaynak
 kat: 0
-surum: 1.2
+surum: 1.3
 durum: aktif
 amac: 4k-claude'a eklenebilecek yenilikçi YZ araç ve teknolojilerini (bilgi grafı, yerel arama, ses hattı, belge alma, gözlemlenebilirlik, değerlendirme, otomasyon, sandbox, eller, görselleştirme) Ekim 2026 durumuyla taramak; 09-github-taramasi'nda verilen kararları tekrar etmeden yalnız yeni olanı ve durumu değişeni etiketlemek.
 olusturma: 2026-10-06
@@ -46,6 +46,8 @@ saklama: K
 | 8 | İç Ses ses hattı v1: `/voice` Türkçe + Chatterbox Multilingual V3 | 40 / `40-ic-ses` ses hattı; settings `language` | BENİMSE (/voice) · BENİMSE-deneme (Chatterbox) | `/voice` artık resmi olarak Türkçe destekliyor ve token tüketmiyor. Chatterbox MIT lisanslı, Türkçe doğrulanmış, 500M parametre; 12 GB GPU'ya sığar. | M | `"language": "turkish"`. Chatterbox ile 10 cümlelik Türkçe gecikme ve kalite testi yapılır, sonucu `arastirma-notlari`'na yazılır. |
 | 9 | Snyk agent-scan (eski adı invariantlabs mcp-scan) | 30 / A10 araç ekleme kapısı → ARAC-KAYDI | BENİMSE | Yerel binary. MCP sunucularını ve skill'leri 14+ risk türü için tarar. Kayda girmeden önce kanıt üretir. | S | `/kapi` şablonuna "agent-scan çıktısı + çıkış kodu" kanıt alanı eklenir. |
 | 10 | Gelen kutusu besleme: Obsidian Web Clipper + Syncthing-Fork | 00 / `01-gelen` | BENİMSE | Clipper resmi ve MIT; Syncthing-Fork resmi Android uygulamasının etkin halefi. İkisi de yerel ve buluta veri göndermiyor. | S | Clipper şablonu `01-gelen/` + frontmatter (`tur: kirpik`, `kaynak`, `alindi`). Telefon notları klasörü Syncthing ile `01-gelen/mobil/`'e eşlenir. |
+
+> **Düzeltmeler (uygulama sırasında ölçüldü):** (a) öncelik 9 **agent-scan yerel değildir**: skill içeriği, MCP ayarı ve araç açıklamalarını Snyk API'sine gönderir, hesap ve SNYK_TOKEN ister, çevrimdışı kipi yoktur (resmi README, 2026-10-07; T-013) → BENİMSE değil, sahibinin kararı. (b) öncelik 5 **docling kurulmadı**: Türkçe metin PDF'inde markitdown kayıpsız (T-012); docling yalnız OCR gerekirse. (c) öncelik 3 qmd: hibrit kip bu wikide vektörden kötü (T-010, [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]]). (d) markitdown'ın kullandığı onnxruntime 1.30 Microsoft telemetrisi açık gelir; `ORT_DISABLE_TELEMETRY=1` gerekir (T-012).
 
 ## 1. Bilgi grafı ve hafıza
 
@@ -219,3 +221,4 @@ saklama: K
 | 1.0 | 2026-10-06 | T-007 | Araştırma alt ajanının raporu sisteme alındı; ad, yol ve gövde yapısı (Amaç/İçerik/Bağlar) düzeltildi |
 | 1.1 | 2026-10-06 | T-008 | besledigi += KP-001 (öncelik 1 uygulamaya alındı) |
 | 1.2 | 2026-10-07 | T-010 | besledigi += qmd-turkce-isabet (öncelik 3 ölçüldü) |
+| 1.3 | 2026-10-07 | T-013 | Düzeltmeler notu: agent-scan veri gönderir (yerel değil), docling kurulmadı, qmd hibrit, onnxruntime telemetrisi |

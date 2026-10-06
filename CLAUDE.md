@@ -56,6 +56,7 @@ KAYIT (TALIMATLAR.md'ye T-xxx) → AMAÇ + KAT → YER + AD → ŞABLON → BAĞ
 - `python3 00-sistem/scripts/gunluk.py <tur> <yol|T-xxx> "<not>"` GUNLUK satırı (zaman damgası otomatik)
 - `python3 00-sistem/scripts/ara.py "<soru>"` anlamsal arama (HARITA'dan sonra ikinci adım; sonuç ipucudur, sayfayı aç); yeni sayfadan sonra `--yenile`
 - `python3 00-sistem/scripts/al.py <dosya|URL>` dış belgeyi 01-gelen'e ham not olarak al (içeriği okuma; /inbox-triage okuyucuyla okur)
+- `python3 00-sistem/scripts/maliyet.py` MALIYET.csv ↔ ccusage mutabakatı · `python3 00-sistem/scripts/canli.py` web bağlantı canlılığı (ağ ister)
 - `python3 00-sistem/scripts/graf.py` bağ grafı: kopuk küme, yetim, merkez, sınır aşan bağ; HTML `00-sistem/.kosu/graf/` (LLM yok)
 - `/yeni-parca` · `/degistir` · `/kapat` · `/brifing` · `/kapi` · `/karar` · `/uyku` · `/alan-paketi` · `/haftalik` · `/inbox-triage`
 

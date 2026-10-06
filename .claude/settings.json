@@ -7,6 +7,8 @@
       "Bash(python3 00-sistem/scripts/gunluk.py*)",
       "Bash(python3 00-sistem/scripts/graf.py*)",
       "Bash(python3 00-sistem/scripts/al.py*)",
+      "Bash(python3 00-sistem/scripts/canli.py*)",
+      "Bash(python3 00-sistem/scripts/maliyet.py*)",
       "Bash(python3 00-sistem/scripts/ara-olcum.py*)",
       "Bash(python3 00-sistem/scripts/ara.py*)",
       "Bash(git status*)",

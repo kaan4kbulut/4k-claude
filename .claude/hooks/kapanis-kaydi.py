@@ -11,7 +11,8 @@ ConfigChange      → artık ayar-denetimi.py (T-011)
 
 Hiçbir zaman engellemez; yalnız yazar. Alan adları Claude Code sürümüne göre değişebildiği için savunmacı okur.
 Maliyet tahmini: fiyatlar 30-devlet/normlar/MODEL-POLITIKASI.md fiyat tablosundan okunur (tek kaynak); önbellek yazımı
-giriş fiyatının 1.25 katı varsayılır (5 dk TTL; 1 saat TTL'de 2 kat — tahmin düşük kalır). Abonelikte gerçek fatura
+usage.cache_creation'daki ayrıma göre fiyatlanır: 5 dk TTL giriş fiyatının 1.25 katı, 1 saat TTL 2 katı (T-013: eski
+tek tip 1.25 varsayımı ~%30 düşük tahmin veriyordu; ccusage mutabakatıyla ölçüldü). Abonelikte gerçek fatura
 farklıdır; buradaki değer sıra büyüklüğü içindir.
 """
 import csv
@@ -81,7 +82,8 @@ def transcript_ozeti(yol):
                 if k.get("type") == "assistant" and isinstance(u, dict) and m.get("model") != "<synthetic>":
                     mesajlar[m.get("id") or k.get("requestId") or f"{d}:{len(mesajlar)}"] = (
                         m.get("model") or "", u.get("input_tokens") or 0, u.get("output_tokens") or 0,
-                        u.get("cache_read_input_tokens") or 0, u.get("cache_creation_input_tokens") or 0)
+                        u.get("cache_read_input_tokens") or 0, u.get("cache_creation_input_tokens") or 0,
+                        ((u.get("cache_creation") or {}).get("ephemeral_1h_input_tokens") or 0))
     return tur, mesajlar
 
 
@@ -90,7 +92,7 @@ def maliyet_satiri(kok, girdi):
     fy = fiyatlar(kok)
     top = [0, 0, 0, 0]
     usd, bilinmeyen, modeller = 0.0, set(), {}
-    for model, gi, co, cr, cw in mesajlar.values():
+    for model, gi, co, cr, cw, cw1s in mesajlar.values():
         for j, v in enumerate((gi, co, cr, cw)):
             top[j] += v
         modeller[model] = modeller.get(model, 0) + co
@@ -98,7 +100,8 @@ def maliyet_satiri(kok, girdi):
         if p is None:
             bilinmeyen.add(model)
             continue
-        usd += (gi * p[0] + co * p[1] + cr * p[2] + cw * p[0] * 1.25) / 1_000_000
+        cw1s = min(cw1s, cw)  # 1 saatlik yazım; kalan 5 dakikalık
+        usd += (gi * p[0] + co * p[1] + cr * p[2] + (cw - cw1s) * p[0] * 1.25 + cw1s * p[0] * 2) / 1_000_000
     baskin = max(modeller, key=modeller.get) if modeller else ""
     usd_yazi = f"{usd:.4f}" + (f" (fiyatsız: {','.join(sorted(bilinmeyen))})" if bilinmeyen else "")
     return tur, top, baskin, usd_yazi

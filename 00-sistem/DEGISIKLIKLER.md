@@ -4,6 +4,14 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 
+## [0.8.0] — 2026-10-07 (T-013)
+### Eklendi
+- `canli.py` (lychee 0.24.2): web bağlantı canlılığı; ilk rapor 414 bağlantı, 401 canlı, 3 ölü (404), 6 belirsiz.
+- `maliyet.py` (ccusage 20.0.26): MALIYET.csv ↔ oturum kayıtları mutabakatı; eşik %5.
+- `/haftalik` metrikler: maliyet mutabakatı ve bağlantı canlılığı adımı.
+### Düzeltildi
+- `kapanis-kaydi.py`: önbellek yazımı TTL'ye göre fiyatlanır (5 dk 1.25×, 1 saat 2×). Eski tek tip 1.25× tahmin ~%30 düşüktü; yeni yöntem 9 oturumda ccusage ile ±%0.1.
+
 ## [0.7.0] — 2026-10-07 (T-012)
 ### Eklendi
 - `al.py`: PDF/DOCX/PPTX/XLSX/HTML/URL → 01-gelen ham not (markitdown, yerel, LLM yok). Meta veri JSON dizgisiyle yazılır (YAML kırılamaz); taranmış PDF uyarısı.

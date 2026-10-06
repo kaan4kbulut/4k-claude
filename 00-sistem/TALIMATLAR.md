@@ -146,3 +146,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/al.py, 00-sistem/sablonlar/web-clipper-gelen.json (yeni); değişen: kontrol.py, graf.py, settings.json (env + allow), ARAC-KAYDI (0.5), SISTEM (0.5), CLAUDE.md, DEGISIKLIKLER
 - Kapanış notu: markitdown Türkçe PDF'te kayıpsız (73 bin karakter, 0 bozuk, tablolar korunur); kötü niyetli başlık ve dosya adı frontmatter'ı bozmadı; sahte wikilink kontrolü kırmadı; sandbox içinde çalışıyor. docling kurulmadı (kanıtla). Beklenmeyen bulgu: onnxruntime 1.30 Microsoft telemetrisi (cihaz kimliği + 24 olaylık kuyruk ~/.cache/Microsoft/DeveloperTools/.onnxruntime/, sandbox'ta proje köküne ":memory:.ses"); ORT_DISABLE_TELEMETRY=1 ile durduruldu, resmi disable_telemetry_events() etkisiz. Kayıt betiği tırnak hatasıyla çalışmadan commit atıldı (215e41d); kayıtlar ayrı commit'le tamamlandı. Açık: kuyruğun silinmesi sahibinin kararı (proje dışı); Web Clipper şablonu gerçek eklentide sınanmadı.
+
+## T-013 — Bağlantı canlılığı (lychee) ve maliyet mutabakatı (ccusage) (öncelik 6)
+- Tarih: 2026-10-07
+- Niyet: 10-yenilikci-teknolojiler öncelik 6'nın yerel parçaları: kaynak sayfalarındaki URL'lerin canlılığını denetleyen `canli.py` (lychee) ve MALIYET.csv tahminini Claude Code oturum kayıtlarıyla karşılaştıran `maliyet.py` (ccusage). agent-scan bu talimatta YOK: içerik Snyk API'sine gider ve hesap ister (araştırma 10'daki "yerel" bilgisi yanlıştı); sahibinin kararı bekleniyor.
+- Başarı ölçütü: iki betik çalışır (çıkış kodu anlamlı); ilk canlılık raporu ve ilk mutabakat sonucu kanıt olarak; 01-gelen URL'leri denetlenmez (güvenilmeyen); kontrol.py sıfır hata.
+- Sınırlar: Ölü bağlantı otomatik düzeltilmez (rapor; düzeltme /degistir ile). MALIYET.csv satırları yeniden yazılmaz. Sürüm sabit, proje içine kurulum (.araclar).
+- Kat: 0
+- Kapı: cift-yonlu · yerel araçlar (B7); sahibinin sıra onayı 2026-10-07
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/scripts/canli.py, 00-sistem/scripts/maliyet.py (yeni), .araclar/lychee, .araclar/ccusage (git dışı); değişen: kapanis-kaydi.py, settings.json, CLAUDE.md, haftalik SKILL.md, ARAC-KAYDI (0.6), arastirma/10 (1.3), DEGISIKLIKLER
+- Kapanış notu: canli.py ilk rapor: 414 bağlantı, 401 canlı, 3 kesin ölü (404: arastirma/03 ADP 6-0 PDF; arastirma/07 enerji.gov.tr imza yönergesi ve anayasa.gov.tr norm kararı PDF'leri), 6 belirsiz. maliyet.py: T-013 öncesi 9 satır ccusage'in %27-34 altında (kök neden: önbellek yazımı tek tip 1.25×); kapanis-kaydi TTL ayrımıyla düzeltildi, yeni satır %0.0 fark. Sandbox içinde maliyet.py çalışıyor; canli.py ağ istediği için sahibi çalıştırır. agent-scan kurulmadı (veri Snyk'e gider). Ara hata: geçici sunucuları kapatan pkill kendi kabuğunu da öldürdü; kayıt ikinci denemede yazıldı. Açık: 3 ölü bağlantının sayfaları (kaynak) /degistir ile güncellenmeli ya da UNCONFIRMED işaretlenmeli — sahibinin onayıyla.

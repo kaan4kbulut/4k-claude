@@ -3,7 +3,7 @@ id: 20261006-2251-arac-kaydi
 ad: arac-kaydi
 tur: referans
 kat: 1
-surum: 0.5
+surum: 0.6
 durum: aktif
 amac: Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz.
 olusturma: 2026-10-06
@@ -64,6 +64,9 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | docling | — | KURULMADI: metin PDF'inde markitdown yeterli; taranmış (görüntü) PDF gelirse OCR için ayrı karar (araştırma 10 önerisinden kanıtla sapma) | 2026-10-07 | T-012 |
 | Obsidian Web Clipper (tarayıcı eklentisi) | İnsan noktası | Sahibi kurar: kasa = bu klasör; şablon `00-sistem/sablonlar/web-clipper-gelen.json` içe aktarılır; not 01-gelen'e düşer. İlk kırpıntıdan sonra `kontrol.py --kisa` (şablon gerçek eklentide sınanmadı: UNCONFIRMED) | 2026-10-07 | T-012 |
 | Syncthing-Fork (Android) | İnsan noktası | Sahibi kurar: telefondaki not klasörü → `01-gelen/mobil/` (tek yönlü gönderim önerilir) | 2026-10-07 | T-012 |
+| lychee 0.24.2 (`.araclar/lychee`, sha256 doğrulandı) | Yerel CLI (Rust) | `00-sistem/scripts/canli.py`: wiki'deki http(s) bağlantıların canlılığı; yalnız 404/410 ölü, 403/429/5xx/ağ belirsiz; 01-gelen denetlenmez. Ağ ister (sandbox'ta alan adı onayı; /haftalik'te sahibi `!` ile) | 2026-10-07 | T-013 |
+| ccusage 20.0.26 (`.araclar/ccusage`) | Yerel CLI (node) | `00-sistem/scripts/maliyet.py`: MALIYET.csv ↔ Claude Code oturum kayıtları; `--offline` (ağ yok). Sınır: çevrimdışı fiyat tablosunda olmayan model (claude-sonnet-5-5) 0 USD sayılır, "fiyatsız" işaretlenir | 2026-10-07 | T-013 |
+| Snyk agent-scan | — | KURULMADI: skill içeriği, MCP ayarı ve araç açıklamalarını Snyk API'sine gönderir, hesap ve SNYK_TOKEN ister, çevrimdışı kipi yok (resmi README, 2026-10-07). Araştırma 10'daki "yerel" bilgisi yanlıştı. Karar sahibinin (A6/A10) | 2026-10-07 | T-013 |
 | (MCP yok) | — | ilk gerçek işte A10 ile | — | — |
 
 ### C. İnsan noktası türleri (kartlarda HP-xxx)
@@ -93,3 +96,4 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | 0.3 | 2026-10-06 | T-009 | B tablosuna graphifyy (graf.py) ve Bash sandbox satırları |
 | 0.4 | 2026-10-07 | T-010 | B tablosuna qmd (ara.py) |
 | 0.5 | 2026-10-07 | T-012 | B tablosuna markitdown (telemetri kapalı), docling kararı, Web Clipper ve Syncthing insan noktaları |
+| 0.6 | 2026-10-07 | T-013 | B tablosuna lychee, ccusage; agent-scan kurulmadı (veri dışarı gider) |

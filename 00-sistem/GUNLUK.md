@@ -162,3 +162,16 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 00:58 [hata] .venv/onnxruntime — onnxruntime 1.30 Microsoft 1DS telemetrisi açık geldi: cihaz kimliği + olay kuyruğu ~/.cache/Microsoft/DeveloperTools/.onnxruntime/; ORT_DISABLE_TELEMETRY=1 ile kapatıldı (T-012)
 2026-10-07 00:58 [oturum] T-012 — kapandı — al.py + Web Clipper şablonu; onnxruntime telemetrisi kapatıldı
 2026-10-07 00:58 [degisti] T-012 — kayıtlar tamamlandı (önceki commit 215e41d kayıt betiği tırnak hatasıyla çalışmadan atılmıştı)
+2026-10-07 01:20 [degisti] T-013 — talimat açıldı: lychee + ccusage (öncelik 6; agent-scan dışarıda)
+2026-10-07 01:25 [oturum] 409d03a6-0f9 — kapandı (other); tur=1 in=18 out=379 cache_okuma=55635 usd≈0.0480
+2026-10-07 01:26 [yeni] 00-sistem/scripts/canli.py — lychee ile web bağlantı canlılığı; ilk rapor 414/401 canlı, 3 ölü, 6 belirsiz
+2026-10-07 01:26 [yeni] 00-sistem/scripts/maliyet.py — ccusage ile MALIYET.csv mutabakatı
+2026-10-07 01:26 [degisti] .claude/hooks/kapanis-kaydi.py — T-013 lychee/ccusage
+2026-10-07 01:26 [degisti] .claude/settings.json — T-013 lychee/ccusage
+2026-10-07 01:26 [degisti] CLAUDE.md — T-013 lychee/ccusage
+2026-10-07 01:26 [degisti] .claude/skills/haftalik/SKILL.md — T-013 lychee/ccusage
+2026-10-07 01:26 [degisti] 10-insan/araclar/ARAC-KAYDI.md — T-013 lychee/ccusage
+2026-10-07 01:26 [degisti] 00-sistem/arastirma/10-yenilikci-teknolojiler.md — T-013 lychee/ccusage
+2026-10-07 01:26 [degisti] 00-sistem/DEGISIKLIKLER.md — T-013 lychee/ccusage
+2026-10-07 01:26 [ayar] .araclar — lychee 0.24.2 (sha256 doğrulandı) ve ccusage 20.0.26 kuruldu; git dışı
+2026-10-07 01:26 [oturum] T-013 — kapandı — canli.py + maliyet.py; maliyet tahmini kök nedenden düzeltildi
