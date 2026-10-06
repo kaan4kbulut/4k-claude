@@ -2,10 +2,10 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar.
 
-aktif_talimat: T-006 (kapandı) — sıradaki T-007 (yenilikçi teknoloji araştırması kaynak sayfası)
+aktif_talimat: yok — T-007 kapandı
 kapi: yok
 acik_soru: F-0001 yazıcı türü (3D mi, kâğıt/baskı mı)? · cynefin 'kompleks' onayı · hafif yol (kat 4 için 6 adım yerine 2 adım) sahibine öneri olarak sunuldu, karar bekliyor
-siradaki: T-007 araştırma raporu 00-sistem/arastirma/10; ardından öncelikli öneriler için ayrı talimatlar (sahibinin seçimi); T-002..T-004 denemeleri açık
+siradaki: sahibi 10-yenilikci-teknolojiler öncelik listesinden seçer (önerilen sıra: sandbox → graf.py → qmd); T-002..T-004 denemeleri açık
 
 ## T-005 (2026-10-06)
 - [x] calistir.sh --bare · durus-kapisi dosya izi · yikici-koruma 35 test · MALIYET transcript · şema belirlenmedi · gunluk.py · git

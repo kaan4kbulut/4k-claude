@@ -79,3 +79,13 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-06 23:48 [degisti] .claude/skills/degistir/SKILL.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
 2026-10-06 23:48 [degisti] .claude/skills/yeni-parca/SKILL.md — T-006 ad değişikliği: Yeni Sistem → 4k-claude
 2026-10-06 23:49 [oturum] T-006 — kapandı — ad 4k-claude, klasör ~/Downloads/4k-claude
+2026-10-06 23:50 [degisti] T-007 — talimat açıldı: yenilikçi teknoloji araştırması kaynak sayfası
+2026-10-06 23:50 [yeni] 00-sistem/arastirma/10-yenilikci-teknolojiler.md — yenilikçi YZ araç taraması (10 öncelikli öneri; BENİMSE/ÖDÜNÇ AL/İZLE/UNCONFIRMED)
+2026-10-06 23:50 [degisti] 00-sistem/arastirma/02-hafiza-ve-wiki-duzenleri.md — besledigi += 10-yenilikci-teknolojiler (T-007; içerik değişmedi)
+2026-10-06 23:50 [degisti] 00-sistem/arastirma/04-guvenilirlik-ve-kalite-teknikleri.md — besledigi += 10-yenilikci-teknolojiler (T-007; içerik değişmedi)
+2026-10-06 23:50 [degisti] 00-sistem/arastirma/05-eller-ve-alan-paketi-3d.md — besledigi += 10-yenilikci-teknolojiler (T-007; içerik değişmedi)
+2026-10-06 23:50 [degisti] 00-sistem/arastirma/08-ic-ses-yontemleri.md — besledigi += 10-yenilikci-teknolojiler (T-007; içerik değişmedi)
+2026-10-06 23:50 [degisti] 00-sistem/arastirma/09-github-taramasi.md — besledigi += 10-yenilikci-teknolojiler (T-007; içerik değişmedi)
+2026-10-06 23:50 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 0.2: dayandigi += 10-yenilikci-teknolojiler (T-007)
+2026-10-06 23:50 [degisti] 00-sistem/HARITA.md — harita.py --uret (T-007)
+2026-10-06 23:51 [oturum] T-007 — kapandı — araştırma 10 kaydedildi; kontrol.py 0

@@ -80,3 +80,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/kararlar/K-003-ad-degisikligi-4k-claude.md (yeni); değişen: ANAYASA (1.1), SISTEM (0.2), KARARLAR, MOC-devlet, HARITA, README, CLAUDE.md, AGENTS.md, hook iletileri, şemalar, ajanlar, skill açıklamaları; klasör ~/Downloads/yeni-sistem → ~/Downloads/4k-claude
 - Kapanış notu: Ad değişti; canlı dosyalarda eski ad yok, tarihî kayıtlar korundu. Açık: eski Claude Code oturum geçmişi eski yola bağlı; ~/Downloads/yeni-sistem.zip ve "Yeni Sistem Şeması.md" klasör dışı, dokunulmadı.
+
+## T-007 — Yenilikçi YZ araç ve teknoloji araştırmasını kaynak sayfası olarak kaydet
+- Tarih: 2026-10-06
+- Niyet: Sahibinin "Graphify gibi yapay zeka çözümlerini ve yenilikçi teknolojileri araştır, dahil edebileceklerimizi bul" isteği. Araştırma alt ajanının raporu 00-sistem/arastirma/10 olarak, 09-github-taramasi kararlarını tekrar etmeden, BENİMSE/ÖDÜNÇ AL/İZLE/UNCONFIRMED etiketleriyle sisteme girer.
+- Başarı ölçütü: sayfa var, SEMA'ya uygun; dayandığı raporlar ve ARAC-KAYDI ile iki yönlü bağ; HARITA ve GUNLUK satırı; kontrol.py sıfır hata.
+- Sınırlar: Hiçbir araç kurulmaz, ayar değiştirilmez; öneriler sahibinin seçimiyle ayrı talimatlara döner (sandbox açmak imza ister).
+- Kat: 0
+- Kapı: cift-yonlu
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/arastirma/10-yenilikci-teknolojiler.md (yeni); değişen: arastirma 02/04/05/08/09 (besledigi, 1.1), ARAC-KAYDI (0.2), HARITA
+- Kapanış notu: 10 öncelikli öneri kayıtlı; hiçbiri kurulmadı. Sahibinin seçimi bekleniyor (öncelik 1 sandbox imza ister). Ara hata: backlink betiği 5 raporu boşalttı, git HEAD'den geri yüklenip yeniden uygulandı.

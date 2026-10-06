@@ -3,7 +3,7 @@ id: 20261006-1903-arastirma-04
 ad: guvenilirlik-ve-kalite-teknikleri
 tur: kaynak
 kat: 0
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: Bir LLM/ajan sistemini daha iyi ve daha guvenilir yapan teknikleri (baglam muhendisligi, uzun sureli ajan guvenilirligi, degerlendirme, MCP, model yonlendirme ve maliyet, yapili cikti, korkuluklar, bilgi temellendirme, gozlemlenebilirlik, ses) ve her birinin Yeni Sistem'de tam olarak hangi dosyaya/hook'a/skill'e girdigini belirlemek.
 olusturma: 2026-10-06
@@ -11,7 +11,7 @@ guncelleme: 2026-10-06
 yazar: claude
 talimat: T-000
 dayandigi: [00-sistem/arastirma/01-claude-code-mekanikleri.md]
-besledigi: [30-devlet/normlar/MODEL-POLITIKASI.md, 30-devlet/normlar/HAKEM-KURALLARI.md, 10-insan/araclar/ARAC-KAYDI.md]
+besledigi: [30-devlet/normlar/MODEL-POLITIKASI.md, 30-devlet/normlar/HAKEM-KURALLARI.md, 10-insan/araclar/ARAC-KAYDI.md, 00-sistem/arastirma/10-yenilikci-teknolojiler.md]
 kaynaklar: ["https://research.trychroma.com/context-rot", "https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents", "https://code.claude.com/docs/en/hooks", "https://code.claude.com/docs/en/goal", "https://platform.claude.com/docs/en/about-claude/pricing", "https://www.anthropic.com/engineering/claude-code-sandboxing", "https://arxiv.org/abs/2506.08837"]
 alindi: 2026-10-06
 guven: orta

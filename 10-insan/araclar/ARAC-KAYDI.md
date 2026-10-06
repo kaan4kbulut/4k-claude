@@ -3,14 +3,14 @@ id: 20261006-2251-arac-kaydi
 ad: arac-kaydi
 tur: referans
 kat: 1
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz.
 olusturma: 2026-10-06
 guncelleme: 2026-10-06
 yazar: claude
 talimat: T-000
-dayandigi: [00-sistem/arastirma/05-eller-ve-alan-paketi-3d.md, 00-sistem/arastirma/04-guvenilirlik-ve-kalite-teknikleri.md, 00-sistem/arastirma/09-github-taramasi.md]
+dayandigi: [00-sistem/arastirma/05-eller-ve-alan-paketi-3d.md, 00-sistem/arastirma/04-guvenilirlik-ve-kalite-teknikleri.md, 00-sistem/arastirma/09-github-taramasi.md, 00-sistem/arastirma/10-yenilikci-teknolojiler.md]
 besledigi: []
 kaynaklar: ["https://claude.com/docs/connectors/overview", "https://github.com/stripe/agent-toolkit", "https://apidocs.parasut.com/", "https://code.claude.com/docs/en/routines"]
 alindi: 2026-10-06
@@ -73,6 +73,7 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 - [[00-sistem/arastirma/05-eller-ve-alan-paketi-3d]] — yetenek matrisi
 - [[00-sistem/arastirma/04-guvenilirlik-ve-kalite-teknikleri]] — MCP/CLI tercih sırası, güvenlik
 - [[00-sistem/arastirma/09-github-taramasi]] — benimsenecek araçlar
+- [[00-sistem/arastirma/10-yenilikci-teknolojiler]] — Ekim 2026 yenilikçi araç taraması; öncelikli 10 öneri buradan kayda aday
 ### Beslediği
 ### Gelen
 - ← [[10-insan/MOC-insan]] — araç kaydı
@@ -81,3 +82,4 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
+| 0.2 | 2026-10-06 | T-007 | dayandigi += 00-sistem/arastirma/10-yenilikci-teknolojiler.md |

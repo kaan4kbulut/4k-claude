@@ -3,7 +3,7 @@ id: 20261006-1908-arastirma-09
 ad: github-taramasi
 tur: kaynak
 kat: 0
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: Ekim 2026 itibariyla Markdown-wiki tabanli bir Claude Code isletim sistemiyle ilgili acik kaynak projeleri (ekosistem, hafiza, karar/yonetisim, orkestrasyon, SOP-dosya, ses, 3D) taramak; benimse/odunc al/oku kararlarini vermek.
 olusturma: 2026-10-06
@@ -11,7 +11,7 @@ guncelleme: 2026-10-06
 yazar: claude
 talimat: T-000
 dayandigi: []
-besledigi: [10-insan/araclar/ARAC-KAYDI.md]
+besledigi: [10-insan/araclar/ARAC-KAYDI.md, 00-sistem/arastirma/10-yenilikci-teknolojiler.md]
 kaynaklar: ["https://github.com/anthropics/skills", "https://github.com/OthmanAdi/planning-with-files", "https://github.com/Astro-Han/karpathy-llm-wiki", "https://github.com/MrLesk/Backlog.md", "https://github.com/kenryu42/cc-safety-net", "https://github.com/zilliztech/memsearch", "https://github.com/dagucloud/dagu"]
 alindi: 2026-10-06
 guven: orta

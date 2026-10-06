@@ -3,7 +3,7 @@ id: 20261006-1904-arastirma-05
 ad: eller-ve-alan-paketi-3d
 tur: kaynak
 kat: 0
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: Bir ajanin dunyaya dijital olarak dokunma yollarini (eller yetenek matrisi) ve bir alanin sisteme nasil ogretilecegini gosteren Alan Paketi sablonunu, 3D baski mikro-fabrikasi test alani uzerinden belirlemek.
 olusturma: 2026-10-06
@@ -11,7 +11,7 @@ guncelleme: 2026-10-06
 yazar: claude
 talimat: T-000
 dayandigi: []
-besledigi: [10-insan/araclar/ARAC-KAYDI.md, 20-sirket/alan-paketleri/3d-uretim.md]
+besledigi: [10-insan/araclar/ARAC-KAYDI.md, 20-sirket/alan-paketleri/3d-uretim.md, 00-sistem/arastirma/10-yenilikci-teknolojiler.md]
 kaynaklar: ["https://platform.claude.com/docs/en/agents-and-tools/tool-use/code-execution-tool", "https://github.com/stripe/agent-toolkit", "https://apidocs.parasut.com/", "https://www.orcaslicer.com/wiki/cli/cli_mode", "https://moonraker.readthedocs.io/", "https://wiki.bambulab.com/en/software/third-party-integration", "https://makers101.com/commercial-license-to-sell-3d-prints/"]
 alindi: 2026-10-06
 guven: orta

@@ -3,7 +3,7 @@ id: 20261006-1907-arastirma-08
 ad: ic-ses-yontemleri
 tur: kaynak
 kat: 0
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: Sesli dusunme, fikir yakalama ve olgunlastirma, ses-boru-hatti, arastirma-eslikcisi pratikleri, yansima/konsolidasyon ve dalkavukluk-karsiti kurallari Ic Ses katinin konusma protokolune, not turlerine ve olgunluk merdivenine donusturmek.
 olusturma: 2026-10-06
@@ -11,7 +11,7 @@ guncelleme: 2026-10-06
 yazar: claude
 talimat: T-000
 dayandigi: []
-besledigi: [30-devlet/kararlar/K-002-danisman-zihin-islevi.md, 20-sirket/RITIM.md]
+besledigi: [30-devlet/kararlar/K-002-danisman-zihin-islevi.md, 20-sirket/RITIM.md, 00-sistem/arastirma/10-yenilikci-teknolojiler.md]
 kaynaklar: ["https://arxiv.org/abs/2505.13995", "https://www.anthropic.com/research/claude-personal-guidance", "https://gettingthingsdone.com/wp-content/uploads/2014/10/Weekly_Review_Checklist.pdf", "https://zettelkasten.de/posts/concepts-sohnke-ahrens-explained/", "https://huggingface.co/BuzzASR/turkish", "https://letta.com/blog/sleep-time-compute"]
 alindi: 2026-10-06
 guven: orta

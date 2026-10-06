@@ -3,7 +3,7 @@ id: 20261006-1901-arastirma-02
 ad: hafiza-ve-wiki-duzenleri
 tur: kaynak
 kat: 0
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: Yapay zeka ajan hafiza sistemlerinin ve kisisel bilgi/wiki yontemlerinin, duz Markdown ve frontmatter ile isletilen bir ajan wiki'sine donusturulebilecek kurallarini toplamak.
 olusturma: 2026-10-06
@@ -11,7 +11,7 @@ guncelleme: 2026-10-06
 yazar: claude
 talimat: T-000
 dayandigi: []
-besledigi: [00-sistem/SISTEM.md, 00-sistem/SEMA.md]
+besledigi: [00-sistem/SISTEM.md, 00-sistem/SEMA.md, 00-sistem/arastirma/10-yenilikci-teknolojiler.md]
 kaynaklar: ["https://docs.letta.com/concepts/memory-management", "https://arxiv.org/pdf/2504.19413", "https://arxiv.org/html/2501.13956v1", "https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f", "https://www.zettelkasten.de/posts/backlinks-are-bad-links/", "https://johnnydecimal.com/documentation/the-standard-zeros.md", "https://ozimmer.ch/practices/2022/11/22/MADRTemplatePrimer.html"]
 alindi: 2026-10-06
 guven: orta
