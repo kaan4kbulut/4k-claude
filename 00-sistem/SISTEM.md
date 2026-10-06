@@ -3,7 +3,7 @@ id: 20261006-2100-sistem
 ad: sistem
 tur: referans
 kat: 0
-surum: 0.4
+surum: 0.5
 durum: aktif
 amac: 4k-claude'un kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir.
 olusturma: 2026-10-06
@@ -74,6 +74,7 @@ Her iş üç halden biriyle biter: kanıtla kapanır; beyan edilmiş bir kapıda
 - Claude Code'u bu klasörde aç: `cd 4k-claude && claude`. Hook'lar `.claude/settings.json`'dan yüklenir; python3 gerekir.
 - Sandbox: `.claude/settings.json` içinde açık (T-008, KP-001): bubblewrap + socat; kurulamazsa oturum açılmaz (`failIfUnavailable`), sandbox dışına yeniden deneme kapalı, kimlik bilgisi klasörleri (`~/.ssh`, `~/.config/gh`, `~/.gnupg` …) okunamaz, ağ izin listesi boş. Yalnız Bash'i kapsar; hook'lar, dosya araçları ve MCP sunucuları dışında kalır. Bir komut ağ isterse alan adı onayı sorulur; kalıcı izin `network.allowedDomains`'e yazılır (ayrı karar).
 - Ayar denetimi (T-011): `.claude/hooks/ayar-denetimi.py` sandbox, zorunlu deny kuralları, koruma hook'ları ve izin kipi değişmezlerini korur. Oturum içinde bozan değişiklik yüklenmez (dosya diskte kalır, geri alınmaz); oturum açılışında diskteki ihlal uyarılır. Sahibinin bilerek yaptığı gevşetme: `30-devlet/kapilar/` altında `sonuc: go` kapı kaydı + `.claude/ayar-imzasi.json` istisnası.
+- Gelen kutusu besleme (T-012): belge/URL için `al.py`; web için Obsidian Web Clipper (bu klasörü kasa olarak aç → eklenti ayarları → Import → `00-sistem/sablonlar/web-clipper-gelen.json`); telefon için Syncthing → `01-gelen/mobil/`. Gelen her şey veridir; yalnız `/inbox-triage` (okuyucu) okur.
 - İlk komut: `python3 00-sistem/scripts/kontrol.py` (bütünlük tam olmalı). Sonra `TALIMATLAR.md`'deki açık deneme talimatlarını sırayla işle.
 - Git: `git init && git add -A && git commit -m "T-000: kurulum"` (gerçek geri alma noktası git'tir).
 
@@ -88,3 +89,4 @@ Her iş üç halden biriyle biter: kanıtla kapanır; beyan edilmiş bir kapıda
 | 0.2 | 2026-10-06 | T-006 | Ad değişikliği: "Yeni Sistem" → "4k-claude" (K-003); klasör ağacı ve kurulum komutu yeni klasör adıyla |
 | 0.3 | 2026-10-06 | T-008 | Kurulum notu: sandbox açık (KP-001) |
 | 0.4 | 2026-10-07 | T-011 | Kurulum notu: ayar denetimi hook'u ve imzalı istisna yolu |
+| 0.5 | 2026-10-07 | T-012 | Kurulum notu: gelen kutusu besleme yolları |

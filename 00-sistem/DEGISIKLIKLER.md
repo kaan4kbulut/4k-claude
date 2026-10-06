@@ -4,6 +4,14 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 
+## [0.7.0] — 2026-10-07 (T-012)
+### Eklendi
+- `al.py`: PDF/DOCX/PPTX/XLSX/HTML/URL → 01-gelen ham not (markitdown, yerel, LLM yok). Meta veri JSON dizgisiyle yazılır (YAML kırılamaz); taranmış PDF uyarısı.
+- `00-sistem/sablonlar/web-clipper-gelen.json`: Obsidian Web Clipper şablonu (ham not alanları).
+- `settings.json` env: `ORT_DISABLE_TELEMETRY=1` (onnxruntime 1DS telemetrisi).
+### Değişti
+- `kontrol.py`: ham notlarda gövde wikilink denetimi yok; boş bağ alanı [] sayılır. `graf.py`: ham notlar grafa girmez.
+
 ## [0.6.0] — 2026-10-07 (T-011)
 ### Eklendi
 - `ayar-denetimi.py` (ConfigChange, SessionStart, PermissionDenied): güvenlik değişmezlerini bozan ayar değişikliği oturuma yüklenmez; açılışta diskteki ihlal uyarılır; geçerli değişiklik anahtar düzeyinde GUNLUK'e; auto kipte izin reddi kaydı. İmzalı istisna: KP (go) + `.claude/ayar-imzasi.json`.

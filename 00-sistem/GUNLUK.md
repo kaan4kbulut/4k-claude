@@ -161,3 +161,4 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 00:58 [degisti] 00-sistem/DEGISIKLIKLER.md — T-012 gelen kutusu besleme
 2026-10-07 00:58 [hata] .venv/onnxruntime — onnxruntime 1.30 Microsoft 1DS telemetrisi açık geldi: cihaz kimliği + olay kuyruğu ~/.cache/Microsoft/DeveloperTools/.onnxruntime/; ORT_DISABLE_TELEMETRY=1 ile kapatıldı (T-012)
 2026-10-07 00:58 [oturum] T-012 — kapandı — al.py + Web Clipper şablonu; onnxruntime telemetrisi kapatıldı
+2026-10-07 00:58 [degisti] T-012 — kayıtlar tamamlandı (önceki commit 215e41d kayıt betiği tırnak hatasıyla çalışmadan atılmıştı)
