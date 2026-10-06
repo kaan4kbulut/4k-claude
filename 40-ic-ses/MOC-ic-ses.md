@@ -3,11 +3,11 @@ id: 20261006-2230-moc-ic-ses
 ad: moc-ic-ses
 tur: moc
 kat: 4
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Bu icerik haritasi, zihin katindaki fikirlerin merdiven durumunu, gozlemleri, yansimalari, kavramlari, park listesini ve haftalik metrikleri tek bakista gosterir.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: []
@@ -45,7 +45,7 @@ Fikir: 1 (M0 0 · M1 1 · M2 0 · M3 0 · M4 0 · M5 0) · Gözlem: 0 · Yansım
 - —
 
 ### Araştırma notları
-- —
+- [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] — qmd Türkçe isabet ölçümü: vektör %90@3, kelime %0 (dogruluyor)
 
 ### Park listesi [?]
 - [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — yazıcı türü ne (3D mi, kâğıt/baskı mı)? Ne tür iş?
@@ -69,3 +69,4 @@ Fikir: 1 (M0 0 · M1 1 · M2 0 · M3 0 · M4 0 · M5 0) · Gözlem: 0 · Yansım
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
+| 0.2 | 2026-10-07 | T-010 | Araştırma notları += qmd-turkce-isabet |

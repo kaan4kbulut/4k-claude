@@ -3,11 +3,11 @@ id: 20261006-2101-sema
 ad: sema
 tur: referans
 kat: 0
-surum: 0.2
+surum: 0.3
 durum: aktif
 amac: Her sayfanin frontmatter alanlarini, turlerini, durum degerlerini, bag turlerini, adlandirma ve saklama kurallarini tek yerde tam olarak tanimlar; kontrol.py bu dosyaya gore denetler.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: [00-sistem/SISTEM.md, 00-sistem/arastirma/02-hafiza-ve-wiki-duzenleri.md, 00-sistem/arastirma/01-claude-code-mekanikleri.md]
@@ -59,7 +59,7 @@ Her Markdown sayfası `---` ile açılan YAML frontmatter taşır. Alan adları 
 | `kanit` | list[object] | gorev | `{komut, cikis, ozet}`; `durum: tamam` için boş olamaz. |
 | `insan_noktalari` | list[object] | gorev, sop, alan-paketi | `{id, tur, kosul, kanit, bekleyen_adim}`. |
 | `bekci` | string | kapi | Tek bekçi. |
-| `sonuc` | enum | kapi, arastirma-notu | `bekliyor`, `go`, `kill`, `hold`, `recycle`, `belirlenmedi`. Kapı kaydında karar çıkana kadar `bekliyor` kullanılır. |
+| `sonuc` | enum | kapi, arastirma-notu | kapı: `bekliyor`, `go`, `kill`, `hold`, `recycle`; araştırma notu: `dogruluyor`, `celisiyor`, `bilinmiyor`; ikisinde de `belirlenmedi`. Kapı kaydında karar çıkana kadar `bekliyor` kullanılır. |
 | `saklama` | enum | kat 3 sayfaları, kaynak, cikti | `S` sürekli, `K` kurum (plan dönemi + denetim), `B` birim (görev + 1 çevrim), `I` imha adayı. |
 
 ### 1.3 İsteğe bağlı
@@ -153,3 +153,4 @@ CLAUDE.md ≤ 200 satır; her SKILL.md ≤ 500 satır; HARITA.md ≤ 200 sayfa s
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
 | 0.2 | 2026-10-06 | T-005 | kapi ve sonuc enum'larına `belirlenmedi` eklendi (eski: yalnız karar değerleri); cynefin satırı şemayla eşitlendi; belirlenmedi'nin taslak sınırı yazıldı |
+| 0.3 | 2026-10-07 | T-010 | sonuc enum'una araştırma notu değerleri (dogruluyor, celisiyor, bilinmiyor) eklendi; şablon bunları öneriyordu, şema reddediyordu |

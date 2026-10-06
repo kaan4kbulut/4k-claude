@@ -113,3 +113,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/graf.py (yeni), .venv/ (git dışı); değişen: yscommon.py, sikistirma-oncesi.py, settings.json, CLAUDE.md, uyku SKILL.md, ARAC-KAYDI (0.3), .gitignore, DEGISIKLIKLER
 - Kapanış notu: graf.py çalışıyor (doğrudan ve sandbox içinde çıkış 0; graphify yokken 2). İlk bulgu: 40-ic-ses katı (MOC-ic-ses, F-0001, nerede-kaldik) sistemin geri kalanından kopuk; düzeltme sahibinin içerik kararı (öneri: MOC-ic-ses dayandigi += arastirma/08, ya da SISTEM besledigi += MOC-ic-ses).
+
+## T-010 — qmd: yerel anlamsal arama (öncelik 3)
+- Tarih: 2026-10-06
+- Niyet: 10-yenilikci-teknolojiler öncelik 3: wiki için yerel hibrit arama (BM25 + vektör + yeniden sıralama). Proje içine sabit sürümle kurulur (`.araclar/`, git dışı); dizin ve modeller proje içinde tutulur ki sandbox içinden güncellenebilsin. Türkçe isabet ölçülür.
+- Başarı ölçütü: `ara.py` sarmalayıcısı çalışır; 20 Türkçe sorguda isabet@3 ölçülür ve BM25 ile karşılaştırılır; sonuç 40-ic-ses/arastirma-notlari'na yazılır; 01-gelen dizine girmez; kontrol.py sıfır hata.
+- Sınırlar: Global kurulum yok. MCP sunucusu (.mcp.json) yalnız ölçüm tatmin ediciyse eklenir. Modeller yalnız ilk kurulumda HuggingFace'ten iner (sonra ağ yok).
+- Kat: 0
+- Kapı: cift-yonlu · yerel araç, dış erişim vermez (B7); sahibinin sıra onayı 2026-10-06
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/scripts/ara.py, 00-sistem/scripts/ara-olcum.py, 40-ic-ses/arastirma-notlari/qmd-turkce-isabet.md (yeni), .araclar/ (git dışı); değişen: şema + SEMA (0.3) + kontrol.py (sonuc türleri), ARAC-KAYDI (0.4), MOC-ic-ses (0.2), arastirma/10 (1.2), settings.json, CLAUDE.md, HARITA, DEGISIKLIKLER
+- Kapanış notu: Vektör arama Türkçe çalışıyor (%75@1, %90@3, 4.5 sn); kelime araması Türkçe cümlede %0; hibrit daha kötü. MCP eklenmedi (30 sayfada gereksiz; 100 sayfada yeniden ölç). Yan etki: not araştırma 10'a dayandığı için 40-ic-ses kopuk kümesi bağlandı (graf: 1 bileşen). T-005 kalıntısı sonuc şema uyumsuzluğu düzeltildi.

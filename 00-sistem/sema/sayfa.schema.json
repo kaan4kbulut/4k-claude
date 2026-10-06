@@ -37,7 +37,7 @@
     "kanit": {"type": "array", "items": {"type": "object", "required": ["komut", "cikis"], "properties": {"komut": {"type": "string"}, "cikis": {"type": ["integer", "string"]}, "ozet": {"type": "string"}}}},
     "insan_noktalari": {"type": "array", "items": {"type": "object", "required": ["id", "tur", "kosul"], "properties": {"id": {"type": "string", "pattern": "^HP-[A-Z0-9-]+$"}, "tur": {"type": "string"}, "kosul": {"type": "string"}, "kanit": {"type": "string"}, "bekleyen_adim": {"type": ["string", "integer"]}}}},
     "bekci": {"type": "string"},
-    "sonuc": {"type": "string", "enum": ["bekliyor", "go", "kill", "hold", "recycle", "belirlenmedi"]},
+    "sonuc": {"type": "string", "enum": ["bekliyor", "go", "kill", "hold", "recycle", "dogruluyor", "celisiyor", "bilinmiyor", "belirlenmedi"]},
     "saklama": {"type": "string", "enum": ["S", "K", "B", "I"]},
     "yerine_gecti": {"type": "string"},
     "yerine_gecen": {"type": "string"},

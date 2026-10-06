@@ -113,3 +113,23 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-06 23:58 [degisti] 00-sistem/DEGISIKLIKLER.md — T-009 graf.py entegrasyonu
 2026-10-06 23:58 [ayar] .venv — graphifyy 0.9.77 kuruldu (sha256 incelenen kopyayla eşleşti; git dışı)
 2026-10-06 23:58 [oturum] T-009 — kapandı — graf.py; bulgu: 40-ic-ses kopuk küme
+2026-10-06 23:59 [degisti] T-010 — talimat açıldı: qmd yerel arama (öncelik 3)
+2026-10-07 00:40 [oturum] c939765d-557 — kapandı (other); tur=1 in=26 out=1172 cache_okuma=92128 usd≈0.0401
+2026-10-07 00:40 [ayar] local_settings — ayar değişti (denetim izi)
+2026-10-07 00:40 [oturum] 56c1c272-e5c — kapandı (other); tur=1 in=18 out=367 cache_okuma=55204 usd≈0.0317
+2026-10-07 00:41 [yeni] 40-ic-ses/arastirma-notlari/qmd-turkce-isabet.md — qmd Türkçe isabet ölçümü: vektör %75@1 %90@3, hibrit %50@1, kelime %0 (dogruluyor)
+2026-10-07 00:41 [yeni] 00-sistem/scripts/ara.py — qmd sarmalayıcısı; varsayılan vektör arama
+2026-10-07 00:41 [yeni] 00-sistem/scripts/ara-olcum.py — 20 Türkçe sorguluk isabet ölçümü
+2026-10-07 00:41 [degisti] 40-ic-ses/MOC-ic-ses.md — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] 00-sistem/arastirma/10-yenilikci-teknolojiler.md — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] 10-insan/araclar/ARAC-KAYDI.md — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] .claude/settings.json — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] CLAUDE.md — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] 00-sistem/DEGISIKLIKLER.md — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] 00-sistem/sema/sayfa.schema.json — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] 00-sistem/SEMA.md — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] 00-sistem/scripts/kontrol.py — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] 00-sistem/HARITA.md — T-010 qmd / ara.py
+2026-10-07 00:41 [degisti] .gitignore — T-010 qmd / ara.py
+2026-10-07 00:41 [ayar] .araclar — qmd 2.8.3 + modeller (embeddinggemma, Qwen3-Embedding-0.6B, reranker, sorgu genişletme) indirildi; git dışı
+2026-10-07 00:41 [oturum] T-010 — kapandı — ara.py (qmd); graf tek bileşen

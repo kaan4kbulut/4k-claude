@@ -372,6 +372,10 @@ def main():
             hata(yol, f"kapi belirlenmedi ama merdiven {fm['merdiven']} (M4'te kapı tipi belirlenir)")
         if t == "fikir" and fm.get("cynefin") == "belirlenmedi" and isinstance(fm.get("merdiven"), int) and fm["merdiven"] >= 1:
             hata(yol, f"cynefin belirlenmedi ama merdiven {fm['merdiven']} (SEMA §1.2: merdiven ≥ 1)")
+        if t == "kapi" and fm.get("sonuc") in ("dogruluyor", "celisiyor", "bilinmiyor"):
+            hata(yol, f"kapı kaydında sonuc {fm.get('sonuc')} olamaz (araştırma notu değeri); go/kill/hold/recycle/bekliyor")
+        if t == "arastirma-notu" and fm.get("sonuc") in ("go", "kill", "hold", "recycle", "bekliyor"):
+            hata(yol, f"araştırma notunda sonuc {fm.get('sonuc')} olamaz (kapı değeri); dogruluyor/celisiyor/bilinmiyor")
         if t == "kapi" and fm.get("sonuc") == "belirlenmedi":
             hata(yol, "kapı kaydında sonuc belirlenmedi olamaz; karar çıkana kadar bekliyor kullan")
 

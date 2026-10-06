@@ -6,6 +6,8 @@
       "Bash(python3 00-sistem/scripts/harita.py*)",
       "Bash(python3 00-sistem/scripts/gunluk.py*)",
       "Bash(python3 00-sistem/scripts/graf.py*)",
+      "Bash(python3 00-sistem/scripts/ara-olcum.py*)",
+      "Bash(python3 00-sistem/scripts/ara.py*)",
       "Bash(git status*)",
       "Bash(git log*)",
       "Bash(git diff*)",

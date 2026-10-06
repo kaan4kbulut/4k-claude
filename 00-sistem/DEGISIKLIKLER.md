@@ -4,6 +4,13 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 
+## [0.5.0] — 2026-10-07 (T-010)
+### Eklendi
+- `ara.py`: qmd 2.8.3 ile yerel anlamsal arama (varsayılan vektör; `--hibrit`, `--kelime`, `--yenile`, `--mcp`). Dizin ve modeller proje içinde (`.araclar/`, git dışı) ki sandbox içinden güncellenebilsin. 01-gelen, şablonlar ve günlükler dizin dışı.
+- `ara-olcum.py`: 20 Türkçe sorguluk isabet ölçümü. Sonuç: 40-ic-ses/arastirma-notlari/qmd-turkce-isabet.
+### Düzeltildi
+- Şema: `sonuc` enum'u araştırma notu değerlerini (dogruluyor, celisiyor, bilinmiyor) kabul eder; kontrol.py tür karışmasını (kapıda araştırma değeri ve tersi) hata sayar. T-005'ten kalan şablon/şema uyumsuzluğu.
+
 ## [0.4.0] — 2026-10-06 (T-009)
 ### Eklendi
 - `graf.py`: frontmatter ve wikilink'lerden sayfa grafı; Graphify 0.9.77 (kütüphane, LLM'siz) ile topluluk, merkez, sınır aşan bağ, HTML. Çıktı `00-sistem/.kosu/graf/`. Proje `.venv/` (git dışı).
