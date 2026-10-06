@@ -1,0 +1,78 @@
+---
+id: 20261006-2144-yazici-isi-fikri
+ad: yazici-isi-fikri
+tur: fikir
+kat: 4
+surum: 0.1
+durum: taslak
+amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
+olusturma: 2026-10-06
+guncelleme: 2026-10-06
+yazar: kaan
+talimat: T-001
+dayandigi: []
+besledigi: []
+ust: 40-ic-ses/MOC-ic-ses.md
+merdiven: 1
+cynefin: kompleks
+guven: dusuk
+kaynaklar: []
+dokunus_sayisi: 1
+son_dokunus: "2026-10-06"
+etiketler: [is-fikri, yazici]
+---
+
+# Fikir F-0001: Yazıcı işi
+
+## Amaç
+Bu fikir, Kaan'ın gelir getiren bir iş kurma isteğini bir yazıcı satın alıp onunla iş yapma yoluyla çözme önerisini olgunlaştırmak için var.
+
+## İçerik
+### Tek cümle
+Kaan bir yazıcı satın alıp bu yazıcıyla para kazandıran küçük bir iş kurmak istiyor.
+
+### Çerçeve (üçüncü şahıs)
+Kaan, bir yazıcı alıp onunla bir işe başlayabileceğini düşünüyor; dayanağı: belirlenmedi (sahibi henüz söylemedi). Alternatif çerçeve: belirlenmedi (ZORLA modunda yazılacak; T-001 sınırı gereği değerlendirme yapılmadı).
+
+### Neden şimdi
+belirlenmedi — tetikleyen gözlem kaydı yok.
+
+### Cynefin ataması
+`kompleks` — Claude'un ilk ataması, sahibinin onayını bekliyor. Gerekçe: yeni bir işte talebin ve müşteri tepkisinin önceden analizle bilinemeyeceği, ancak küçük denemelerle (dene-gör) öğrenilebileceği varsayıldı. Sahibi farklı görürse `/degistir` ile düzeltilir.
+
+### Kanıt
+- henüz yok (merdiven 1; kanıt araması M2'de)
+### Karşı-kanıt
+- aranmadı (T-001 sınırı: yalnız kayıt)
+
+### Steelman (M2)
+belirlenmedi
+
+### Inversion (M2)
+belirlenmedi
+
+### Pre-mortem (M2)
+belirlenmedi
+
+### Açık sorular (M3 için ≤2)
+- [?] Yazıcının türü ne: 3D yazıcı mı, kâğıt/baskı (dijital, büyük format, tekstil vb.) mı? Not: sistemde `20-sirket/alan-paketleri/3d-uretim` yalnızca bir test örneği olarak duruyor; bu fikirle aynı şey olduğu varsayılmadı.
+- [?] Ne tür bir iş: kime, ne satılacak?
+
+### Kapı tipi ve istenen (M4)
+kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
+
+### Senin pozisyonun ([konum])
+- yok — T-001 sınırı gereği pozisyon bildirilmedi.
+
+## Bağlar
+### Dayandığı
+- yok (tetikleyen gözlem kaydı yok)
+### Beslediği
+- yok (T-002 ile K-003 gelmesi bekleniyor)
+### Gelen
+- ← [[40-ic-ses/MOC-ic-ses]] — merdiven tablosu, M1
+
+## Günlük
+| Sürüm | Tarih | Talimat | Değişiklik |
+| --- | --- | --- | --- |
+| 0.1 | 2026-10-06 | T-001 | Oluşturuldu (merdiven 1) |

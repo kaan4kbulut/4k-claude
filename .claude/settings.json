@@ -1,0 +1,132 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 00-sistem/scripts/kontrol.py*)",
+      "Bash(python3 00-sistem/scripts/bayat.py*)",
+      "Bash(python3 00-sistem/scripts/harita.py*)",
+      "Bash(git status*)",
+      "Bash(git log*)",
+      "Bash(git diff*)",
+      "Bash(git add*)",
+      "Bash(git commit*)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Edit(30-devlet/**)",
+      "Write(30-devlet/**)",
+      "Edit(.claude/**)",
+      "Write(.claude/**)",
+      "Edit(CLAUDE.md)"
+    ],
+    "deny": [
+      "Read(./.env*)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git reset --hard*)",
+      "Bash(rm -rf *)",
+      "Edit(30-devlet/normlar/ANAYASA.md)",
+      "Write(30-devlet/normlar/ANAYASA.md)"
+    ]
+  },
+  "sandbox": {
+    "enabled": false
+  },
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+    "CLAUDE_CODE_STOP_HOOK_BLOCK_CAP": "10"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|compact|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/oturum-basi.py\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/durus-kapisi.py\"",
+            "timeout": 60
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/yikici-koruma.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/sikistirma-oncesi.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/kapanis-kaydi.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/kapanis-kaydi.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/kapanis-kaydi.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "ConfigChange": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/kapanis-kaydi.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

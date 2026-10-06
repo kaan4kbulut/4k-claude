@@ -1,0 +1,40 @@
+# Harita — dizin
+
+Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N · YYYY-MM-DD`. Şablonlar, arşiv ve ham notlar listelenmez. 200 satır tavanı; aşınca MOC'lara bölünür (harita.py uyarır). Önce burayı oku, sonra yalnız gereken sayfayı aç.
+
+## 00-sistem
+- [[00-sistem/SEMA]] — Her sayfanin frontmatter alanlarini, turlerini, durum degerlerini, bag turlerini, adlandirma ve saklama kurallarini tek yerde tam olarak tanimlar; kontrol.py bu dosyaya gore denetler. · referans · kat 0 · 2026-10-06
+- [[00-sistem/SISTEM]] — Yeni Sistem'in kok haritasi; ne oldugunu, katlari, klasorleri ve nasil gezilecegini anlatir. · referans · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/01-claude-code-mekanikleri]] — Claude Code'un CLAUDE.md, hafiza, alt ajan, hook, skill, izin ve oturum mekaniklerini resmi belgelerden dogrulanmis haliyle tek yerde toplamak; sistemin hicbir kurali var olmayan bir ozellige dayanmasin. · kaynak · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/02-hafiza-ve-wiki-duzenleri]] — Yapay zeka ajan hafiza sistemlerinin ve kisisel bilgi/wiki yontemlerinin, duz Markdown ve frontmatter ile isletilen bir ajan wiki'sine donusturulebilecek kurallarini toplamak. · kaynak · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/03-cok-ajanli-isleyis-ve-yonetisim]] — Cok ajanli mimari desenlerini, insan-dongude yonetisim araclarini (kapilar, karar haklari, karar kayitlari, brifing bicimleri), orgut tasarimi kurallarini ve fikir olgunlastirma yontemlerini isletim kurallarina donusturmek. · kaynak · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/04-guvenilirlik-ve-kalite-teknikleri]] — Bir LLM/ajan sistemini daha iyi ve daha guvenilir yapan teknikleri (baglam muhendisligi, uzun sureli ajan guvenilirligi, degerlendirme, MCP, model yonlendirme ve maliyet, yapili cikti, korkuluklar, bilgi temellendirme, gozlemlenebilirlik, ses) ve her birinin Yeni Sistem'de tam olarak hangi dosyaya/hook'a/skill'e girdigini belirlemek. · kaynak · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/05-eller-ve-alan-paketi-3d]] — Bir ajanin dunyaya dijital olarak dokunma yollarini (eller yetenek matrisi) ve bir alanin sisteme nasil ogretilecegini gosteren Alan Paketi sablonunu, 3D baski mikro-fabrikasi test alani uzerinden belirlemek. · kaynak · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/06-sirket-operasyonlari]] — Gercek sirket operasyon bilgisini (SOP, surec haritalari, roller, kalite, tedarik, finans, ritim, KPI, eskalasyon) sirket katina kodlanabilir hale getirmek. · kaynak · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/07-devlet-yapilari]] — Gercek devlet teskilatlarinin (bakanlik anatomisi, norm hiyerarsisi, imza/onay, denetim, kayit yonetimi, stratejik planlama, kriz, anti-kaliplar) devlet katina aktarilabilir kurallarini toplamak. · kaynak · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/08-ic-ses-yontemleri]] — Sesli dusunme, fikir yakalama ve olgunlastirma, ses-boru-hatti, arastirma-eslikcisi pratikleri, yansima/konsolidasyon ve dalkavukluk-karsiti kurallari Ic Ses katinin konusma protokolune, not turlerine ve olgunluk merdivenine donusturmek. · kaynak · kat 0 · 2026-10-06
+- [[00-sistem/arastirma/09-github-taramasi]] — Ekim 2026 itibariyla Markdown-wiki tabanli bir Claude Code isletim sistemiyle ilgili acik kaynak projeleri (ekosistem, hafiza, karar/yonetisim, orkestrasyon, SOP-dosya, ses, 3D) taramak; benimse/odunc al/oku kararlarini vermek. · kaynak · kat 0 · 2026-10-06
+
+## 40-ic-ses
+- [[40-ic-ses/MOC-ic-ses]] — Bu icerik haritasi, zihin katindaki fikirlerin merdiven durumunu, gozlemleri, yansimalari, kavramlari, park listesini ve haftalik metrikleri tek bakista gosterir. · moc · kat 4 · 2026-10-06
+- [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var. · fikir · kat 4 · 2026-10-06
+- [[40-ic-ses/nerede-kaldik]] — Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir. · referans · kat 4 · 2026-10-06
+
+## 30-devlet
+- [[30-devlet/MOC-devlet]] — Bu icerik haritasi, irade katindaki normlari, kararlari, kapilari ve denetim kayitlarini gruplayip nedenli baglarla tek bakista gosterir. · moc · kat 3 · 2026-10-06
+- [[30-devlet/kararlar/K-001-pilotta-kadro-yok]] — Bu karar kaydi, pilot asamasinda rol (bakanlik) ajanlari acilmamasini, yalniz okuyucu ve denetci alt ajanlarinin bulunmasini ve nedenini kalici olarak tutar. · karar · kat 3 · 2026-10-06
+- [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Bu karar kaydi, Danisman rolunun ayri bir ajan olarak degil zihin katinin bir islevi (yonlendirme notu + steelman/pre-mortem degerlendirmesi) olarak tanimlanmasi onerisini ve alternatifleri tutar. · karar · kat 3 · 2026-10-06
+- [[30-devlet/normlar/ANAYASA]] — Yeni Sistem'in degistirilemez cekirdegini kurar; katlari, ilkeleri, yetkinin kaynagini, denetimin bagimsizligini ve insan noktasi ilkesini tanimlar; tum alt normlar buna uyar. · anayasa · kat 3 · 2026-10-06
+- [[30-devlet/normlar/HAKEM-KURALLARI]] — Bir modelin baska bir modelin ciktisini yargiladigi her yerde (denetci, kapi yargisi, eval) onyargilari azaltan kurallari koyar. · referans · kat 3 · 2026-10-06
+- [[30-devlet/normlar/IMZA-MATRISI]] — Hangi kararin kimin imzasini istedigini, yetki devrinin kurallarini ve kayitlarini tek tabloda tutar; orkestrator her kararda buraya bakar. · referans · kat 3 · 2026-10-06
+- [[30-devlet/normlar/MODEL-POLITIKASI]] — Hangi isin hangi modele ve cabaya gidecegini, tur ve butce tavanlarini, onbellek ve maliyet disiplinini belirler; alt ajan tanimlari ve calistir.sh buna uyar. · referans · kat 3 · 2026-10-06
+
+## 20-sirket
+- [[20-sirket/MOC-sirket]] — Bu icerik haritasi, orgutleme katindaki rolleri, acik gorev kartlarini (Kanban), SOP'lari, alan paketlerini, scorecard'i ve ritmi tek bakista gosterir. · moc · kat 2 · 2026-10-06
+- [[20-sirket/RITIM]] — Gunluk, haftalik, aylik, ceyreklik ve yillik operasyon ritmini; her toplantinin gundemini ve ajanin onceden hazirladiklarini belirler. · referans · kat 2 · 2026-10-06
+- [[20-sirket/SCORECARD]] — Haftalik 5-15 KPI'yi sahipli ve hedefli tutar; off-track olan gosterge Issues listesine duser ve haftalik L10'da ele alinir. · referans · kat 2 · 2026-10-06
+- [[20-sirket/alan-paketleri/3d-uretim]] — Bu alan paketi, 3D baski mikro-uretim alaninda sistemin dijital tarafi ucten uca yurutebilmesi icin gereken tum bilgiyi tek yerde toplar; sistemin bilinmeyen bir alani ogrenme yetenegini sinayan ornektir, gercek plan degildir. · alan-paketi · kat 2 · 2026-10-06
+
+## 10-insan
+- [[10-insan/MOC-insan]] — Bu icerik haritasi, eller katindaki ciktilari, degismez kaynaklari ve arac kaydini tek bakista gosterir. · moc · kat 1 · 2026-10-06
+- [[10-insan/araclar/ARAC-KAYDI]] — Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz. · referans · kat 1 · 2026-10-06

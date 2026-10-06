@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "yeni-sistem/kapi-raporu.schema.json",
+  "title": "Gozetimsiz kosu kapi raporu",
+  "description": "calistir.sh ile yapilan her gozetimsiz kosunun yapili ciktisi. claude -p --json-schema ile zorlanir; Stop ve Denetim bu bicimi okur.",
+  "type": "object",
+  "required": ["talimat", "durum", "kanit", "degisen_dosyalar", "siradaki"],
+  "properties": {
+    "talimat": {"type": "string", "pattern": "^T-[0-9]{3,4}$"},
+    "kapi": {"type": "string", "description": "Acik kapi varsa KP-xxx, yoksa 'yok'"},
+    "durum": {"type": "string", "enum": ["gecti", "durdu", "bekliyor"], "description": "gecti = kanitla kapandi; bekliyor = ASK.md yazildi; durdu = engel kaydi"},
+    "kanit": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["komut", "cikis"],
+        "properties": {
+          "komut": {"type": "string"},
+          "cikis": {"type": "integer"},
+          "ozet": {"type": "string", "maxLength": 600}
+        }
+      }
+    },
+    "degisen_dosyalar": {"type": "array", "items": {"type": "string"}},
+    "soru": {"type": "string", "description": "durum=bekliyor ise ASK.md'deki tek soru"},
+    "engel": {"type": "string", "description": "durum=durdu ise neden"},
+    "ortulu_kararlar": {"type": "array", "items": {"type": "string"}, "description": "Kosu sirasinda alinan cift yonlu kararlar; brifingde gorunur"},
+    "siradaki": {"type": "string"},
+    "maliyet_tahmini_usd": {"type": "number"}
+  },
+  "additionalProperties": false
+}
