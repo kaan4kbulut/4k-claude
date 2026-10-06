@@ -20,7 +20,8 @@ def en_yeni_md(kok):
     yol_en = ""
     for kat in KATLAR:
         d = os.path.join(kok, kat)
-        for dirpath, _dirs, files in os.walk(d):
+        for dirpath, dirs, files in os.walk(d):
+            dirs[:] = [x for x in dirs if not x.startswith(".")]  # .kosu gibi üretilmiş klasörler sayılmaz
             for f in files:
                 if f.endswith(".md") and f != "ILERLEME.md" and f != "GUNLUK.md":
                     p = os.path.join(dirpath, f)

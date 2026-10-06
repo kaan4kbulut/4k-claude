@@ -53,6 +53,7 @@ KAYIT (TALIMATLAR.md'ye T-xxx) → AMAÇ + KAT → YER + AD → ŞABLON → BAĞ
 - `python3 00-sistem/scripts/bayat.py` bayat sayfalar
 - `python3 00-sistem/scripts/harita.py --dogrula` harita doğrulama
 - `python3 00-sistem/scripts/gunluk.py <tur> <yol|T-xxx> "<not>"` GUNLUK satırı (zaman damgası otomatik)
+- `python3 00-sistem/scripts/graf.py` bağ grafı: kopuk küme, yetim, merkez, sınır aşan bağ; HTML `00-sistem/.kosu/graf/` (LLM yok)
 - `/yeni-parca` · `/degistir` · `/kapat` · `/brifing` · `/kapi` · `/karar` · `/uyku` · `/alan-paketi` · `/haftalik` · `/inbox-triage`
 
 ## Compact instructions

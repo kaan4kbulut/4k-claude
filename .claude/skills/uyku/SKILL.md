@@ -32,6 +32,7 @@ Bayat liste:
 5. **Çelişki taraması**: aynı varlık hakkında çelişen iki iddia → raporla (LLM yargısı, otomatik düzeltme yok); sahibi karar verir.
 6. MOC'ları güncelle (merdiven özeti, açık sorular, park listesi).
 7. `python3 00-sistem/scripts/harita.py --dogrula`; `kontrol.py --kisa`.
+7a. **Graf** (`python3 00-sistem/scripts/graf.py`): kopuk küme ve yetim sayfa → bağ önerisi (hangi MOC ya da dayanak eksik); "sınır aşan bağ" → yansıma adayı; merkez sayfalar → değişirse etkisi geniş, BLUF'ta belirt. Öneri sunulur, bağ sahibinin onayıyla `/degistir` ile eklenir.
 8. GUNLUK `[uyku] tam — …`. Sahibine BLUF: ne birleşti, ne arşivlendi, hangi terfiler onay bekliyor.
 
 ## aylik

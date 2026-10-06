@@ -100,3 +100,16 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-06 23:54 [degisti] 00-sistem/SISTEM.md — 0.3: sandbox kurulum notu (T-008)
 2026-10-06 23:54 [degisti] 00-sistem/DEGISIKLIKLER.md — 0.3.0 sandbox (T-008)
 2026-10-06 23:54 [oturum] T-008 — kapandı — sandbox açık; 7 yoklama, 2 test oturumu (0.11 USD)
+2026-10-06 23:58 [oturum] 2072d465-036 — kapandı (other); tur=1 in=18 out=375 cache_okuma=55325 usd≈0.0326
+2026-10-06 23:58 [degisti] T-009 — talimat açıldı: graf.py (öncelik 2)
+2026-10-06 23:58 [yeni] 00-sistem/scripts/graf.py — sayfa grafı + Graphify analizi (LLM yok)
+2026-10-06 23:58 [degisti] 00-sistem/scripts/yscommon.py — T-009 graf.py entegrasyonu
+2026-10-06 23:58 [degisti] .claude/hooks/sikistirma-oncesi.py — T-009 graf.py entegrasyonu
+2026-10-06 23:58 [degisti] .claude/settings.json — T-009 graf.py entegrasyonu
+2026-10-06 23:58 [degisti] CLAUDE.md — T-009 graf.py entegrasyonu
+2026-10-06 23:58 [degisti] .claude/skills/uyku/SKILL.md — T-009 graf.py entegrasyonu
+2026-10-06 23:58 [degisti] 10-insan/araclar/ARAC-KAYDI.md — T-009 graf.py entegrasyonu
+2026-10-06 23:58 [degisti] .gitignore — T-009 graf.py entegrasyonu
+2026-10-06 23:58 [degisti] 00-sistem/DEGISIKLIKLER.md — T-009 graf.py entegrasyonu
+2026-10-06 23:58 [ayar] .venv — graphifyy 0.9.77 kuruldu (sha256 incelenen kopyayla eşleşti; git dışı)
+2026-10-06 23:58 [oturum] T-009 — kapandı — graf.py; bulgu: 40-ic-ses kopuk küme

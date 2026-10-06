@@ -102,3 +102,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/kapilar/KP-001-sandbox-acilisi.md (yeni); değişen: .claude/settings.json, SISTEM (0.3), MOC-devlet, arastirma/10 (1.1), HARITA, DEGISIKLIKLER
 - Kapanış notu: Sandbox açık ve gerçek oturumda doğrulandı (ev dizinine yazma, proxy dışı ağ, .claude/hooks yazma reddedildi; ~/.config/gh ve keyrings boş göründü; kontrol.py çalıştı). Açık: klasör yeni adıyla güvenilir değil (sahibi bir kez etkileşimli claude açıp onaylamalı); maliyet tahmini gerçek faturadan ~%30 düşük (1 saatlik önbellek yazımı 2× fiyatlanıyor) → ccusage mutabakatı (öncelik 7).
+
+## T-009 — graf.py: Graphify'ı LLM'siz kütüphane olarak bağla (öncelik 2)
+- Tarih: 2026-10-06
+- Niyet: 10-yenilikci-teknolojiler öncelik 2: frontmatter bağlarından (dayandigi, ust) ve gövde wikilink'lerinden sayfa grafı kurmak; Graphify ile topluluk, merkez düğüm, sınır aşan bağ ve HTML görünümü üretmek; kopuk küme ve yetim sayfayı raporlamak.
+- Başarı ölçütü: graf.py çalışır (çıkış 0), graphify yokken çıkış 2; çıktılar 00-sistem/.kosu/graf/ (git dışı); kurulu paket incelenen 0.9.77 ile birebir (sha256); ARAC-KAYDI satırı; kontrol.py sıfır hata.
+- Sınırlar: graphify install, git hook'ları, --mode deep yok; LLM çağrısı yok. Bulunan yapısal sorunlar düzeltilmez, raporlanır.
+- Kat: 0
+- Kapı: cift-yonlu · araç kaydı A10 değil (dış erişim vermez; B7, sahibinin sıra onayı 2026-10-06)
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/scripts/graf.py (yeni), .venv/ (git dışı); değişen: yscommon.py, sikistirma-oncesi.py, settings.json, CLAUDE.md, uyku SKILL.md, ARAC-KAYDI (0.3), .gitignore, DEGISIKLIKLER
+- Kapanış notu: graf.py çalışıyor (doğrudan ve sandbox içinde çıkış 0; graphify yokken 2). İlk bulgu: 40-ic-ses katı (MOC-ic-ses, F-0001, nerede-kaldik) sistemin geri kalanından kopuk; düzeltme sahibinin içerik kararı (öneri: MOC-ic-ses dayandigi += arastirma/08, ya da SISTEM besledigi += MOC-ic-ses).

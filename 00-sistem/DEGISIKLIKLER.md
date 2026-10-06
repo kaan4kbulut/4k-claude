@@ -4,6 +4,14 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 
+## [0.4.0] — 2026-10-06 (T-009)
+### Eklendi
+- `graf.py`: frontmatter ve wikilink'lerden sayfa grafı; Graphify 0.9.77 (kütüphane, LLM'siz) ile topluluk, merkez, sınır aşan bağ, HTML. Çıktı `00-sistem/.kosu/graf/`. Proje `.venv/` (git dışı).
+- `/uyku tam` adım 7a: graf bulguları bağ ve yansıma önerisine döner.
+- İzin: `graf.py` allow; `graphify install`, `graphify hook`, `--mode deep` deny.
+### Değişti
+- `yscommon` ve `sikistirma-oncesi`: `00-sistem/.kosu` (üretilmiş dosyalar) taramadan çıkarıldı.
+
 ## [0.3.0] — 2026-10-06 (T-008)
 ### Değişti
 - Bash sandbox açıldı (`.claude/settings.json` → `sandbox`): `enabled`, `failIfUnavailable`, `allowUnsandboxedCommands: false`, `autoAllowBashIfSandboxed`, kimlik bilgisi klasörleri `denyRead`, boş ağ izin listesi. Onay: KP-001.

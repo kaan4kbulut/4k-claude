@@ -3,7 +3,7 @@ id: 20261006-2251-arac-kaydi
 ad: arac-kaydi
 tur: referans
 kat: 1
-surum: 0.2
+surum: 0.3
 durum: aktif
 amac: Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz.
 olusturma: 2026-10-06
@@ -57,6 +57,8 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | --- | --- | --- | --- | --- |
 | python3 | CLI | hook'lar, betikler | 2026-10-06 | T-000 |
 | git | CLI | kayıt, geri alma | 2026-10-06 | T-000 |
+| graphifyy 0.9.77 (sabit; `.venv/`) | Python kütüphanesi | `00-sistem/scripts/graf.py`: Leiden topluluk, merkez düğüm, sınır aşan bağ, vis.js HTML. LLM yok, ağ yok (kaynak incelendi, sha256 eşleşti). `graphify install`, git hook'ları ve `--mode deep` YASAK. graf.html açılınca vis-network'ü unpkg.com'dan indirir | 2026-10-06 | T-009 |
+| Bash sandbox (bubblewrap + socat) | Claude Code yerleşik | Bash komutları; kimlik bilgisi klasörleri okunamaz, ağ izin listesi boş | 2026-10-06 | T-008, KP-001 |
 | (MCP yok) | — | ilk gerçek işte A10 ile | — | — |
 
 ### C. İnsan noktası türleri (kartlarda HP-xxx)
@@ -83,3 +85,4 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
 | 0.2 | 2026-10-06 | T-007 | dayandigi += 00-sistem/arastirma/10-yenilikci-teknolojiler.md |
+| 0.3 | 2026-10-06 | T-009 | B tablosuna graphifyy (graf.py) ve Bash sandbox satırları |
