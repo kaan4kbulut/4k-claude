@@ -5,7 +5,7 @@ Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStar
 aktif_talimat: yok — T-034 kapandı; oturum bütçe uyarısıyla (%80) durdu
 kapi: yok
 acik_soru: yok
-siradaki: devam istemi (~/Work/isler/2026-10-07-genel-toparlama/devam-istemi.md) madde 4 (test kurulumu) ve 5 (hatalar; ek: kapanis-kaydi.py:146 çok satırlı hata özeti + GUNLUK 265-291, ortak.py sandbox /dev/null yer tutucuları). Sahibi: zip'i arşive taşı, 4k-pano bağı, panoyu gözle kontrol; mali müşavire metni gönder
+siradaki: devam istemi (~/Work/isler/2026-10-07-genel-toparlama/devam-istemi.md) madde 4 (test kurulumu) ve 5 (hatalar; ek: kapanis-kaydi.py:146 çok satırlı hata özeti + GUNLUK 265-291, ortak.py sandbox /dev/null yer tutucuları). Sahibi: panoyu gözle kontrol (4k-pano); mali müşavire metni gönder
 
 ## Son kapanış
 - T-034 (2026-10-07): pano.py ilk aşaması: Pano ve Sağlık ekranları 00-sistem/.kosu/pano'da; başlatıcı pano.sh. Açık: görsel kontrol ve ~/.local/bin bağı sahibine. Kanıt: pano.py → 0; grep script/style/http → 0; kontrol.py --test temiz kopyada → 0 (62), bozuk kopyada 6 FAIL; kontrol.py --kisa → 0; denetci: engelleyici yok.

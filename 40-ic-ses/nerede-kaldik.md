@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.11
+surum: 0.12
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -29,8 +29,7 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
 
 **Açık**
-- Sahibi: panoyu aç ve gözle kontrol et (`00-sistem/scripts/pano.sh`); `ln -s ~/Work/4k-claude/00-sistem/scripts/pano.sh ~/.local/bin/4k-pano`.
-- Sahibi: `~/Downloads/4k-claude-pano-tasarim.zip` → `~/Work/arsiv/pano-tasarim-paketi/` (proje dışı yazım; yikici-koruma engelledi).
+- Sahibi: panoyu gözle kontrol et (`4k-pano`; zip arşivde, bağ kuruldu 2026-10-07 18:13).
 - F-0001: mali müşavire metni göndermek; fiziksel adımlar (TTS dinleme, Obsidian + Web Clipper).
 
 **Sonraki**
@@ -74,3 +73,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.9 | 2026-10-07 | T-032 | Akşam oturumu: T-032 kapanışı |
 | 0.10 | 2026-10-07 | T-033 | T-033 kapanışı |
 | 0.11 | 2026-10-07 | T-034 | T-034 kapanışı; bütçe uyarısıyla durma |
+| 0.12 | 2026-10-07 | T-034 | Zip arşive taşındı ve 4k-pano bağı kuruldu (sahibi); açık listeden düştü |

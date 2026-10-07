@@ -398,3 +398,7 @@ ls: '/tmp/claude-1000/*.png' ögesine erişilemedi: Böyle bir dosya ya da dizin
 2026-10-07 18:07 [degisti] 10-insan/kaynaklar/pano-tasarim-paketi.md — 0.2 — besledigi += pano.py
 2026-10-07 18:08 [degisti] 40-ic-ses/nerede-kaldik.md — 0.11 — T-034
 2026-10-07 18:08 [oturum] T-034 — kapandı — pano.py Pano+Sağlık, pano.sh; 62 test; bütçe %80 uyarısı: madde 4-5 sonraki oturuma
+2026-10-07 18:08 [hata] 00-sistem/scripts/push.sh — otomatik push başarısız: Done
+2026-10-07 18:14 [ayar] ~/.local/bin/4k-pano — pano.sh bağı kuruldu (sahibi, ! komutu; T-034 açık kalemi)
+2026-10-07 18:14 [arsiv] ~/Work/arsiv/pano-tasarim-paketi/4k-claude-pano-tasarim.zip — Downloads zip'i proje dışı arşive (sahibi; T-032 açık kalemi, duzen-2026-10-07.log)
+2026-10-07 18:14 [degisti] 40-ic-ses/nerede-kaldik.md — 0.12 — zip arşivde, 4k-pano kuruldu
