@@ -423,3 +423,11 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:20 [hata] Bash — Exit code 2 · /usr/bin/bash: eval: satır 1: beklenmeyen jeton `(' yakınında sözdizim hatası · /usr/bin/bash: eval: satır 1: `cd ~/Work/4k-claude && sed -i 's/Kapı şablonuna A10 kanıtı: `claude plugin vali
 2026-10-07 19:20 [degisti] 40-ic-ses/nerede-kaldik.md — 0.17 — T-039
 2026-10-07 19:20 [oturum] T-039 — kapandı — ayar-denetimi: eklenti tabanı, workflow, managed, env FOURK_*
+2026-10-07 19:20 [yeni] T-040 — talimat açıldı — model bekçisi hook'u (liste T-d)
+2026-10-07 19:21 [hata] oturum 51b5652a-b77 — bütçe tavanı aşıldı: ≈15.12 USD / tavan 5 USD (3×)
+2026-10-07 19:22 [yeni] .claude/hooks/model-bekcisi.py — PreModelSwitch ask (Fable/Opus) + Post kaydı (T-040)
+2026-10-07 19:22 [ayar] .claude/settings.json — hooks += PreModelSwitch, PostModelSwitch → model-bekcisi.py (T-040)
+2026-10-07 19:22 [degisti] .claude/hooks/ayar-denetimi.py — ZORUNLU_HOOKLAR += PreModelSwitch (T-040)
+2026-10-07 19:22 [yeni] 00-sistem/testler/test_model_bekcisi.py — model bekçisi testleri, 5 (T-040)
+2026-10-07 19:23 [degisti] 40-ic-ses/nerede-kaldik.md — 0.18 — T-040
+2026-10-07 19:23 [oturum] T-040 — kapandı — model bekçisi hook'u

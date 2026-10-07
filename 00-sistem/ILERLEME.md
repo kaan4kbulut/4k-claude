@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-039 kapandı; sıradaki: liste T-d (PreModelSwitch hook'u)
+aktif_talimat: yok — T-040 kapandı; sıradaki: liste T-e (alt ajan alanları)
 kapi: yok
 acik_soru: yok
 siradaki: talimat listesi ~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md T-b … T-m sırayla (kaynak: 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* (40 klasör) kararı; mali müşavire metni gönder
 
 ## Son kapanış
+- T-040 (2026-10-07): model-bekcisi: Fable/Opus geçişi ask, her geçiş GUNLUK [ayar]. Açık: canlı geçişle doğrulama. Kanıt: test_model_bekcisi 5/5; kontrol.py --test → OK; ayar-denetimi SessionStart temiz; denetci engelleyici yok.
 - T-039 (2026-10-07): ayar-denetimi eklenti tabanı, workflow ve managed settings denetimi; env FOURK_* değişmezi. Kanıt: test_ayar_denetimi 15/15, eski hook'ta 7 FAIL; gerçek SessionStart uyarısız; kontrol.py --test → OK; kontrol.py --kisa → 0; denetci engelleyicisi kapatıldı.
 - T-038 (2026-10-07): K-006 yalnız yönetilen mod'lar; IMZA-MATRISI A12, ARAC-KAYDI satırı. Mod iddiası resmi dokümanla düzeltildi. Kanıt: cat managed-settings.json → allowManagedModsOnly true; claude --version → 2.1.292; okuyucu: code.claude.com/docs/en/plugins/mods/admin; kontrol.py --kisa → 0.
 - T-037 (2026-10-07): YZ tarama raporu gelen kutusundan kaynak sayfasına işlendi; iddialar URL'siz, UNCONFIRMED. Kanıt: al.py → 0; harita.py --dogrula → 0 (43); kontrol.py --kisa → 0.

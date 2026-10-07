@@ -443,3 +443,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: .claude/eklenti-tabani.json (yeni); değişen: .claude/hooks/ayar-denetimi.py, 00-sistem/testler/test_ayar_denetimi.py (+7), 00-sistem/sablonlar/kapi.md (A10 kanıtı), DEGISIKLIKLER, nerede-kaldik 0.17
 - Kapanış notu: Eklenti/marketplace/pluginConfigs/prependPlugins taban dışıysa engellenir, workflow dosyası ve managed settings eksikliği oturum başında uyarılır. Denetci engelleyicisi (env FOURK_* ile denetimi yönlendirme) değişmezle kapandı. Not: 19:16 GUNLUK [hata] satırı sahte (hook'u sandbox içinden elle koştum), kök nedeni düzeltildi.
+
+## T-040 — PreModelSwitch/PostModelSwitch hook'u: model politikası araçta (liste T-d)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-d. MODEL-POLITIKASI yalnız yazılı; pahalı modele (Fable, Opus) geçiş araçla sorulsun ve her geçiş GUNLUK'e düşsün (Anayasa ilke 6).
+- Başarı ölçütü: olay adları, girdi alanları ve karar biçimi resmi dokümanla doğrulanmış (URL); `.claude/hooks/model-bekcisi.py`: Fable/Opus'a geçiş ask (desteklenmiyorsa deny + gerekçe), Sonnet/Haiku serbest; Pre ve Post GUNLUK `[ayar]`; settings.json'a hook kaydı (ayar-denetimi ZORUNLU_HOOKLAR'a eklenir); testler `kontrol.py --test` içinde; kontrol.py --kisa → 0.
+- Sınırlar: Model politikası tablosu ve tavanlar değişmez (A5). Olay belgede yoksa hook yazılmaz, bulgu raporlanır.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (talimat listesi T-d)
+- Durum: kapali
+- Doğurduğu dosyalar: .claude/hooks/model-bekcisi.py, 00-sistem/testler/test_model_bekcisi.py (yeni); değişen: .claude/settings.json (PreModelSwitch, PostModelSwitch), ayar-denetimi.py (ZORUNLU_HOOKLAR), DEGISIKLIKLER, nerede-kaldik 0.18
+- Kapanış notu: Fable/Opus'a geçiş artık sorulur ve her geçiş GUNLUK'e düşer. Olaylar resmi dokümanda var (code.claude.com/docs/en/hooks); çıktı biçimi özetten okundu, canlı geçişle doğrulanmadı — ilk /model geçişinde GUNLUK [ayar] satırı ve onay sorusu görülmeli.

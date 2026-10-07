@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.17
+surum: 0.18
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -43,6 +43,7 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - T-037 kapandı: YZ tarama raporu → 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07 (iddialar UNCONFIRMED).
 - T-038 kapandı: K-006 yalnız yönetilen mod'lar (managed settings), IMZA-MATRISI A12.
 - T-039 kapandı: ayar-denetimi eklenti/workflow/managed denetimi.
+- T-040 kapandı: model bekçisi (PreModelSwitch ask, GUNLUK kaydı); canlı doğrulama ilk /model geçişinde.
 - Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
 
 **Açık**
@@ -98,3 +99,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.15 | 2026-10-07 | T-037 | T-037 kapanışı |
 | 0.16 | 2026-10-07 | T-038 | T-038 kapanışı |
 | 0.17 | 2026-10-07 | T-039 | T-039 kapanışı |
+| 0.18 | 2026-10-07 | T-040 | T-040 kapanışı |

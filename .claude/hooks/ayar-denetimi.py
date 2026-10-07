@@ -43,7 +43,7 @@ ZORUNLU_DENY = [
 ]
 ZORUNLU_HOOKLAR = {
     "PreToolUse": "yikici-koruma.py", "Stop": "durus-kapisi.py", "SessionStart": "oturum-basi.py",
-    "ConfigChange": "ayar-denetimi.py",
+    "ConfigChange": "ayar-denetimi.py", "PreModelSwitch": "model-bekcisi.py",
 }
 GENIS_ALLOW = re.compile(r"^(Bash|Bash\(\*\)|Edit|Write|Edit\(\*\*\)|Write\(\*\*\)|"
                          r"(Edit|Write)\((\./)?(\.claude|30-devlet)(/.*)?\)|(Edit|Write)\(.*ANAYASA.*\))$")
