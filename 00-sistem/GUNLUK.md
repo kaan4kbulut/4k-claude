@@ -213,3 +213,15 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:16 [degisti] 00-sistem/HARITA.md — T-017 sahibinin kararları
 2026-10-07 10:16 [ayar] ~/.cache/Microsoft — onnxruntime telemetri kuyruğu sahibinin onayıyla silindi (T-017)
 2026-10-07 10:16 [oturum] T-017 — kapandı — K-004 kabul, tür belli değil, agent-scan yok, telemetri silindi
+2026-10-07 10:17 [degisti] T-018 — talimat açıldı: G-001 pazar araştırması başladı (kanban basladi)
+2026-10-07 10:20 [yeni] 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md — G-001 çıktısı: 3 seçenek yan yana, talep kanıtı yok (bilinmiyor)
+2026-10-07 10:20 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — T-018 G-001 araştırma notu bağları
+2026-10-07 10:20 [degisti] 20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md — T-018 G-001 araştırma notu bağları
+2026-10-07 10:20 [degisti] 40-ic-ses/MOC-ic-ses.md — T-018 G-001 araştırma notu bağları
+2026-10-07 10:20 [degisti] 00-sistem/HARITA.md — T-018 G-001 araştırma notu bağları
+2026-10-07 10:22 [degisti] 20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md — 0.3: kanban basladi kaydı, Dokunma netleştirildi (denetci engelleyici 1)
+2026-10-07 10:22 [degisti] 40-ic-ses/MOC-ic-ses.md — 0.3: araştırma notu satırları için sürüm ve günlük (denetci engelleyici 2)
+2026-10-07 10:22 [degisti] 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md — denetci önerileri: UNCONFIRMED 16, ısı presi kaynağı
+2026-10-07 10:23 [degisti] 20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md — 0.4: tamam — 4 ölçüt kanıtlı, denetci geçer
+2026-10-07 10:23 [degisti] 20-sirket/MOC-sirket.md — G-001 tamam
+2026-10-07 10:23 [oturum] T-018 — kapandı — G-001 tamam (pazar araştırması; sonuç bilinmiyor)

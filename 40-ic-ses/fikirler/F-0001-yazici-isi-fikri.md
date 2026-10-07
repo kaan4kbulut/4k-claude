@@ -3,7 +3,7 @@ id: 20261006-2144-yazici-isi-fikri
 ad: yazici-isi-fikri
 tur: fikir
 kat: 4
-surum: 0.3
+surum: 0.4
 durum: taslak
 amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
 olusturma: 2026-10-06
@@ -11,12 +11,12 @@ guncelleme: 2026-10-07
 yazar: kaan
 talimat: T-001
 dayandigi: []
-besledigi: [30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md]
+besledigi: [30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md, 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md]
 ust: 40-ic-ses/MOC-ic-ses.md
 merdiven: 1
 cynefin: kompleks
 guven: dusuk
-kaynaklar: []
+kaynaklar: [40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md]
 dokunus_sayisi: 1
 son_dokunus: "2026-10-06"
 etiketler: [is-fikri, yazici]
@@ -32,7 +32,7 @@ Bu fikir, Kaan'ın gelir getiren bir iş kurma isteğini bir yazıcı satın al�
 Kaan bir yazıcı satın alıp bu yazıcıyla para kazandıran küçük bir iş kurmak istiyor.
 
 ### Çerçeve (üçüncü şahıs)
-Kaan, bir yazıcı alıp onunla bir işe başlayabileceğini düşünüyor; dayanağı: belirlenmedi (sahibi henüz söylemedi). Alternatif çerçeve: belirlenmedi (ZORLA modunda yazılacak; T-001 sınırı gereği değerlendirme yapılmadı).
+Kaan, bir yazıcı alıp onunla bir işe başlayabileceğini düşünüyor; dayanağı: belirlenmedi (sahibi henüz söylemedi). Alternatif çerçeve: belirlenmedi (ZORLA modunda yazılacak). Alternatif iş biçimleri (G-001): A FDM 3D kişiye özel ürün, B1 süblimasyon kupa/hediye, B2 DTF tekstil — [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]].
 
 ### Neden şimdi
 belirlenmedi — tetikleyen gözlem kaydı yok.
@@ -42,9 +42,9 @@ belirlenmedi — tetikleyen gözlem kaydı yok.
 Bu atamaya uygun olarak [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] alım öncesi zaman kutulu bir pazar araştırması öneriyor; buna dayanan görev kartı [[20-sirket/gorevler/G-001-yazici-pazar-arastirmasi]] sahibinin onayını ve yazıcı türü cevabını bekliyor.
 
 ### Kanıt
-- henüz yok (merdiven 1; kanıt araması M2'de)
+- [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — üç seçenek için kaynaklı başlangıç maliyeti ve rakip fiyat aralıkları (güven düşük; çoğu arama özeti)
 ### Karşı-kanıt
-- aranmadı (T-001 sınırı: yalnız kayıt)
+- [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — düşük fiyat tabanı ve yoğun rekabet (ör. anahtarlık 21–250 TL), hiçbir seçenekte talep kanıtı yok, esnaf muafiyeti kapsamı belirsiz
 
 ### Steelman (M2)
 belirlenmedi
@@ -70,6 +70,7 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 ### Dayandığı
 - yok (tetikleyen gözlem kaydı yok)
 ### Beslediği
+- [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — açık sorulara G-001 araştırma notu (sonuç: bilinmiyor)
 - [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — önce pazar araştırması kararı (önerildi)
 ### Gelen
 - ← [[40-ic-ses/MOC-ic-ses]] — merdiven tablosu, M1
@@ -81,3 +82,4 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 | 0.1 | 2026-10-06 | T-001 | Oluşturuldu (merdiven 1) |
 | 0.2 | 2026-10-07 | T-004 | Cynefin ataması bölümüne K-004/G-001'e işaret eden bir cümle eklendi (eski: cümle yoktu) |
 | 0.3 | 2026-10-07 | T-017 | Açık soru 1'e sahibinin cevabı: tür henüz belli değil (eski: cevapsız) |
+| 0.4 | 2026-10-07 | T-018 | Kaynaklar, alternatifler, kanıt ve karşı-kanıt G-001 notuyla dolduruldu (eski: boş / aranmadı) |

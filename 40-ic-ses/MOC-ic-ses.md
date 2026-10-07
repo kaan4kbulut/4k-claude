@@ -3,7 +3,7 @@ id: 20261006-2230-moc-ic-ses
 ad: moc-ic-ses
 tur: moc
 kat: 4
-surum: 0.2
+surum: 0.3
 durum: aktif
 amac: Bu icerik haritasi, zihin katindaki fikirlerin merdiven durumunu, gozlemleri, yansimalari, kavramlari, park listesini ve haftalik metrikleri tek bakista gosterir.
 olusturma: 2026-10-06
@@ -47,6 +47,7 @@ Fikir: 1 (M0 0 · M1 1 · M2 0 · M3 0 · M4 0 · M5 0) · Gözlem: 0 · Yansım
 ### Araştırma notları
 - [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] — qmd Türkçe isabet ölçümü: vektör %90@3, kelime %0 (dogruluyor)
 - [[40-ic-ses/arastirma-notlari/freyatts-turkce-deneme]] — FreyaTTS Türkçe ses: günlük WER %7, İngilizce terim %60, işlemcide RTF 2.5–12 (celisiyor)
+- [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — yazıcı işi: 3 seçenek yan yana, talep kanıtı yok (bilinmiyor; güven düşük)
 
 ### Park listesi [?]
 - [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — yazıcı türü ne (3D mi, kâğıt/baskı mı)? Ne tür iş?
@@ -71,3 +72,4 @@ Fikir: 1 (M0 0 · M1 1 · M2 0 · M3 0 · M4 0 · M5 0) · Gözlem: 0 · Yansım
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
 | 0.2 | 2026-10-07 | T-010 | Araştırma notları += qmd-turkce-isabet |
+| 0.3 | 2026-10-07 | T-018 | Araştırma notları += freyatts-turkce-deneme (T-016'da sürümsüz eklenmişti) ve yazici-pazar-arastirmasi |

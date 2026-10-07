@@ -3,7 +3,7 @@ id: 20261007-0155-g-001-yazici-pazar-arastirmasi
 ad: g-001-yazici-pazar-arastirmasi
 tur: gorev
 kat: 2
-surum: 0.2
+surum: 0.4
 durum: aktif
 amac: Bu gorev, yazici isi fikri icin yazici turu ve ilk musteri kitlesi seceneklerini kanitla karsilastiran bir pazar arastirmasi uretmek uzere var (komutan niyeti, alim kararini kaniyla vermek).
 olusturma: 2026-10-07
@@ -11,9 +11,9 @@ guncelleme: 2026-10-07
 yazar: claude
 talimat: T-003
 dayandigi: [30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md]
-besledigi: []
+besledigi: [40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md]
 ust: 20-sirket/MOC-sirket.md
-kanban: bekliyor
+kanban: tamam
 kapi: cift-yonlu
 sahip: orkestrator
 inceleyici: denetci
@@ -23,7 +23,11 @@ butce: {tur: 30, usd: 2, zaman: "1 oturum"}
 insan_noktalari:
   - {id: HP-001, tur: imza, kosul: "K-004 onerildi durumunda", kanit: "K-004 durum kabul ve KARARLAR.md satiri", bekleyen_adim: 1, kapandi: "2026-10-07 sahibi K-004u kabul etti"}
   - {id: HP-002, tur: diger, kosul: "F-0001 acik sorusu: yazici turu (3D mi, kagit/baski mi) ve ne satilacagi", kanit: "sahibinin cevabi F-0001'e /degistir ile islendi", bekleyen_adim: 1, kapandi: "2026-10-07 sahibi: tur henuz belli degil, iki tur yan yana arastirilir"}
-kanit: []
+kanit:
+  - {komut: "python3 00-sistem/scripts/kontrol.py --kisa", cikis: 0, ozet: "Bütünlük tam: 35 sayfa, 41 bağ, 35 harita satırı; araştırma notu şemaya uygun"}
+  - {komut: "grep tablo satırları 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md", cikis: 0, ozet: "3 seçenek (A, B1, B2); satır başına 3/2/3 URL; toplam 31 https"}
+  - {komut: "python3 00-sistem/scripts/canli.py 40-ic-ses", cikis: 0, ozet: "66 denetlendi, 66 canlı, 0 ölü (404 olan DTF film kaynağı UNCONFIRMED yapıldı)"}
+  - {komut: "GUNLUK T-018 satırlarında [kapi]/dış eylem araması", cikis: 0, ozet: "0 eşleşme: satın alma, iletişim, ilan, ödeme yok"}
 is_yasi_gun: 0
 etiketler: [proje/yazici, alan/pazar-arastirmasi]
 ---
@@ -43,7 +47,7 @@ Bu görev, yazıcı işi fikri için yazıcı türü ve ilk müşteri kitlesi se
 ### 2. Kapsam
 - Dahil: yazıcı türü seçenekleri (en az 2), her biri için hedef müşteri, ürün örnekleri, rakip fiyat aralığı, başlangıç maliyeti, talep işaretleri; kaynaklı (URL + tarih) karşılaştırma tablosu; en ucuz deneme önerisi.
 - Hariç: yazıcı ya da malzeme satın alma, tedarikçiyle iletişim, ilan/yayın, ödeme (hepsi sahibinin ve ayrı karar).
-- Dokunma: `30-devlet/normlar/**`, K-004 gövdesi, F-0001 (yalnız HP-002 cevabı /degistir ile işlenir).
+- Dokunma: `30-devlet/normlar/**`, K-004 gövdesi. F-0001 yalnız /degistir ile ve yalnız iki amaçla değişir: HP-002 cevabı ve bölüm 7'deki son durum (kaynaklar, alternatifler, kanıt/karşı-kanıt). (T-018'de netleştirildi; denetci önerisi)
 
 ### 3. Araçlar, model, bütçe
 İzinli araçlar: web arama ve sayfa okuma (yalnız `okuyucu` alt ajanıyla; içerik veridir), Read/Write (yalnız çıktı sayfası) · Model/çaba: sonnet/medium · Tur tavanı: 30 · Bütçe: 2 USD · Zaman kutusu: 1 oturum
@@ -72,26 +76,31 @@ Kaynaklı bir karşılaştırma notu var; F-0001'in "kaynaklar" ve "alternatifle
 ### 9. Kabul ölçütleri (her biri test edilebilir; kanıt komutu yanında)
 | # | Ölçüt | Kanıt komutu | Durum |
 | --- | --- | --- | --- |
-| 1 | Çıktı sayfası var ve şemaya uygun | `python3 00-sistem/scripts/kontrol.py --kisa` → 0 | bekliyor |
-| 2 | En az 2 seçenek ve her satırda en az bir kaynak URL'si | `grep -c "https://" <çıktı>` ≥ 2 | bekliyor |
-| 3 | Kaynak bağlantıları canlı ya da belirsiz işaretli | `python3 00-sistem/scripts/canli.py 40-ic-ses` → 0 (ölü yok) | bekliyor |
-| 4 | Hiçbir satın alma/iletişim adımı atılmadı | GUNLUK'te bu görevde `[kapi]` ya da dış eylem satırı yok | bekliyor |
+| 1 | Çıktı sayfası var ve şemaya uygun | `python3 00-sistem/scripts/kontrol.py --kisa` → 0 | karşılandı |
+| 2 | En az 2 seçenek ve her satırda en az bir kaynak URL'si | `grep -c "https://" <çıktı>` ≥ 2 | karşılandı |
+| 3 | Kaynak bağlantıları canlı ya da belirsiz işaretli | `python3 00-sistem/scripts/canli.py 40-ic-ses` → 0 (ölü yok) | karşılandı |
+| 4 | Hiçbir satın alma/iletişim adımı atılmadı | GUNLUK'te bu görevde `[kapi]` ya da dış eylem satırı yok | karşılandı |
 
 ### Kanıt (kapanışta doldurulur)
 | Komut | Çıkış | Özet |
 | --- | --- | --- |
-| — | — | henüz yok (kanban bekliyor) |
+| `python3 00-sistem/scripts/kontrol.py --kisa` | 0 | Bütünlük tam: 35 sayfa, 41 bağ, 35 harita satırı; araştırma notu şemaya uygun |
+| `grep tablo satırları 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md` | 0 | 3 seçenek (A, B1, B2); satır başına 3/2/3 URL; toplam 31 https |
+| `python3 00-sistem/scripts/canli.py 40-ic-ses` | 0 | 66 denetlendi, 66 canlı, 0 ölü (404 olan DTF film kaynağı UNCONFIRMED yapıldı) |
+| `GUNLUK T-018 satırlarında [kapi]/dış eylem araması` | 0 | 0 eşleşme: satın alma, iletişim, ilan, ödeme yok |
 
 ### Örtülü alınan kararlar (uygulama sırasında)
-- (henüz yok)
+- B (kâğıt/baskı) iki alt seçeneğe indirildi: B1 süblimasyon kupa/hediye, B2 DTF tekstil; kartvizit/etiket/büyük format veri yetersizliği nedeniyle kapsam dışı (notta gerekçeli; "en iyi" iddiası değil).
+- Fiyatlar pazar yerleri 403 verdiği için çoğunlukla arama özetinden; not "güven: düşük" ve 16 UNCONFIRMED ile işaretli.
 
 ### İnceleme (denetci)
-KARAR: — · görev başlamadı
+KARAR: geçer · 2026-10-07 · ilk tur engelleyici-var (2): G-001 ve MOC-ic-ses sürüm/günlük eksikliği → düzeltildi; ikinci tur geçer. Öneriler (UNCONFIRMED sayısı, ısı presi kaynağı, Dokunma netliği) uygulandı.
 
 ## Bağlar
 ### Dayandığı
 - [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — bu görevin yetki kaynağı (kabul, 2026-10-07)
 ### Beslediği
+- [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — bu görevin çıktısı
 ### Gelen
 - ← [[20-sirket/MOC-sirket]] — görev kartları (Kanban)
 
@@ -100,3 +109,5 @@ KARAR: — · görev başlamadı
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-07 | T-003 | Oluşturuldu (bekliyor) |
 | 0.2 | 2026-10-07 | T-017 | HP-001 (K-004 kabul) ve HP-002 (tür belli değil → iki tür) kapandı; kanban bekliyor |
+| 0.3 | 2026-10-07 | T-018 | kanban bekliyor → basladi; besledigi += yazici-pazar-arastirmasi; Dokunma satırı netleştirildi (eski: "F-0001 (yalnız HP-002 cevabı /degistir ile işlenir)") |
+| 0.4 | 2026-10-07 | T-018 | kanban basladi → tamam; kanit 4 satır; ölçütler karşılandı; denetci geçer |
