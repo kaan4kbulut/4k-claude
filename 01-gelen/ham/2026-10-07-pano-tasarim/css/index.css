@@ -1,0 +1,6 @@
+/* index.html: yalnız ekran dizinine özgü kurallar; 4k-claude.css'ten sonra yüklenir. */
+.idx{min-height:100vh}
+.idx .pad{max-width:920px}
+.idx .row{align-items:center}
+.idx .row:last-child{border-bottom:0}
+.idx .row:hover{background:var(--hov)}

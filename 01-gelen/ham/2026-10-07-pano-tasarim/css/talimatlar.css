@@ -1,0 +1,3 @@
+/* talimatlar.html: yalnız bu ekrana özgü kurallar; 4k-claude.css ten sonra yüklenir. */
+.ck li{display:flex;gap:8px}
+.app .ck svg{margin-top:2px;color:var(--green)}

@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.8
+surum: 0.9
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -21,6 +21,18 @@ etiketler: [oturum]
 Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldık" deyince cevap buradadır.
 
 ## İçerik
+### Oturum: 2026-10-07 akşam — devralınan işler (devam istemi, T-032..)
+**Konuşulan**
+- T-032 kapandı: pano tasarım paketi 01-gelen/ham'de (sha256 35/35 aynı, Downloads zip'i de eşit); GUNLUK'teki bölünmüş kota hatası satırları tek satıra getirildi.
+- Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
+
+**Açık**
+- Sahibi: `~/Downloads/4k-claude-pano-tasarim.zip` → `~/Work/arsiv/pano-tasarim-paketi/` (proje dışı yazım; yikici-koruma engelledi).
+- F-0001: mali müşavire metni göndermek; fiziksel adımlar (TTS dinleme, Obsidian + Web Clipper).
+
+**Sonraki**
+- Devam istemi 2-5: /inbox-triage, pano.py, test kurulumu, hatalar talimatı.
+
 ### Oturum: 2026-10-07 — eksik analizi ve düzeltmeler (T-024..T-031)
 **Konuşulan**
 - T-024 kapandı: `.obsidian/` dar istisna (K-005), git dışı; yeni notlar 01-gelen'e.
@@ -56,3 +68,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.6 | 2026-10-07 | T-029 | Scorecard ölçümü |
 | 0.7 | 2026-10-07 | T-030 | F-0001 insan noktaları |
 | 0.8 | 2026-10-07 | T-031 | Oturum kapanışı: T-024..T-031 |
+| 0.9 | 2026-10-07 | T-032 | Akşam oturumu: T-032 kapanışı |

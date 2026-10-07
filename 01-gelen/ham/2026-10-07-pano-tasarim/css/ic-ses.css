@@ -1,0 +1,11 @@
+/* ic-ses.html: yalnız bu ekrana özgü kurallar; 4k-claude.css ten sonra yüklenir. */
+.rg{display:grid;grid-template-columns:26px 100px minmax(0,1fr);gap:8px;padding:5px 12px;border-bottom:1px solid var(--line)}
+.rg[aria-current]{background:var(--sel);color:var(--fgb)}
+.st{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}
+.st li{display:flex;flex-direction:column;padding-top:6px;border-top:2px solid var(--line)}
+.st .gec{border-color:var(--fg)}
+.st .sim{border-color:var(--acc)}
+.pm{display:grid;grid-template-columns:minmax(0,1fr) 36px;gap:2px 8px}
+.pm span:nth-child(2){text-align:right;color:var(--fgb)}
+.pm progress{grid-column:1 / -1}
+@media(max-width:850px){.st{grid-template-columns:repeat(3,minmax(0,1fr))}}

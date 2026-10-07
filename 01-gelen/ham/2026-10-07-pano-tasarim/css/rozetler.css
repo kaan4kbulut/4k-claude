@@ -1,0 +1,4 @@
+/* rozetler.html: yalnız bu ekrana özgü kurallar; 4k-claude.css ten sonra yüklenir. */
+.rz{box-sizing:border-box;width:1440px;height:770px}
+.g5{display:grid;gap:12px;grid-template-columns:repeat(5,minmax(0,1fr))}
+.rz .sbar{border:1px solid var(--line)}

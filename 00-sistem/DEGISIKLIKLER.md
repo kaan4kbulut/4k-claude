@@ -3,6 +3,10 @@
 Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikliği MINOR, şablon/betik düzeltmesi PATCH, kat yapısı değişikliği MAJOR. Bu dosya sistemin kendisini anlatır; içerik sayfalarının değişiklikleri GUNLUK.md'dedir.
 
 ## [Unreleased]
+### Değişti
+- `yscommon.py` HARIC_KLASOR += `01-gelen/ham` (T-032): gelen kutusunun özgün dış dosyaları (HTML, CSS, PNG, frontmatter'sız .md) taranmaz; okunacak hâlleri `al.py` notu olarak `01-gelen/*.md`'de durur.
+### Düzeltildi
+- GUNLUK.md: 2026-10-07 17:04-17:06 kota hatası satırları (kapanis-kaydi hook'u çok satırlı hata özeti yazmıştı) tek satır kuralına getirildi (T-032).
 
 ## [0.10.0] — 2026-10-07 (T-024..T-031, eksik analizi)
 ### Eklendi

@@ -1,0 +1,6 @@
+/* gunluk.html: yalnız bu ekrana özgü kurallar; 4k-claude.css ten sonra yüklenir. */
+.gl{display:grid;grid-template-columns:40px 70px 236px minmax(0,1fr);gap:0 10px;align-items:center;padding:4px 12px;border-bottom:1px solid var(--line)}
+.gl .bd{justify-self:start}
+.dy{padding:6px 12px;background:var(--bg2);border-bottom:1px solid var(--line)}
+.ev.d{grid-template-columns:76px minmax(0,1fr)}
+@media(max-width:850px){.gl{grid-template-columns:40px 70px minmax(0,1fr)}.gl>:nth-child(4){grid-column:1 / -1}}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4k-claude — Rozetler</title>
+<link rel="stylesheet" href="../css/4k-claude.css">
+<link rel="stylesheet" href="../css/rozetler.css">
+</head>
+<body>
+<div class="app sheet rz" data-theme="tokyo-night">
+<div class="hd">
+<h1 class="t gr">4k-claude panosu · rozetler ve kapı kartı durumları</h1>
+<span class="sm mu">Her rozet yazı taşır; renk yalnız yardımcıdır. Kesik çerçeveli etiket durum değil, açıklamadır.</span>
+<a class="lk sm" href="pano.html">panoya dön</a>
+</div>
+<div class="pad c">
+
+<div class="g4">
+<section class="card"><div class="sec">
+<h2 class="cap">SAYFA DURUMU · durum</h2>
+<div class="r w"><span class="bd off">taslak</span><span class="bd run"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5"></circle></svg>aktif</span><span class="bd wait"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"></path></svg>önerildi</span><span class="bd ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>kabul</span><span class="bd off"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6h9l-2.5-2.5"></path></svg>yerine geçildi</span><span class="bd err"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"></path></svg>reddedildi</span><span class="bd off">arşiv</span></div>
+<p class="sm mu">taslak → aktif · önerildi → kabul</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">TALİMAT</h2>
+<div class="r w"><span class="bd run"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="5"></circle></svg>açık</span><span class="bd wait"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"></path></svg>bekliyor</span><span class="bd off"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>kapalı</span></div>
+<p class="sm mu">Oturumda tek açık talimat. Bekliyor = kapı cevabı bekleniyor.</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">GÖREV · kanban</h2>
+<div class="r w"><span class="bd">bekliyor</span><span class="bd run"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2a6 6 0 1 0 6 6"></path></svg>başladı</span><span class="bd wait"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="5" r="2.5"></circle><path d="M3 14c0-3 2.2-4.5 5-4.5s5 1.5 5 4.5"></path></svg>fiziksel adım bekliyor</span><span class="bd wait"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 8s2.5-4.5 6.5-4.5S14.5 8 14.5 8s-2.5 4.5-6.5 4.5S1.5 8 1.5 8z"></path><circle cx="8" cy="8" r="2"></circle></svg>kontrol</span><span class="bd ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>tamam</span><span class="bd off"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"></path></svg>iptal</span></div>
+<p class="sm mu">WIP tavanı 3. Kanıt boşken tamam olamaz.</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">KAPI SONUCU · sonuc</h2>
+<div class="r w"><span class="bd wait"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"></path></svg>bekliyor</span><span class="bd ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>go</span><span class="bd err"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"></path></svg>kill</span><span class="bd unc"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"></path></svg>hold</span><span class="bd run"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6h9l-2.5-2.5M13 10H4l2.5 2.5"></path></svg>recycle</span></div>
+<p class="sm mu">Yalnız sahibinin cevabı kapıyı açar.</p>
+</div></section>
+
+<section class="card"><div class="sec">
+<h2 class="cap">KAPI TİPİ VE TÜRÜ</h2>
+<div class="r w"><span class="tag">TEK YÖNLÜ</span><span class="tag">ÇİFT YÖNLÜ</span><span class="bd">G0</span><span class="bd">G1</span><span class="bd">G2</span><span class="bd">G3</span><span class="bd">adhoc</span></div>
+<p class="sm mu">Tek yönlü = geri alınamaz; sahibinin imzası gerekir.</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">FİKİR · merdiven</h2>
+<div class="r w"><span class="bd off">M0 ham</span><span class="bd">M1 fikir</span><span class="bd">M2 sınanmış</span><span class="bd run"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 13h3v-3h3V7h3V4h3"></path></svg>M3 araştırılmış</span><span class="bd">M4 brif</span><span class="bd ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>M5 devredildi</span><span class="bd off"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"></path></svg>öldürülen</span></div>
+<p class="sm mu">Öldürme her basamakta normal çıkıştır.</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">CYNEFIN VE GÜVEN</h2>
+<div class="r w"><span class="bd">açık</span><span class="bd">karmaşık</span><span class="bd">kompleks</span><span class="bd">kaotik</span><span class="bd">karışık</span><span class="bd off">belirlenmedi</span></div>
+<p class="sm mu">güven: düşük · orta · yüksek</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">ARAŞTIRMA SONUCU</h2>
+<div class="r w"><span class="bd ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>doğruluyor</span><span class="bd err"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"></path></svg>çelişiyor</span><span class="bd off"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 6a2.5 2.5 0 1 1 3.6 2.2c-.7.4-1.1.9-1.1 1.6M8 12.3v.2"></path></svg>bilinmiyor</span></div>
+<p class="sm mu">“Bilinmiyor” geçerli bir cevaptır.</p>
+</div></section>
+
+<section class="card"><div class="sec">
+<h2 class="cap">GÜNLÜK TÜRLERİ</h2>
+<div class="r w"><span class="bd ok">yeni</span><span class="bd">degisti</span><span class="bd off">arsiv</span><span class="bd src">karar</span><span class="bd wait">kapi</span><span class="bd err">hata</span><span class="bd unc">durdu</span><span class="bd rem">ayar</span><span class="bd run">oturum</span><span class="bd off">uyku</span></div>
+<p class="sm mu">Dosyadaki yazımıyla gösterilir; çevrilmez.</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">İMZA</h2>
+<div class="r w"><span class="tag">SAHİBİ</span><span class="tag">BAŞKAN A.</span><span class="tag">ROL</span></div>
+<p class="sm mu">A1–A11 sahibi · B1–B7 orkestratör · C1–C4 rol ajanı</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">ARAÇ · AĞ VE VERİ</h2>
+<div class="r w"><span class="bd off">yerel</span><span class="bd wait">ağ ister</span><span class="bd rem">veri dışarı</span><span class="bd unc">dış yazım</span><span class="bd off">kurulmadı</span></div>
+<p class="sm mu">Veri dışarı çıkıyorsa her zaman görünür.</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">AÇIKLAMA ETİKETLERİ</h2>
+<div class="r w"><span class="tag">KANIT</span><span class="tag">ÖRNEK AN</span><span class="tag">SEÇİLEN</span><span class="tag">FİZİKSEL</span><span class="tag unc">TEST YOK</span></div>
+<p class="sm mu">saklama: S sürekli · K kurum · B birim · I imha adayı</p>
+</div></section>
+</div>
+
+<h2 class="cap">KAPI KARTI DURUMLARI</h2>
+<div class="g5">
+<section class="card dec"><div class="sec">
+<div class="r"><span class="bd wait"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"></path></svg>bekliyor</span></div>
+<p class="sm">ASK.md var. Talimat bekliyor; oturum başka işe geçmez. Cevap oturumda verilir.</p>
+</div></section>
+<section class="card"><div class="sec">
+<div class="r"><span class="bd ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5"></path></svg>go</span></div>
+<p class="sm">İşe devam. ASK.md silinir; talimat yeniden açık.</p>
+</div></section>
+<section class="card"><div class="sec">
+<div class="r"><span class="bd err"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"></path></svg>kill</span></div>
+<p class="sm">Talimat kapanır: iptal, nedeniyle birlikte.</p>
+</div></section>
+<section class="card"><div class="sec">
+<div class="r"><span class="bd unc"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9"></path></svg>hold</span></div>
+<p class="sm">ILERLEME “siradaki: bekle” olur; tarih yazılır.</p>
+</div></section>
+<section class="card"><div class="sec">
+<div class="r"><span class="bd run"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6h9l-2.5-2.5M13 10H4l2.5 2.5"></path></svg>recycle</span></div>
+<p class="sm">Fikir M3'e döner ya da kart yeniden yazılır.</p>
+</div></section>
+</div>
+
+<div class="g2">
+<section class="card hl err"><div class="sec">
+<div class="r"><h2 class="cap gr">BÜTÜNLÜK HATASI</h2><span class="tag">ÖRNEK · T-025 ÖNCESİ</span></div>
+<div class="pre"><div class="ln">BÜTÜNLÜK HATASI: 2 hata, 0 uyarı (40 sayfa, 47 bağ).</div><div class="ln">  HATA  00-sistem/ILERLEME.md: aktif_talimat açık talimatı göstermiyor (T-025)</div><div class="ln">  HATA  40-ic-ses/nerede-kaldik.md: son kapanan T-024 yazılmamış (/kapat 3. adım)</div></div>
+<p class="sm mu">Hata varken pano yine açılır ve hatalı kayıtları listeler. Düzeltme oturumda yapılır.</p>
+</div></section>
+<section class="card"><div class="sec">
+<h2 class="cap">DURUM ÇUBUĞU · HATA VE AÇIK KAPI</h2>
+<div class="sbar"><span><span class="dot ok"></span>4k-claude · master</span><span><span class="dot wait"></span>aktif talimat T-026 · bekliyor</span><span><span class="dot wait"></span>kapı KP-003</span><span><span class="dot err"></span>bütünlük: 2 hata</span><span class="gr"></span></div>
+<h2 class="cap">BOŞ DURUM</h2>
+<p class="sm mu">Boş liste “—” ile ve sayı 0 ile gösterilir; gizlenmez. Örnek: gözlem 0 · arşiv 0 · uyku 0.</p>
+</div></section>
+</div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+/* kapi.html: yalnız bu ekrana özgü kurallar; 4k-claude.css ten sonra yüklenir. */
+.op{display:grid;grid-template-columns:22px minmax(0,1fr) 200px;gap:2px 10px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--line)}
+.op:last-child{border-bottom:0}
+.op>b{color:var(--fgb)}
+@media(max-width:850px){.op{grid-template-columns:22px minmax(0,1fr)}.op .cmd{grid-column:2}}

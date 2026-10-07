@@ -357,3 +357,16 @@ ayar-denetimi.
 2026-10-07 12:22 [degisti] 40-ic-ses/nerede-kaldik.md — 0.8 — oturum kapanışı T-024..T-031
 2026-10-07 12:22 [ayar] ~/.claude/settings.json — PreToolUse += kasa-disi-koruma (sahibi onayladı; commit'ten hemen sonra kurulur)
 2026-10-07 12:22 [oturum] T-031 — kapandı — klasör dışı açılış engeli; eksik analizi düzeltmeleri tamam
+2026-10-07 16:55 [hata] Read — EISDIR: illegal operation on a directory, read '/home/caferkaandebana/Work/4k-claude/4k-claude-pano-tasarim'
+2026-10-07 16:59 [yeni] T-032 — talimat açıldı — pano tasarım paketi gelen kutusuna
+2026-10-07 16:59 [yeni] 01-gelen/2026-10-07-1659-istem.md — al.py: dış içerik gelen kutusuna (işlenmedi; okuyucu ile /inbox-triage)
+2026-10-07 16:59 [yeni] 01-gelen/2026-10-07-1659-teslim.md — al.py: dış içerik gelen kutusuna (işlenmedi; okuyucu ile /inbox-triage)
+2026-10-07 17:01 [yeni] 01-gelen/ham/2026-10-07-pano-tasarim — sahibinin tasarım paketi kökten taşındı (35 dosya, sha256 aynı; T-032)
+2026-10-07 17:01 [degisti] 00-sistem/scripts/yscommon.py — HARIC_KLASOR += 01-gelen/ham: özgün dış dosyalar taranmaz (T-032)
+2026-10-07 17:04 [hata] Bash — Exit code 1 · Your disk quota is full on the filesystem with Claude Code's temp directory /tmp/claude-1000/-home-caferkaandebana-Work-4k-claude/50f21f27-a239-466a-8468-6d0bc49fa7b4/tasks (EDQUOT), so an
+2026-10-07 17:04 [hata] Bash — Exit code 1 · Your disk quota is full on the filesystem with Claude Code's temp directory /tmp/claude-1000/-home-caferkaandebana-Work-4k-claude/50f21f27-a239-466a-8468-6d0bc49fa7b4/tasks (EDQUOT), so an
+2026-10-07 17:06 [hata] Bash — Exit code 1 · Your disk quota is full on the filesystem with Claude Code's temp directory /tmp/claude-1000/-home-caferkaandebana-Work-4k-claude/50f21f27-a239-466a-8468-6d0bc49fa7b4/tasks (EDQUOT), so an
+2026-10-07 17:07 [oturum] 50f21f27-a23 — kapandı (other); tur=7 in=160 out=28163 cache_okuma=3830679 usd≈2.2527
+2026-10-07 17:53 [degisti] 40-ic-ses/nerede-kaldik.md — 0.9 — T-032
+2026-10-07 17:53 [degisti] 00-sistem/GUNLUK.md — 17:04-17:06 [hata] satırları tek satıra (T-032)
+2026-10-07 17:53 [oturum] T-032 — kapandı — paket 01-gelen/ham'de (sha256 35/35); zip arşivi sahibine; testler sandbox'ta koşmuyor (temiz kopyada 53/53)

@@ -355,3 +355,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: .claude/hooks/kasa-disi-koruma.py, 00-sistem/scripts/4k-claude.sh, 00-sistem/testler/test_kasa_disi_koruma.py (yeni); değişen: CLAUDE.md, DEGISIKLIKLER (0.10.0), MALIYET.csv, nerede-kaldik 0.8; proje dışı (sahibinin onayıyla): ~/.claude/settings.json PreToolUse, ~/.local/bin/4k-claude
 - Kapanış notu: Klasör dışında açılan oturum artık 4k-claude'a yazamaz (okuma serbest); oturumlar 4k-claude ile açılır. Kurulum bu commit'ten sonra yapıldı; canlı doğrulama brifingde.
+
+## T-032 — Pano tasarım paketini kökten gelen kutusuna al
+- Tarih: 2026-10-07
+- Niyet: Sahibinin eklediği `4k-claude-pano-tasarim/` (35 dosya: 11 HTML, 12 CSS, 10 PNG, ISTEM.md, TESLIM.md) depo kökünde duruyor; kural 7 (kat dışına yazma yok) ihlali. Paket dış üretim olduğu için veridir: gelen kutusuna alınır, ISTEM ve TESLIM al.py ile ham not olur, okuma /inbox-triage'a kalır.
+- Başarı ölçütü: kökte paket yok; ham paket `01-gelen/ham/2026-10-07-pano-tasarim/` altında, içerik değişmeden (sha256 aynı); ISTEM ve TESLIM için iki ham not `01-gelen/*.md`; `01-gelen/ham/` kontrol.py taramasından hariç (ham özgün dosyalar frontmatter taşımaz); `kontrol.py --test` ve `--kisa` → 0.
+- Sınırlar: Paketin içeriği okunmaz, değiştirilmez, silinmez; pano.py yazılmaz (ISTEM'in ilk aşaması ayrı talimat); /inbox-triage bu talimatta koşmaz.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07: "önerdiğin şekilde uygula")
+- Durum: kapali
+- Doğurduğu dosyalar: 01-gelen/ham/2026-10-07-pano-tasarim/ (taşındı, 35 dosya), 01-gelen/2026-10-07-1659-istem.md, 01-gelen/2026-10-07-1659-teslim.md (yeni); değişen: 00-sistem/scripts/yscommon.py (HARIC_KLASOR), DEGISIKLIKLER, GUNLUK (17:04-17:06 kota hatası satırları tek satıra), nerede-kaldik 0.9
+- Kapanış notu: Paket gelen kutusunda, içerik aynı (sha256 35/35; ~/Downloads zip'i de pakete eşit). Açık: zip'in ~/Work/arsiv'e taşınması proje dışı yazım, sahibine kaldı; testler gerçek depoda sandbox yer tutucuları yüzünden koşmuyor (ortak.py, sıradaki hatalar talimatı).

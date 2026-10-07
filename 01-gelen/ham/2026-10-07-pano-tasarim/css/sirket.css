@@ -1,0 +1,10 @@
+/* sirket.html: yalnız bu ekrana özgü kurallar; 4k-claude.css ten sonra yüklenir. */
+.kb{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line);border-radius:var(--r)}
+.kb>div{display:flex;flex-direction:column;gap:6px;min-height:92px;padding:8px 10px;border-right:1px solid var(--line)}
+.kb>div:last-child{border-right:0}
+.kc{display:flex;flex-direction:column;padding:5px 8px;border:1px solid var(--edge);border-radius:var(--r);background:var(--fill)}
+.tb code{font:inherit;color:var(--fgb)}
+.tb .n{width:24px}.tb .x{width:52px}
+.sc{display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:1px 6px;font-size:11px}
+.sc dt{font-weight:700;color:var(--fgb)}
+@media(max-width:850px){.kb{grid-template-columns:minmax(0,1fr)}.kb>div{min-height:0;border-right:0;border-bottom:1px solid var(--line)}.kb>div:last-child{border-bottom:0}}

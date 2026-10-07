@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-031 kapandı; eksik analizi düzeltmeleri bitti (T-024..T-031)
+aktif_talimat: yok — T-032 kapandı; sıradaki: /inbox-triage (istem + teslim notları)
 kapi: yok
 acik_soru: yok
-siradaki: sahibi: mali müşavire metni gönder (esnaf-muafiyeti notu); oturumları 4k-claude ile aç. Açık öneriler: 4k-core bağı (izinle), S7 flip ölçümü, orkestratör tavanı/modeli (A5)
+siradaki: devam istemi (~/Work/isler/2026-10-07-genel-toparlama/devam-istemi.md) 2-5: inbox-triage, pano.py, test kurulumu, hatalar. Sahibi: zip'i arşive taşı; mali müşavire metni gönder (esnaf-muafiyeti notu); oturumları 4k-claude ile aç. Açık öneriler: 4k-core bağı (izinle), S7 flip ölçümü, orkestratör tavanı/modeli (A5)
 
 ## Son kapanış
+- T-032 (2026-10-07): Pano tasarım paketi 01-gelen/ham'de, içerik aynı; ham dosyalar kontrol.py taramasından hariç. Açık: ~/Downloads zip'ini arşive taşımak (proje dışı, sahibi). Kanıt: sha256sum -c → 35/35 OK; zip içeriği 35/35 OK; kontrol.py --test gerçek depoda → 1 (40 hata: sandbox /dev/null yer tutucuları copytree'yi bozuyor), git ls-files kopyasında → 0 (53); kontrol.py --kisa → 0.
 - T-031 (2026-10-07): Klasör dışında açılan oturum artık 4k-claude'a yazamaz (okuma serbest); oturumlar 4k-claude ile açılır. Kurulum bu commit'ten sonra yapıldı; canlı doğrulama brifingde. Kanıt: kontrol.py --test → 0 (53); kontrol.py --kisa → 0.
 - T-030 (2026-10-07): Mali müşavire 3 soruluk metin hazır; F-0001'de sıradaki insan noktaları yazılı. Sahibi deneme türünü henüz bilmiyor, önce müşavir cevabını görmek istiyor. Açık: metni göndermek (sahibi). Kanıt: kontrol.py --kisa → 0; sahibine tek soru soruldu (cevap: henüz bilmiyor).
 - T-029 (2026-10-07): Scorecard artık ölçülüyor; ilk kayıt 2026-W41: S1 %97 (T-001 kaydı eksik), S5 67,85 USD (bir oturum tavanı 13× aştı). S7 flip sayacı ölçülmüyor ([konum] satır türü yok). Kanıt: kontrol.py --test → 0 (46); scorecard.py --yaz T-029 → SCORECARD 0.2; kontrol.py --kisa → 0.

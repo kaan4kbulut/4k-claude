@@ -8,7 +8,8 @@ import sys
 
 KAT_KLASOR = {"00-sistem": 0, "01-gelen": 0, "10-insan": 1, "20-sirket": 2, "30-devlet": 3, "40-ic-ses": 4, "90-arsiv": 9}
 TARANAN = ["00-sistem", "01-gelen", "10-insan", "20-sirket", "30-devlet", "40-ic-ses"]
-HARIC_KLASOR = ("00-sistem/sablonlar", "00-sistem/scripts", "00-sistem/sema", "00-sistem/.kosu")
+HARIC_KLASOR = ("00-sistem/sablonlar", "00-sistem/scripts", "00-sistem/sema", "00-sistem/.kosu",
+                "01-gelen/ham")  # özgün dış dosyalar: frontmatter taşımaz, al.py notu yanlarında (T-032)
 HARIC_DOSYA = {"00-sistem/HARITA.md", "00-sistem/GUNLUK.md", "00-sistem/ILERLEME.md", "00-sistem/TALIMATLAR.md",
                "00-sistem/KARARLAR.md", "00-sistem/DEGISIKLIKLER.md", "00-sistem/ASK.md"}
 

@@ -1,0 +1,162 @@
+# 4k-claude panosu — tasarım başvurusu
+
+Bu paket, 4k-claude klasörü için tasarlanan salt okunur bir panonun ekranlarını ve tasarım dilini içerir. Deponun `48b94f8` anındaki (T-026 kapanışı, 2026-10-07) kayıtlarına bakılarak hazırlandı.
+
+Bu belge bir başvuru kaynağıdır, talimat değildir. Ne yapılacağını sahibi oturumda söyler; burada yazanlar yalnız tasarımın ne olduğunu ve neden öyle olduğunu anlatır. "Öneri" diye işaretlenen bölümler bağlayıcı değildir.
+
+Bu paketin 4k-core ile ilgisi yoktur; yalnız 4k-claude içindir.
+
+## 1. Pano nedir
+
+- Wiki dosyalarından üretilen statik HTML sayfalarıdır. Sunucu yoktur, ağa çıkmaz.
+- Hiçbir dosyaya yazmaz, karar vermez, talimat açmaz, kapı cevaplamaz.
+- Sahibine tek bakışta şunu gösterir: nerede kaldık, bekleyen kapı var mı, sıra bende mi, sistem sağlam mı.
+- Her değişiklik ve karar Claude Code oturumunda yapılır. Pano bunun için yalnız kopyalanacak metin verir.
+- Sayfa gövdelerini okumak için Obsidian yerinde kalır; pano oraya bağlantı verir.
+
+## 2. Paket haritası
+
+| Yol | İçerik |
+| --- | --- |
+| `TESLIM.md` | bu belge |
+| `ISTEM.md` | sahibinin oturuma yapıştırabileceği hazır istem |
+| `index.html` | ekran dizini (tarayıcıda açılır) |
+| `ekranlar/*.html` | 10 ekranın sade HTML'i; betik yok, satır içi stil yok |
+| `css/4k-claude.css` | ortak tasarım dili: renk değişkenleri, kabuk, rozet, kart, tablo |
+| `css/<ekran>.css` | yalnız o ekrana özgü kurallar |
+| `goruntuler/*.png` | her ekranın 1440 px genişlikte görüntüsü |
+
+Ekran görüntüleri bu ortamda JetBrains Mono kurulu olmadığı için DejaVu Sans Mono ile alındı. Harf genişliği yakındır; Omarchy'de sistem yazı tipiyle satır kırılımları biraz değişebilir.
+
+## 3. Ekranlar ve okudukları kayıtlar
+
+| Ekran | Dosya | Okuduğu kayıtlar |
+| --- | --- | --- |
+| Pano | `pano.html` | `00-sistem/ILERLEME.md` (aktif_talimat, kapi, acik_soru, siradaki, Son kapanış) · `40-ic-ses/nerede-kaldik.md` · `kontrol.py --json` · her katın sayfa sayıları · `01-gelen` |
+| Açık kapı | `kapi.html` | `00-sistem/ASK.md` (varsa) · `30-devlet/kapilar/KP-*.md` · `IMZA-MATRISI.md` · ilgili talimat ve günlük satırları |
+| Kararlar ve normlar | `kararlar.html` | `00-sistem/KARARLAR.md` · `30-devlet/kararlar/K-*.md` · `normlar/` · `IMZA-MATRISI.md` |
+| İç Ses | `ic-ses.html` | `40-ic-ses/fikirler/F-*.md` (merdiven, cynefin, guven, açık sorular, [konum]) · `arastirma-notlari/` (sonuc) · `MOC-ic-ses.md` park listesi |
+| Şirket | `sirket.html` | `20-sirket/gorevler/G-*.md` (kanban, insan_noktalari, kanit, kabul ölçütleri, inceleme) · `SCORECARD.md` · `RITIM.md` |
+| İnsan | `insan.html` | açık insan noktaları · `10-insan/araclar/ARAC-KAYDI.md` · `01-gelen` · kapı kayıtlarındaki imzalar |
+| Talimat defteri | `talimatlar.html` | `00-sistem/TALIMATLAR.md` · `GUNLUK.md`'de o talimata ait satırlar · `git log` |
+| Günlük | `gunluk.html` | `00-sistem/GUNLUK.md` |
+| Sağlık | `saglik.html` | `kontrol.py` · `bayat.py` · `00-sistem/MALIYET.csv` · `HARITA.md` · `.claude/settings.json` (hook ve sandbox) · `DEGISIKLIKLER.md` |
+| Rozetler | `rozetler.html` | başvuru sayfası; veri okumaz |
+
+Sol ray katların kendisidir: Pano, 40 İç Ses, 30 Devlet, 20 Şirket, 10 İnsan, 00 Sistem. Alt durum çubuğu her ekranda aynıdır: dal, aktif talimat, kapı, açık soru, bütünlük, WIP, gelen kutusu, üretim zamanı ve commit.
+
+## 4. Panodan dışarı çıkan üç şey
+
+Pano yazmadığı için sahibine yalnız şunları verir:
+
+1. Terminal komutu (`$` ile başlayan kutu). Salt okur betikler (`kontrol.py`, `bayat.py`, `maliyet.py`, `ara.py`) ve sahibinin kendi çalıştırdığı iki yazan betik: `not.py` (KR-001 hafif yol) ve `al.py` (gelen kutusuna belge alma). "Kopyala" düğmesi metni kopyalar; çalıştırmaz.
+2. Oturum mesajı (`>` ile başlayan kutu). Kapı cevabı (`KP-003: B`) ve `/degistir <yol> <ne değişecek>`. Sahibi bunu Claude Code oturumuna yapıştırır ya da kendi cümlesiyle yazar.
+3. `obsidian://open?vault=<kasa adı>&file=<yol>` bağlantısı. Kasa adı klasör adıdır. Bağlantı, sahibi klasörü Obsidian'da kasa olarak açtıktan sonra çalışır (bu adım kayıtlarda hâlâ açık).
+
+Panoda birincil (dolu) düğme yoktur; çünkü panonun yaptığı bir iş yoktur.
+
+## 5. Tasarım dili
+
+### Renk değişkenleri
+
+Değerler Omarchy'nin `themes/tokyo-night/colors.toml` dosyasından alındı. Ad sabit kalır, değer temayla değişir. CSS'te dört tema hazır: `tokyo-night`, `catppuccin`, `gruvbox`, `flexoki-light` (kök öğede `data-theme`).
+
+| CSS değişkeni | colors.toml anahtarı | Tokyo Night | Kullanım |
+| --- | --- | --- | --- |
+| `--bg` | `background` | `#1a1b26` | ana zemin |
+| `--bg2` | `dark_background` | `#13141c` | komut kutusu, betik çıktısı, gün başlığı |
+| `--sel` | `selection` | `#292e42` | seçili satır, seçili sekme |
+| `--mut` | `muted` | `#414868` | ayırıcı çizgiler |
+| `--fg` | `foreground` | `#a9b1d6` | gövde yazısı |
+| `--fgd` | `dark_foreground` | `#565f89` | pasif rozet |
+| `--fgb` | `bright_foreground` | `#c0caf5` | başlık, vurgulu yazı |
+| `--acc` | `accent` | `#7aa2f7` | odak halkası, bağlantı, açık kapı kartının kenarlığı |
+| `--blue` … `--cyan` | aynı adlı anahtarlar | | rozet tonları |
+
+Köşeler keskin (`--r: 0`), gölge ve bulanıklık yok; Omarchy'nin Hyprland görünümüyle aynı. Yazı tipi sistemin tek aralıklı yazı tipi (`JetBrainsMono Nerd Font`), taban 12 px. Dış font ya da CDN yok.
+
+### Rozetler
+
+- Her rozet yazı taşır; renk yalnız yardımcıdır. Bazı Omarchy temalarında renk adları güvenilir değildir (ör. matte-black'te `yellow` kırmızıdır), bu yüzden anlam yalnız renge bırakılmadı.
+- Günlük türleri ve kapı sonuçları dosyadaki yazımıyla gösterilir (`degisti`, `kapi`, `go`). Durum, kanban ve kapı tipi değerleri okunur Türkçeyle yazılır (`basladi` → başladı, `fiziksel-adim-bekliyor` → fiziksel adım bekliyor, `cift-yonlu` → çift yönlü).
+- Kesik çerçeveli etiket (`.tag`) durum değildir, açıklamadır: KANIT, ÖRNEK AN, SEÇİLEN, TEK YÖNLÜ.
+- Tam sözlük `ekranlar/rozetler.html` içinde.
+
+| Sınıf | Ton | Kullanıldığı yer |
+| --- | --- | --- |
+| `.ok` | yeşil | kabul, go, tamam, doğruluyor, geçer |
+| `.wait` | sarı | bekliyor, önerildi, kontrol, ağ ister, açık fiziksel adım |
+| `.run` | mavi | aktif, açık, başladı, recycle, oturum |
+| `.err` | kırmızı | kill, reddedildi, çelişiyor, hata |
+| `.unc` | turuncu | hold, durdu, dış yazım, TEST YOK |
+| `.rem` | mor | veri dışarı, ayar |
+| `.src` | camgöbeği | karar |
+| `.off` | soluk | taslak, kapalı, arşiv, yerel, bilinmiyor |
+
+### Düzen
+
+- Dört sütun: ray 76 px · liste 300 px · sahne esnek · yan panel 300 px. 1250 px ve altında yan panel gizlenir; 850 px ve altında ray yalnız kat numarasına iner, ızgaralar tek sütuna düşer.
+- Çizimlerde kök `min-height: 900px` kullanıldı. Gerçek sayfada kök yüksekliği pencere yüksekliği olmalı ki sütunlar kendi içinde kaysın.
+- Boş liste gizlenmez: "—" ve 0 ile gösterilir (kanban'da boş kolonlar, günlükte `arsiv 0`, `uyku 0`).
+
+## 6. Depoda görülen ve ayrıştırmayı etkileyen durumlar
+
+Bunlar tasarım yapılırken dosyalar okunurken görüldü:
+
+1. `GUNLUK.md` içinde biçime uymayan devam satırları var. 2026-10-07 11:18 ve 11:21 tarihli iki `[hata] Bash — Exit code 2` kaydının ardından komut çıktısının gövdesi (bir dizin listesi ve bir JSON parçası) günlüğe düşmüş. Tasarım bunları önceki kayda ek sayar ve satır sayımına katmaz (288 kayıt).
+2. `TALIMATLAR.md` düz madde listesidir: `## T-xxx — başlık`, altında `- Tarih:`, `- Niyet:`, `- Başarı ölçütü:`, `- Sınırlar:`, `- Kat:`, `- Kapı:`, `- Durum:`, `- Doğurduğu dosyalar:`, `- Kapanış notu:`. `Kapı` alanı serbest metindir (`tek-yonlu (A6 …) · imza: sahibi (…)`); tek/çift ayrımı için ilk sözcük yeter.
+3. `ILERLEME.md`'deki dört alan frontmatter değil, düz satırdır (`aktif_talimat: yok — T-026 kapandı …`). Değer ile açıklama `—` ile ayrılmış.
+4. `KARARLAR.md` satır biçimi `K-xxx · tarih · durum · başlık · kapı`; yönerge (Y-001) ve kural (KR-001) da aynı dizindedir.
+5. `MALIYET.csv`'de `usd_tahmin` sütununda sayıdan sonra not olabilir (`0.0 (eski hook: token okunamadı)`). İlk iki satırda model ve tur boştur.
+6. Görev kartında `insan_noktalari` ve `kanit` frontmatter'da satır içi sözlük listesidir. `yscommon.py` bunları zaten ayrıştırıyor (`frontmatter_oku`, `sayfalari_tara`).
+7. Bazı sayfalarda frontmatter'daki `amac` Türkçe karaktersiz yazılmış; gövdedeki `# başlık` ve `## Amaç` doğru yazımlıdır. Tasarım başlığı gövdeden alır.
+8. `nerede-kaldik.md` üç kalın başlıkla bölünmüştür: `**Konuşulan**`, `**Açık**`, `**Sonraki**`.
+9. Kapı kayıtlarının hepsi şablondaki tam Onay Dosyası alanlarını taşımıyor (KP-001…003'te Bağlam, Kriterler, İmza, Sonuç var). Kapı ekranı kayıtta ne varsa onu gösterecek biçimde çizildi.
+10. `ASK.md` yalnız kapı açıkken vardır; biçimi `/kapi` becerisinde tanımlıdır (`Soru`, `Varsayılan`, `Seçenekler`, `Bağlı`, `Son tarih`).
+
+## 7. Uygulama için öneri
+
+Öneridir; yer, ad ve sıra oturumda kararlaştırılır.
+
+- Üretici: `00-sistem/scripts/pano.py`. Yalnız standart kütüphane, yalnız okur, `yscommon.py`'yi kullanır. `graf.py` emsaldir.
+- Çıktı: `00-sistem/.kosu/pano/` (zaten git dışı). Böylece üretilen dosyalar haritaya, günlüğe ve `kontrol.py` taramasına girmez.
+- Tasarım kaynakları (CSS ve HTML şablonları): `00-sistem/scripts/` altında bir klasör; bu klasör `yscommon.HARIC_KLASOR` içinde olduğu için sayfa taramasının dışındadır.
+- Betik: tek küçük dosya; yalnız süzgeç ve "kopyala". Ağ isteği, dış betik, satır içi betik yok. `graf.html`'in aksine hiçbir şey CDN'den gelmez.
+- `kontrol.py` ve `bayat.py` sonuçları betiklerin `--json` çıktısından alınır; denetim mantığı yeniden yazılmaz.
+- İzin: `pano.py`'nin sorulmadan çalışması için `.claude/settings.json` `permissions.allow` listesine satır gerekir. Bu dosya `ask` altındadır ve `ayar-denetimi` hook'u değişikliği izler; yani sahibinin onayıyla olur.
+- Kayıt: betik bir araç sayılırsa `ARAC-KAYDI` B tablosuna satır (yerel, ağ yok).
+- Üretim zamanı: elle (`python3 00-sistem/scripts/pano.py`) ve istenirse `/kapat` sonunda. Durum çubuğundaki "üretildi … · commit" damgası panonun hangi ana ait olduğunu gösterir; pano kendi kendine yenilenmez.
+
+Olası sıra:
+
+1. Kabuk, durum çubuğu, Pano ve Sağlık (en az ayrıştırma; `ILERLEME`, `nerede-kaldik`, `kontrol.py --json`).
+2. Talimat defteri ve Günlük.
+3. Kapı ve Kararlar.
+4. İç Ses, Şirket, İnsan.
+5. Süzgeç, kopyala, tema bağlama.
+
+## 8. Tasarımdaki örnek ve yeniden kurulan içerik
+
+Ekranlardaki veriler depodan alındı. Aşağıdakiler birebir kayıt değildir:
+
+- Kapı ekranı, KP-003'ün cevaplanmadan önceki anını canlandırır ("ÖRNEK AN · 11:58"). O ana ait `ASK.md` depoda yok; soru cümlesi ve "varsayılan" satırı kapı kaydındaki seçeneklerden yeniden kuruldu. Günlükteki `[kapi] KP-003 açıldı` satırı da bu canlandırmaya aittir (gerçek satır doğrudan `go` ile yazılmış).
+- `KP-003: A` biçimindeki cevap metni bir öneridir; oturum serbest cümleyi de kabul eder.
+- Rozetler sayfasındaki "BÜTÜNLÜK HATASI" örneği T-025'ten önceki iki hatayı temsil eder; ilk satırın tam metni kayıtta yok, `kontrol.py`'nin ileti kalıbından yazıldı.
+- İç Ses ekranındaki steelman metni ve Kararlar ekranındaki seçenek tablosu kayıttaki uzun metinlerin kısaltılmış hâlidir.
+- Kararlar ekranındaki "Doğrulama" satırları (G-001 kapandı mı, açık sorular cevaplandı mı) kayıtlardan türetilmiş bir görünümdür; K-004'te böyle bir alan yok.
+- İnsan ekranındaki üç açık fiziksel adım iki kaynaktan toplandı: `nerede-kaldik` "Açık" bölümü (TTS, Obsidian + Web Clipper) ve `ARAC-KAYDI`'ndaki "Sahibi kurar" satırları (Web Clipper, Syncthing). Bunların kapanıp kapanmadığı tek bir yerde tutulmuyor.
+
+## 9. Açık sorular
+
+- Açık fiziksel adımların tek kaynağı ne olmalı? Görev kartı dışındaki insan noktaları (araç kurulumu gibi) şu an iki ayrı dosyada duruyor.
+- Pano ne zaman üretilsin: yalnız elle mi, `/kapat` sonunda mı, commit sonrası mı?
+- `GUNLUK.md`'deki devam satırları olduğu gibi mi kalacak, yoksa hook çıktısı tek satıra mı indirilecek? (Günlük salt eklemeli olduğu için eski satırlar değişmez; soru yalnız yeni kayıtlar içindir.)
+
+## 10. Omarchy temasını izleme (isteğe bağlı)
+
+Omarchy, kapsamadığı uygulamaları şablonla temalar: `~/.config/omarchy/themed/` altına `<dosya>.tpl` konur, içinde `{{ background }}`, `{{ foreground }}`, `{{ accent }}` gibi yer tutucular kullanılır; tema değiştikçe `~/.local/state/omarchy/current/theme/<dosya>` yeniden üretilir. Pano bu üretilen dosyayı ikinci bir stil dosyası olarak bağlarsa renkler sistem temasını izler. Şablon proje klasörünün dışına yazıldığı için bu adım sahibine aittir.
+
+## Kaynaklar
+
+- 4k-claude deposu, `48b94f8`: `CLAUDE.md`, `00-sistem/SEMA.md`, `ILERLEME.md`, `TALIMATLAR.md`, `GUNLUK.md`, `KARARLAR.md`, `MALIYET.csv`, `scripts/*.py`, `.claude/settings.json`, `.claude/skills/*/SKILL.md`, `.claude/rules/*.md` ve kat klasörlerindeki sayfalar.
+- Omarchy deposu: https://github.com/basecamp/omarchy (`themes/*/colors.toml`, `docs/theming.md`, `default/themed/shell.toml.tpl`).

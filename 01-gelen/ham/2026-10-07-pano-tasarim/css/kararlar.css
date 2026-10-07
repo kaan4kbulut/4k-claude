@@ -1,0 +1,4 @@
+/* kararlar.html: yalnız bu ekrana özgü kurallar; 4k-claude.css ten sonra yüklenir. */
+.tb .sel td{background:var(--sel);color:var(--fgb)}
+.im{display:grid;grid-template-columns:28px minmax(0,1fr);gap:1px 6px;font-size:11px}
+.im dt{font-weight:700;color:var(--fgb)}
