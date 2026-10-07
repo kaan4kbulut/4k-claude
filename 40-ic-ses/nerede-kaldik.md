@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.4
+surum: 0.5
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -27,13 +27,14 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - Eksik analizi: korumalar klasör dışından açılan oturumda çalışmıyor; kapanış kayıtları yazılmıyor; hook testi, yedek, bütçe uygulaması, ritim yok; iş/yönetişim oranı düşük.
 - T-026: 4k-claude GitHub'da açık (github.com/kaan4kbulut/4k-claude); commit e-postası gizli adres; her commit'ten sonra otomatik push (KP-003).
 - T-027: 35 hook/betik regresyon testi (`kontrol.py --test`); kasıtlı bozulan üç hook'ta 6 test düştü.
+- T-028: bütçe bekçisi hook'u; ölçüm: T-017..T-024'ü yapan oturum ≈65,80 USD (tavan 5 USD, 13×) ve MALIYET'te yoktu → geriye dönük eklendi.
 
 **Açık**
 - F-0001 M3'te iki açık soru: mali müşavir/özelge (9/10 makine yorumu) ve yazıcı türü (sahibinin seçimi).
 - Sahibinin fiziksel adımları: TTS örneklerini dinleme, Obsidian'da kasayı açma + Web Clipper.
 
 **Sonraki**
-- T-027'den sonra sırayla: bütçe uyarısı, scorecard, F-0001 soruları, klasör dışı açılış engeli.
+- T-028'den sonra sırayla: scorecard, F-0001 soruları, klasör dışı açılış engeli.
 
 ## Bağlar
 ### Dayandığı
@@ -48,3 +49,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.2 | 2026-10-07 | T-025 | T-000 oturum özeti yerine 2026-10-07 oturumu (dosya T-000'dan beri güncellenmemişti) |
 | 0.3 | 2026-10-07 | T-026 | GitHub açık depo tamamlandı; sonraki liste güncellendi |
 | 0.4 | 2026-10-07 | T-027 | Hook testleri eklendi; sonraki liste güncellendi |
+| 0.5 | 2026-10-07 | T-028 | Bütçe bekçisi ve 65,80 USD bulgusu |

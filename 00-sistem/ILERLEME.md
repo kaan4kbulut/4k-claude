@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-027 kapandı (hook ve betik testleri)
+aktif_talimat: yok — T-028 kapandı (bütçe bekçisi)
 kapi: yok
 acik_soru: yok
-siradaki: T-028 bütçe uyarısı + calistir.sh GUNLUK düzeltmesi; ardından scorecard, F-0001 soruları, klasör dışı açılış engeli
+siradaki: T-029 scorecard.py (haftalık göstergeler); ardından F-0001 soruları, klasör dışı açılış engeli
 
 ## Son kapanış
+- T-028 (2026-10-07): Oturum tavanı artık oturum sürerken ölçülüyor (uyarı + GUNLUK, engel yok). Gerçek ölçüm: 5fd94f32 ≈65,80 USD = tavanın 13 katı. Tavan ya da model politikası değişikliği sahibinin kararı (A5). Kanıt: kontrol.py --test → 0 (41 test); gerçek 7,2 MB transcript'te 0,18 s, 65,80 USD (ccusage 64,54, +%2); kontrol.py --kisa → 0.
 - T-027 (2026-10-07): 35 regresyon testi; kontrol.py --test → 0. Negatif kanıt: kopyada sudo kuralı, kanıt denetimi ve zorunlu deny bozulunca 6 test düştü. Hook davranışında hata bulunmadı. Kanıt: kontrol.py --test → 0 (35 test); bozuk kopyada → FAILED (6); kontrol.py --kisa → 0.
 - T-026 (2026-10-07): 4k-claude GitHub'da açık (kaan4kbulut/4k-claude); geçmişte gmail 0, GitHub'da 58/58 noreply; her commit'ten sonra systemd birimi push eder. Yedek: ön-yeniden-yazım bundle'ı oturum scratchpad'inde, refs/original yerelde. Kanıt: git log %ae → yalnız noreply; gh api commits → 58 noreply; gh repo view → PUBLIC; kapanış commit'i otomatik push ile gitti (push.log).
 - T-025 (2026-10-07): Kapanış kaydı artık engelle sağlanıyor: kontrol.py 16. denetim eski hâlde 2 hata verdi (nerede-kaldik T-024 yok, aktif_talimat yanlış), düzeltmeden sonra 0. Kanıt: kontrol.py --kisa önce → 1 (2 hata), sonra → 0.

@@ -311,3 +311,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/testler/{ortak,test_yikici_koruma,test_durus_kapisi,test_ayar_denetimi,test_betikler}.py (yeni); değişen: kontrol.py (--test), CLAUDE.md, kapat SKILL, DEGISIKLIKLER, nerede-kaldik 0.4
 - Kapanış notu: 35 regresyon testi; kontrol.py --test → 0. Negatif kanıt: kopyada sudo kuralı, kanıt denetimi ve zorunlu deny bozulunca 6 test düştü. Hook davranışında hata bulunmadı.
+
+## T-028 — Bütçe tavanı bekçisi ve calistir.sh günlük düzeltmesi (eksik analizi #4, #9)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "eksikleri tamamlayalım" talimatı. MODEL-POLITIKASI oturum tavanı (orkestratör 5 USD) yazılı ama hiçbir şey ölçmüyor; maliyet yalnız SessionEnd'de, oturum bittikten sonra yazılıyor. calistir.sh GUNLUK'e `echo` ile yazıyor (kural 3: satırı gunluk.py yazar).
+- Başarı ölçütü: UserPromptSubmit hook'u (butce-bekcisi) oturum maliyetini transcript'ten hesaplar, tavanı MODEL-POLITIKASI'ndan okur; %80, %100 ve katlarında bir kez uyarı (additionalContext) ve %100+ için GUNLUK [hata]; asla engellemez ve çökmez; testleri `kontrol.py --test` içinde; calistir.sh'ta GUNLUK'e doğrudan yazım yok; ayar-denetimi değişmezleri bozulmaz.
+- Sınırlar: Tavan değerleri ve model politikası değişmez (A5, sahibinin). Engelleme yok (iş yarım kalmasın).
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07)
+- Durum: kapali
+- Doğurduğu dosyalar: .claude/hooks/butce-bekcisi.py, 00-sistem/testler/test_butce_bekcisi.py (yeni); değişen: .claude/settings.json (UserPromptSubmit), calistir.sh, MALIYET.csv (geriye dönük satır), CLAUDE.md, DEGISIKLIKLER, nerede-kaldik 0.5
+- Kapanış notu: Oturum tavanı artık oturum sürerken ölçülüyor (uyarı + GUNLUK, engel yok). Gerçek ölçüm: 5fd94f32 ≈65,80 USD = tavanın 13 katı. Tavan ya da model politikası değişikliği sahibinin kararı (A5).

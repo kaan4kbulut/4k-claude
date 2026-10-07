@@ -325,3 +325,12 @@ ayar-denetimi.
 2026-10-07 12:08 [degisti] CLAUDE.md — komutlar += kontrol.py --test
 2026-10-07 12:08 [degisti] 40-ic-ses/nerede-kaldik.md — 0.4 — T-027
 2026-10-07 12:08 [oturum] T-027 — kapandı — 35 regresyon testi, kontrol.py --test
+2026-10-07 12:08 [yeni] T-028 — talimat açıldı — bütçe bekçisi, calistir.sh
+2026-10-07 12:10 [yeni] .claude/hooks/butce-bekcisi.py — UserPromptSubmit hook'u: oturum tavanı izleme (T-028)
+2026-10-07 12:10 [yeni] 00-sistem/testler/test_butce_bekcisi.py — regresyon testi (T-028)
+2026-10-07 12:10 [ayar] .claude/settings.json — hooks += UserPromptSubmit butce-bekcisi (T-028); değişmezler tamam
+2026-10-07 12:10 [degisti] 00-sistem/scripts/calistir.sh — GUNLUK satırlarını gunluk.py yazar (kural 3)
+2026-10-07 12:10 [degisti] 00-sistem/MALIYET.csv — 5fd94f32 oturumu geriye dönük: ≈65,80 USD (tavan 5 USD); klasör dışı açılış nedeniyle SessionEnd çalışmamıştı
+2026-10-07 12:10 [degisti] CLAUDE.md — bütçe bekçisi satırı
+2026-10-07 12:10 [degisti] 40-ic-ses/nerede-kaldik.md — 0.5 — T-028
+2026-10-07 12:10 [oturum] T-028 — kapandı — bütçe bekçisi; 5fd94f32 ≈65,80 USD bulgusu

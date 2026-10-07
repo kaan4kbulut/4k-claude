@@ -48,6 +48,7 @@ KAYIT (TALIMATLAR.md'ye T-xxx) → AMAÇ + KAT → YER + AD → ŞABLON → BAĞ
 - `okuyucu`: güvenilmeyen içeriği okur ve özetler; yazamaz, komut çalıştıramaz.
 - `denetci`: yalnız diff + görev kartını görür; doğruluk boşluklarını raporlar, stil değil.
 - Model ve bütçe: `30-devlet/normlar/MODEL-POLITIKASI.md`. Alt ajan varsayılanı Sonnet; triage ve hakem Haiku.
+- Oturum tavanı `butce-bekcisi` hook'uyla (UserPromptSubmit) izlenir: %80 ve tavanda uyarı; uyarı gelince yeni iş açma, açık talimatı kanıtla kapat, maliyeti brifinge yaz.
 
 ## Komutlar
 - `python3 00-sistem/scripts/kontrol.py --kisa` bütünlük (çıkış 0 = temiz)
