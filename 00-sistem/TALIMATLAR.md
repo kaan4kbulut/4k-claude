@@ -267,3 +267,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md (yeni); değişen: F-0001 (0.7, merdiven 3), yazici-pazar-arastirmasi (bağ), MOC-ic-ses, HARITA
 - Kapanış notu: Çelişki kanun metniyle çözüldü: 9/6 (motorsuz, sayılı ev ürünleri) yazıcı işine uygulanmaz; 9/10 (evde, seri üretim makinesi olmadan, internet satışı, banka %4 kesinti, hasılat sınırı metinde 1.900.000 TL) cihazın makine yorumuna bağlı → açık soru (mali müşavir/özelge). F-0001 M3 (Y-001). canli.py 0 ölü.
+
+## T-024 — Obsidian kasası: .obsidian/ için dar istisna (kural 7) ve git dışı
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "evet, .obsidian için talimatı aç" talimatı. Klasör Obsidian kasası olarak açılınca kök dizinde doğacak `.obsidian/` ayar klasörünün kural 7'yi (kat dışına yazma yok) ve git durumunu bozmaması: karar kaydı (K-005), `.gitignore` satırı, Obsidian'ın yeni not ve ekleri köke değil `01-gelen/`'e koyması için ön ayar (`.obsidian/app.json`).
+- Başarı ölçütü: K-005 kabul ve KARARLAR satırı; `git check-ignore .obsidian/app.json` çıkış 0; app.json geçerli JSON; tarama betikleri `.obsidian`'ı görmüyor; kontrol.py sıfır hata.
+- Sınırlar: CLAUDE.md kural metni değişmez (istisna K-005'te). Obsidian'ı açmak, eklentiyi kurmak sahibinin fiziksel adımı. Proje dışına (~/.config/obsidian) yazılmaz.
+- Kat: 3
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07)
+- Durum: kapali
+- Doğurduğu dosyalar: 30-devlet/kararlar/K-005-obsidian-kasa-istisnasi.md (yeni); değişen: .gitignore, KARARLAR, MOC-devlet, ARAC-KAYDI, HARITA; git dışı: .obsidian/app.json
+- Kapanış notu: `.obsidian/` kural 7'ye dar istisna (K-005) ve git dışı; yeni not ve ekler 01-gelen'e. Açık: kasayı Obsidian'da açmak ve Web Clipper kurulumu sahibinin fiziksel adımı.

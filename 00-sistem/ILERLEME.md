@@ -2,10 +2,10 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar.
 
-aktif_talimat: yok — T-022 kapandı (KR-001 yürürlükte, F-0001 M2)
+aktif_talimat: yok — T-024 kapandı (K-005, .obsidian git dışı)
 kapi: yok
 acik_soru: yok (sahibinin imza kalemleri tamamlandı)
-siradaki: sahibinin fiziksel adımları: klasörü etkileşimli açıp güven onayı, /voice, TTS örneklerini dinleme (00-sistem/.kosu/tts-ornek), Web Clipper kurulumu
+siradaki: eksik analizi düzeltmeleri (T-025..); sahibinin fiziksel adımları: TTS örneklerini dinleme (00-sistem/.kosu/tts-ornek), Obsidian'da kasayı açma + Web Clipper kurulumu (güven onayı ve /voice tamam)
 
 ## T-005 (2026-10-06)
 - [x] calistir.sh --bare · durus-kapisi dosya izi · yikici-koruma 35 test · MALIYET transcript · şema belirlenmedi · gunluk.py · git

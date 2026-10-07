@@ -6,3 +6,6 @@ __pycache__/
 .env.*
 .venv/
 .araclar/
+
+# Obsidian kasa ayarları (K-005)
+.obsidian/

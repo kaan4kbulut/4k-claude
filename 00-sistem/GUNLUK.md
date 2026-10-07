@@ -262,3 +262,41 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:48 [degisti] 40-ic-ses/MOC-ic-ses.md — T-023 esnaf muafiyeti; F-0001 M3
 2026-10-07 10:48 [degisti] 00-sistem/HARITA.md — T-023 esnaf muafiyeti; F-0001 M3
 2026-10-07 10:48 [oturum] T-023 — kapandı — esnaf muafiyeti çözüldü; F-0001 M3
+2026-10-07 11:18 [hata] Bash — Exit code 2
+00-sistem/scripts/:
+al.py
+ara-olcum.py
+ara.py
+bayat.py
+calistir.sh
+canli.py
+graf.py
+gunluk.py
+harita.py
+kontrol.py
+maliyet.py
+not.py
+__pycache__
+yscommon.py
+
+.claude/hooks/:
+ayar-denetimi.
+2026-10-07 11:21 [hata] Bash — Exit code 2
+{
+	"schemaVersion": "0.1.0",
+	"name": "4k-claude gelen kutusu",
+	"behavior": "create",
+	"noteNameFormat": "{{date|date:\"YYYY-MM-DD-HHmm\"}}-{{title|safe_name}}",
+	"path": "01-gelen",
+	"no
+2026-10-07 11:24 [degisti] T-024 — talimat açıldı: .obsidian dar istisna + git dışı
+2026-10-07 11:25 [karar] 30-devlet/kararlar/K-005-obsidian-kasa-istisnasi.md — K-005 — .obsidian/ kural 7'ye dar istisna, git dışı (kabul, sahibinin onayı)
+2026-10-07 11:25 [yeni] 30-devlet/kararlar/K-005-obsidian-kasa-istisnasi.md — karar kaydı: Obsidian kasa istisnası
+2026-10-07 11:25 [degisti] 10-insan/araclar/ARAC-KAYDI.md — T-024 .obsidian istisnası (K-005)
+2026-10-07 11:25 [degisti] 30-devlet/MOC-devlet.md — T-024 .obsidian istisnası (K-005)
+2026-10-07 11:25 [degisti] 00-sistem/HARITA.md — T-024 .obsidian istisnası (K-005)
+2026-10-07 11:25 [degisti] 00-sistem/KARARLAR.md — T-024 .obsidian istisnası (K-005)
+2026-10-07 11:25 [degisti] .gitignore — T-024 .obsidian istisnası (K-005)
+2026-10-07 11:25 [ayar] .obsidian/app.json — Obsidian ön ayarı: yeni not ve ek yolu 01-gelen (K-005)
+2026-10-07 11:46 [oturum] 2069894c-cb0 — kapandı (other); tur=7 in=60 out=21176 cache_okuma=2339533 usd≈1.5255
+2026-10-07 11:52 [oturum] T-024 — kapandı — K-005 kabul; .obsidian git dışı; app.json yeni notları 01-gelen'e yönlendirir

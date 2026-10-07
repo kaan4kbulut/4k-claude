@@ -7,4 +7,5 @@ Karar başına tek satır; ayrıntı `30-devlet/kararlar/K-xxx-*.md`. Bir kural 
 - K-003 · 2026-10-06 · kabul · Sistemin adı Yeni Sistem yerine 4k-claude; canlı dosyalar ve klasör değişir, tarihî kayıtlar kalır (Anayasa 1.1, Madde 14) · cift-yonlu
 - K-004 · 2026-10-07 · kabul · Yazıcı işinde (F-0001) alım öncesi zaman kutulu pazar araştırması · cift-yonlu
 - Y-001 · 2026-10-07 · aktif · Yönerge: çift yönlü kararlarda orkestratöre yetki devri (Başkan a.; sahibinin yazılı talimatı) · cift-yonlu
+- K-005 · 2026-10-07 · kabul · Obsidian kasası: kök `.obsidian/` kural 7'ye dar istisna, git dışı; yeni not/ek yolu 01-gelen · cift-yonlu
 - KR-001 · 2026-10-07 · kabul · Kural: hafif yol — İç Ses gözlem ve M0 fikir için altı adım tek komutta (not.py); yayım KP-002 · tek-yonlu

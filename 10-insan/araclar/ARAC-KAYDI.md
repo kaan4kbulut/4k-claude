@@ -3,7 +3,7 @@ id: 20261006-2251-arac-kaydi
 ad: arac-kaydi
 tur: referans
 kat: 1
-surum: 0.9
+surum: 1.0
 durum: aktif
 amac: Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz.
 olusturma: 2026-10-06
@@ -11,7 +11,7 @@ guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: [00-sistem/arastirma/05-eller-ve-alan-paketi-3d.md, 00-sistem/arastirma/04-guvenilirlik-ve-kalite-teknikleri.md, 00-sistem/arastirma/09-github-taramasi.md, 00-sistem/arastirma/10-yenilikci-teknolojiler.md]
-besledigi: []
+besledigi: [30-devlet/kararlar/K-005-obsidian-kasa-istisnasi.md]
 kaynaklar: ["https://claude.com/docs/connectors/overview", "https://github.com/stripe/agent-toolkit", "https://apidocs.parasut.com/", "https://code.claude.com/docs/en/routines"]
 alindi: 2026-10-06
 guven: orta
@@ -62,7 +62,7 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | qmd 2.8.3 (sabit; `.araclar/qmd`, dizin ve modeller `.araclar/onbellek`; .araclar toplam 3.6 GB, ölçüldü 2026-10-07) | Yerel CLI (node-llama-cpp) | `00-sistem/scripts/ara.py`: wiki'de anlamsal arama (Qwen3-Embedding-0.6B); 01-gelen ve günlükler dizin dışı. Ağ yalnız ilk model indirmede (HuggingFace). MCP eklenmedi. Ölçüm: [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] | 2026-10-07 | T-010 |
 | markitdown 0.1.8 (`.venv/`) | Python kütüphanesi | `00-sistem/scripts/al.py`: PDF/DOCX/PPTX/XLSX/HTML/URL → 01-gelen ham not. Türkçe metin PDF'inde karakter ve tablo kaybı yok (T-012). Eklentiler ve LLM görsel açıklaması kapalı. **onnxruntime telemetrisi**: `ORT_DISABLE_TELEMETRY=1` zorunlu (al.py ve settings.json env); kapatılmazsa `~/.cache/Microsoft/DeveloperTools/.onnxruntime/` altına cihaz kimliği ve olay kuyruğu yazar. T-012'de oluşan kuyruk sahibinin onayıyla silindi (2026-10-07) | 2026-10-07 | T-012 |
 | docling | — | KURULMADI: metin PDF'inde markitdown yeterli; taranmış (görüntü) PDF gelirse OCR için ayrı karar (araştırma 10 önerisinden kanıtla sapma) | 2026-10-07 | T-012 |
-| Obsidian Web Clipper (tarayıcı eklentisi) | İnsan noktası | Sahibi kurar: kasa = bu klasör; şablon `00-sistem/sablonlar/web-clipper-gelen.json` içe aktarılır; not 01-gelen'e düşer. İlk kırpıntıdan sonra `kontrol.py --kisa` (şablon gerçek eklentide sınanmadı: UNCONFIRMED) | 2026-10-07 | T-012 |
+| Obsidian Web Clipper (tarayıcı eklentisi) | İnsan noktası | Sahibi kurar: kasa = bu klasör; şablon `00-sistem/sablonlar/web-clipper-gelen.json` içe aktarılır; not 01-gelen'e düşer. İlk kırpıntıdan sonra `kontrol.py --kisa` (şablon gerçek eklentide sınanmadı: UNCONFIRMED). Kök `.obsidian/` git dışı, yeni not/ek yolu `01-gelen` (K-005) | 2026-10-07 | T-012, T-024 |
 | Syncthing-Fork (Android) | İnsan noktası | Sahibi kurar: telefondaki not klasörü → `01-gelen/mobil/` (tek yönlü gönderim önerilir) | 2026-10-07 | T-012 |
 | lychee 0.24.2 (`.araclar/lychee`, sha256 doğrulandı) | Yerel CLI (Rust) | `00-sistem/scripts/canli.py`: wiki'deki http(s) bağlantıların canlılığı; yalnız 404/410 ölü, 403/429/5xx/ağ belirsiz; 01-gelen denetlenmez. Ağ ister (sandbox'ta alan adı onayı; /haftalik'te sahibi `!` ile) | 2026-10-07 | T-013 |
 | ccusage 20.0.26 (`.araclar/ccusage`) | Yerel CLI (node) | `00-sistem/scripts/maliyet.py`: MALIYET.csv ↔ Claude Code oturum kayıtları; `--offline` (ağ yok). Sınır: çevrimdışı fiyat tablosunda olmayan model (claude-sonnet-5-5) 0 USD sayılır, "fiyatsız" işaretlenir | 2026-10-07 | T-013 |
@@ -87,6 +87,7 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 - [[00-sistem/arastirma/09-github-taramasi]] — benimsenecek araçlar
 - [[00-sistem/arastirma/10-yenilikci-teknolojiler]] — Ekim 2026 yenilikçi araç taraması; öncelikli 10 öneri buradan kayda aday
 ### Beslediği
+- [[30-devlet/kararlar/K-005-obsidian-kasa-istisnasi]] — Web Clipper için kasa açılınca doğan `.obsidian/` istisnası
 ### Gelen
 - ← [[10-insan/MOC-insan]] — araç kaydı
 
@@ -102,3 +103,4 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | 0.7 | 2026-10-07 | T-015 | B tablosuna /voice (Türkçe; ses Anthropic'e gider) |
 | 0.8 | 2026-10-07 | T-016 | B tablosuna FreyaTTS deneme ortamı |
 | 0.9 | 2026-10-07 | T-017 | agent-scan: sahibinin kararı kurulmayacak; onnxruntime telemetri kuyruğu silindi |
+| 1.0 | 2026-10-07 | T-024 | Web Clipper satırına K-005 (.obsidian git dışı, not yolu 01-gelen); besledigi += K-005 (eski: boş) |
