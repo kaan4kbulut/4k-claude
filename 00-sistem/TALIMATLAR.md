@@ -344,3 +344,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: 40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md (0.2), 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md (0.9), nerede-kaldik 0.7
 - Kapanış notu: Mali müşavire 3 soruluk metin hazır; F-0001'de sıradaki insan noktaları yazılı. Sahibi deneme türünü henüz bilmiyor, önce müşavir cevabını görmek istiyor. Açık: metni göndermek (sahibi).
+
+## T-031 — Klasör dışından açılan oturumda 4k-claude'a yazma engeli (eksik analizi #1)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "eksikleri tamamlayalım" talimatı. Analizin kritik bulgusu: T-017..T-024'ü yapan oturum (5fd94f32) ev dizininden açıldı; proje ayarı yüklenmediği için sandbox, yikici-koruma, durus-kapisi, ayar-denetimi ve maliyet kaydı çalışmadı (≈65,80 USD, MALIYET'te yoktu). Engel klasöre bağlı kaldıkça kural metni korumasız (Anayasa ilke 6).
+- Başarı ölçütü: kullanıcı düzeyi PreToolUse hook'u (kasa-disi-koruma): oturum 4k-claude içinde açıldıysa sessiz; dışarıda açıldıysa 4k-claude'a Edit/Write ve yazan Bash reddedilir, okumalar (cat, grep, git status/log/diff, kontrol.py…) serbest, başka projeler etkilenmez; `4k-claude` başlatıcısı klasörde açar; testleri `kontrol.py --test` içinde; kurulum sahibinin onayıyla ~/.claude/settings.json ve ~/.local/bin'e.
+- Sınırlar: Proje ayarları ve mevcut hook'lar değişmez. Başka projelerin akışı bozulmaz (yalnız 4k-claude yolu hedeflenince devreye girer).
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07; global ayar için kurulumdan önce tek soru)
+- Durum: kapali
+- Doğurduğu dosyalar: .claude/hooks/kasa-disi-koruma.py, 00-sistem/scripts/4k-claude.sh, 00-sistem/testler/test_kasa_disi_koruma.py (yeni); değişen: CLAUDE.md, DEGISIKLIKLER (0.10.0), MALIYET.csv, nerede-kaldik 0.8; proje dışı (sahibinin onayıyla): ~/.claude/settings.json PreToolUse, ~/.local/bin/4k-claude
+- Kapanış notu: Klasör dışında açılan oturum artık 4k-claude'a yazamaz (okuma serbest); oturumlar 4k-claude ile açılır. Kurulum bu commit'ten sonra yapıldı; canlı doğrulama brifingde.

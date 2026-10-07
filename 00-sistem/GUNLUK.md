@@ -348,3 +348,12 @@ ayar-denetimi.
 2026-10-07 12:16 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — 0.9 — tür: sahibi henüz bilmiyor, önce mali müşavir
 2026-10-07 12:16 [degisti] 40-ic-ses/nerede-kaldik.md — 0.7 — T-030
 2026-10-07 12:16 [oturum] T-030 — kapandı — mali müşavir metni hazır; tür seçimi müşavir cevabından sonra
+2026-10-07 12:17 [yeni] T-031 — talimat açıldı — klasör dışı açılış engeli
+2026-10-07 12:22 [yeni] .claude/hooks/kasa-disi-koruma.py — kullanıcı düzeyi PreToolUse: klasör dışı oturumda yazma engeli (T-031)
+2026-10-07 12:22 [yeni] 00-sistem/testler/test_kasa_disi_koruma.py — regresyon testi (T-031)
+2026-10-07 12:22 [yeni] 00-sistem/scripts/4k-claude.sh — başlatıcı: oturumu kasada açar (T-031)
+2026-10-07 12:22 [degisti] CLAUDE.md — oturum protokolü: 4k-claude ile aç
+2026-10-07 12:22 [degisti] 00-sistem/MALIYET.csv — d5bc94b7 oturumu geriye dönük (klasör dışı açılış)
+2026-10-07 12:22 [degisti] 40-ic-ses/nerede-kaldik.md — 0.8 — oturum kapanışı T-024..T-031
+2026-10-07 12:22 [ayar] ~/.claude/settings.json — PreToolUse += kasa-disi-koruma (sahibi onayladı; commit'ten hemen sonra kurulur)
+2026-10-07 12:22 [oturum] T-031 — kapandı — klasör dışı açılış engeli; eksik analizi düzeltmeleri tamam

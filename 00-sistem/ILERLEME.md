@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-030 kapandı (F-0001 insan noktaları)
+aktif_talimat: yok — T-031 kapandı; eksik analizi düzeltmeleri bitti (T-024..T-031)
 kapi: yok
 acik_soru: yok
-siradaki: T-031 klasör dışı açılış engeli (kullanıcı düzeyi hook + 4k başlatıcı); sahibi: mali müşavire metni gönder
+siradaki: sahibi: mali müşavire metni gönder (esnaf-muafiyeti notu); oturumları 4k-claude ile aç. Açık öneriler: 4k-core bağı (izinle), S7 flip ölçümü, orkestratör tavanı/modeli (A5)
 
 ## Son kapanış
+- T-031 (2026-10-07): Klasör dışında açılan oturum artık 4k-claude'a yazamaz (okuma serbest); oturumlar 4k-claude ile açılır. Kurulum bu commit'ten sonra yapıldı; canlı doğrulama brifingde. Kanıt: kontrol.py --test → 0 (53); kontrol.py --kisa → 0.
 - T-030 (2026-10-07): Mali müşavire 3 soruluk metin hazır; F-0001'de sıradaki insan noktaları yazılı. Sahibi deneme türünü henüz bilmiyor, önce müşavir cevabını görmek istiyor. Açık: metni göndermek (sahibi). Kanıt: kontrol.py --kisa → 0; sahibine tek soru soruldu (cevap: henüz bilmiyor).
 - T-029 (2026-10-07): Scorecard artık ölçülüyor; ilk kayıt 2026-W41: S1 %97 (T-001 kaydı eksik), S5 67,85 USD (bir oturum tavanı 13× aştı). S7 flip sayacı ölçülmüyor ([konum] satır türü yok). Kanıt: kontrol.py --test → 0 (46); scorecard.py --yaz T-029 → SCORECARD 0.2; kontrol.py --kisa → 0.
 - T-028 (2026-10-07): Oturum tavanı artık oturum sürerken ölçülüyor (uyarı + GUNLUK, engel yok). Gerçek ölçüm: 5fd94f32 ≈65,80 USD = tavanın 13 katı. Tavan ya da model politikası değişikliği sahibinin kararı (A5). Kanıt: kontrol.py --test → 0 (41 test); gerçek 7,2 MB transcript'te 0,18 s, 65,80 USD (ccusage 64,54, +%2); kontrol.py --kisa → 0.

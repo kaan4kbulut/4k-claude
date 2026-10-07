@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.7
+surum: 0.8
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -21,7 +21,7 @@ etiketler: [oturum]
 Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldık" deyince cevap buradadır.
 
 ## İçerik
-### Oturum: 2026-10-07 — eksik analizi ve düzeltmeler (T-024, T-025…)
+### Oturum: 2026-10-07 — eksik analizi ve düzeltmeler (T-024..T-031)
 **Konuşulan**
 - T-024 kapandı: `.obsidian/` dar istisna (K-005), git dışı; yeni notlar 01-gelen'e.
 - Eksik analizi: korumalar klasör dışından açılan oturumda çalışmıyor; kapanış kayıtları yazılmıyor; hook testi, yedek, bütçe uygulaması, ritim yok; iş/yönetişim oranı düşük.
@@ -30,13 +30,14 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - T-028: bütçe bekçisi hook'u; ölçüm: T-017..T-024'ü yapan oturum ≈65,80 USD (tavan 5 USD, 13×) ve MALIYET'te yoktu → geriye dönük eklendi.
 - T-029: scorecard.py; ilk haftalık kayıt 2026-W41: hedef dışı S1 (T-001 kapanış kaydı eksik) ve S5 (65,80 USD'lik oturum).
 - T-030: mali müşavir metni hazır (esnaf notu); deneme türü: sahibi önce müşavir cevabını görmek istiyor.
+- T-031: klasör dışı açılış engeli (kullanıcı düzeyi hook) ve `4k-claude` başlatıcısı kuruldu.
 
 **Açık**
 - F-0001: sahibi mali müşavire metni gönderecek (esnaf-muafiyeti notu); cevap gelince deneme türü seçilir.
 - Sahibinin fiziksel adımları: TTS örneklerini dinleme, Obsidian'da kasayı açma + Web Clipper.
 
 **Sonraki**
-- T-030'dan sonra: klasör dışı açılış engeli (T-031).
+- Oturumları `4k-claude` ile aç. Kalan: 4k-core bağı (4k-core'a yazmak sahibinin izniyle), S7 flip ölçümü, orkestratör tavanı/modeli gerçekle uyumsuz (A5, sahibinin kararı).
 
 ## Bağlar
 ### Dayandığı
@@ -54,3 +55,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.5 | 2026-10-07 | T-028 | Bütçe bekçisi ve 65,80 USD bulgusu |
 | 0.6 | 2026-10-07 | T-029 | Scorecard ölçümü |
 | 0.7 | 2026-10-07 | T-030 | F-0001 insan noktaları |
+| 0.8 | 2026-10-07 | T-031 | Oturum kapanışı: T-024..T-031 |

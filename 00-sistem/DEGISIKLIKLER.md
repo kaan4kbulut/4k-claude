@@ -3,12 +3,15 @@
 Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikliği MINOR, şablon/betik düzeltmesi PATCH, kat yapısı değişikliği MAJOR. Bu dosya sistemin kendisini anlatır; içerik sayfalarının değişiklikleri GUNLUK.md'dedir.
 
 ## [Unreleased]
+
+## [0.10.0] — 2026-10-07 (T-024..T-031, eksik analizi)
 ### Eklendi
 - `kontrol.py` 16. denetim (T-025): son kapanan talimatın GUNLUK [oturum] satırı, ILERLEME ve nerede-kaldik izi; en çok bir açık talimat; aktif_talimat tutarlılığı. /kapat 3. adımı artık engelle sağlanır.
 - GitHub açık depo `kaan4kbulut/4k-claude` (T-026, KP-003): commit e-postası gizli adres, geçmiş yeniden yazıldı; `push.sh` + systemd kullanıcı path birimi her commit'ten sonra sandbox dışından push eder (sonuç `00-sistem/.kosu/push.log`).
 - `00-sistem/testler/` (T-027): 35 regresyon testi — yikici-koruma (red/sor/izin, yanlış pozitif), durus-kapisi, ayar-denetimi, kontrol.py bozma senaryoları, gunluk.py. Depo kopyasında koşar. `kontrol.py --test` hepsini çalıştırır.
 - `butce-bekcisi.py` (T-028, UserPromptSubmit): oturum maliyetini her istemde transcript'ten tahmin eder (kapanis-kaydi hesabı), tavanı MODEL-POLITIKASI'ndan okur; %80 ve tavanın katlarında bir kez uyarı, tavanda GUNLUK [hata]. Engellemez. 6 test.
 - `scorecard.py` (T-029): SCORECARD S1–S8 dosyalardan (son 7 gün); `--yaz T-xxx` haftalık satır + Issues; ölçülemeyen gösterge "ölçülmüyor" ve neden. /haftalik 6. adım bunu çağırır. 5 test. İlk kayıt 2026-W41.
+- `kasa-disi-koruma.py` (T-031, kullanıcı düzeyi PreToolUse, ~/.claude/settings.json): oturum klasör dışında açıldıysa 4k-claude'a yazımı reddeder, okumalar serbest; başka projelere dokunmaz. `4k-claude.sh` başlatıcısı (~/.local/bin/4k-claude). 7 test.
 ### Düzeltildi
 - `calistir.sh` GUNLUK'e `echo` ile yazıyordu; satırları artık `gunluk.py` yazar (kural 3).
 - MALIYET.csv: klasör dışından açılan 5fd94f32 oturumu geriye dönük eklendi (≈65,80 USD; ccusage 64,54).
