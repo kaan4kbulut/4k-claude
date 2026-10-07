@@ -451,3 +451,11 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:37 [yeni] 00-sistem/ASK.md — tek soru: KR-002 imzası (T-043)
 2026-10-07 19:37 [kapi] T-043 — KP-004 açık; ASK.md yazıldı, sahibinin imzası bekleniyor
 2026-10-07 19:37 [degisti] 40-ic-ses/nerede-kaldik.md — 0.21 — KP-004 bekliyor
+2026-10-07 19:39 [hata] izin-reddi Bash — — cd ~/Work/4k-claude && grep -n "^sonuc\|^surum" 30-devlet/kapilar/KP-004-kr-002-yayimi.md; grep -n "^surum\|^durum\|^yururluk" 30-devlet/normlar/kurallar/KR-002 (sınıflandırıcısız)
+2026-10-07 19:40 [yeni] T-044 — talimat açıldı — ARAC-KAYDI tazeleme (liste T-h, T-h2)
+2026-10-07 19:40 [degisti] 40-ic-ses/nerede-kaldik.md — 0.22 — T-043
+2026-10-07 19:40 [oturum] T-043 — kapandı — KR-002 taslak + KP-004; yayım sahibinin açık imzasında
+2026-10-07 19:40 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 1.3 — voxtype (ölçüldü), tarama izleme listesi UNCONFIRMED (T-044)
+2026-10-07 19:41 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 1.3 — B += Tailscale, ntfy (T-044)
+2026-10-07 19:41 [degisti] 40-ic-ses/nerede-kaldik.md — 0.23 — T-044
+2026-10-07 19:41 [oturum] T-044 — kapandı — ARAC-KAYDI tazeleme ve bildirim hattı

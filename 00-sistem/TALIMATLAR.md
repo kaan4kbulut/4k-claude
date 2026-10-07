@@ -484,6 +484,17 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Sınırlar: İmza gelmeden kural yürürlüğe girmez; mevcut KP-003 otomatik push kapsam dışı.
 - Kat: 3
 - Kapı: tek-yonlu · bekçi: sahibi (A4)
-- Durum: bekliyor
+- Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/normlar/kurallar/KR-002-zamanli-kosular.md, 30-devlet/kapilar/KP-004-kr-002-yayimi.md, 00-sistem/ASK.md
-- Kapanış notu: belirlenmedi (imza bekleniyor)
+- Kapanış notu: KR-002 taslak, KP-004 kapısı ve ASK.md hazır (ölçüt tamam). Yayım sahibinin açık imzasına (A4) kaldı: 'kendin yap' cevabı kural imzası sayılmadı (izin sınıflandırıcısı da engelledi). Yürürlük olmadan da zamanlı koşu kurulmuyor.
+
+## T-044 — ARAC-KAYDI tazeleme ve bildirim hattı kaydı (liste T-h, T-h2)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-h ve T-h2: taramanın araç iddiaları ve sahibinin kurduğu bildirim hattı (Tailscale + ntfy) araç kaydına girsin.
+- Başarı ölçütü: ARAC-KAYDI'nda yerelde ölçülenler (Claude Code 2.1.292, voxtype 1.1.0 large-v3-turbo) olgu olarak; URL'siz tarama iddiaları ayrı "İzleme listesi (UNCONFIRMED)" bölümünde kaynak sayfasına bağlı; bildirim hattı iki satır (veri akışı notuyla) — ayrıntı BILDIRIM-HATTI.md'den (okuyucu); kapı/insan noktası bildirimini bağlama önerisi kayıtta; kontrol.py --kisa → 0.
+- Sınırlar: Doğrulanmamış iddia olgu gibi yazılmaz (kural 5). Hiçbir araç kurulmaz/kaldırılmaz.
+- Kat: 1
+- Kapı: cift-yonlu · onay: sahibi (talimat listesi; "kendin yap")
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: 10-insan/araclar/ARAC-KAYDI.md 1.3, nerede-kaldik 0.23
+- Kapanış notu: Ölçülenler olgu, tarama iddiaları UNCONFIRMED izleme listesinde; bildirim hattı iki satır (tailnet adı/IP/e-posta açık depoya yazılmadı). Öneri kayıtta: ASK.md yazılınca ntfy bildirimi.

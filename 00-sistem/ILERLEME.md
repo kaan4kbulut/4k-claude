@@ -2,12 +2,14 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: T-043 — zamanlı koşular kuralı (liste T-g); imza bekliyor
+aktif_talimat: yok — T-044 kapandı; sıradaki: liste T-i (/haftalik'e skill-doctor)
 kapi: KP-004 — KR-002 yayımı (bekliyor)
 acik_soru: ASK.md — KR-002 imzası
 siradaki: sahibinin KP-004 cevabı (ASK.md); sonra liste T-h … T-m (~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* kararı; mali müşavire metni gönder
 
 ## Son kapanış
+- T-044 (2026-10-07): ARAC-KAYDI 1.3: voxtype ve Claude Code ölçüldü; tarama iddiaları UNCONFIRMED listede; Tailscale + ntfy. Kanıt: claude --version 2.1.292; voxtype --version 1.1.0; kontrol.py --kisa → 0.
+- T-043 (2026-10-07): KR-002 taslak + KP-004 kapısı + ASK.md; yayım sahibinin açık imzasında. Kanıt: kontrol.py --kisa → 0 (49 sayfa); commit 5428cd5.
 - T-042 (2026-10-07): autoMemoryEnabled false (proje). Kanıt: settings.json okundu → false; ayar-denetimi SessionStart temiz; kontrol.py --kisa → 0.
 - T-041 (2026-10-07): okuyucu effort low, denetci effort medium, NotebookEdit yasak. Sınır: denetci Bash'le yazabilir. Kanıt: head .claude/agents/*.md; kontrol.py --kisa → 0.
 - T-040 (2026-10-07): model-bekcisi: Fable/Opus geçişi ask, her geçiş GUNLUK [ayar]. Açık: canlı geçişle doğrulama. Kanıt: test_model_bekcisi 5/5; kontrol.py --test → OK; ayar-denetimi SessionStart temiz; denetci engelleyici yok.

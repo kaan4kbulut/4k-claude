@@ -44,7 +44,7 @@ Bu kapı kaydı, KR-002 zamanlı koşular kuralının yayımı kararı için sah
 - Zorunlu: KP-003 otomatik push kapsam dışı — evet (Madde 1).
 
 ### İmza
-Bekleniyor (IMZA-MATRISI A4).
+Bekleniyor (IMZA-MATRISI A4). Sahibinin 2026-10-07 "kendin yap" cevabı genel yetki; kural yayımı için açık imza sayılmadı. Kural yürürlükte değilken de orkestratör zamanlı koşu kurmuyor (bugün kurulu rutin yok).
 
 ### Sonuç
 bekliyor — bekçi: kaan.
