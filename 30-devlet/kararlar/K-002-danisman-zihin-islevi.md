@@ -3,11 +3,11 @@ id: 20261006-2211-k-002-danisman-zihin-islevi
 ad: k-002-danisman-zihin-islevi
 tur: karar
 kat: 3
-surum: 0.1
-durum: onerildi
+surum: 1.0
+durum: kabul
 amac: Bu karar kaydi, Danisman rolunun ayri bir ajan olarak degil zihin katinin bir islevi (yonlendirme notu + steelman/pre-mortem degerlendirmesi) olarak tanimlanmasi onerisini ve alternatifleri tutar.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: [30-devlet/normlar/ANAYASA.md, 00-sistem/arastirma/08-ic-ses-yontemleri.md, 30-devlet/kararlar/K-001-pilotta-kadro-yok.md]
@@ -59,7 +59,7 @@ Pilotta yönlendirme ve değerlendirme ihtiyacı ana oturumda karşılanır; ola
 Pilot deneme sonunda (2026-11-06) sahibine soru: yönlendirme/değerlendirme yeterli miydi? Yetersizse B.
 
 ### Kapı ve roller
-kapi: cift-yonlu · karar veren: kaan (onay bekliyor) · danışılan: claude
+kapi: cift-yonlu · karar veren: kaan (kabul, 2026-10-07) · danışılan: claude
 
 ## Bağlar
 ### Dayandığı
@@ -74,3 +74,4 @@ kapi: cift-yonlu · karar veren: kaan (onay bekliyor) · danışılan: claude
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu (onerildi) |
+| 1.0 | 2026-10-07 | T-019 | Sahibi kabul etti (eski durum: onerildi) |

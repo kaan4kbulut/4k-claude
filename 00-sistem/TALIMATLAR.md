@@ -212,3 +212,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md (yeni); değişen: G-001 (0.4 tamam), F-0001 (0.4), MOC-ic-ses (0.3), MOC-sirket, HARITA
 - Kapanış notu: G-001 tamam. Çıktı: 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi (sonuç bilinmiyor, güven düşük, 16 UNCONFIRMED): A FDM 3D (cihaz ~21-26 bin TL, anahtarlık 21-250 TL), B1 süblimasyon (pres ~11 bin TL, kupa 375-899 TL), B2 DTF (TL fiyatları bulunamadı); hiçbirinde talep kanıtı yok. 4 ölçüt kanıtla karşılandı; denetci ilk turda 2 engelleyici (sürüm/günlük eksikliği) buldu, düzeltildi, ikinci tur geçer. Web'deki talimat benzeri içeriğe (pea3d paneli) uyulmadı. Açık (sahibine tek soru): hangi seçenek için 'hazır hizmetle 10 ürün' denemesi yapılsın, yoksa önce ZORLA modu mu?
+
+## T-019 — K-002 kabulü ve F-0001 için ZORLA modu
+- Tarih: 2026-10-07
+- Niyet: Sahibinin kararları: K-002 kabul; yazıcı işi için önce ZORLA modu (rules/40-ic-ses: steelman → inversion ≥3 → pre-mortem ≥3 olasılıklı).
+- Başarı ölçütü: K-002 1.0 kabul ve KARARLAR/MOC; F-0001'de steelman (sahibi onayı bekliyor), inversion ≥3, pre-mortem ≥3 olasılıklı, gerekçeli [konum]; merdiven 1'de kalır (M2 için steelman onayı şart); kontrol.py sıfır hata.
+- Sınırlar: Merdiven sahibinin steelman onayı olmadan değişmez. Seçenek seçimi yapılmaz.
+- Kat: 4
+- Kapı: cift-yonlu
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: K-002 (1.0 kabul), KARARLAR, MOC-devlet, F-0001 (0.5)
+- Kapanış notu: K-002 kabul. F-0001 ZORLA: steelman yazıldı (sahibinin onayı bekleniyor), inversion 4, pre-mortem 4 (en olası: talep yok %40), [konum]: cihazsız deneme önce. M2 için tek eksik sahibinin steelman onayı.

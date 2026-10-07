@@ -225,3 +225,9 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:23 [degisti] 20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md — 0.4: tamam — 4 ölçüt kanıtlı, denetci geçer
 2026-10-07 10:23 [degisti] 20-sirket/MOC-sirket.md — G-001 tamam
 2026-10-07 10:23 [oturum] T-018 — kapandı — G-001 tamam (pazar araştırması; sonuç bilinmiyor)
+2026-10-07 10:30 [karar] 30-devlet/kararlar/K-002-danisman-zihin-islevi.md — kabul: sahibi onayladı (1.0)
+2026-10-07 10:30 [degisti] 00-sistem/KARARLAR.md — T-019 K-002 kabul / F-0001 ZORLA
+2026-10-07 10:30 [degisti] 30-devlet/MOC-devlet.md — T-019 K-002 kabul / F-0001 ZORLA
+2026-10-07 10:30 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — T-019 K-002 kabul / F-0001 ZORLA
+2026-10-07 10:30 [degisti] 00-sistem/HARITA.md — T-019 K-002 kabul / F-0001 ZORLA
+2026-10-07 10:30 [oturum] T-019 — kapandı — K-002 kabul; F-0001 ZORLA modu (steelman onayı bekliyor)

@@ -23,7 +23,7 @@ Bu içerik haritası, irade katındaki normları, kararları, kapıları ve dene
 
 ## İçerik
 ### Durum özeti
-Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 4 (3 kabul, 1 önerildi) · Açık kapı: 0 · Kapanmış kapı: 1 · Açık bulgu: 0
+Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 4 (4 kabul) · Açık kapı: 0 · Kapanmış kapı: 1 · Açık bulgu: 0
 
 ### Normlar (üstten alta)
 - [[30-devlet/normlar/ANAYASA]] — en üst norm; yalnız sahibi değiştirir
@@ -35,7 +35,7 @@ Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 4 (3 kabul, 1 öner
 
 ### Kararlar
 - [[30-devlet/kararlar/K-001-pilotta-kadro-yok]] — pilotta rol ajanı yok; okuyucu + denetci (kabul)
-- [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Danışman ayrı ajan değil, zihin katı işlevi (önerildi; sahibi onayı bekliyor)
+- [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Danışman ayrı ajan değil, zihin katı işlevi (kabul, 2026-10-07)
 - [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — sistemin adı 4k-claude (kabul)
 - [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — yazıcı işinde önce pazar araştırması (kabul, 2026-10-07)
 
@@ -47,7 +47,6 @@ Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 4 (3 kabul, 1 öner
 - Bulgular: yok · Eylem planları: yok · Sonraki uygunluk denetimi: pilot denemesi sonrası (T-004 kapanınca)
 
 ### Açık sorular / park listesi
-- [?] K-002 onayı (sahibi)
 - [?] İlk kural adayı: "lisansı NC olan 3D model satılmaz" (alan paketinden) — pilot sonrası
 
 ## Bağlar

@@ -3,7 +3,7 @@ id: 20261006-2144-yazici-isi-fikri
 ad: yazici-isi-fikri
 tur: fikir
 kat: 4
-surum: 0.4
+surum: 0.5
 durum: taslak
 amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
 olusturma: 2026-10-06
@@ -47,13 +47,21 @@ Bu atamaya uygun olarak [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] al
 - [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — düşük fiyat tabanı ve yoğun rekabet (ör. anahtarlık 21–250 TL), hiçbir seçenekte talep kanıtı yok, esnaf muafiyeti kapsamı belirsiz
 
 ### Steelman (M2)
-belirlenmedi
+**Sahibinin onayını bekliyor.** Fikrin en güçlü hâli: Kaan'ın elinde dijital olarak her şeyi yapabilen bir sistem var; eksik olan, dünyaya dokunan bir "el". Küçük bir yazıcı işi bu el için ucuz bir deney alanıdır: kişiye özel, düşük adetli ürünlerde büyük üreticiler verimsizdir; tek kişilik, sipariş üzerine çalışan bir atölye bu boşlukta yaşayabilir. Tasarım, sipariş takibi, fiyatlama ve pazar yeri listelemesinin çoğu dijitaldir ve sistem bunları üstlenebilir; Kaan'a kalan fiziksel adımlar (baskı, paketleme, kargo) sınırlı ve öngörülebilirdir. G-001'e göre giriş maliyeti tek bir cihaz düzeyindedir (A: ~21–26 bin TL, B1: pres ~11 bin TL) ve cihaz almadan hazır hizmetle 10 ürünlük bir denemeyle talep sınanabilir; yani kaybın üst sınırı küçük tutulabilir. Kaynak: [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]].
 
 ### Inversion (M2)
-belirlenmedi
+Bu işin kesin başarısız olması için ne yapardık:
+1. Talebi sınamadan önce cihaz almak ve ilk aylarda en ucuz rakiple fiyat yarışına girmek (A'da anahtarlık 21 TL'ye kadar iniyor).
+2. Lisanslı karakter, takım logosu ya da marka baskısı satmak (telif/marka ihlali, mağaza kapatma).
+3. Esnaf muafiyeti ve vergi durumunu bir mali müşavire sormadan satışa başlamak (muafiyet limiti kaynaklarda çelişiyor; "makine ile üretim" ve "al-sat" ayrımı belirsiz).
+4. Kaan'ın fiziksel saatlerini hesaba katmadan sipariş almak (tek kişi kapasitesi, baskı hatası payı, kargo).
 
 ### Pre-mortem (M2)
-belirlenmedi
+Altı ay sonra iş battı; neden (olasılıklar Claude'un tahmini, kalibrasyon için):
+1. Talep çıkmadı ya da kâr marjı komisyon ve kargoyla eridi — %40 (G-001: hiçbir seçenekte talep kanıtı yok; pazar yeri komisyonu %19–25 iddiası UNCONFIRMED).
+2. Fiziksel iş yükü Kaan'ın ayırabildiği saatleri aştı, siparişler gecikti — %25.
+3. Cihaz arızası, baskı hatası ya da sarf maliyeti beklenenden yüksek çıktı (B2 DTF'de bakım ve beyaz mürekkep riski) — %20.
+4. Vergi/yasal bir sorun (muafiyet kapsamı dışında kalmak, lisans ihlali) işi durdurdu — %15.
 
 ### Açık sorular (M3 için ≤2)
 - [?] Yazıcının türü ne: 3D yazıcı mı, kâğıt/baskı (dijital, büyük format, tekstil vb.) mı? Not: sistemde `20-sirket/alan-paketleri/3d-uretim` yalnızca bir test örneği olarak duruyor; bu fikirle aynı şey olduğu varsayılmadı.
@@ -64,7 +72,7 @@ belirlenmedi
 kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 
 ### Senin pozisyonun ([konum])
-- yok — T-001 sınırı gereği pozisyon bildirilmedi.
+- [konum] 2026-10-07: Bence şu an cihaz almak erken; önce cihazsız deneme. Gerekçe: G-001'de talep kanıtı hiç yok ve pre-mortem'deki en olası neden talep yokluğu (%40); hazır hizmetle 10 ürün denemesi bu riski cihaz bedelinin çok altında bir maliyetle sınar. Hangi seçenekle deneneceği (A, B1, B2) Kaan'ın ilgisine ve fiziksel saatlerine bağlı; bunu ben seçmiyorum. Yeni kanıt (ör. denemede satış) gelmeden bu pozisyon değişmez.
 
 ## Bağlar
 ### Dayandığı
@@ -83,3 +91,4 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 | 0.2 | 2026-10-07 | T-004 | Cynefin ataması bölümüne K-004/G-001'e işaret eden bir cümle eklendi (eski: cümle yoktu) |
 | 0.3 | 2026-10-07 | T-017 | Açık soru 1'e sahibinin cevabı: tür henüz belli değil (eski: cevapsız) |
 | 0.4 | 2026-10-07 | T-018 | Kaynaklar, alternatifler, kanıt ve karşı-kanıt G-001 notuyla dolduruldu (eski: boş / aranmadı) |
+| 0.5 | 2026-10-07 | T-019 | ZORLA modu: steelman (sahibi onayı bekliyor), inversion 4, pre-mortem 4 olasılıklı, [konum] (eski: hepsi belirlenmedi / pozisyon yok); merdiven 1'de kalır |
