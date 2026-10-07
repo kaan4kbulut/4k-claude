@@ -234,3 +234,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri.md (yeni); değişen: IMZA-MATRISI (bağ), MOC-devlet, KARARLAR, CLAUDE.md, HARITA; ayrıca Claude hafızası (karar-yetkisi-cift-yonlu)
 - Kapanış notu: Y-001 yürürlükte. Kendi hatam: K-002, K-004, deneme sırası ve ZORLA gibi çift yönlü seçimleri sahibine sordum; anayasa Madde 9 ve rules/30-devlet bunları orkestratöre bırakıyordu. Bundan sonra yalnız imza matrisi ve fiziksel eylemler sorulur.
+
+## T-021 — KR-001 hafif yol kural taslağı ve not.py
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "kural taslağı hazırla" kararı: İç Ses gözlem ve M0 fikir için altı adımı tek komutla yapan hafif yol (KR-001, önerildi) ve uygulayıcısı not.py (kural kabul edilmeden kilitli). Fikir şablonundaki merdiven/cynefin çelişkisi de düzeltilir.
+- Başarı ölçütü: KR-001 şablona uygun (amaç, sunset, DEA-lite); not.py kural önerildiyken çıkış 3; karalama kopyasında kural kabul varsayılarak gözlem ve fikir eklenir ve kontrol.py 0; fikir şablonu kontrol.py ile çelişmez; kontrol.py sıfır hata.
+- Sınırlar: Kural yayımı sahibinin imzasıdır (A4); bu talimat yayımlamaz. CLAUDE.md'nin altı adım kuralı değişmez.
+- Kat: 3
+- Kapı: tek-yonlu (yayım) · taslak çift yönlü
+- Durum: kapali
+- Doğurduğu dosyalar: 30-devlet/normlar/kurallar/KR-001-hafif-yol.md, 00-sistem/scripts/not.py (yeni); değişen: MOC-devlet, sablonlar/fikir.md, CLAUDE.md, DEGISIKLIKLER, HARITA
+- Kapanış notu: KR-001 önerildi; not.py kural kabul edilmeden çıkış 3 (doğrulandı). Karalama kopyasında kural kabul varsayılarak 1 gözlem + 2 M0 fikir eklendi; sayfalar, MOC M0 satırı, gözlem listesi, talimat aç/kapa doğru. Yayım sahibinin imzası (A4).

@@ -13,7 +13,7 @@ talimat: T-xxx
 dayandigi: []
 besledigi: []
 ust: 40-ic-ses/MOC-ic-ses.md
-merdiven: 1
+merdiven: 0
 cynefin: belirlenmedi
 guven: dusuk
 kaynaklar: []
@@ -89,4 +89,4 @@ kapi: tek-yonlu | cift-yonlu · istenen: karar | arastirma | prototip | rol-atam
 ## Günlük
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
-| 0.1 | YYYY-MM-DD | T-xxx | Oluşturuldu (merdiven 1) |
+| 0.1 | YYYY-MM-DD | T-xxx | Oluşturuldu (merdiven 0; M1 için cynefin atanır) |

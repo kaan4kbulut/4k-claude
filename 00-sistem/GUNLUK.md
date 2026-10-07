@@ -238,3 +238,12 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:32 [degisti] CLAUDE.md — T-020 Y-001 yetki devri
 2026-10-07 10:32 [degisti] 00-sistem/HARITA.md — T-020 Y-001 yetki devri
 2026-10-07 10:32 [oturum] T-020 — kapandı — Y-001 yürürlükte
+2026-10-07 10:34 [degisti] T-021 — talimat açıldı: KR-001 taslağı + not.py
+2026-10-07 10:35 [yeni] 30-devlet/normlar/kurallar/KR-001-hafif-yol.md — kural taslağı: hafif yol (önerildi, imza bekliyor)
+2026-10-07 10:35 [yeni] 00-sistem/scripts/not.py — hafif yol betiği (KR-001 kabul edilene kadar kilitli)
+2026-10-07 10:35 [degisti] 30-devlet/MOC-devlet.md — T-021 KR-001 / not.py
+2026-10-07 10:35 [degisti] 00-sistem/sablonlar/fikir.md — T-021 KR-001 / not.py
+2026-10-07 10:35 [degisti] CLAUDE.md — T-021 KR-001 / not.py
+2026-10-07 10:35 [degisti] 00-sistem/DEGISIKLIKLER.md — T-021 KR-001 / not.py
+2026-10-07 10:35 [degisti] 00-sistem/HARITA.md — T-021 KR-001 / not.py
+2026-10-07 10:35 [oturum] T-021 — kapandı — KR-001 taslak; not.py hazır ve kilitli

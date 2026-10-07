@@ -4,6 +4,13 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 
+## [0.9.0] — 2026-10-07 (T-019..T-021)
+### Eklendi
+- Y-001 yönergesi: çift yönlü kararlar orkestratörde; sahibine yalnız imza matrisi ve fiziksel eylemler.
+- KR-001 hafif yol kural taslağı (önerildi) ve `not.py` (kural kabul edilmeden çıkış 3).
+### Düzeltildi
+- Fikir şablonu varsayılanı `merdiven: 0` (eski `merdiven: 1` + `cynefin: belirlenmedi` kontrol.py 14. denetimiyle çelişiyordu).
+
 ## [0.8.0] — 2026-10-07 (T-013)
 ### Eklendi
 - `canli.py` (lychee 0.24.2): web bağlantı canlılığı; ilk rapor 414 bağlantı, 401 canlı, 3 ölü (404), 6 belirsiz.
