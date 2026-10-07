@@ -278,3 +278,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/kararlar/K-005-obsidian-kasa-istisnasi.md (yeni); değişen: .gitignore, KARARLAR, MOC-devlet, ARAC-KAYDI, HARITA; git dışı: .obsidian/app.json
 - Kapanış notu: `.obsidian/` kural 7'ye dar istisna (K-005) ve git dışı; yeni not ve ekler 01-gelen'e. Açık: kasayı Obsidian'da açmak ve Web Clipper kurulumu sahibinin fiziksel adımı.
+
+## T-025 — Kapanış kayıtlarını kontrol.py ile zorunlu kıl (eksik analizi #2)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "eksikleri tamamlayalım" talimatı. 2026-10-07 analizi: nerede-kaldik.md T-000'dan beri güncellenmemiş, ILERLEME.md "Son kanıt" 26 sayfada kalmış; /kapat'ın 3. adımı elle kapanışlarda atlanıyor ve hiçbir denetim yakalamıyor. Kural metinde var, engel yok (Anayasa ilke 6).
+- Başarı ölçütü: kontrol.py 16. denetim: son kapanan talimatın GUNLUK [oturum] satırı, ILERLEME.md ve nerede-kaldik.md'de izi yoksa hata; birden çok açık talimat hata; ILERLEME aktif_talimat kapalı bir talimatı gösteriyorsa hata. Denetim eski hâl üzerinde hata verir (negatif kanıt), düzeltilmiş hâlde kontrol.py sıfır hata.
+- Sınırlar: Eski talimatların kayıtları geriye dönük yeniden yazılmaz; yalnız son kapanış denetlenir. "Oturumda tek talimat" kuralının metni değişmez.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07)
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: 00-sistem/scripts/kontrol.py (16. denetim), 00-sistem/ILERLEME.md (yeniden düzen), 40-ic-ses/nerede-kaldik.md (0.2), 00-sistem/SEMA.md (0.4), .claude/skills/kapat/SKILL.md, DEGISIKLIKLER
+- Kapanış notu: Kapanış kaydı artık engelle sağlanıyor: kontrol.py 16. denetim eski hâlde 2 hata verdi (nerede-kaldik T-024 yok, aktif_talimat yanlış), düzeltmeden sonra 0.

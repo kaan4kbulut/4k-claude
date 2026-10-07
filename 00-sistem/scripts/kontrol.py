@@ -400,6 +400,38 @@ def main():
             uyari("00-sistem/GUNLUK.md", f"satır {i} zaman sırası dışı ({m.group(1)} < {onceki}); damgayı gunluk.py bassın")
         onceki = max(onceki or m.group(1), m.group(1))
 
+    # 16 kapanış kaydı (T-025): /kapat 3. adımı elle kapanışta atlanmasın. Yalnız son kapanan talimat denetlenir.
+    acik = [t for t, d in talimat_durum.items() if d in ("acik", "bekliyor", "?")]  # Durum satırı yoksa açık say
+    if len(acik) > 1:
+        hata("00-sistem/TALIMATLAR.md", f"birden çok açık talimat: {', '.join(acik)} (oturumda tek talimat; biri kapanmadan diğeri açılmaz)")
+    try:
+        with open(os.path.join(kok, "00-sistem", "ILERLEME.md"), encoding="utf-8") as f:
+            ilerleme = f.read()
+    except FileNotFoundError:
+        ilerleme = ""
+        hata("00-sistem/ILERLEME.md", "yok")
+    m = re.search(r"^aktif_talimat:\s*(T-\d+)", ilerleme, re.M)
+    if m and m.group(1) not in talimat_durum:
+        hata("00-sistem/ILERLEME.md", f"aktif_talimat {m.group(1)} TALIMATLAR.md'de yok")
+    elif m and talimat_durum.get(m.group(1)) == "kapali":
+        hata("00-sistem/ILERLEME.md", f"aktif_talimat {m.group(1)} ama talimat kapali")
+    if acik and not (m and m.group(1) in acik):
+        hata("00-sistem/ILERLEME.md", f"aktif_talimat açık talimatı göstermiyor ({', '.join(acik)})")
+    kapali = sorted((t for t, d in talimat_durum.items() if d == "kapali"), key=lambda t: int(t[2:]))
+    if kapali:
+        son = kapali[-1]
+        if not re.search(rf"^\S+ \S+ \[oturum\] {son} ", gunluk, re.M):
+            hata("00-sistem/GUNLUK.md", f"son kapanan {son} için [oturum] satırı yok")
+        if not re.search(rf"\b{son}\b", ilerleme):
+            hata("00-sistem/ILERLEME.md", f"son kapanan {son} yazılmamış (/kapat 3. adım)")
+        try:
+            with open(os.path.join(kok, "40-ic-ses", "nerede-kaldik.md"), encoding="utf-8") as f:
+                nk = f.read()
+        except FileNotFoundError:
+            nk = ""
+        if not re.search(rf"\b{son}\b", nk):
+            hata("40-ic-ses/nerede-kaldik.md", f"son kapanan {son} yazılmamış (/kapat 3. adım)")
+
     # ---------- rapor ----------
     bag_sayisi = sum(len(liste(fm.get("dayandigi"))) for fm in fm_map.values())
     ciktikod = 1 if hatalar or (strict and uyarilar) else 0

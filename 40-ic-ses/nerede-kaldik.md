@@ -3,11 +3,11 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: []
@@ -21,18 +21,18 @@ etiketler: [oturum]
 Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldık" deyince cevap buradadır.
 
 ## İçerik
-### Oturum: 2026-10-06 — kurulum (T-000)
+### Oturum: 2026-10-07 — eksik analizi ve düzeltmeler (T-024, T-025…)
 **Konuşulan**
-- Şema v2 onaylandı; klasör, hook, skill, şablon ve betikler yazıldı.
-- Anayasa (15 madde), imza matrisi, model politikası, hakem kuralları, K-001 ve K-002 yazıldı.
-- Deneme talimatları T-001..T-004 açıldı.
+- T-024 kapandı: `.obsidian/` dar istisna (K-005), git dışı; yeni notlar 01-gelen'e.
+- Eksik analizi: korumalar klasör dışından açılan oturumda çalışmıyor; kapanış kayıtları yazılmıyor; hook testi, yedek, bütçe uygulaması, ritim yok; iş/yönetişim oranı düşük.
+- Sahibi 4k-claude'un GitHub'da açık depo olarak yayımlanmasını onayladı (A6, A9).
 
 **Açık**
-- K-002 (Danışman zihin işlevi) sahibinin onayını bekliyor.
-- Sandbox kapalı; bubblewrap/socat kurulunca açılacak.
+- F-0001 M3'te iki açık soru: mali müşavir/özelge (9/10 makine yorumu) ve yazıcı türü (sahibinin seçimi).
+- Sahibinin fiziksel adımları: TTS örneklerini dinleme, Obsidian'da kasayı açma + Web Clipper.
 
 **Sonraki**
-- Claude Code'da klasörü aç, `kontrol.py` çalıştır, T-001'den başla.
+- T-025'ten sonra sırayla: GitHub açık depo + otomatik push, hook testleri, bütçe uyarısı, scorecard, F-0001 soruları, klasör dışı açılış engeli.
 
 ## Bağlar
 ### Dayandığı
@@ -44,3 +44,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
+| 0.2 | 2026-10-07 | T-025 | T-000 oturum özeti yerine 2026-10-07 oturumu (dosya T-000'dan beri güncellenmemişti) |

@@ -3,6 +3,8 @@
 Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikliği MINOR, şablon/betik düzeltmesi PATCH, kat yapısı değişikliği MAJOR. Bu dosya sistemin kendisini anlatır; içerik sayfalarının değişiklikleri GUNLUK.md'dedir.
 
 ## [Unreleased]
+### Eklendi
+- `kontrol.py` 16. denetim (T-025): son kapanan talimatın GUNLUK [oturum] satırı, ILERLEME ve nerede-kaldik izi; en çok bir açık talimat; aktif_talimat tutarlılığı. /kapat 3. adımı artık engelle sağlanır.
 
 ## [0.9.0] — 2026-10-07 (T-019..T-021)
 ### Eklendi

@@ -141,8 +141,8 @@ Devlet Arşivleri ve ISO 15489'dan uyarlandı: `S` sürekli (anayasa, kurallar, 
 ## 10. Boyut sınırları (kontrol.py denetler)
 CLAUDE.md ≤ 200 satır; her SKILL.md ≤ 500 satır; HARITA.md ≤ 200 sayfa satırı (aşınca MOC bölme); ajan→orkestratör rapor ≤ 2.000 token (kural, ölçülmez); Onay Dosyası ≤ yarım sayfa (~250 kelime).
 
-## 11. Kontrol listesi (kontrol.py'nin 13 denetimi)
-1 frontmatter var/ayrıştırılır, zorunlu alanlar türe göre tam, enum geçerli, tarih ISO · 2 id tekil · 3 kat ↔ klasör, tür ↔ klasör · 4 HARITA'da tek satır (arşiv ve şablon hariç) · 5 kırık bağ (dayandigi/besledigi/ust hedefi yok) · 6 tek yönlü bağ · 7 `ust` var ve MOC · 8 GUNLUK kaydı var · 9 `talimat` TALIMATLAR'da var; durum ≠ taslak ise talimat kapalı ya da bekliyor · 10 ADR simetrisi (yerine_gecti/yerine_gecen) · 11 bayat (son_gozden_gecirme > 60, alindi > 90, gecerli_bitis geçmiş ama durum aktif) · 12 boyutlar (§10) · 13 kanıtsız tamam (gorev kanban=tamam ve kanit boş).
+## 11. Kontrol listesi (kontrol.py'nin 16 denetimi)
+1 frontmatter var/ayrıştırılır, zorunlu alanlar türe göre tam, enum geçerli, tarih ISO · 2 id tekil · 3 kat ↔ klasör, tür ↔ klasör · 4 HARITA'da tek satır (arşiv ve şablon hariç) · 5 kırık bağ (dayandigi/besledigi/ust hedefi yok) · 6 tek yönlü bağ · 7 `ust` var ve MOC · 8 GUNLUK kaydı var · 9 `talimat` TALIMATLAR'da var; durum ≠ taslak ise talimat kapalı ya da bekliyor · 10 ADR simetrisi (yerine_gecti/yerine_gecen) · 11 bayat (son_gozden_gecirme > 60, alindi > 90, gecerli_bitis geçmiş ama durum aktif) · 12 boyutlar (§10) · 13 kanıtsız tamam (gorev kanban=tamam ve kanit boş) · 14 belirlenmedi yalnız taslakta · 15 GUNLUK zaman sırası (uyarı) · 16 kapanış kaydı: son kapanan talimat GUNLUK [oturum], ILERLEME ve nerede-kaldik'te; en çok bir açık talimat; ILERLEME aktif_talimat açık talimatı gösterir.
 
 ## Bağlar
 - Dayandığı: [[00-sistem/SISTEM]] — klasör ve kat yapısı buradan; [[00-sistem/arastirma/02-hafiza-ve-wiki-duzenleri]] — frontmatter, tür taksonomisi, lint listesi; [[00-sistem/arastirma/01-claude-code-mekanikleri]] — CLAUDE.md ve SKILL.md boyut sınırları
@@ -154,3 +154,4 @@ CLAUDE.md ≤ 200 satır; her SKILL.md ≤ 500 satır; HARITA.md ≤ 200 sayfa s
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
 | 0.2 | 2026-10-06 | T-005 | kapi ve sonuc enum'larına `belirlenmedi` eklendi (eski: yalnız karar değerleri); cynefin satırı şemayla eşitlendi; belirlenmedi'nin taslak sınırı yazıldı |
 | 0.3 | 2026-10-07 | T-010 | sonuc enum'una araştırma notu değerleri (dogruluyor, celisiyor, bilinmiyor) eklendi; şablon bunları öneriyordu, şema reddediyordu |
+| 0.4 | 2026-10-07 | T-025 | §11: 14-16. denetimler eklendi (eski başlık 13 denetim diyordu) |

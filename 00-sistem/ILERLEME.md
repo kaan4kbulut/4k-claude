@@ -1,21 +1,27 @@
 # İlerleme
 
-Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar.
+Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-024 kapandı (K-005, .obsidian git dışı)
+aktif_talimat: yok — T-025 kapandı (kapanış kaydı kontrol.py'de zorunlu)
 kapi: yok
-acik_soru: yok (sahibinin imza kalemleri tamamlandı)
-siradaki: eksik analizi düzeltmeleri (T-025..); sahibinin fiziksel adımları: TTS örneklerini dinleme (00-sistem/.kosu/tts-ornek), Obsidian'da kasayı açma + Web Clipper kurulumu (güven onayı ve /voice tamam)
+acik_soru: yok
+siradaki: T-026 GitHub açık depo + otomatik push (sahibi A6/A9 onayladı); ardından hook testleri, bütçe uyarısı, scorecard, F-0001 soruları, klasör dışı açılış engeli
 
-## T-005 (2026-10-06)
+## Son kapanış
+- T-025 (2026-10-07): Kapanış kaydı artık engelle sağlanıyor: kontrol.py 16. denetim eski hâlde 2 hata verdi (nerede-kaldik T-024 yok, aktif_talimat yanlış), düzeltmeden sonra 0. Kanıt: kontrol.py --kisa önce → 1 (2 hata), sonra → 0.
+- T-024 (2026-10-07): .obsidian dar istisna (K-005), git dışı. Kanıt: `git check-ignore .obsidian/app.json` → 0; `kontrol.py --kisa` → 0 (40 sayfa, 47 bağ). Commit ede2e0a.
+- T-017..T-023 kayıtları: TALIMATLAR.md kapanış notları ve GUNLUK [oturum] satırları (bu dosyaya o dönemde yazılmadı; 2026-10-07 eksik analizi).
+
+## Eski kayıtlar
+### T-005 (2026-10-06)
 - [x] calistir.sh --bare · durus-kapisi dosya izi · yikici-koruma 35 test · MALIYET transcript · şema belirlenmedi · gunluk.py · git
 - Değişen: bkz. DEGISIKLIKLER 0.2.0; commit e39a086 sonrası
 
-## T-001 (2026-10-06)
+### T-001 (2026-10-06)
 - [x] KAYIT (T-001 zaten açıktı) · AMAÇ+KAT (4) · YER+AD (40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md) · ŞABLON · BAĞLAR (MOC M1 + park) · KAPANIŞ (HARITA, GUNLUK, TALIMATLAR)
 - Değişen: F-0001 (yeni), MOC-ic-ses, HARITA, GUNLUK, TALIMATLAR, ILERLEME
 
-## Kurulum partileri (T-000)
+### Kurulum partileri (T-000)
 
 - [x] Parti 1: CLAUDE.md, .claude/settings.json, .claude/hooks (5), .claude/rules (5)
 - [x] Parti 2: .claude/skills (10), .claude/agents (2)
@@ -26,7 +32,7 @@ siradaki: eksik analizi düzeltmeleri (T-025..); sahibinin fiziksel adımları: 
 - [x] Parti 7: araştırma raporlarının frontmatter tamamlaması (id, yazar, kaynaklar), HARITA ve GUNLUK dolumu
 - [x] Parti 8: kontrol.py testi, düzeltmeler, zip, teslim
 
-## Değişen dosyalar (bu oturum)
+### Değişen dosyalar (bu oturum)
 - 00-sistem/arastirma/01..09 (frontmatter tamamlandı)
 - 00-sistem/HARITA.md (harita.py --uret ile üretildi)
 - 00-sistem/GUNLUK.md (26 [yeni] + 2 [karar] satırı)
@@ -34,5 +40,5 @@ siradaki: eksik analizi düzeltmeleri (T-025..); sahibinin fiziksel adımları: 
 - 30-devlet/kararlar/K-001 (besledigi += K-002)
 - 00-sistem/ILERLEME.md (bu dosya)
 
-## Son kanıt
+### Son kanıt
 `python3 00-sistem/scripts/kontrol.py` → çıkış 0 · "Bütünlük tam: 26 sayfa, 27 bağ, 26 harita satırı. Uyarı: 0."

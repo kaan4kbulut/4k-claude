@@ -300,3 +300,9 @@ ayar-denetimi.
 2026-10-07 11:25 [ayar] .obsidian/app.json — Obsidian ön ayarı: yeni not ve ek yolu 01-gelen (K-005)
 2026-10-07 11:46 [oturum] 2069894c-cb0 — kapandı (other); tur=7 in=60 out=21176 cache_okuma=2339533 usd≈1.5255
 2026-10-07 11:52 [oturum] T-024 — kapandı — K-005 kabul; .obsidian git dışı; app.json yeni notları 01-gelen'e yönlendirir
+2026-10-07 11:52 [yeni] T-025 — talimat açıldı — kapanış kayıtları kontrol.py ile zorunlu
+2026-10-07 11:54 [degisti] 40-ic-ses/nerede-kaldik.md — 0.2 — 2026-10-07 oturumu; T-000'dan beri güncellenmemişti
+2026-10-07 11:54 [degisti] 00-sistem/scripts/kontrol.py — 16. denetim: kapanış kaydı (son kapanan talimat GUNLUK/ILERLEME/nerede-kaldik), tek açık talimat, aktif_talimat tutarlılığı
+2026-10-07 11:54 [degisti] 00-sistem/SEMA.md — 0.4 — §11 denetim listesi 16'ya tamamlandı
+2026-10-07 11:54 [degisti] .claude/skills/kapat/SKILL.md — 3. adım: kontrol.py 16. denetim notu
+2026-10-07 11:54 [oturum] T-025 — kapandı — kapanış kaydı kontrol.py 16. denetimle zorunlu

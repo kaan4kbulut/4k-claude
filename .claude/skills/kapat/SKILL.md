@@ -31,6 +31,7 @@ Aktif talimat: `$0` (boşsa ILERLEME.md'deki `aktif_talimat`).
 - `40-ic-ses/nerede-kaldik.md`: konuşulan (≤3 madde), açık (≤3), sonraki (1).
 - `GUNLUK.md`: `[oturum] T-xxx kapandı — özet`.
 - İlgili MOC'ta durum satırı.
+- Bu adım elle kapanışta da zorunludur: kontrol.py 16. denetim, son kapanan talimat GUNLUK `[oturum]`, ILERLEME ve nerede-kaldik'te yoksa hata verir (T-025).
 
 ## 4. Commit
 - `git add -A && git commit -m "T-xxx: <kısa başlık>"`. Gövdede: değişen dosyalar, kanıt özeti. Push yapma (izin sistemi sorar; sahibi ister).
