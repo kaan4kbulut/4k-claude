@@ -3,8 +3,8 @@ id: 20261007-0152-k-004-yazici-pazar-arastirmasi
 ad: k-004-yazici-pazar-arastirmasi
 tur: karar
 kat: 3
-surum: 0.1
-durum: onerildi
+surum: 1.0
+durum: kabul
 amac: Bu karar kaydi, yazici isi fikri (F-0001) icin yazici satin almadan once pazar arastirmasi yapilmasi secenegini neden onerdigimizi, alternatifleri ve dogrulama yolunu kalici olarak tutmak icin var.
 olusturma: 2026-10-07
 guncelleme: 2026-10-07
@@ -48,7 +48,7 @@ Kaan bir yazıcı satın alıp onunla para kazandıran küçük bir iş kurmak i
 ### Karar (öneri)
 **Yazıcı almadan önce zaman kutulu bir pazar araştırması yapacağız**, çünkü yazıcı türü ve müşteri belli değilken alım geri dönüşü pahalı bir adım; araştırma ucuz ve fikri merdivende kanıtla ilerletir. (seçilen: A). Kompleks alana uygun olarak araştırma, B'deki "küçük deneme" fikrini dışlamaz: araştırma sonunda en ucuz deneme (ör. ikinci el ya da kiralık cihazla tek ürün denemesi) önerilebilir.
 
-Bu kayıt **önerildi** durumundadır; sahibi onaylamadan `kabul` olmaz ve buna dayanan görev kartı (G-001) başlamaz.
+Bu kayıt **2026-10-07'de sahibi tarafından kabul edildi** (sahibinin 2026-10-07 sohbet kararı); G-001'in HP-001 insan noktası kapandı.
 
 ### Beklenen sonuç
 Araştırma bir oturumluk zaman kutusunda yazıcı türü ve ilk müşteri kitlesi için en az iki seçenek ve karşılaştırma üretir; olasılık %70; gerekçe: türü belirsiz bir fikirde ilk tur araştırma genelde seçenekleri daraltır ama kesin talep kanıtı vermez.
@@ -77,3 +77,4 @@ kapi: cift-yonlu (araştırma geri alınabilir; alım kararı ayrı ve sahibinin
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-07 | T-002 | Oluşturuldu (önerildi) |
+| 1.0 | 2026-10-07 | T-017 | Sahibi kabul etti (eski durum: onerildi) |

@@ -7,7 +7,7 @@ surum: 0.1
 durum: aktif
 amac: Bu icerik haritasi, irade katindaki normlari, kararlari, kapilari ve denetim kayitlarini gruplayip nedenli baglarla tek bakista gosterir.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: []
@@ -23,7 +23,7 @@ Bu içerik haritası, irade katındaki normları, kararları, kapıları ve dene
 
 ## İçerik
 ### Durum özeti
-Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 4 (2 kabul, 2 önerildi) · Açık kapı: 0 · Kapanmış kapı: 1 · Açık bulgu: 0
+Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 4 (3 kabul, 1 önerildi) · Açık kapı: 0 · Kapanmış kapı: 1 · Açık bulgu: 0
 
 ### Normlar (üstten alta)
 - [[30-devlet/normlar/ANAYASA]] — en üst norm; yalnız sahibi değiştirir
@@ -37,7 +37,7 @@ Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 4 (2 kabul, 2 öner
 - [[30-devlet/kararlar/K-001-pilotta-kadro-yok]] — pilotta rol ajanı yok; okuyucu + denetci (kabul)
 - [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Danışman ayrı ajan değil, zihin katı işlevi (önerildi; sahibi onayı bekliyor)
 - [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — sistemin adı 4k-claude (kabul)
-- [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — yazıcı işinde önce pazar araştırması (önerildi; sahibi onayı bekliyor)
+- [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — yazıcı işinde önce pazar araştırması (kabul, 2026-10-07)
 
 ### Kapılar (KP-xxx)
 - [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — Bash sandbox'ının açılışı (go, sahibi)
@@ -48,7 +48,6 @@ Normlar: 1 anayasa (kabul), 0 kural, 0 yönerge · Kararlar: 4 (2 kabul, 2 öner
 
 ### Açık sorular / park listesi
 - [?] K-002 onayı (sahibi)
-- [?] K-004 onayı (sahibi)
 - [?] İlk kural adayı: "lisansı NC olan 3D model satılmaz" (alan paketinden) — pilot sonrası
 
 ## Bağlar

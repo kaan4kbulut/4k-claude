@@ -3,7 +3,7 @@ id: 20261006-2144-yazici-isi-fikri
 ad: yazici-isi-fikri
 tur: fikir
 kat: 4
-surum: 0.2
+surum: 0.3
 durum: taslak
 amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
 olusturma: 2026-10-06
@@ -57,6 +57,7 @@ belirlenmedi
 
 ### Açık sorular (M3 için ≤2)
 - [?] Yazıcının türü ne: 3D yazıcı mı, kâğıt/baskı (dijital, büyük format, tekstil vb.) mı? Not: sistemde `20-sirket/alan-paketleri/3d-uretim` yalnızca bir test örneği olarak duruyor; bu fikirle aynı şey olduğu varsayılmadı.
+  - Cevap (2026-10-07, sahibi): **henüz bilmiyor.** G-001 iki türü (3D ve kâğıt/baskı) yan yana araştırır, seçim yapmaz.
 - [?] Ne tür bir iş: kime, ne satılacak?
 
 ### Kapı tipi ve istenen (M4)
@@ -79,3 +80,4 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-001 | Oluşturuldu (merdiven 1) |
 | 0.2 | 2026-10-07 | T-004 | Cynefin ataması bölümüne K-004/G-001'e işaret eden bir cümle eklendi (eski: cümle yoktu) |
+| 0.3 | 2026-10-07 | T-017 | Açık soru 1'e sahibinin cevabı: tür henüz belli değil (eski: cevapsız) |

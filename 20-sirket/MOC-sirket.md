@@ -25,7 +25,7 @@ Bu içerik haritası, örgütleme katındaki rolleri, açık görev kartlarını
 Roller: 0 (K-001: pilotta yok) · Görev kartları: 1 (bekliyor: 1) · SOP: 0 · Alan paketi: 1 · WIP tavanı: 3
 
 ### Kanban
-- [[20-sirket/gorevler/G-001-yazici-pazar-arastirmasi]] — yazıcı işi pazar araştırması · bekliyor (HP-001 K-004 onayı, HP-002 yazıcı türü)
+- [[20-sirket/gorevler/G-001-yazici-pazar-arastirmasi]] — yazıcı işi pazar araştırması · bekliyor (insan noktaları kapandı; başlatılabilir)
 | bekliyor | basladi | fiziksel-adim-bekliyor | kontrol | tamam |
 | --- | --- | --- | --- | --- |
 | — | — | — | — | — |

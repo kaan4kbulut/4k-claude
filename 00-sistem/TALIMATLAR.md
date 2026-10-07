@@ -190,3 +190,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 40-ic-ses/arastirma-notlari/freyatts-turkce-deneme.md (yeni), .araclar/tts (git dışı), 00-sistem/.kosu/tts-ornek/*.wav (git dışı); değişen: arastirma/10 (besledigi), MOC-ic-ses, ARAC-KAYDI (0.8)
 - Kapanış notu: FreyaTTS CPU'da kuruldu (torchaudio CUDA/CPU uyumsuzluğu 2.11 CPU sürümleriyle çözüldü), 4 Türkçe örnek üretildi (00-sistem/.kosu/tts-ornek). RTF 2.5–12 (iddia 0.70); Whisper ile anlaşılırlık: günlük %7, Türkçe harf %25, sayı %53 (çoğu rakam yazımı), İngilizce terim %60. Sonuç notu: 40-ic-ses/arastirma-notlari/freyatts-turkce-deneme (celisiyor). Bağımlılık yapılmadı. Açık: sahibi örnekleri dinler; GPU denemesi (~3 GB) sahibinin kararı.
+
+## T-017 — Sahibinin 2026-10-07 kararlarının işlenmesi
+- Tarih: 2026-10-07
+- Niyet: Sahibinin sohbette verdiği dört kararı kayda geçirmek: K-004 kabul; F-0001 yazıcı türü "henüz bilmiyorum"; agent-scan kurulmayacak; onnxruntime telemetri kuyruğu silinsin.
+- Başarı ölçütü: K-004 durum kabul (1.0) ve KARARLAR/MOC; F-0001 0.3 cevaplı; G-001 HP-001 ve HP-002 kapalı (kanban bekliyor); ARAC-KAYDI agent-scan kararı; ~/.cache/Microsoft/DeveloperTools/.onnxruntime yok; kontrol.py sıfır hata.
+- Sınırlar: G-001 bu talimatta başlatılmaz (ayrı talimat). K-002 ve hafif yol kararlarına dokunulmaz.
+- Kat: 0
+- Kapı: cift-yonlu · imza: sahibi (sohbet, 2026-10-07)
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: K-004 (1.0 kabul), KARARLAR, MOC-devlet, F-0001 (0.3), G-001 (0.2), MOC-sirket, ARAC-KAYDI (0.9); silinen (proje dışı): ~/.cache/Microsoft/DeveloperTools/.onnxruntime (+ boş üst klasörler)
+- Kapanış notu: Dört karar işlendi. G-001'in iki insan noktası kapandı; kart başlatılabilir (ayrı talimat). Telemetri kuyruğu 00:57'den beri yeni olay almamıştı (ORT_DISABLE_TELEMETRY etkili), silindi.

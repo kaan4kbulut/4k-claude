@@ -203,3 +203,13 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:11 [degisti] 00-sistem/HARITA.md — T-016 TTS denemesi
 2026-10-07 10:11 [ayar] .araclar/tts — FreyaTTS + Whisper deneme ortamı (5.1 GB, git dışı)
 2026-10-07 10:11 [oturum] T-016 — kapandı — TTS ölçümü; karar sahibinde
+2026-10-07 10:16 [karar] 30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md — kabul: sahibi onayladı (1.0)
+2026-10-07 10:16 [degisti] 00-sistem/KARARLAR.md — T-017 sahibinin kararları
+2026-10-07 10:16 [degisti] 30-devlet/MOC-devlet.md — T-017 sahibinin kararları
+2026-10-07 10:16 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — T-017 sahibinin kararları
+2026-10-07 10:16 [degisti] 20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md — T-017 sahibinin kararları
+2026-10-07 10:16 [degisti] 20-sirket/MOC-sirket.md — T-017 sahibinin kararları
+2026-10-07 10:16 [degisti] 10-insan/araclar/ARAC-KAYDI.md — T-017 sahibinin kararları
+2026-10-07 10:16 [degisti] 00-sistem/HARITA.md — T-017 sahibinin kararları
+2026-10-07 10:16 [ayar] ~/.cache/Microsoft — onnxruntime telemetri kuyruğu sahibinin onayıyla silindi (T-017)
+2026-10-07 10:16 [oturum] T-017 — kapandı — K-004 kabul, tür belli değil, agent-scan yok, telemetri silindi

@@ -3,7 +3,7 @@ id: 20261006-2251-arac-kaydi
 ad: arac-kaydi
 tur: referans
 kat: 1
-surum: 0.8
+surum: 0.9
 durum: aktif
 amac: Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz.
 olusturma: 2026-10-06
@@ -60,13 +60,13 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | graphifyy 0.9.77 (sabit; `.venv/`) | Python kütüphanesi | `00-sistem/scripts/graf.py`: Leiden topluluk, merkez düğüm, sınır aşan bağ, vis.js HTML. LLM yok, ağ yok (kaynak incelendi, sha256 eşleşti). `graphify install`, git hook'ları ve `--mode deep` YASAK. graf.html açılınca vis-network'ü unpkg.com'dan indirir | 2026-10-06 | T-009 |
 | Bash sandbox (bubblewrap + socat) | Claude Code yerleşik | Bash komutları; kimlik bilgisi klasörleri okunamaz, ağ izin listesi boş | 2026-10-06 | T-008, KP-001 |
 | qmd 2.8.3 (sabit; `.araclar/qmd`, dizin ve modeller `.araclar/onbellek`; .araclar toplam 3.6 GB, ölçüldü 2026-10-07) | Yerel CLI (node-llama-cpp) | `00-sistem/scripts/ara.py`: wiki'de anlamsal arama (Qwen3-Embedding-0.6B); 01-gelen ve günlükler dizin dışı. Ağ yalnız ilk model indirmede (HuggingFace). MCP eklenmedi. Ölçüm: [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] | 2026-10-07 | T-010 |
-| markitdown 0.1.8 (`.venv/`) | Python kütüphanesi | `00-sistem/scripts/al.py`: PDF/DOCX/PPTX/XLSX/HTML/URL → 01-gelen ham not. Türkçe metin PDF'inde karakter ve tablo kaybı yok (T-012). Eklentiler ve LLM görsel açıklaması kapalı. **onnxruntime telemetrisi**: `ORT_DISABLE_TELEMETRY=1` zorunlu (al.py ve settings.json env); kapatılmazsa `~/.cache/Microsoft/DeveloperTools/.onnxruntime/` altına cihaz kimliği ve olay kuyruğu yazar | 2026-10-07 | T-012 |
+| markitdown 0.1.8 (`.venv/`) | Python kütüphanesi | `00-sistem/scripts/al.py`: PDF/DOCX/PPTX/XLSX/HTML/URL → 01-gelen ham not. Türkçe metin PDF'inde karakter ve tablo kaybı yok (T-012). Eklentiler ve LLM görsel açıklaması kapalı. **onnxruntime telemetrisi**: `ORT_DISABLE_TELEMETRY=1` zorunlu (al.py ve settings.json env); kapatılmazsa `~/.cache/Microsoft/DeveloperTools/.onnxruntime/` altına cihaz kimliği ve olay kuyruğu yazar. T-012'de oluşan kuyruk sahibinin onayıyla silindi (2026-10-07) | 2026-10-07 | T-012 |
 | docling | — | KURULMADI: metin PDF'inde markitdown yeterli; taranmış (görüntü) PDF gelirse OCR için ayrı karar (araştırma 10 önerisinden kanıtla sapma) | 2026-10-07 | T-012 |
 | Obsidian Web Clipper (tarayıcı eklentisi) | İnsan noktası | Sahibi kurar: kasa = bu klasör; şablon `00-sistem/sablonlar/web-clipper-gelen.json` içe aktarılır; not 01-gelen'e düşer. İlk kırpıntıdan sonra `kontrol.py --kisa` (şablon gerçek eklentide sınanmadı: UNCONFIRMED) | 2026-10-07 | T-012 |
 | Syncthing-Fork (Android) | İnsan noktası | Sahibi kurar: telefondaki not klasörü → `01-gelen/mobil/` (tek yönlü gönderim önerilir) | 2026-10-07 | T-012 |
 | lychee 0.24.2 (`.araclar/lychee`, sha256 doğrulandı) | Yerel CLI (Rust) | `00-sistem/scripts/canli.py`: wiki'deki http(s) bağlantıların canlılığı; yalnız 404/410 ölü, 403/429/5xx/ağ belirsiz; 01-gelen denetlenmez. Ağ ister (sandbox'ta alan adı onayı; /haftalik'te sahibi `!` ile) | 2026-10-07 | T-013 |
 | ccusage 20.0.26 (`.araclar/ccusage`) | Yerel CLI (node) | `00-sistem/scripts/maliyet.py`: MALIYET.csv ↔ Claude Code oturum kayıtları; `--offline` (ağ yok). Sınır: çevrimdışı fiyat tablosunda olmayan model (claude-sonnet-5-5) 0 USD sayılır, "fiyatsız" işaretlenir | 2026-10-07 | T-013 |
-| Snyk agent-scan | — | KURULMADI: skill içeriği, MCP ayarı ve araç açıklamalarını Snyk API'sine gönderir, hesap ve SNYK_TOKEN ister, çevrimdışı kipi yok (resmi README, 2026-10-07). Araştırma 10'daki "yerel" bilgisi yanlıştı. Karar sahibinin (A6/A10) | 2026-10-07 | T-013 |
+| Snyk agent-scan | — | KURULMADI: skill içeriği, MCP ayarı ve araç açıklamalarını Snyk API'sine gönderir, hesap ve SNYK_TOKEN ister, çevrimdışı kipi yok (resmi README, 2026-10-07). Araştırma 10'daki "yerel" bilgisi yanlıştı. **Sahibinin kararı (2026-10-07): kurulmayacak** | 2026-10-07 | T-013 |
 | Claude Code /voice (dikte) | Yerleşik | Proje ayarı `language: turkish` (T-015). **Veri dışarı:** ses transkripsiyon için Anthropic sunucularına gider, yerelde işlenmez; claude.ai girişi ister; token tüketmez; 15 sn sessizlik ya da 2 dk sınırı. Etkinleştirme (/voice) sahibinde | 2026-10-07 | T-015 |
 | FreyaTTS (commit 146d36c; `.araclar/tts`, CPU PyTorch 2.11; deneme ortamı + Whisper large-v3-turbo; toplam 5.1 GB) | Deneme (bağımlılık değil) | Türkçe TTS ölçümü: günlük cümle WER %7, İngilizce terim %60, işlemcide RTF 2.5–12 → canlı sohbete uygun değil. Ağ yalnız HuggingFace indirme. Kaldırmak: `rm -r .araclar/tts` (sahibi) | 2026-10-07 | T-016 |
 | (MCP yok) | — | ilk gerçek işte A10 ile | — | — |
@@ -101,3 +101,4 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | 0.6 | 2026-10-07 | T-013 | B tablosuna lychee, ccusage; agent-scan kurulmadı (veri dışarı gider) |
 | 0.7 | 2026-10-07 | T-015 | B tablosuna /voice (Türkçe; ses Anthropic'e gider) |
 | 0.8 | 2026-10-07 | T-016 | B tablosuna FreyaTTS deneme ortamı |
+| 0.9 | 2026-10-07 | T-017 | agent-scan: sahibinin kararı kurulmayacak; onnxruntime telemetri kuyruğu silindi |

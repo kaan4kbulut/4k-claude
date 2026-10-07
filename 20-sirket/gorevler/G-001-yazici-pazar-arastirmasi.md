@@ -3,7 +3,7 @@ id: 20261007-0155-g-001-yazici-pazar-arastirmasi
 ad: g-001-yazici-pazar-arastirmasi
 tur: gorev
 kat: 2
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Bu gorev, yazici isi fikri icin yazici turu ve ilk musteri kitlesi seceneklerini kanitla karsilastiran bir pazar arastirmasi uretmek uzere var (komutan niyeti, alim kararini kaniyla vermek).
 olusturma: 2026-10-07
@@ -21,8 +21,8 @@ devretme_seviyesi: 5
 model_caba: sonnet/medium
 butce: {tur: 30, usd: 2, zaman: "1 oturum"}
 insan_noktalari:
-  - {id: HP-001, tur: imza, kosul: "K-004 onerildi durumunda", kanit: "K-004 durum kabul ve KARARLAR.md satiri", bekleyen_adim: 1}
-  - {id: HP-002, tur: diger, kosul: "F-0001 acik sorusu: yazici turu (3D mi, kagit/baski mi) ve ne satilacagi", kanit: "sahibinin cevabi F-0001'e /degistir ile islendi", bekleyen_adim: 1}
+  - {id: HP-001, tur: imza, kosul: "K-004 onerildi durumunda", kanit: "K-004 durum kabul ve KARARLAR.md satiri", bekleyen_adim: 1, kapandi: "2026-10-07 sahibi K-004u kabul etti"}
+  - {id: HP-002, tur: diger, kosul: "F-0001 acik sorusu: yazici turu (3D mi, kagit/baski mi) ve ne satilacagi", kanit: "sahibinin cevabi F-0001'e /degistir ile islendi", bekleyen_adim: 1, kapandi: "2026-10-07 sahibi: tur henuz belli degil, iki tur yan yana arastirilir"}
 kanit: []
 is_yasi_gun: 0
 etiketler: [proje/yazici, alan/pazar-arastirmasi]
@@ -35,7 +35,7 @@ Bu görev, yazıcı işi fikri için yazıcı türü ve ilk müşteri kitlesi se
 
 ## İçerik
 ### 1. Girdiler ve bağlam
-- [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — bu görevi doğuran karar (önerildi; HP-001 kapanmadan görev başlamaz)
+- [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — bu görevi doğuran karar (kabul, 2026-10-07)
 - [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — fikir, açık sorular, Cynefin ataması
 - [[20-sirket/alan-paketleri/3d-uretim]] — yalnız tür 3D seçilirse girdi; aynı şey olduğu varsayılmaz
 - [[00-sistem/arastirma/05-eller-ve-alan-paketi-3d]] — eller (ödeme, kargo, vergi) ve TR mevzuatı notları
@@ -57,8 +57,8 @@ kapi: cift-yonlu · Eskale edilecekler: K-004 kabul edilmemişse başlama; yazı
 ### 6. İnsan noktaları (önceden beyan)
 | id | tür | koşul | insan ne yapar | kanıt | bekleyen adım |
 | --- | --- | --- | --- | --- | --- |
-| HP-001 | imza | K-004 önerildi | K-004'ü kabul ya da ret | K-004 `durum: kabul`, KARARLAR satırı | 1 |
-| HP-002 | diger | yazıcı türü ve satılacak şey belirsiz | F-0001'in açık sorusunu cevaplar | F-0001 günlüğünde cevap satırı | 1 |
+| HP-001 | imza | K-004 önerildi | K-004'ü kabul ya da ret | K-004 `durum: kabul`, KARARLAR satırı | 1 — **kapandı 2026-10-07: kabul** |
+| HP-002 | diger | yazıcı türü ve satılacak şey belirsiz | F-0001'in açık sorusunu cevaplar | F-0001 günlüğünde cevap satırı | 1 — **kapandı 2026-10-07: tür belli değil → iki tür yan yana** |
 
 ### 7. Son durum (bitince gözlemlenebilir olan)
 Kaynaklı bir karşılaştırma notu var; F-0001'in "kaynaklar" ve "alternatifler" alanları dolu (M2 adayı); sahibine alım kararı için tek bir soru sunulmuş.
@@ -90,7 +90,7 @@ KARAR: — · görev başlamadı
 
 ## Bağlar
 ### Dayandığı
-- [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — bu görevin yetki kaynağı (önerildi; HP-001)
+- [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — bu görevin yetki kaynağı (kabul, 2026-10-07)
 ### Beslediği
 ### Gelen
 - ← [[20-sirket/MOC-sirket]] — görev kartları (Kanban)
@@ -99,3 +99,4 @@ KARAR: — · görev başlamadı
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-07 | T-003 | Oluşturuldu (bekliyor) |
+| 0.2 | 2026-10-07 | T-017 | HP-001 (K-004 kabul) ve HP-002 (tür belli değil → iki tür) kapandı; kanban bekliyor |
