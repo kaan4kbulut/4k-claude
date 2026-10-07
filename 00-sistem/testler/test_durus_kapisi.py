@@ -14,6 +14,11 @@ class DurusKapisi(unittest.TestCase):
     def setUp(self):
         self.kok, self.temizle = kopya_olustur()
         self.sayac = 0
+        # Gerçek depoda açık bir kapı (ASK.md) varsa kopya onu taşır ve hook serbest bırakır; testler kendi
+        # durumunu kurar, ASK.md'yi isteyen test kendisi yazar (T-046: KP-004 açıkken 3 test düşmüştü).
+        ask = os.path.join(self.kok, "00-sistem", "ASK.md")
+        if os.path.exists(ask):
+            os.replace(ask, ask + ".gercek")
 
     def tearDown(self):
         self.temizle()

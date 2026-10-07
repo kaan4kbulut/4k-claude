@@ -472,3 +472,5 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:43 [yeni] 00-sistem/testler/test_kanban_kaydi.py — 17. denetim testleri, 2 (T-046)
 2026-10-07 19:43 [degisti] 40-ic-ses/nerede-kaldik.md — 0.25 — T-046
 2026-10-07 19:43 [oturum] T-046 — kapandı — Bases pano ve kanban kayıt denetimi
+2026-10-07 19:45 [hata] T-046 — 535c123 kontrol.py --test 3 FAIL iken commit edildi; kök neden: test_durus_kapisi gerçek ASK.md'ye bağımlı
+2026-10-07 19:45 [degisti] 00-sistem/testler/test_durus_kapisi.py — setUp kopyadaki ASK.md'yi kenara alır (T-046)

@@ -519,4 +519,4 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Kapı: cift-yonlu · onay: sahibi (talimat listesi)
 - Durum: kapali
 - Doğurduğu dosyalar: 20-sirket/gorevler/PANO.base, 00-sistem/testler/test_kanban_kaydi.py (yeni); değişen: 00-sistem/scripts/kontrol.py (17. denetim), SEMA 0.5, DEGISIKLIKLER, nerede-kaldik 0.25
-- Kapanış notu: Pano dosyası ve kayıt denetimi hazır; denetim gerçek kartta negatif denendi (hata verdi, geri alındı). Kanban görünümünün Obsidian'da açılışı gözle görülmedi (sandbox); yedek tablo görünümü aynı gruplamayla.
+- Kapanış notu: Pano dosyası ve kayıt denetimi hazır; denetim gerçek kartta negatif denendi (hata verdi, geri alındı). Kanban görünümünün Obsidian'da açılışı gözle görülmedi (sandbox); yedek tablo görünümü aynı gruplamayla. Düzeltme: 535c123 kontrol.py --test 3 FAIL iken commit edildi (ASK.md test bağımlılığı); test_durus_kapisi düzeltildi, --test → 0.
