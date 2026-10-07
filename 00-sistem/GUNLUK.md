@@ -306,3 +306,7 @@ ayar-denetimi.
 2026-10-07 11:54 [degisti] 00-sistem/SEMA.md — 0.4 — §11 denetim listesi 16'ya tamamlandı
 2026-10-07 11:54 [degisti] .claude/skills/kapat/SKILL.md — 3. adım: kontrol.py 16. denetim notu
 2026-10-07 11:54 [oturum] T-025 — kapandı — kapanış kaydı kontrol.py 16. denetimle zorunlu
+2026-10-07 11:58 [yeni] T-026 — talimat açıldı — GitHub açık depo, gizli e-posta, otomatik push
+2026-10-07 11:58 [kapi] 30-devlet/kapilar/KP-003-github-acik-depo.md — go — sahibi A6/A9 onayı (sohbet): açık depo, gizli e-posta
+2026-10-07 11:58 [degisti] 30-devlet/MOC-devlet.md — 0.6 — Kapılar += KP-003
+2026-10-07 11:58 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 1.1 — GitHub açık depo ve otomatik push

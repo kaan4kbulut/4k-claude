@@ -23,12 +23,13 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 - [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] — Bu arastirma notu, arastirma 10'un "qmd yerel aramanin Turkce isabeti olculmeli" sorusuna dogruluyor cevabini 20 sorguluk olcumle verir. · arastirma-notu · kat 4 · 2026-10-07
 - [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — Bu arastirma notu, F-0001'in "hangi tur yazici ve kime ne satilir" sorusuna G-001 masa basi arastirmasiyla bilinmiyor cevabini (uc secenek yan yana, talep kaniti yok) kanitlariyla verir. · arastirma-notu · kat 4 · 2026-10-07
 - [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var. · fikir · kat 4 · 2026-10-07
-- [[40-ic-ses/nerede-kaldik]] — Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir. · referans · kat 4 · 2026-10-06
+- [[40-ic-ses/nerede-kaldik]] — Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir. · referans · kat 4 · 2026-10-07
 
 ## 30-devlet
 - [[30-devlet/MOC-devlet]] — Bu icerik haritasi, irade katindaki normlari, kararlari, kapilari ve denetim kayitlarini gruplayip nedenli baglarla tek bakista gosterir. · moc · kat 3 · 2026-10-07
 - [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — Bu kapi kaydi, Claude Code Bash sandbox'inin bu projede acilmasi karari icin sahibinin onayini, kriterleri ve sonucu tutmak icin var. · kapi · kat 3 · 2026-10-06
 - [[30-devlet/kapilar/KP-002-kr-001-yayimi]] — Bu kapi kaydi, KR-001 hafif yol kuralinin yayimi karari icin sahibinin imzasini, kriterleri ve sonucu tutmak icin var. · kapi · kat 3 · 2026-10-07
+- [[30-devlet/kapilar/KP-003-github-acik-depo]] — Bu kapi kaydi, 4k-claude deposunun GitHub'da herkese acik yayimlanmasi ve her commit'ten sonra otomatik push karari icin sahibinin imzasini, kriterleri ve sonucu tutmak icin var. · kapi · kat 3 · 2026-10-07
 - [[30-devlet/kararlar/K-001-pilotta-kadro-yok]] — Bu karar kaydi, pilot asamasinda rol (bakanlik) ajanlari acilmamasini, yalniz okuyucu ve denetci alt ajanlarinin bulunmasini ve nedenini kalici olarak tutar. · karar · kat 3 · 2026-10-06
 - [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Bu karar kaydi, Danisman rolunun ayri bir ajan olarak degil zihin katinin bir islevi (yonlendirme notu + steelman/pre-mortem degerlendirmesi) olarak tanimlanmasi onerisini ve alternatifleri tutar. · karar · kat 3 · 2026-10-07
 - [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — Bu karar kaydi, sistemin adinin sahibinin istegiyle Yeni Sistem yerine 4k-claude olmasini ve Anayasa'daki ad degisikliginin Madde 14 usulune dayanagini kalici olarak tutar. · karar · kat 3 · 2026-10-06

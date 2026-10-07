@@ -3,7 +3,7 @@ id: 20261006-2251-arac-kaydi
 ad: arac-kaydi
 tur: referans
 kat: 1
-surum: 1.0
+surum: 1.1
 durum: aktif
 amac: Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz.
 olusturma: 2026-10-06
@@ -56,6 +56,7 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | Araç | Tür | Kapsam | Eklenme | Karar |
 | --- | --- | --- | --- | --- |
 | python3 | CLI | hook'lar, betikler | 2026-10-06 | T-000 |
+| GitHub (gh 2.x, `kaan4kbulut/4k-claude`, açık) | Uzak git deposu | Yedek ve yayın. Commit sonrası `~/.config/systemd/user/4k-claude-push.path` sandbox dışından `git push origin master` çalıştırır; sonuç `00-sistem/.kosu/push.log`. Force push yok. Commit e-postası gizli adres | 2026-10-07 | KP-003 |
 | git | CLI | kayıt, geri alma | 2026-10-06 | T-000 |
 | graphifyy 0.9.77 (sabit; `.venv/`) | Python kütüphanesi | `00-sistem/scripts/graf.py`: Leiden topluluk, merkez düğüm, sınır aşan bağ, vis.js HTML. LLM yok, ağ yok (kaynak incelendi, sha256 eşleşti). `graphify install`, git hook'ları ve `--mode deep` YASAK. graf.html açılınca vis-network'ü unpkg.com'dan indirir | 2026-10-06 | T-009 |
 | Bash sandbox (bubblewrap + socat) | Claude Code yerleşik | Bash komutları; kimlik bilgisi klasörleri okunamaz, ağ izin listesi boş | 2026-10-06 | T-008, KP-001 |
@@ -104,3 +105,4 @@ Sistemin dünyaya dijital dokunma yollarını (yetenek, araç/API, olgunluk, ins
 | 0.8 | 2026-10-07 | T-016 | B tablosuna FreyaTTS deneme ortamı |
 | 0.9 | 2026-10-07 | T-017 | agent-scan: sahibinin kararı kurulmayacak; onnxruntime telemetri kuyruğu silindi |
 | 1.0 | 2026-10-07 | T-024 | Web Clipper satırına K-005 (.obsidian git dışı, not yolu 01-gelen); besledigi += K-005 (eski: boş) |
+| 1.1 | 2026-10-07 | T-026 | B tablosuna GitHub açık depo ve otomatik push (KP-003) |

@@ -289,3 +289,12 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: 00-sistem/scripts/kontrol.py (16. denetim), 00-sistem/ILERLEME.md (yeniden düzen), 40-ic-ses/nerede-kaldik.md (0.2), 00-sistem/SEMA.md (0.4), .claude/skills/kapat/SKILL.md, DEGISIKLIKLER
 - Kapanış notu: Kapanış kaydı artık engelle sağlanıyor: kontrol.py 16. denetim eski hâlde 2 hata verdi (nerede-kaldik T-024 yok, aktif_talimat yanlış), düzeltmeden sonra 0.
+
+## T-026 — GitHub açık depo, gizli e-posta ve otomatik push (eksik analizi #5)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "4k claude neden github'da yok?" sorusu ve "Açık depo" + "Gizli adrese çevir" seçimleri. Eksik analizi #5 (yedek yok): depo yalnız ~/Downloads'ta, uzak kopya yok.
+- Başarı ölçütü: KP-003 go (A6, A9 sahibi); geçmişte gmail adresi kalmaz (`git log --format=%ae` yalnız noreply); github.com/kaan4kbulut/4k-claude açık ve `git status -sb` uzakla eşit; commit sonrası otomatik push (systemd path birimi) bir deneme commit'iyle kanıtlı; kayıtlarda geçen eski commit kimlikleri yenilendi; kontrol.py sıfır hata.
+- Sınırlar: .araclar ve .venv yayımlanmaz (git dışı kalır). Sandbox ve izin ayarları değişmez (push sandbox dışından, systemd ile). Force push yok.
+- Kat: 3
+- Kapı: tek-yonlu (A6 dış API yazımı, A9 kamuya açık çıktı) · imza: sahibi (sohbet, 2026-10-07)
+- Durum: acik

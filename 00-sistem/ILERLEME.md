@@ -2,8 +2,8 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-025 kapandı (kapanış kaydı kontrol.py'de zorunlu)
-kapi: yok
+aktif_talimat: T-026 — GitHub açık depo, gizli e-posta, otomatik push
+kapi: KP-003 go (A6, A9; sahibi sohbette onayladı)
 acik_soru: yok
 siradaki: T-026 GitHub açık depo + otomatik push (sahibi A6/A9 onayladı); ardından hook testleri, bütçe uyarısı, scorecard, F-0001 soruları, klasör dışı açılış engeli
 

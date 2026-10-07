@@ -3,7 +3,7 @@ id: 20261006-2220-moc-devlet
 ad: moc-devlet
 tur: moc
 kat: 3
-surum: 0.5
+surum: 0.6
 durum: aktif
 amac: Bu icerik haritasi, irade katindaki normlari, kararlari, kapilari ve denetim kayitlarini gruplayip nedenli baglarla tek bakista gosterir.
 olusturma: 2026-10-06
@@ -45,6 +45,7 @@ Normlar: 1 anayasa (kabul), 1 kural, 1 yönerge · Kararlar: 4 (4 kabul) · Aç�
 ### Kapılar (KP-xxx)
 - [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — Bash sandbox'ının açılışı (go, sahibi)
 - [[30-devlet/kapilar/KP-002-kr-001-yayimi]] — KR-001 yayımı (go, sahibi)
+- [[30-devlet/kapilar/KP-003-github-acik-depo]] — GitHub açık depo ve otomatik push (go, sahibi)
 - Açık kapı yok. ASK.md yok.
 
 ### Denetim
@@ -66,3 +67,4 @@ Normlar: 1 anayasa (kabul), 1 kural, 1 yönerge · Kararlar: 4 (4 kabul) · Aç�
 | 0.3 | 2026-10-07 | T-021 | Kurallar += KR-001 (önerildi) |
 | 0.4 | 2026-10-07 | T-022 | KR-001 kabul; Kapılar += KP-002 |
 | 0.5 | 2026-10-07 | T-024 | Kararlar += K-005 |
+| 0.6 | 2026-10-07 | T-026 | Kapılar += KP-003 |
