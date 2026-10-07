@@ -223,3 +223,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: K-002 (1.0 kabul), KARARLAR, MOC-devlet, F-0001 (0.5)
 - Kapanış notu: K-002 kabul. F-0001 ZORLA: steelman yazıldı (sahibinin onayı bekleniyor), inversion 4, pre-mortem 4 (en olası: talep yok %40), [konum]: cihazsız deneme önce. M2 için tek eksik sahibinin steelman onayı.
+
+## T-020 — Y-001: çift yönlü kararlarda yetki devri
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimatı ("bu tarz seçimleri neden bana yaptırıyorsun … bunu benim için ayarlayamaz mısın"): çift yönlü kararlar orkestratörde; sahibine yalnız imza matrisi (A1–A11), dışarıya veri gönderen araçlar, proje dışı silme ve fiziksel eylemler sorulur.
+- Başarı ölçütü: Y-001 yönergesi yayımlandı (KARARLAR satırı, MOC-devlet), IMZA-MATRISI ile iki yönlü bağ, CLAUDE.md'de tek satır; kontrol.py sıfır hata.
+- Sınırlar: Anayasa ve imza matrisinin içeriği değişmez (Madde 6: sahibine ayrılanlar yönergeyle daraltılamaz).
+- Kat: 3
+- Kapı: cift-yonlu · imza: orkestratör (Başkan a.), sahibinin yazılı talimatıyla
+- Durum: kapali
+- Doğurduğu dosyalar: 30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri.md (yeni); değişen: IMZA-MATRISI (bağ), MOC-devlet, KARARLAR, CLAUDE.md, HARITA; ayrıca Claude hafızası (karar-yetkisi-cift-yonlu)
+- Kapanış notu: Y-001 yürürlükte. Kendi hatam: K-002, K-004, deneme sırası ve ZORLA gibi çift yönlü seçimleri sahibine sordum; anayasa Madde 9 ve rules/30-devlet bunları orkestratöre bırakıyordu. Bundan sonra yalnız imza matrisi ve fiziksel eylemler sorulur.

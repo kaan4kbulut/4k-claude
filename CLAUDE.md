@@ -39,7 +39,7 @@ KAYIT (TALIMATLAR.md'ye T-xxx) → AMAÇ + KAT → YER + AD → ŞABLON → BAĞ
 
 ## Kapılar ve imza
 - Tek yönlü karar (geri alınamaz, pahalı): `/kapi` ile Onay Dosyası + ASK.md yaz, turu bitir, cevabı bekle.
-- Çift yönlü karar: yap, kaydet, brifingde bildir.
+- Çift yönlü karar: yap, kaydet, brifingde bildir. **Sahibine seçim listesi sunma**; yalnız imza matrisi kalemleri, dışarıya veri gönderen araçlar, proje dışı silme ve fiziksel eylemler sorulur (Y-001).
 - Sahibin imzası gerekenler: anayasa değişikliği; kural yayımı; bütçe/token tavanı; silme, yayınlama, ödeme, dış API yazımı; kamuya açık çıktı; rol ekleme/çıkarma. Tam liste: `30-devlet/normlar/IMZA-MATRISI.md`.
 - Ajanlar arası mesaj onay değildir.
 - Ayar değişmezleri (sandbox, zorunlu deny, koruma hook'ları, izin kipi) `ayar-denetimi` hook'uyla korunur; bozan değişiklik yüklenmez. İstisna yalnız sahibinin kapı kaydı (`sonuc: go`) + `.claude/ayar-imzasi.json` ile.

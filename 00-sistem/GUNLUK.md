@@ -231,3 +231,10 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:30 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — T-019 K-002 kabul / F-0001 ZORLA
 2026-10-07 10:30 [degisti] 00-sistem/HARITA.md — T-019 K-002 kabul / F-0001 ZORLA
 2026-10-07 10:30 [oturum] T-019 — kapandı — K-002 kabul; F-0001 ZORLA modu (steelman onayı bekliyor)
+2026-10-07 10:32 [yeni] 30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri.md — yönerge yayımlandı: çift yönlü kararlar orkestratörde (Başkan a.)
+2026-10-07 10:32 [degisti] 30-devlet/normlar/IMZA-MATRISI.md — T-020 Y-001 yetki devri
+2026-10-07 10:32 [degisti] 30-devlet/MOC-devlet.md — T-020 Y-001 yetki devri
+2026-10-07 10:32 [degisti] 00-sistem/KARARLAR.md — T-020 Y-001 yetki devri
+2026-10-07 10:32 [degisti] CLAUDE.md — T-020 Y-001 yetki devri
+2026-10-07 10:32 [degisti] 00-sistem/HARITA.md — T-020 Y-001 yetki devri
+2026-10-07 10:32 [oturum] T-020 — kapandı — Y-001 yürürlükte

@@ -7,11 +7,11 @@ surum: 0.1
 durum: aktif
 amac: Hangi kararin kimin imzasini istedigini, yetki devrinin kurallarini ve kayitlarini tek tabloda tutar; orkestrator her kararda buraya bakar.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: kaan
 talimat: T-000
 dayandigi: [30-devlet/normlar/ANAYASA.md, 00-sistem/arastirma/07-devlet-yapilari.md]
-besledigi: []
+besledigi: [30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri.md]
 saklama: S
 etiketler: [norm/yetki]
 ---
@@ -87,6 +87,7 @@ Her karar sınıfı "onay" (B/C satırı için orkestratör onayı; A için sahi
 - [[00-sistem/arastirma/07-devlet-yapilari]] — bakanlık imza yönergeleri, yetki devri ilkeleri, Late Notice
 ### Beslediği
 ### Gelen
+- ← [[30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri]] — çift yönlü kararlarda orkestratöre yetki devri (A1–A11 dışı)
 - ← [[30-devlet/normlar/ANAYASA]] — Madde 6 ve 9'un ayrıntısı
 
 ## Günlük

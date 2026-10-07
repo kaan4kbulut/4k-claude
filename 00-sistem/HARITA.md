@@ -33,8 +33,9 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 - [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — Bu karar kaydi, yazici isi fikri (F-0001) icin yazici satin almadan once pazar arastirmasi yapilmasi secenegini neden onerdigimizi, alternatifleri ve dogrulama yolunu kalici olarak tutmak icin var. · karar · kat 3 · 2026-10-07
 - [[30-devlet/normlar/ANAYASA]] — 4k-claude'un degistirilemez cekirdegini kurar; katlari, ilkeleri, yetkinin kaynagini, denetimin bagimsizligini ve insan noktasi ilkesini tanimlar; tum alt normlar buna uyar. · anayasa · kat 3 · 2026-10-06
 - [[30-devlet/normlar/HAKEM-KURALLARI]] — Bir modelin baska bir modelin ciktisini yargiladigi her yerde (denetci, kapi yargisi, eval) onyargilari azaltan kurallari koyar. · referans · kat 3 · 2026-10-06
-- [[30-devlet/normlar/IMZA-MATRISI]] — Hangi kararin kimin imzasini istedigini, yetki devrinin kurallarini ve kayitlarini tek tabloda tutar; orkestrator her kararda buraya bakar. · referans · kat 3 · 2026-10-06
+- [[30-devlet/normlar/IMZA-MATRISI]] — Hangi kararin kimin imzasini istedigini, yetki devrinin kurallarini ve kayitlarini tek tabloda tutar; orkestrator her kararda buraya bakar. · referans · kat 3 · 2026-10-07
 - [[30-devlet/normlar/MODEL-POLITIKASI]] — Hangi isin hangi modele ve cabaya gidecegini, tur ve butce tavanlarini, onbellek ve maliyet disiplinini belirler; alt ajan tanimlari ve calistir.sh buna uyar. · referans · kat 3 · 2026-10-06
+- [[30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri]] — Bu yonerge, imza matrisinde sahibine ayrilmamis butun cift yonlu (geri alinabilir) kararlarin orkestrator tarafindan sahibine sorulmadan verilip kaydedilmesini ve brifingde bildirilmesini, sahibine yalniz imza matrisi kalemlerinin ve fiziksel eylemlerin sorulmasini belirlemek icin var. · yonerge · kat 3 · 2026-10-07
 
 ## 20-sirket
 - [[20-sirket/MOC-sirket]] — Bu icerik haritasi, orgutleme katindaki rolleri, acik gorev kartlarini (Kanban), SOP'lari, alan paketlerini, scorecard'i ve ritmi tek bakista gosterir. · moc · kat 2 · 2026-10-07

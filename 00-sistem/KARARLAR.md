@@ -6,3 +6,4 @@ Karar başına tek satır; ayrıntı `30-devlet/kararlar/K-xxx-*.md`. Bir kural 
 - K-002 · 2026-10-06 · kabul · Danışman ayrı ajan değil, zihin katının işlevi (yönlendirme notu + değerlendirme); kadro kapısında yeniden ele alınır · cift-yonlu
 - K-003 · 2026-10-06 · kabul · Sistemin adı Yeni Sistem yerine 4k-claude; canlı dosyalar ve klasör değişir, tarihî kayıtlar kalır (Anayasa 1.1, Madde 14) · cift-yonlu
 - K-004 · 2026-10-07 · kabul · Yazıcı işinde (F-0001) alım öncesi zaman kutulu pazar araştırması · cift-yonlu
+- Y-001 · 2026-10-07 · aktif · Yönerge: çift yönlü kararlarda orkestratöre yetki devri (Başkan a.; sahibinin yazılı talimatı) · cift-yonlu
