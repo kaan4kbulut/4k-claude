@@ -437,6 +437,27 @@ def main():
         if not re.search(rf"\b{son}\b", nk):
             hata("40-ic-ses/nerede-kaldik.md", f"son kapanan {son} yazılmamış (/kapat 3. adım)")
 
+    # 17 kanban değişimi GUNLUK'süz (T-046): Obsidian panosunda kart sürüklemek frontmatter'ı kayıtsız yazar.
+    # Son commit'teki kanban değeriyle karşılaştırılır; değişen kart için GUNLUK'e commit'ten sonra satır düşmüş olmalı.
+    try:
+        import subprocess
+        r = subprocess.run(["git", "-C", kok, "show", "HEAD:00-sistem/GUNLUK.md"], capture_output=True, text=True, timeout=20)
+        eski_gunluk = set(r.stdout.splitlines()) if r.returncode == 0 else None
+    except (OSError, subprocess.TimeoutExpired):
+        eski_gunluk = None
+    if eski_gunluk is not None:
+        yeni_satirlar = [s for s in gunluk.splitlines() if s not in eski_gunluk]
+        for yol, fm in fm_map.items():
+            if fm.get("tur") != "gorev":
+                continue
+            r = subprocess.run(["git", "-C", kok, "show", f"HEAD:{yol}"], capture_output=True, text=True, timeout=20)
+            if r.returncode != 0:
+                continue  # yeni kart: 8. denetim kaydı arar
+            m = re.search(r"^kanban:\s*(\S+)", r.stdout, re.M)
+            eski, yeni = (m.group(1) if m else None), fm.get("kanban")
+            if eski != yeni and not any(yol in s for s in yeni_satirlar):
+                hata(yol, f"kanban değişti ({eski} → {yeni}) ama GUNLUK'te kayıt yok (pano sürüklemesi? /degistir ile kaydet)")
+
     # ---------- rapor ----------
     bag_sayisi = sum(len(liste(fm.get("dayandigi"))) for fm in fm_map.values())
     ciktikod = 1 if hatalar or (strict and uyarilar) else 0

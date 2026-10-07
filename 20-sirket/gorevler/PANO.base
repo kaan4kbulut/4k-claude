@@ -1,0 +1,27 @@
+# Görev panosu (T-046). Salt görünüm: kartlar /degistir ile değişir. Panoda kart sürüklemek
+# frontmatter'ı GUNLUK'süz yazar; kontrol.py 17. denetim bunu yakalar (kanban değişti ama kayıt yok).
+# Sözdizimi: https://obsidian.md/help/bases/syntax , görünümler: https://obsidian.md/help/bases/views (okundu 2026-10-07)
+filters:
+  and:
+    - file.inFolder("20-sirket/gorevler")
+    - file.ext == "md"
+views:
+  - type: kanban
+    name: Pano
+    order:
+      - file.name
+      - sahip
+      - inceleyici
+    groupBy:
+      property: kanban
+      direction: ASC
+  - type: table
+    name: Liste
+    order:
+      - file.name
+      - kanban
+      - sahip
+      - durum
+    groupBy:
+      property: kanban
+      direction: ASC

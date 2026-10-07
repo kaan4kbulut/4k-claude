@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-045 kapandı; sıradaki: liste T-j (Bases görev panosu)
+aktif_talimat: yok — T-046 kapandı; sıradaki: liste T-k (GUNLUK hash zinciri)
 kapi: KP-004 — KR-002 yayımı (bekliyor)
 acik_soru: ASK.md — KR-002 imzası
 siradaki: sahibinin KP-004 cevabı (ASK.md); sonra liste T-h … T-m (~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* kararı; mali müşavire metni gönder
 
 ## Son kapanış
+- T-046 (2026-10-07): PANO.base ve kontrol.py 17. denetim (kanban değişimi GUNLUK'süz). Kanıt: test_kanban_kaydi 2/2; gerçek kartta negatif → hata; kontrol.py --kisa → 0.
 - T-045 (2026-10-07): /haftalik'e skill-doctor ve prompt-audit adımı. Kanıt: SKILL.md 48 satır (≤ 500); kontrol.py --kisa → 0.
 - T-044 (2026-10-07): ARAC-KAYDI 1.3: voxtype ve Claude Code ölçüldü; tarama iddiaları UNCONFIRMED listede; Tailscale + ntfy. Kanıt: claude --version 2.1.292; voxtype --version 1.1.0; kontrol.py --kisa → 0.
 - T-043 (2026-10-07): KR-002 taslak + KP-004 kapısı + ASK.md; yayım sahibinin açık imzasında. Kanıt: kontrol.py --kisa → 0 (49 sayfa); commit 5428cd5.

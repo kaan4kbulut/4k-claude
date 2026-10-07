@@ -509,3 +509,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: .claude/skills/haftalik/SKILL.md, nerede-kaldik 0.24
 - Kapanış notu: /haftalik 6. adımı skill-doctor ve prompt-audit çıktısını brifinge alır; çalışmazsa 'ölçülmedi'.
+
+## T-046 — Görev panosu (Obsidian Bases) ve kanban kayıt denetimi (liste T-j)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-j. Görev kartları Obsidian'da pano olarak görülsün; panoda kart sürüklemek frontmatter'ı GUNLUK'süz yazacağı için bunu kontrol.py yakalasın.
+- Başarı ölçütü: `20-sirket/gorevler/PANO.base` (klasöre göre süz, `kanban` alanına göre grupla; sözdizimi Obsidian yardımından doğrulanmış); kontrol.py 17. denetim: kartın `kanban` değeri son commit'e göre değişmiş ve GUNLUK'te o karta yeni satır yoksa hata (git yoksa atlanır); SEMA §11 güncel; testleri `kontrol.py --test` içinde; kontrol.py --kisa → 0.
+- Sınırlar: Pano salt görünüm; kartlar yine /degistir ile değişir.
+- Kat: 2
+- Kapı: cift-yonlu · onay: sahibi (talimat listesi)
+- Durum: kapali
+- Doğurduğu dosyalar: 20-sirket/gorevler/PANO.base, 00-sistem/testler/test_kanban_kaydi.py (yeni); değişen: 00-sistem/scripts/kontrol.py (17. denetim), SEMA 0.5, DEGISIKLIKLER, nerede-kaldik 0.25
+- Kapanış notu: Pano dosyası ve kayıt denetimi hazır; denetim gerçek kartta negatif denendi (hata verdi, geri alındı). Kanban görünümünün Obsidian'da açılışı gözle görülmedi (sandbox); yedek tablo görünümü aynı gruplamayla.

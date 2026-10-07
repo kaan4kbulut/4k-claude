@@ -463,3 +463,12 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:41 [degisti] .claude/skills/haftalik/SKILL.md — 6. adım += skill-doctor, prompt-audit (T-045)
 2026-10-07 19:41 [degisti] 40-ic-ses/nerede-kaldik.md — 0.24 — T-045
 2026-10-07 19:41 [oturum] T-045 — kapandı — haftalik bağlam/istem denetimi
+2026-10-07 19:41 [ayar] .claude/skills/haftalik/SKILL.md — skill dosyası değişti (denetim izi)
+2026-10-07 19:42 [yeni] T-046 — talimat açıldı — Bases pano ve kanban denetimi (liste T-j)
+2026-10-07 19:42 [hata] oturum 51b5652a-b77 — bütçe tavanı aşıldı: ≈21.07 USD / tavan 5 USD (4×)
+2026-10-07 19:43 [yeni] 20-sirket/gorevler/PANO.base — Bases görev panosu: kanban + tablo (T-046)
+2026-10-07 19:43 [degisti] 00-sistem/scripts/kontrol.py — 17. denetim: kanban değişimi GUNLUK'süz (T-046)
+2026-10-07 19:43 [degisti] 00-sistem/SEMA.md — 0.5 — §11 17. denetim; surum alanı 0.3'te kalmıştı (T-046)
+2026-10-07 19:43 [yeni] 00-sistem/testler/test_kanban_kaydi.py — 17. denetim testleri, 2 (T-046)
+2026-10-07 19:43 [degisti] 40-ic-ses/nerede-kaldik.md — 0.25 — T-046
+2026-10-07 19:43 [oturum] T-046 — kapandı — Bases pano ve kanban kayıt denetimi
