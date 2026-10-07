@@ -11,7 +11,7 @@ guncelleme: 2026-10-07
 yazar: claude
 talimat: T-007
 dayandigi: [00-sistem/arastirma/09-github-taramasi.md, 00-sistem/arastirma/02-hafiza-ve-wiki-duzenleri.md, 00-sistem/arastirma/04-guvenilirlik-ve-kalite-teknikleri.md, 00-sistem/arastirma/05-eller-ve-alan-paketi-3d.md, 00-sistem/arastirma/08-ic-ses-yontemleri.md]
-besledigi: [10-insan/araclar/ARAC-KAYDI.md, 30-devlet/kapilar/KP-001-sandbox-acilisi.md, 40-ic-ses/arastirma-notlari/qmd-turkce-isabet.md]
+besledigi: [10-insan/araclar/ARAC-KAYDI.md, 30-devlet/kapilar/KP-001-sandbox-acilisi.md, 40-ic-ses/arastirma-notlari/qmd-turkce-isabet.md, 40-ic-ses/arastirma-notlari/freyatts-turkce-deneme.md]
 kaynaklar: ["https://github.com/Graphify-Labs/graphify", "https://pypi.org/project/graphifyy/", "https://github.com/tobi/qmd", "https://code.claude.com/docs/en/sandboxing", "https://code.claude.com/docs/en/hooks", "https://code.claude.com/docs/en/voice-dictation", "https://github.com/docling-project/docling", "https://github.com/lycheeverse/lychee", "https://github.com/snyk/agent-scan", "https://docs.livekit.io/agents/logic/turns/turn-detector/", "https://github.com/resemble-ai/chatterbox"]
 alindi: 2026-10-06
 guven: orta
@@ -210,6 +210,7 @@ saklama: K
 - [[00-sistem/arastirma/05-eller-ve-alan-paketi-3d]] — eller ve MCP kararları (Türkiye'ye özgü araçlar)
 - [[00-sistem/arastirma/08-ic-ses-yontemleri]] — ses hattı kararları (whisper, Smart Turn, Handy)
 ### Beslediği
+- [[40-ic-ses/arastirma-notlari/freyatts-turkce-deneme]] — öncelik 8 ses hattı: FreyaTTS ölçümü (işlemcide gerçek zamanlı değil)
 - [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] — öncelik 3'ün Türkçe isabet ölçümü (UNCONFIRMED → ölçüldü)
 - [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — öncelik 1 (sandbox) bu raporla kapıya geldi
 - [[10-insan/araclar/ARAC-KAYDI]] — benimsenecek araçların kayda girmeden önceki dayanağı

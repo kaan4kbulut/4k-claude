@@ -179,3 +179,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: .claude/settings.json (language), 10-insan/araclar/ARAC-KAYDI.md (0.7)
 - Kapanış notu: Dikte dili Türkçe (belge: Türkçe `tr` destekli; language yanıt dilini de belirler). Ayar denetimi değişmezleri tamam. Sıradaki (sahibin katılımıyla): /voice ile mikrofon denetimi ve deneme dikte; yerel TTS (FreyaTTS hafif / Chatterbox GPU) ses örnekleri.
+
+## T-016 — İç Ses ses hattı, 2. kısım: yerel Türkçe TTS denemesi (öncelik 7)
+- Tarih: 2026-10-07
+- Niyet: Araştırma 10'un "Türkçe kalitesi ölçülmeden bağımlılığa çevrilmez" şartıyla, yerel Türkçe TTS adayını (FreyaTTS, Apache-2.0, 183M) proje dışı izole ortamda (.araclar/tts, git dışı) kurup Türkçe örnek ses dosyaları üretmek ve hızını (RTF) ölçmek. Kalite yargısı sahibinin kulağına bırakılır.
+- Başarı ölçütü: sabit commit'li kurulum; Türkçe karakter, sayı ve İngilizce terim içeren örnek cümlelerden WAV dosyaları; RTF ölçümü; ağ erişimi yalnız model indirmede; sonuç 40-ic-ses/arastirma-notlari'na; kontrol.py sıfır hata.
+- Sınırlar: Bağımlılık yapılmaz (hook/skill entegrasyonu yok); ses klonlama yok; Chatterbox (GPU, birkaç GB) bu talimatta yok.
+- Kat: 0
+- Kapı: cift-yonlu
+- Durum: kapali
+- Doğurduğu dosyalar: 40-ic-ses/arastirma-notlari/freyatts-turkce-deneme.md (yeni), .araclar/tts (git dışı), 00-sistem/.kosu/tts-ornek/*.wav (git dışı); değişen: arastirma/10 (besledigi), MOC-ic-ses, ARAC-KAYDI (0.8)
+- Kapanış notu: FreyaTTS CPU'da kuruldu (torchaudio CUDA/CPU uyumsuzluğu 2.11 CPU sürümleriyle çözüldü), 4 Türkçe örnek üretildi (00-sistem/.kosu/tts-ornek). RTF 2.5–12 (iddia 0.70); Whisper ile anlaşılırlık: günlük %7, Türkçe harf %25, sayı %53 (çoğu rakam yazımı), İngilizce terim %60. Sonuç notu: 40-ic-ses/arastirma-notlari/freyatts-turkce-deneme (celisiyor). Bağımlılık yapılmadı. Açık: sahibi örnekleri dinler; GPU denemesi (~3 GB) sahibinin kararı.

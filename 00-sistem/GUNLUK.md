@@ -195,3 +195,11 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 02:08 [degisti] .claude/settings.json — language: turkish (dikte ve yanıt dili; T-015)
 2026-10-07 02:08 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 0.7: /voice satırı (T-015)
 2026-10-07 02:08 [oturum] T-015 — kapandı — dikte dili Türkçe; etkinleştirme sahibinde
+2026-10-07 09:55 [degisti] T-016 — talimat açıldı: yerel Türkçe TTS denemesi (FreyaTTS)
+2026-10-07 10:11 [yeni] 40-ic-ses/arastirma-notlari/freyatts-turkce-deneme.md — FreyaTTS Türkçe ölçümü: celisiyor (CPU RTF 2.5–12, İngilizce terim WER %60)
+2026-10-07 10:11 [degisti] 00-sistem/arastirma/10-yenilikci-teknolojiler.md — T-016 TTS denemesi
+2026-10-07 10:11 [degisti] 40-ic-ses/MOC-ic-ses.md — T-016 TTS denemesi
+2026-10-07 10:11 [degisti] 10-insan/araclar/ARAC-KAYDI.md — T-016 TTS denemesi
+2026-10-07 10:11 [degisti] 00-sistem/HARITA.md — T-016 TTS denemesi
+2026-10-07 10:11 [ayar] .araclar/tts — FreyaTTS + Whisper deneme ortamı (5.1 GB, git dışı)
+2026-10-07 10:11 [oturum] T-016 — kapandı — TTS ölçümü; karar sahibinde

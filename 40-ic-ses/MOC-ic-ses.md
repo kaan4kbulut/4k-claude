@@ -46,6 +46,7 @@ Fikir: 1 (M0 0 · M1 1 · M2 0 · M3 0 · M4 0 · M5 0) · Gözlem: 0 · Yansım
 
 ### Araştırma notları
 - [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] — qmd Türkçe isabet ölçümü: vektör %90@3, kelime %0 (dogruluyor)
+- [[40-ic-ses/arastirma-notlari/freyatts-turkce-deneme]] — FreyaTTS Türkçe ses: günlük WER %7, İngilizce terim %60, işlemcide RTF 2.5–12 (celisiyor)
 
 ### Park listesi [?]
 - [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — yazıcı türü ne (3D mi, kâğıt/baskı mı)? Ne tür iş?
