@@ -542,3 +542,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/testler/test_calistir.py (yeni); değişen: 00-sistem/scripts/calistir.sh, DEGISIKLIKLER, nerede-kaldik 0.27
 - Kapanış notu: Gözetimsiz koşu workflow açamaz. Liste T-l (Nemotron) ön koşulsuz kaldı ([durdu]); T-m denemesi sahibinin açık workflow isteğine kaldı.
+
+## T-049 — Bulunan iki hata: not.py kapanış kaydı, durus-kapisi sandbox yer tutucuları
+- Tarih: 2026-10-07
+- Niyet: Bu oturumda bulundu. (1) not.py (KR-001 hafif yol) kendi talimatını kapatıyor ama ILERLEME ve nerede-kaldik'e yazmıyor; 16. denetim hata veriyor (T-047'de görüldü). (2) yscommon.dosya_izi sandbox'ın /dev/null yer tutucularını (.claude/commands, launch.json …) dosya sayıyor; durus-kapisi bunları "değişen dosya" diye listeliyor.
+- Başarı ölçütü: not.py sonrası kontrol.py --kisa → 0 (kayıt elle tamamlanmadan); dosya_izi karakter aygıtlarını atlar; ikisine de regresyon testi; kontrol.py --test ve --kisa → 0.
+- Sınırlar: Hafif yolun adımları ve durus-kapisi'nin karar mantığı değişmez.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi ("kendin yap")
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/testler/test_not_ve_iz.py (yeni); değişen: 00-sistem/scripts/not.py, 00-sistem/scripts/yscommon.py, DEGISIKLIKLER, nerede-kaldik 0.28
+- Kapanış notu: İki hata kapandı; yeni testler eski kodda düşüyor. Açık: T-048'de bir kez görülen kararsız test yeniden üretilemedi.

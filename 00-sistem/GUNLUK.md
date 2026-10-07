@@ -486,3 +486,9 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:47 [oturum] T-048 — kapandı — gözetimsiz koşuda Workflow kapalı
 2026-10-07 19:47 [hata] Bash — Exit code 1 · OK
 2026-10-07 19:49 [hata] T-048 — kontrol.py --test bir kez 1 döndü (çıktı görülmedi), ardından 3 koşu 0; kararsız test şüphesi, yeniden üretilemedi
+2026-10-07 19:50 [yeni] T-049 — talimat açıldı — not.py kapanış kaydı, dosya_izi yer tutucuları
+2026-10-07 19:51 [degisti] 00-sistem/scripts/not.py — kapanışta ILERLEME ve nerede-kaldik yazar (T-049)
+2026-10-07 19:51 [degisti] 00-sistem/scripts/yscommon.py — dosya_izi sandbox yer tutucularını atlar (T-049)
+2026-10-07 19:51 [yeni] 00-sistem/testler/test_not_ve_iz.py — T-049 regresyon testleri, 2
+2026-10-07 19:51 [degisti] 40-ic-ses/nerede-kaldik.md — 0.28 — T-049
+2026-10-07 19:51 [oturum] T-049 — kapandı — not.py kapanış kaydı, yer tutucu izi

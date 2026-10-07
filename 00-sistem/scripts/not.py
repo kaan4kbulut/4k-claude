@@ -154,6 +154,24 @@ def main():
     t = t.replace("- Kapanış notu:", "- Kapanış notu: hafif yol (not.py); altı adım otomatik.", 1)
     with open(tal_yol, "w", encoding="utf-8") as f:
         f.write(talimatlar[:i] + t)
+    # /kapat 3. adımı (16. denetim): son kapanan talimat ILERLEME ve nerede-kaldik'te geçmeli (T-049)
+    bugun = datetime.now().strftime("%Y-%m-%d")
+    il_yol = os.path.join(KOK, "00-sistem", "ILERLEME.md")
+    il = open(il_yol, encoding="utf-8").read()
+    il = il.replace("## Son kapanış\n", f"## Son kapanış\n- {tno} ({bugun}): hafif yol (KR-001) → {goreli}.\n", 1)
+    with open(il_yol, "w", encoding="utf-8") as f:
+        f.write(il)
+    nk_yol = os.path.join(KOK, "40-ic-ses", "nerede-kaldik.md")
+    nk = open(nk_yol, encoding="utf-8").read()
+    m = re.search(r"^surum: (\d+)\.(\d+)$", nk, re.M)
+    if m and "**Konuşulan**\n" in nk:
+        yeni_surum = f"{m.group(1)}.{int(m.group(2)) + 1}"
+        nk = nk[:m.start()] + f"surum: {yeni_surum}" + nk[m.end():]
+        nk = nk.replace("**Konuşulan**\n", f"**Konuşulan**\n- {tno}: hafif yol notu {ad}.\n", 1)
+        nk = nk.rstrip("\n") + f"\n| {yeni_surum} | {bugun} | {tno} | Hafif yol notu {ad} (not.py) |\n"
+        with open(nk_yol, "w", encoding="utf-8") as f:
+            f.write(nk)
+        calistir(os.path.join(BURASI, "gunluk.py"), "degisti", "40-ic-ses/nerede-kaldik.md", f"{yeni_surum} — {tno} (not.py)")
     calistir(os.path.join(BURASI, "gunluk.py"), "oturum", tno, "kapandı — hafif yol")
     k = calistir(os.path.join(BURASI, "kontrol.py"), "--kisa")
     print(f"## Kanıt\n- sayfa: {goreli} ({tno})\n- `python3 00-sistem/scripts/kontrol.py --kisa` → {k.returncode}: "

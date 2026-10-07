@@ -4,6 +4,7 @@ sayfa tarama, yol çözümleme. kontrol.py, bayat.py ve harita.py bunu kullanır
 import datetime
 import os
 import re
+import stat
 import sys
 
 KAT_KLASOR = {"00-sistem": 0, "01-gelen": 0, "10-insan": 1, "20-sirket": 2, "30-devlet": 3, "40-ic-ses": 4, "90-arsiv": 9}
@@ -239,6 +240,8 @@ def dosya_izi(kok):
                 st = os.stat(a)
             except OSError:
                 continue
+            if stat.S_ISCHR(st.st_mode):
+                continue  # sandbox yer tutucusu (/dev/null bağı): dosya değil, değişiklik sayılmaz (T-049)
             iz[g] = [st.st_mtime_ns, st.st_size]
     return iz
 

@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-048 kapandı; talimat listesi bitti (T-l ön koşulsuz, T-m denemesi açık istek bekler)
+aktif_talimat: yok — T-049 kapandı; talimat listesi ve bulunan hatalar bitti
 kapi: KP-004 — KR-002 yayımı (bekliyor)
 acik_soru: ASK.md — KR-002 imzası
-siradaki: not.py kapanışta ILERLEME/nerede-kaldik yazmıyor (16. denetimle çelişki) — düzelt; sahibinin KP-004 cevabı (ASK.md); sonra liste T-h … T-m (~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* kararı; mali müşavire metni gönder
+siradaki: sahibinin KP-004 cevabı (ASK.md); sonra liste T-h … T-m (~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* kararı; mali müşavire metni gönder
 
 ## Son kapanış
+- T-049 (2026-10-07): not.py kapanış kaydı; dosya_izi sandbox yer tutucularını atlar. Kanıt: test_not_ve_iz 2/2 (eski kodda 2 FAIL); kontrol.py --test → 0 (93); kontrol.py --kisa → 0.
 - T-048 (2026-10-07): calistir.sh --disallowedTools Workflow. Liste T-l [durdu]: 10 gerçek kayıt/NeMo/GPU yok. Kanıt: claude --help → --disallowedTools; bash -n → 0; test_calistir 3/3; kontrol.py --kisa → 0.
 - T-047 (2026-10-07): F-0002 GUNLUK hash zinciri fikri (liste T-k; hafif yol). Bulgu: not.py ILERLEME ve nerede-kaldik'i yazmıyor, 16. denetim hata veriyor (düzeltilecek). Kanıt: not.py → F-0002; kontrol.py --kisa (elle kayıttan sonra) → 0.
 - T-046 (2026-10-07): PANO.base ve kontrol.py 17. denetim (kanban değişimi GUNLUK'süz). Kanıt: test_kanban_kaydi 2/2; gerçek kartta negatif → hata; kontrol.py --kisa → 0.

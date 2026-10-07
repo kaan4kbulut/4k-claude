@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.27
+surum: 0.28
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -52,6 +52,7 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - T-046 kapandı: Bases görev panosu ve kanban kayıt denetimi.
 - T-047 kapandı: F-0002 GUNLUK hash zinciri (fikir); not.py'nin kapanış kaydı eksik (bulgu).
 - T-048 kapandı: gözetimsiz koşuda Workflow kapalı. T-l (Nemotron) ön koşulsuz: 10 gerçek kayıt, NeMo, GPU yok.
+- T-049 kapandı: not.py kapanış kaydı ve durus-kapisi yer tutucu yanlış alarmı düzeldi.
 - Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
 
 **Açık**
@@ -117,3 +118,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.25 | 2026-10-07 | T-046 | T-046 kapanışı |
 | 0.26 | 2026-10-07 | T-047 | T-047 kapanışı |
 | 0.27 | 2026-10-07 | T-048 | T-048 kapanışı |
+| 0.28 | 2026-10-07 | T-049 | T-049 kapanışı |
