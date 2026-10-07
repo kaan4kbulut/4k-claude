@@ -3,11 +3,11 @@ id: 20261006-2241-scorecard
 ad: scorecard
 tur: referans
 kat: 2
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Haftalik 5-15 KPI'yi sahipli ve hedefli tutar; off-track olan gosterge Issues listesine duser ve haftalik L10'da ele alinir.
 olusturma: 2026-10-06
-guncelleme: 2026-10-06
+guncelleme: 2026-10-07
 yazar: claude
 talimat: T-000
 dayandigi: [00-sistem/arastirma/06-sirket-operasyonlari.md]
@@ -41,9 +41,11 @@ Teslimat: zamanında teslim %, iş emri çevrim süresi, WIP, geciken. Kalite: i
 ### Haftalık kayıt
 | Hafta | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | Issues |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2026-W41 | 97 | 0 | — | — | 67.85 | 1 | ölçülmüyor | 0 / — | S1; S5 |
 
 ### Issues (off-track)
-- —
+- 2026-W41 S1: 97 — 28/29; kaydı eksik: T-001
+- 2026-W41 S5: 67.85 — tavanı aşan oturum: 5fd94f32-8bd 65.80 (tavan 5 USD/oturum)
 
 ## Bağlar
 ### Dayandığı
@@ -56,3 +58,4 @@ Teslimat: zamanında teslim %, iş emri çevrim süresi, WIP, geciken. Kalite: i
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
+| 0.2 | 2026-10-07 | T-029 | Haftalık kayıt 2026-W41 (scorecard.py) |

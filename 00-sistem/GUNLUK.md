@@ -334,3 +334,12 @@ ayar-denetimi.
 2026-10-07 12:10 [degisti] CLAUDE.md — bütçe bekçisi satırı
 2026-10-07 12:10 [degisti] 40-ic-ses/nerede-kaldik.md — 0.5 — T-028
 2026-10-07 12:10 [oturum] T-028 — kapandı — bütçe bekçisi; 5fd94f32 ≈65,80 USD bulgusu
+2026-10-07 12:11 [yeni] T-029 — talimat açıldı — scorecard.py
+2026-10-07 12:12 [degisti] 20-sirket/SCORECARD.md — 0.2 — haftalık kayıt 2026-W41: hedef dışı 2
+2026-10-07 12:12 [yeni] 00-sistem/scripts/scorecard.py — SCORECARD S1–S8 ölçümü (T-029)
+2026-10-07 12:12 [yeni] 00-sistem/testler/test_scorecard.py — regresyon testi (T-029)
+2026-10-07 12:12 [degisti] .claude/skills/haftalik/SKILL.md — 6. adım scorecard.py --yaz
+2026-10-07 12:12 [degisti] CLAUDE.md — komutlar += scorecard.py
+2026-10-07 12:12 [ayar] .claude/settings.json — allow += scorecard.py (T-029); değişmezler tamam
+2026-10-07 12:12 [degisti] 40-ic-ses/nerede-kaldik.md — 0.6 — T-029
+2026-10-07 12:12 [oturum] T-029 — kapandı — scorecard.py, ilk kayıt 2026-W41

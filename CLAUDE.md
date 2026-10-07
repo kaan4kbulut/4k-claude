@@ -54,6 +54,7 @@ KAYIT (TALIMATLAR.md'ye T-xxx) → AMAÇ + KAT → YER + AD → ŞABLON → BAĞ
 - `python3 00-sistem/scripts/kontrol.py --kisa` bütünlük (çıkış 0 = temiz)
 - `python3 00-sistem/scripts/kontrol.py --test` hook ve betik testleri; hook, betik ya da ayar değiştiyse kapanıştan önce zorunlu
 - `python3 00-sistem/scripts/bayat.py` bayat sayfalar
+- `python3 00-sistem/scripts/scorecard.py [--yaz T-xxx]` SCORECARD S1–S8 ölçümü (son 7 gün); `--yaz` haftalık satırı yazar
 - `python3 00-sistem/scripts/harita.py --dogrula` harita doğrulama
 - `python3 00-sistem/scripts/gunluk.py <tur> <yol|T-xxx> "<not>"` GUNLUK satırı (zaman damgası otomatik)
 - `python3 00-sistem/scripts/ara.py "<soru>"` anlamsal arama (HARITA'dan sonra ikinci adım; sonuç ipucudur, sayfayı aç); yeni sayfadan sonra `--yenile`

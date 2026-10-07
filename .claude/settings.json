@@ -3,6 +3,7 @@
     "allow": [
       "Bash(python3 00-sistem/scripts/kontrol.py*)",
       "Bash(python3 00-sistem/scripts/bayat.py*)",
+      "Bash(python3 00-sistem/scripts/scorecard.py*)",
       "Bash(python3 00-sistem/scripts/harita.py*)",
       "Bash(python3 00-sistem/scripts/gunluk.py*)",
       "Bash(python3 00-sistem/scripts/graf.py*)",

@@ -32,6 +32,7 @@ Hazırlık (sen önceden çıkar, sahibine okuma):
 - Someday listesi (MOC-ic-ses "Someday"); arşivden rastgele iki öldürülmüş fikir oku (yeniden karşılaşma; aralıklı tekrar değil). Sahibi isterse biri geri alınır (`durum: taslak`, günlük notu).
 
 ## 6. Metrikler (5 dk, sen yazarsın, sahibi okur)
+- Önce `python3 00-sistem/scripts/scorecard.py --yaz T-xxx`: S1–S8 dosyalardan hesaplanır, SCORECARD haftalık satırı ve Issues yazılır (aynı hafta yeniden koşarsa satır güncellenir). Hedef dışı her gösterge IDS gündemine girer.
 - Yakalanan not sayısı; 48 saatte işlenen %; basamak başına terfi; öldürülen; medyan fikir→brif gün; açık görev ve ortalama is_yasi; MALIYET.csv haftalık toplam; **flip sayacı**: senin `[konum]` değişikliklerin ve kaçının gerekçeli olduğu.
 - MOC-ic-ses "Haftalık" bölümüne tablo satırı.
 - Maliyet doğruluğu: `python3 00-sistem/scripts/maliyet.py --gunluk` (çıkış 1 = tahmin ile ccusage farkı > %5; nedenini bul). Bağlantı canlılığı: sahibine `! python3 00-sistem/scripts/canli.py` çalıştırmasını öner (ağ ister); ölü bağlantılı kaynak sayfası /degistir ile güncellenir ya da olgu UNCONFIRMED işaretlenir.

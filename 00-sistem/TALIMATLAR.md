@@ -322,3 +322,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: .claude/hooks/butce-bekcisi.py, 00-sistem/testler/test_butce_bekcisi.py (yeni); değişen: .claude/settings.json (UserPromptSubmit), calistir.sh, MALIYET.csv (geriye dönük satır), CLAUDE.md, DEGISIKLIKLER, nerede-kaldik 0.5
 - Kapanış notu: Oturum tavanı artık oturum sürerken ölçülüyor (uyarı + GUNLUK, engel yok). Gerçek ölçüm: 5fd94f32 ≈65,80 USD = tavanın 13 katı. Tavan ya da model politikası değişikliği sahibinin kararı (A5).
+
+## T-029 — scorecard.py: haftalık sistem göstergelerini ölçen betik (eksik analizi #6)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "eksikleri tamamlayalım" talimatı. SCORECARD'ın haftalık tablosu hiç dolmamış; /haftalik ve ritim hiç koşmamış. S1–S8'in çoğu mevcut dosyalardan hesaplanabilir; elle sayım yapılmadığı için ritim ölçümsüz kalıyor.
+- Başarı ölçütü: `scorecard.py` S1–S8'i dosyalardan hesaplar (ölçülemeyeni "ölçülmüyor" ve nedeniyle yazar), hedef dışı olanları Issues olarak listeler; `--yaz T-xxx` SCORECARD'a haftalık satırı yazar (aynı hafta yeniden yazılırsa satır güncellenir, çift satır olmaz), sürüm ve günlük kaydı düşer; /haftalik 6. adımı bunu çağırır; testleri `kontrol.py --test` içinde; ilk haftalık satır (2026-W41) yazılmış; kontrol.py sıfır hata.
+- Sınırlar: Göstergelerin tanımı ve hedefleri değişmez (SCORECARD); operasyon göstergeleri ilk gerçek işle açılır, bu talimatta yok.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07)
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/scripts/scorecard.py, 00-sistem/testler/test_scorecard.py (yeni); değişen: SCORECARD 0.2 (2026-W41), haftalik SKILL, CLAUDE.md, settings.json (allow), DEGISIKLIKLER, nerede-kaldik 0.6
+- Kapanış notu: Scorecard artık ölçülüyor; ilk kayıt 2026-W41: S1 %97 (T-001 kaydı eksik), S5 67,85 USD (bir oturum tavanı 13× aştı). S7 flip sayacı ölçülmüyor ([konum] satır türü yok).
