@@ -23,6 +23,7 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 - [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] — Bu arastirma notu, arastirma 10'un "qmd yerel aramanin Turkce isabeti olculmeli" sorusuna dogruluyor cevabini 20 sorguluk olcumle verir. · arastirma-notu · kat 4 · 2026-10-07
 - [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — Bu arastirma notu, F-0001'in "hangi tur yazici ve kime ne satilir" sorusuna G-001 masa basi arastirmasiyla bilinmiyor cevabini (uc secenek yan yana, talep kaniti yok) kanitlariyla verir. · arastirma-notu · kat 4 · 2026-10-07
 - [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var. · fikir · kat 4 · 2026-10-07
+- [[40-ic-ses/fikirler/F-0002-gunluk-hash-zinciri]] — Bu fikir, 'GUNLUK hash zinciri' onerisini kaydetmek ve olgunlastirmak icin var (merdiven 0, ham). · fikir · kat 4 · 2026-10-07
 - [[40-ic-ses/nerede-kaldik]] — Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir. · referans · kat 4 · 2026-10-07
 
 ## 30-devlet
@@ -48,12 +49,12 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 ## 20-sirket
 - [[20-sirket/MOC-sirket]] — Bu icerik haritasi, orgutleme katindaki rolleri, acik gorev kartlarini (Kanban), SOP'lari, alan paketlerini, scorecard'i ve ritmi tek bakista gosterir. · moc · kat 2 · 2026-10-07
 - [[20-sirket/RITIM]] — Gunluk, haftalik, aylik, ceyreklik ve yillik operasyon ritmini; her toplantinin gundemini ve ajanin onceden hazirladiklarini belirler. · referans · kat 2 · 2026-10-06
-- [[20-sirket/SCORECARD]] — Haftalik 5-15 KPI'yi sahipli ve hedefli tutar; off-track olan gosterge Issues listesine duser ve haftalik L10'da ele alinir. · referans · kat 2 · 2026-10-06
+- [[20-sirket/SCORECARD]] — Haftalik 5-15 KPI'yi sahipli ve hedefli tutar; off-track olan gosterge Issues listesine duser ve haftalik L10'da ele alinir. · referans · kat 2 · 2026-10-07
 - [[20-sirket/alan-paketleri/3d-uretim]] — Bu alan paketi, 3D baski mikro-uretim alaninda sistemin dijital tarafi ucten uca yurutebilmesi icin gereken tum bilgiyi tek yerde toplar; sistemin bilinmeyen bir alani ogrenme yetenegini sinayan ornektir, gercek plan degildir. · alan-paketi · kat 2 · 2026-10-06
 - [[20-sirket/gorevler/G-001-yazici-pazar-arastirmasi]] — Bu gorev, yazici isi fikri icin yazici turu ve ilk musteri kitlesi seceneklerini kanitla karsilastiran bir pazar arastirmasi uretmek uzere var (komutan niyeti, alim kararini kaniyla vermek). · gorev · kat 2 · 2026-10-07
 
 ## 10-insan
-- [[10-insan/MOC-insan]] — Bu icerik haritasi, eller katindaki ciktilari, degismez kaynaklari ve arac kaydini tek bakista gosterir. · moc · kat 1 · 2026-10-06
+- [[10-insan/MOC-insan]] — Bu icerik haritasi, eller katindaki ciktilari, degismez kaynaklari ve arac kaydini tek bakista gosterir. · moc · kat 1 · 2026-10-07
 - [[10-insan/araclar/ARAC-KAYDI]] — Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz. · referans · kat 1 · 2026-10-07
 - [[10-insan/kaynaklar/pano-tasarim-paketi]] — Bu kaynak sayfasi, pano tasarim paketi adli dis kaynagin degismez kaydini, ozetini ve guven etiketini tutar; pano.py talimatlari buradan turer. · kaynak · kat 1 · 2026-10-07
 - [[10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07]] — Bu kaynak sayfasi, 2026-10-07 YZ teknoloji taramasi raporunun degismez kaydini, ozetini ve guven etiketini tutar; T-b … T-m talimatlari buradan turer. · kaynak · kat 1 · 2026-10-07

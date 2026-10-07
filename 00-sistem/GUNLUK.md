@@ -474,3 +474,7 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:43 [oturum] T-046 — kapandı — Bases pano ve kanban kayıt denetimi
 2026-10-07 19:45 [hata] T-046 — 535c123 kontrol.py --test 3 FAIL iken commit edildi; kök neden: test_durus_kapisi gerçek ASK.md'ye bağımlı
 2026-10-07 19:45 [degisti] 00-sistem/testler/test_durus_kapisi.py — setUp kopyadaki ASK.md'yi kenara alır (T-046)
+2026-10-07 19:46 [yeni] 40-ic-ses/fikirler/F-0002-gunluk-hash-zinciri.md — hafif yol (KR-001): GUNLUK hash zinciri
+2026-10-07 19:46 [degisti] 40-ic-ses/MOC-ic-ses.md — T-047: F-0002-gunluk-hash-zinciri satırı
+2026-10-07 19:46 [oturum] T-047 — kapandı — hafif yol
+2026-10-07 19:46 [degisti] 40-ic-ses/nerede-kaldik.md — 0.26 — T-047

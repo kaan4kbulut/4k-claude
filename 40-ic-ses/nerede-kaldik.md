@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.25
+surum: 0.26
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -50,6 +50,7 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - T-044 kapandı: ARAC-KAYDI tazelendi (bildirim hattı dahil).
 - T-045 kapandı: /haftalik bağlam ve istem denetimi.
 - T-046 kapandı: Bases görev panosu ve kanban kayıt denetimi.
+- T-047 kapandı: F-0002 GUNLUK hash zinciri (fikir); not.py'nin kapanış kaydı eksik (bulgu).
 - Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
 
 **Açık**
@@ -113,3 +114,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.23 | 2026-10-07 | T-044 | T-044 kapanışı |
 | 0.24 | 2026-10-07 | T-045 | T-045 kapanışı |
 | 0.25 | 2026-10-07 | T-046 | T-046 kapanışı |
+| 0.26 | 2026-10-07 | T-047 | T-047 kapanışı |

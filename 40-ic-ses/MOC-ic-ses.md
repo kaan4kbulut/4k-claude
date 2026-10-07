@@ -27,7 +27,7 @@ Fikir: 1 (M0 0 · M1 1 · M2 0 · M3 0 · M4 0 · M5 0) · Gözlem: 0 · Yansım
 ### Fikirler (merdiven)
 | Basamak | Fikirler |
 | --- | --- |
-| M0 ham | — |
+| M0 ham | [[40-ic-ses/fikirler/F-0002-gunluk-hash-zinciri]] — GUNLUK hash zinciri |
 | M1 fikir | — |
 | M2 sınanmış | — |
 | M3 araştırılmış | [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — yazıcı alıp iş kurma (kompleks; 2026-10-07) |
