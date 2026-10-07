@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-041 kapandı; sıradaki: liste T-f (autoMemoryEnabled false)
+aktif_talimat: yok — T-042 kapandı; sıradaki: liste T-g (Routines kuralı)
 kapi: yok
 acik_soru: yok
 siradaki: talimat listesi ~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md T-b … T-m sırayla (kaynak: 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* (40 klasör) kararı; mali müşavire metni gönder
 
 ## Son kapanış
+- T-042 (2026-10-07): autoMemoryEnabled false (proje). Kanıt: settings.json okundu → false; ayar-denetimi SessionStart temiz; kontrol.py --kisa → 0.
 - T-041 (2026-10-07): okuyucu effort low, denetci effort medium, NotebookEdit yasak. Sınır: denetci Bash'le yazabilir. Kanıt: head .claude/agents/*.md; kontrol.py --kisa → 0.
 - T-040 (2026-10-07): model-bekcisi: Fable/Opus geçişi ask, her geçiş GUNLUK [ayar]. Açık: canlı geçişle doğrulama. Kanıt: test_model_bekcisi 5/5; kontrol.py --test → OK; ayar-denetimi SessionStart temiz; denetci engelleyici yok.
 - T-039 (2026-10-07): ayar-denetimi eklenti tabanı, workflow ve managed settings denetimi; env FOURK_* değişmezi. Kanıt: test_ayar_denetimi 15/15, eski hook'ta 7 FAIL; gerçek SessionStart uyarısız; kontrol.py --test → OK; kontrol.py --kisa → 0; denetci engelleyicisi kapatıldı.

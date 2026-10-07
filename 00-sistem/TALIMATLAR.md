@@ -465,3 +465,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: .claude/agents/okuyucu.md, .claude/agents/denetci.md, DEGISIKLIKLER, nerede-kaldik 0.19
 - Kapanış notu: effort ve NotebookEdit yasağı eklendi; okuyucuda memory yok, omitClaudeMd açık (var olan). Denetci gövdesindeki 'dosya yazmazsın' kuralı zaten vardı ve çiğnendi: Bash açık kaldıkça teknik engel yok (sınır). Orkestratör bu oturumda okuyucuyu model: sonnet ile çağırıp haiku'yu ezdi; politika ihlali, düzeltildi.
+
+## T-042 — Projede otomatik hafızayı kapat (liste T-f)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-f. Claude Code auto-memory notları (~/.claude/projects/…/memory) şablon, HARITA ve GUNLUK dışında kalıyor; sistemin tek hafızası wiki olmalı.
+- Başarı ölçütü: `.claude/settings.json` → `"autoMemoryEnabled": false` (anahtar code.claude.com/docs/en/memory ve /settings ile doğrulandı, 2026-10-07); ayar-denetimi değişikliği kabul eder (değişmezler tamam); kontrol.py --kisa → 0.
+- Sınırlar: Var olan hafıza dosyaları silinmez (belgeye göre diskte kalır). Değişmez gevşetme değil, sıkılaştırma: kapı gerekmez.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (talimat listesi T-f)
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: .claude/settings.json, DEGISIKLIKLER, nerede-kaldik 0.20
+- Kapanış notu: Auto-memory projede kapalı; etkisi bir sonraki oturumdan itibaren (bu oturum açıkken yüklenen ayar). Var olan ~/.claude/projects/…/memory dosyaları duruyor.

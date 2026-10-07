@@ -436,3 +436,9 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:25 [degisti] .claude/agents/denetci.md — effort medium; NotebookEdit yasak (T-041)
 2026-10-07 19:25 [degisti] 40-ic-ses/nerede-kaldik.md — 0.19 — T-041
 2026-10-07 19:25 [oturum] T-041 — kapandı — alt ajan ön bilgisi
+2026-10-07 19:25 [ayar] .claude/agents/denetci.md — skill dosyası değişti (denetim izi)
+2026-10-07 19:26 [yeni] T-042 — talimat açıldı — autoMemoryEnabled false (liste T-f)
+2026-10-07 19:26 [ayar] .claude/settings.json — project_settings değişti: +autoMemoryEnabled; değişmezler tamam
+2026-10-07 19:26 [ayar] .claude/settings.json — autoMemoryEnabled: false (T-042)
+2026-10-07 19:26 [degisti] 40-ic-ses/nerede-kaldik.md — 0.20 — T-042
+2026-10-07 19:26 [oturum] T-042 — kapandı — auto-memory kapalı

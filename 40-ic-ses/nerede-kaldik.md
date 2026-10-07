@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.19
+surum: 0.20
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -45,6 +45,7 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - T-039 kapandı: ayar-denetimi eklenti/workflow/managed denetimi.
 - T-040 kapandı: model bekçisi (PreModelSwitch ask, GUNLUK kaydı); canlı doğrulama ilk /model geçişinde.
 - T-041 kapandı: alt ajan effort ve yazma sınırı.
+- T-042 kapandı: projede auto-memory kapalı.
 - Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
 
 **Açık**
@@ -102,3 +103,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.17 | 2026-10-07 | T-039 | T-039 kapanışı |
 | 0.18 | 2026-10-07 | T-040 | T-040 kapanışı |
 | 0.19 | 2026-10-07 | T-041 | T-041 kapanışı |
+| 0.20 | 2026-10-07 | T-042 | T-042 kapanışı |

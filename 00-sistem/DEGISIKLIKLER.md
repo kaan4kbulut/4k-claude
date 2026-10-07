@@ -9,6 +9,7 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 - `test-kurulum.py` (T-035): ayrı test kopyası `~/.local/share/4k-claude-test/kasa` — `guncelle` HEAD'den kurar, kopyada `kontrol.py --kisa --test` geçerse geçer, yoksa çalışan kopya kalır; `geri`, `pano`, `durum`; argümansız Claude Code'u kopyada açar. Kopyanın uzak depo bağı yok. Pano TEST işaretini gösterir. Testler `test_test_kurulum.py` (5).
 - `pano.py` ilk aşama (T-034): salt okur HTML pano, kabuk + Pano + Sağlık ekranları, çıktı `00-sistem/.kosu/pano/`; yalnız stdlib, ağ yok, betik/stil/http yok. Tasarım CSS'i `scripts/pano-tasarim/css/` (01-gelen/ham paketinden, değiştirilmeden). Başlatıcı `pano.sh` (üretir + `xdg-open`). Testler `test_pano.py` (7).
 ### Değişti
+- `.claude/settings.json` (T-042): `autoMemoryEnabled: false` — sistemin hafızası wiki; Claude Code auto-memory projede kapalı (var olan dosyalar silinmez).
 - Alt ajanlar (T-041): okuyucu `effort: low`, denetci `effort: medium`; ikisinde NotebookEdit yasak. Sınır: denetci Bash'le dosya yazabilir (gövde kuralı var ama T-036'da çiğnendi); teknik engel yok.
 - `yscommon.py` HARIC_KLASOR += `01-gelen/ham` (T-032): gelen kutusunun özgün dış dosyaları (HTML, CSS, PNG, frontmatter'sız .md) taranmaz; okunacak hâlleri `al.py` notu olarak `01-gelen/*.md`'de durur.
 ### Düzeltildi
