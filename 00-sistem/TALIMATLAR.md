@@ -531,3 +531,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 40-ic-ses/fikirler/F-0002-gunluk-hash-zinciri.md
 - Kapanış notu: hafif yol (not.py); altı adım otomatik.
+
+## T-048 — Gözetimsiz koşuda Workflow kapalı (liste T-m, güvenlik yarısı)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-m. Gözetimsiz koşu (calistir.sh) çok ajanlı workflow açamasın: maliyet ve onaysız iş riski. Workflow denemesinin kendisi (/alan-paketi araştırması) yapılmadı: Workflow aracı yalnız sahibinin açık "workflow kullan" isteğiyle açılır.
+- Başarı ölçütü: calistir.sh `claude -p` çağrısında `--disallowedTools Workflow`; testi `kontrol.py --test` içinde; kontrol.py --kisa → 0.
+- Sınırlar: .claude/workflows/ açılmaz; deneme ayrı talimat (sahibinin açık isteğiyle).
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (talimat listesi)
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/testler/test_calistir.py (yeni); değişen: 00-sistem/scripts/calistir.sh, DEGISIKLIKLER, nerede-kaldik 0.27
+- Kapanış notu: Gözetimsiz koşu workflow açamaz. Liste T-l (Nemotron) ön koşulsuz kaldı ([durdu]); T-m denemesi sahibinin açık workflow isteğine kaldı.

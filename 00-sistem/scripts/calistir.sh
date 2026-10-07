@@ -35,6 +35,7 @@ claude -p \
   --fallback-model sonnet \
   --permission-mode auto \
   --permission-prompts none \
+  --disallowedTools Workflow \
   --output-format json \
   --json-schema "$(cat "$SEMA")" \
   --name "$T" \

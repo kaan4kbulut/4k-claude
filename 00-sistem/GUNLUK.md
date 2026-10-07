@@ -478,3 +478,11 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:46 [degisti] 40-ic-ses/MOC-ic-ses.md — T-047: F-0002-gunluk-hash-zinciri satırı
 2026-10-07 19:46 [oturum] T-047 — kapandı — hafif yol
 2026-10-07 19:46 [degisti] 40-ic-ses/nerede-kaldik.md — 0.26 — T-047
+2026-10-07 19:47 [yeni] T-048 — talimat açıldı — calistir.sh Workflow kapalı (liste T-m)
+2026-10-07 19:47 [durdu] liste-T-l — Nemotron ASR ölçümü yapılmadı: 10 gerçek Türkçe kayıt + referans metin yok (yalnız 4 sentetik TTS), NeMo kurulu değil, sandbox'tan GPU yok; ön koşullar gelince ayrı talimat
+2026-10-07 19:47 [degisti] 00-sistem/scripts/calistir.sh — --disallowedTools Workflow (T-048)
+2026-10-07 19:47 [yeni] 00-sistem/testler/test_calistir.py — calistir.sh bayrak testleri, 3 (T-048)
+2026-10-07 19:47 [degisti] 40-ic-ses/nerede-kaldik.md — 0.27 — T-048
+2026-10-07 19:47 [oturum] T-048 — kapandı — gözetimsiz koşuda Workflow kapalı
+2026-10-07 19:47 [hata] Bash — Exit code 1 · OK
+2026-10-07 19:49 [hata] T-048 — kontrol.py --test bir kez 1 döndü (çıktı görülmedi), ardından 3 koşu 0; kararsız test şüphesi, yeniden üretilemedi
