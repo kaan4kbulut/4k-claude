@@ -395,3 +395,13 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 18:33 [degisti] 00-sistem/GUNLUK.md — 11:18 ve 11:21 [hata] kayıtları tek satıra (T-036)
 2026-10-07 18:35 [degisti] 40-ic-ses/nerede-kaldik.md — 0.14 — T-036
 2026-10-07 18:35 [oturum] T-036 — kapandı — hatalar; devam istemi 1-5 bitti
+2026-10-07 18:39 [ayar] ~/.claude/settings.json — user_settings değişti: ~hooks; değişmezler tamam
+2026-10-07 18:43 [hata] oturum 51b5652a-b77 — bütçe tavanı aşıldı: ≈10.54 USD / tavan 5 USD (2×)
+2026-10-07 18:44 [yeni] T-037 — talimat açıldı — tarama raporu (liste T-a)
+2026-10-07 18:44 [yeni] 01-gelen/2026-10-07-1844-rapor.md — al.py: dış içerik gelen kutusuna (işlenmedi; okuyucu ile /inbox-triage)
+2026-10-07 18:45 [yeni] 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07.md — kaynak: tarama raporu; iddialar UNCONFIRMED (URL yok) (T-037)
+2026-10-07 18:45 [degisti] 10-insan/MOC-insan.md — 0.3 — kaynaklar += yz taraması
+2026-10-07 18:45 [uyku] triage — 1 işlendi, 0 arşiv — rapor → yz-teknoloji-taramasi kaynağı (T-037)
+2026-10-07 18:46 [ayar] ~/.claude/settings.json — user_settings değişti: +enabledPlugins.pyright-lsp@claude-plugins-official; değişmezler tamam
+2026-10-07 18:46 [degisti] 40-ic-ses/nerede-kaldik.md — 0.15 — T-037
+2026-10-07 18:46 [oturum] T-037 — kapandı — tarama raporu kaynak sayfasında; iddialar UNCONFIRMED

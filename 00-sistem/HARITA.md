@@ -53,3 +53,4 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 - [[10-insan/MOC-insan]] — Bu icerik haritasi, eller katindaki ciktilari, degismez kaynaklari ve arac kaydini tek bakista gosterir. · moc · kat 1 · 2026-10-06
 - [[10-insan/araclar/ARAC-KAYDI]] — Sistemin dunyaya dijital dokunma yollarini (yetenek, arac/API, olgunluk, insan noktasi, yedek yol) ve kurulu MCP/CLI araclarini tek kayitta tutar; kayitsiz arac kullanilmaz. · referans · kat 1 · 2026-10-07
 - [[10-insan/kaynaklar/pano-tasarim-paketi]] — Bu kaynak sayfasi, pano tasarim paketi adli dis kaynagin degismez kaydini, ozetini ve guven etiketini tutar; pano.py talimatlari buradan turer. · kaynak · kat 1 · 2026-10-07
+- [[10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07]] — Bu kaynak sayfasi, 2026-10-07 YZ teknoloji taramasi raporunun degismez kaydini, ozetini ve guven etiketini tutar; T-b … T-m talimatlari buradan turer. · kaynak · kat 1 · 2026-10-07

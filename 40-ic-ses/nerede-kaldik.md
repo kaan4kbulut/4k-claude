@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.14
+surum: 0.15
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -40,6 +40,7 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - T-034 kapandı: pano.py (Pano + Sağlık) ve pano.sh; testler 62/62 (temiz kopyada).
 - T-035 kapandı: test kopyası komutu (test-kurulum.py); sahibi tavan aşımında devam dedi.
 - T-036 kapandı: hatalar (koruma hook'u, test kopyalama, eski yol, ara.py, GUNLUK); devam istemi bitti.
+- T-037 kapandı: YZ tarama raporu → 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07 (iddialar UNCONFIRMED).
 - Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
 
 **Açık**
@@ -48,7 +49,7 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - F-0001: mali müşavire metni göndermek; fiziksel adımlar (TTS dinleme, Obsidian + Web Clipper).
 
 **Sonraki**
-- Sahibine sun: YZ teknoloji taraması talimat listesi (13 madde, ~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md).
+- Talimat listesi T-b … T-m sırayla (~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md).
 
 ### Oturum: 2026-10-07 — eksik analizi ve düzeltmeler (T-024..T-031)
 **Konuşulan**
@@ -92,3 +93,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.13 | 2026-10-07 | T-035 | T-035 kapanışı |
 | 0.14 | 2026-10-07 | T-036 | T-036 kapanışı |
 | 0.14 | 2026-10-07 | T-036 | T-036 kapanışı; devam istemi bitti |
+| 0.15 | 2026-10-07 | T-037 | T-037 kapanışı |

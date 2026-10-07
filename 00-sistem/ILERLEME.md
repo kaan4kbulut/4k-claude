@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-036 kapandı; devam istemi (genel toparlama) bitti
+aktif_talimat: yok — T-037 kapandı; sıradaki: liste T-b (mod koruması kararı)
 kapi: yok
 acik_soru: yok
-siradaki: sahibine sunulacak: ~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md (13 madde, work-09 oturumundan; sıra ve imza sahibinin). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* (40 klasör) temizliği; mali müşavire metni gönder
+siradaki: talimat listesi ~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md T-b … T-m sırayla (kaynak: 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* (40 klasör) kararı; mali müşavire metni gönder
 
 ## Son kapanış
+- T-037 (2026-10-07): YZ tarama raporu gelen kutusundan kaynak sayfasına işlendi; iddialar URL'siz, UNCONFIRMED. Kanıt: al.py → 0; harita.py --dogrula → 0 (43); kontrol.py --kisa → 0.
 - T-036 (2026-10-07): Hatalar: test kopyalama (sızıntı + sandbox yer tutucuları), kasa-disi-koruma yanlış pozitifleri (realpath hedefli), eski yol, ara.py yeni yol, not.py metni, çok satırlı GUNLUK kök nedeni. Kanıt: kontrol.py --test gerçek depoda → 0; yeni testler eski hook'larda FAIL (14 + 1); eski/yeni karşılaştırma 116 komut → gerçek daralma 0; ara.py --yenile → 0; kontrol.py --kisa → 0; denetci 2 tur, engelleyiciler düzeltildi.
 - T-035 (2026-10-07): Ayrı test kopyası: test-kurulum.py guncelle/geri/pano/durum; doğrulamayı geçmeyen kopya geçmez, uzak depo bağı kalırsa geçmez. Açık: ilk kurulum ve bağ sahibine. Kanıt: kontrol.py --test temiz kopyada → 0; uçtan uca guncelle (tam doğrulama) → 0; uzak bağ denetimi kapatılınca test FAIL; kontrol.py --kisa → 0; denetci: engelleyici (remote) düzeltildi.
 - T-034 (2026-10-07): pano.py ilk aşaması: Pano ve Sağlık ekranları 00-sistem/.kosu/pano'da; başlatıcı pano.sh. Açık: görsel kontrol ve ~/.local/bin bağı sahibine. Kanıt: pano.py → 0; grep script/style/http → 0; kontrol.py --test temiz kopyada → 0 (62), bozuk kopyada 6 FAIL; kontrol.py --kisa → 0; denetci: engelleyici yok.

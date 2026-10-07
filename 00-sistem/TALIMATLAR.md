@@ -410,3 +410,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/testler/test_kapanis_kaydi.py (yeni); değişen: .claude/hooks/kasa-disi-koruma.py, .claude/hooks/kapanis-kaydi.py, 00-sistem/testler/ortak.py, test_kasa_disi_koruma.py, CLAUDE.md, GUNLUK (11:18, 11:21), DEGISIKLIKLER, nerede-kaldik 0.14; .araclar/ayar/qmd/index.yml (git dışı, ara.py --yenile)
 - Kapanış notu: Devam isteminin beş maddesi bitti. Testler artık oturum içinden gerçek depoda koşuyor; kasa-disi-koruma'nın yanlış pozitifleri gitti, iki denetci turunun bulduğu 5 daralma kapatıldı (eskinin reddettiği yazma komutlarında daralma 0). Açık: /tmp/claude-1000/4k-test-* altında eski sızıntıdan 40 klasör (141 MB; rm hook'la yasak, sahibi); qmd 'orphaned chunks' uyarısı (qmd cleanup, sahibi).
+
+## T-037 — YZ teknoloji taraması raporunu gelen kutusuna al ve işle (liste T-a)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi (~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md) T-a: tarama raporu sisteme kaynak olarak girsin; sonraki maddeler (T-b … T-m) bu kaynağı gösterir.
+- Başarı ölçütü: `al.py` ile RAPOR.md 01-gelen'de ham not; okuyucu ile işlenmiş (`islendi: true`, `sonuc_yol`); sonuç kaynak sayfası (iddialar URL ve tarihiyle, talimat benzeri içerik işaretli); HARITA, MOC, GUNLUK; kontrol.py --kisa → 0.
+- Sınırlar: Rapordaki önerilere bu talimatta uyulmaz; yalnız kayıt. Doğrulanmamış iddia UNCONFIRMED kalır.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07: "neyi bekliyorsun")
+- Durum: kapali
+- Doğurduğu dosyalar: 01-gelen/2026-10-07-1844-rapor.md (al.py), 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07.md (yeni); değişen: 10-insan/MOC-insan.md 0.3, HARITA, nerede-kaldik 0.15
+- Kapanış notu: Rapor kaynak olarak kayıtlı; iddia başına URL olmadığı için tüm iddialar UNCONFIRMED, raporda 7 iç çelişki var. Güvenlik kalemleri (mod'lar, Routines) kural/karar olmadan birincil kaynakla doğrulanacak.
