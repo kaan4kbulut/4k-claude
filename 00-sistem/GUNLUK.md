@@ -442,3 +442,12 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:26 [ayar] .claude/settings.json — autoMemoryEnabled: false (T-042)
 2026-10-07 19:26 [degisti] 40-ic-ses/nerede-kaldik.md — 0.20 — T-042
 2026-10-07 19:26 [oturum] T-042 — kapandı — auto-memory kapalı
+2026-10-07 19:26 [hata] Bash — Exit code 2 · 88 00-sistem/sablonlar/kural.md · 80 00-sistem/sablonlar/kapi.md · 85 30-devlet/normlar/kurallar/KR-001-hafif-yol.md · 56 30-devlet/kapilar/KP-002-kr-001-yayimi.md · 309 toplam · --- · i
+2026-10-07 19:26 [yeni] T-043 — talimat açıldı — zamanlı koşular kuralı (liste T-g)
+2026-10-07 19:37 [yeni] 30-devlet/normlar/kurallar/KR-002-zamanli-kosular.md — kural taslağı (önerildi): zamanlı koşular yalnız hazırlar (T-043)
+2026-10-07 19:37 [kapi] 30-devlet/kapilar/KP-004-kr-002-yayimi.md — KR-002 yayımı — bekliyor, bekçi sahibi (T-043)
+2026-10-07 19:37 [degisti] 30-devlet/MOC-devlet.md — 0.8 — KR-002, KP-004
+2026-10-07 19:37 [degisti] 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07.md — 0.3 — besledigi += KR-002
+2026-10-07 19:37 [yeni] 00-sistem/ASK.md — tek soru: KR-002 imzası (T-043)
+2026-10-07 19:37 [kapi] T-043 — KP-004 açık; ASK.md yazıldı, sahibinin imzası bekleniyor
+2026-10-07 19:37 [degisti] 40-ic-ses/nerede-kaldik.md — 0.21 — KP-004 bekliyor

@@ -2,10 +2,10 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-042 kapandı; sıradaki: liste T-g (Routines kuralı)
-kapi: yok
-acik_soru: yok
-siradaki: talimat listesi ~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md T-b … T-m sırayla (kaynak: 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* (40 klasör) kararı; mali müşavire metni gönder
+aktif_talimat: T-043 — zamanlı koşular kuralı (liste T-g); imza bekliyor
+kapi: KP-004 — KR-002 yayımı (bekliyor)
+acik_soru: ASK.md — KR-002 imzası
+siradaki: sahibinin KP-004 cevabı (ASK.md); sonra liste T-h … T-m (~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* kararı; mali müşavire metni gönder
 
 ## Son kapanış
 - T-042 (2026-10-07): autoMemoryEnabled false (proje). Kanıt: settings.json okundu → false; ayar-denetimi SessionStart temiz; kontrol.py --kisa → 0.

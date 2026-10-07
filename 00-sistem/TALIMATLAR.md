@@ -476,3 +476,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: .claude/settings.json, DEGISIKLIKLER, nerede-kaldik 0.20
 - Kapanış notu: Auto-memory projede kapalı; etkisi bir sonraki oturumdan itibaren (bu oturum açıkken yüklenen ayar). Var olan ~/.claude/projects/…/memory dosyaları duruyor.
+
+## T-043 — Zamanlı koşular kuralı: yalnız hazırla, bağlayıcı ve yayın yok (liste T-g)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-g. Tarama, Routines'in onaysız artifact yayımladığını ve konektörleri izinsiz kullandığını söylüyor (UNCONFIRMED, URL yok). Önleyici kural: zamanlı/gözetimsiz koşu yalnız "hazırla" adımı olsun.
+- Başarı ölçütü: KR-002 taslak (`durum: onerildi`, DEA-lite, sunset); KP-004 kapı kaydı (`sonuc: bekliyor`); 00-sistem/ASK.md tek soru; HARITA, MOC, GUNLUK; kontrol.py --kisa → 0. Yayım (KARARLAR satırı, `kabul`) yalnız sahibinin imzasıyla (A4).
+- Sınırlar: İmza gelmeden kural yürürlüğe girmez; mevcut KP-003 otomatik push kapsam dışı.
+- Kat: 3
+- Kapı: tek-yonlu · bekçi: sahibi (A4)
+- Durum: bekliyor
+- Doğurduğu dosyalar: 30-devlet/normlar/kurallar/KR-002-zamanli-kosular.md, 30-devlet/kapilar/KP-004-kr-002-yayimi.md, 00-sistem/ASK.md
+- Kapanış notu: belirlenmedi (imza bekleniyor)

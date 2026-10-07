@@ -3,7 +3,7 @@ id: 20261006-2220-moc-devlet
 ad: moc-devlet
 tur: moc
 kat: 3
-surum: 0.7
+surum: 0.8
 durum: aktif
 amac: Bu icerik haritasi, irade katindaki normlari, kararlari, kapilari ve denetim kayitlarini gruplayip nedenli baglarla tek bakista gosterir.
 olusturma: 2026-10-06
@@ -32,6 +32,7 @@ Normlar: 1 anayasa (kabul), 1 kural, 1 yönerge · Kararlar: 4 (4 kabul) · Aç�
 - [[30-devlet/normlar/HAKEM-KURALLARI]] — model modeli yargılarken uyulacak 12 kural
 - Kurallar (KR-xxx):
   - [[30-devlet/normlar/kurallar/KR-001-hafif-yol]] — hafif yol: İç Ses gözlem/M0 fikir için altı adım tek komutta (kabul, yürürlük 2026-10-07)
+  - [[30-devlet/normlar/kurallar/KR-002-zamanli-kosular]] — zamanlı koşular yalnız hazırlar; bağlayıcı ve yayın yok (önerildi, KP-004 bekliyor)
 - Yönergeler (Y-xxx):
   - [[30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri]] — çift yönlü kararlar orkestratörde; sahibine yalnız imza matrisi ve fiziksel eylemler (aktif, sunset 2027-01-05)
 
@@ -47,6 +48,7 @@ Normlar: 1 anayasa (kabul), 1 kural, 1 yönerge · Kararlar: 4 (4 kabul) · Aç�
 - [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — Bash sandbox'ının açılışı (go, sahibi)
 - [[30-devlet/kapilar/KP-002-kr-001-yayimi]] — KR-001 yayımı (go, sahibi)
 - [[30-devlet/kapilar/KP-003-github-acik-depo]] — GitHub açık depo ve otomatik push (go, sahibi)
+- [[30-devlet/kapilar/KP-004-kr-002-yayimi]] — KR-002 yayımı (bekliyor, sahibi)
 - Açık kapı yok. ASK.md yok.
 
 ### Denetim
@@ -70,3 +72,4 @@ Normlar: 1 anayasa (kabul), 1 kural, 1 yönerge · Kararlar: 4 (4 kabul) · Aç�
 | 0.5 | 2026-10-07 | T-024 | Kararlar += K-005 |
 | 0.6 | 2026-10-07 | T-026 | Kapılar += KP-003 |
 | 0.7 | 2026-10-07 | T-038 | Kararlar += K-006 |
+| 0.8 | 2026-10-07 | T-043 | Kurallar += KR-002 (önerildi); kapılar += KP-004 (bekliyor) |

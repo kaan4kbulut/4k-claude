@@ -3,7 +3,7 @@ id: 20261007-1846-yz-teknoloji-taramasi-2026-10-07
 ad: yz-teknoloji-taramasi-2026-10-07
 tur: kaynak
 kat: 1
-surum: 0.2
+surum: 0.3
 durum: aktif
 amac: Bu kaynak sayfasi, 2026-10-07 YZ teknoloji taramasi raporunun degismez kaydini, ozetini ve guven etiketini tutar; T-b … T-m talimatlari buradan turer.
 olusturma: 2026-10-07
@@ -11,7 +11,7 @@ guncelleme: 2026-10-07
 yazar: okuyucu
 talimat: T-037
 dayandigi: []
-besledigi: [30-devlet/kararlar/K-006-yalniz-yonetilen-modlar.md]
+besledigi: [30-devlet/kararlar/K-006-yalniz-yonetilen-modlar.md, 30-devlet/normlar/kurallar/KR-002-zamanli-kosular.md]
 ust: 10-insan/MOC-insan.md
 kaynaklar: ["01-gelen/2026-10-07-1844-rapor.md", "~/Work/isler/2026-10-07-yz-teknoloji-taramasi/RAPOR.md"]
 guven: orta
@@ -62,6 +62,7 @@ Shopify `/api/mcp` → `/{store}/api/ucp/mcp`; Stripe agent-toolkit → `stripe/
 ### Dayandığı
 ### Beslediği
 - [[30-devlet/kararlar/K-006-yalniz-yonetilen-modlar]] — mod koruması kararı bu taramadan
+- [[30-devlet/normlar/kurallar/KR-002-zamanli-kosular]] — Routines riski (UNCONFIRMED) önleyici kurala dönüştü
 ### Gelen
 - ← [[10-insan/MOC-insan]] — eller katının kaynak listesi
 
@@ -70,3 +71,4 @@ Shopify `/api/mcp` → `/{store}/api/ucp/mcp`; Stripe agent-toolkit → `stripe/
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-07 | T-037 | Oluşturuldu (okuyucu triage'ı) |
 | 0.2 | 2026-10-07 | T-038 | besledigi += K-006 |
+| 0.3 | 2026-10-07 | T-043 | besledigi += KR-002 |
