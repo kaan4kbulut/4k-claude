@@ -11,7 +11,7 @@ guncelleme: 2026-10-07
 yazar: claude
 talimat: T-018
 dayandigi: [40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md, 20-sirket/gorevler/G-001-yazici-pazar-arastirmasi.md]
-besledigi: []
+besledigi: [40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md]
 ust: 40-ic-ses/MOC-ic-ses.md
 kaynaklar: ["https://armut.com/dtf-baski", "https://armut.com/tisort-yaptirma", "https://armut.com/toptan-tisort", "https://pea3d.com/3d-yazici-figur-basma-yasal-mi-rehberi/", "https://pea3d.com/3d-yazici-ile-trendyolda-satis-yapma-rehberi-2026-guncel-maliyet-ve-kazanc-analizi/", "https://pea3d.com/lisans-olmadan-3d-baski-satilir-mi-yasal-riskler-ve-bilmen-gerekenler/", "https://www.akakce.com/filament/1-kg-filament,33.html", "https://www.ciceksepeti.com/3d-baski-kisiye-ozel-isim-logo-anahtarlik-5-adet-toplu-siparis-imkani-ozel-tasarim-kcm97178098", "https://www.ciceksepeti.com/kisiye-ozel-guclu-erkek-temali-baskili-kupa-bardak-hediye-kcm20803563", "https://www.ciceksepeti.com/kisiye-ozel-papatya-tasarimli-isimli-beyaz-kupa-bardak-kcm81323506", "https://www.ciceksepeti.com/kisiye-ozel-trend-beyaz-kupa-bardak-23-kc974274", "https://www.cimri.com/marka/bambu-lab", "https://www.ideasoft.com.tr/evden-eticaret-vergi-muafiyeti/", "https://www.idefix.com/ofisomi-freesub-ikili-kupa-baski-presi-p-12110879", "https://www.idefix.com/ofisomi-profesyonel-combo-transfer-baski-seti-p-12111826", "https://www.incehesap.com/bambu-lab-a1-mini-3d-yazici-fiyati-92132/", "https://www.n11.com/-P754323630", "https://www.trendyol.com/3d-anahtarlik-y-s115867", "https://xinflyinggroup.com/tr/best-dtf-printer-2/"]
 alindi: 2026-10-07
@@ -130,6 +130,7 @@ Ortak: İlk denemelerde lisanslı karakter kullanmamak; tasarımlar özgün olma
 - [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — soruyu doğuran fikir
 - [[20-sirket/gorevler/G-001-yazici-pazar-arastirmasi]] — bu notu üreten görev kartı
 ### Beslediği
+- [[40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici]] — Belirsizlikler 1, 3, 4 (esnaf muafiyeti) kanun metniyle çözüldü
 ### Gelen
 - ← [[40-ic-ses/MOC-ic-ses]] — araştırma notları listesi
 

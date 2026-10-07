@@ -256,3 +256,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/kapilar/KP-002-kr-001-yayimi.md (yeni); değişen: KR-001 (1.0 kabul), KARARLAR, MOC-devlet, F-0001 (0.6, merdiven 2), MOC-ic-ses, HARITA
 - Kapanış notu: KR-001 yürürlükte (KP-002 go); not.py kilidi açık (boş girdi çıkış 2 = kilit geçildi). F-0001 M2 (sınanmış). Bir sonraki fikir adımı (M3: açık soru ≤2, canlı kaynaklar) ve deneme seçimi Y-001 uyarınca orkestratörde, sahibinin ilgisine bağlı tür seçimi sahibinde.
+
+## T-023 — ARAŞTIR: esnaf muafiyeti çelişkisi (F-0001 → M3 koşulu)
+- Tarih: 2026-10-07
+- Niyet: F-0001'in M3 (araştırılmış) koşulu "çelişki cevaplanmış". G-001 notundaki esnaf muafiyeti çelişkisini (limit 396.360 / 1.900.000 / 1.983.000 TL; makineyle üretim ve al-sat kapsamı) resmi kaynaklarla (GVK md. 9/6, GİB, Resmî Gazete) çözmek. Y-001 Madde 2.1 (ARAŞTIR modu orkestratörde).
+- Başarı ölçütü: resmi kaynaklı araştırma notu (sonuc: dogruluyor/celisiyor/bilinmiyor); her iddia URL + tarih; canli.py 40-ic-ses ölü 0; F-0001 çelişki bölümü güncel; M3 koşulları değerlendirilmiş; kontrol.py sıfır hata.
+- Sınırlar: Hukuki/vergi görüşü değildir; mali müşavire sorulacak sorular listelenir. Dış eylem yok.
+- Kat: 4
+- Kapı: cift-yonlu
+- Durum: kapali
+- Doğurduğu dosyalar: 40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md (yeni); değişen: F-0001 (0.7, merdiven 3), yazici-pazar-arastirmasi (bağ), MOC-ic-ses, HARITA
+- Kapanış notu: Çelişki kanun metniyle çözüldü: 9/6 (motorsuz, sayılı ev ürünleri) yazıcı işine uygulanmaz; 9/10 (evde, seri üretim makinesi olmadan, internet satışı, banka %4 kesinti, hasılat sınırı metinde 1.900.000 TL) cihazın makine yorumuna bağlı → açık soru (mali müşavir/özelge). F-0001 M3 (Y-001). canli.py 0 ölü.

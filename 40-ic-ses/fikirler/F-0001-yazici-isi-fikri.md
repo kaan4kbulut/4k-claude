@@ -3,7 +3,7 @@ id: 20261006-2144-yazici-isi-fikri
 ad: yazici-isi-fikri
 tur: fikir
 kat: 4
-surum: 0.6
+surum: 0.7
 durum: taslak
 amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
 olusturma: 2026-10-06
@@ -11,12 +11,12 @@ guncelleme: 2026-10-07
 yazar: kaan
 talimat: T-001
 dayandigi: []
-besledigi: [30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md, 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md]
+besledigi: [30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md, 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md, 40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md]
 ust: 40-ic-ses/MOC-ic-ses.md
-merdiven: 2
+merdiven: 3
 cynefin: kompleks
 guven: dusuk
-kaynaklar: [40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md]
+kaynaklar: [40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md, 40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md]
 dokunus_sayisi: 2
 son_dokunus: "2026-10-07"
 etiketler: [is-fikri, yazici]
@@ -44,6 +44,7 @@ Bu atamaya uygun olarak [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] al
 ### Kanıt
 - [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — üç seçenek için kaynaklı başlangıç maliyeti ve rakip fiyat aralıkları (güven düşük; çoğu arama özeti)
 ### Karşı-kanıt
+- [[40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici]] — muafiyet otomatik değil: GVK 9/6 kapsam dışı (motorlu alet, ürün listesi); 9/10 cihazın "seri üretim makinesi" sayılmamasına bağlı
 - [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — düşük fiyat tabanı ve yoğun rekabet (ör. anahtarlık 21–250 TL), hiçbir seçenekte talep kanıtı yok, esnaf muafiyeti kapsamı belirsiz
 
 ### Steelman (M2)
@@ -67,6 +68,7 @@ Altı ay sonra iş battı; neden (olasılıklar Claude'un tahmini, kalibrasyon i
 - [?] Yazıcının türü ne: 3D yazıcı mı, kâğıt/baskı (dijital, büyük format, tekstil vb.) mı? Not: sistemde `20-sirket/alan-paketleri/3d-uretim` yalnızca bir test örneği olarak duruyor; bu fikirle aynı şey olduğu varsayılmadı.
   - Cevap (2026-10-07, sahibi): **henüz bilmiyor.** G-001 iki türü (3D ve kâğıt/baskı) yan yana araştırır, seçim yapmaz.
 - [?] Ne tür bir iş: kime, ne satılacak?
+- [?] Kullanılacak cihaz GVK 9/10'daki "sanayi tipi veya seri üretim yapabilen makine" kapsamında mı? (mali müşavir / GİB özelgesi; [[40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici]])
 
 ### Kapı tipi ve istenen (M4)
 kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
@@ -78,6 +80,7 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 ### Dayandığı
 - yok (tetikleyen gözlem kaydı yok)
 ### Beslediği
+- [[40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici]] — esnaf muafiyeti çelişkisinin çözümü
 - [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — açık sorulara G-001 araştırma notu (sonuç: bilinmiyor)
 - [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — önce pazar araştırması kararı (önerildi)
 ### Gelen
@@ -93,3 +96,4 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 | 0.4 | 2026-10-07 | T-018 | Kaynaklar, alternatifler, kanıt ve karşı-kanıt G-001 notuyla dolduruldu (eski: boş / aranmadı) |
 | 0.5 | 2026-10-07 | T-019 | ZORLA modu: steelman (sahibi onayı bekliyor), inversion 4, pre-mortem 4 olasılıklı, [konum] (eski: hepsi belirlenmedi / pozisyon yok); merdiven 1'de kalır |
 | 0.6 | 2026-10-07 | T-022 | Steelman sahibince onaylandı; merdiven 1 → 2 (sınanmış) |
+| 0.7 | 2026-10-07 | T-023 | Karşı-kanıt ve açık soru 2 (esnaf muafiyeti, GVK 9/10); M3 koşulları sağlandı (açık soru 2, canlı kaynak, çelişki cevaplandı) → merdiven 2 → 3 (Y-001) |

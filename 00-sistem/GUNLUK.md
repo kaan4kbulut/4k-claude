@@ -255,3 +255,10 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:38 [degisti] 40-ic-ses/MOC-ic-ses.md — T-022 imzalar
 2026-10-07 10:38 [degisti] 00-sistem/HARITA.md — T-022 imzalar
 2026-10-07 10:38 [oturum] T-022 — kapandı — KR-001 yürürlükte; F-0001 M2
+2026-10-07 10:45 [degisti] T-023 — talimat açıldı: esnaf muafiyeti çelişkisi (resmi kaynak)
+2026-10-07 10:48 [yeni] 40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md — GVK 9/6 kapsam dışı, 9/10 makine yorumuna bağlı (kanun metni)
+2026-10-07 10:48 [degisti] 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md — T-023 esnaf muafiyeti; F-0001 M3
+2026-10-07 10:48 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — T-023 esnaf muafiyeti; F-0001 M3
+2026-10-07 10:48 [degisti] 40-ic-ses/MOC-ic-ses.md — T-023 esnaf muafiyeti; F-0001 M3
+2026-10-07 10:48 [degisti] 00-sistem/HARITA.md — T-023 esnaf muafiyeti; F-0001 M3
+2026-10-07 10:48 [oturum] T-023 — kapandı — esnaf muafiyeti çözüldü; F-0001 M3

@@ -18,6 +18,7 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 
 ## 40-ic-ses
 - [[40-ic-ses/MOC-ic-ses]] — Bu icerik haritasi, zihin katindaki fikirlerin merdiven durumunu, gozlemleri, yansimalari, kavramlari, park listesini ve haftalik metrikleri tek bakista gosterir. · moc · kat 4 · 2026-10-07
+- [[40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici]] — Bu arastirma notu, G-001 notundaki esnaf muafiyeti celiskisine (uc farkli limit; makineyle uretim) Gelir Vergisi Kanunu metnine dayanan dogruluyor cevabini verir; makinenin kapsam yorumu acik soru olarak kalir. · arastirma-notu · kat 4 · 2026-10-07
 - [[40-ic-ses/arastirma-notlari/freyatts-turkce-deneme]] — Bu arastirma notu, arastirma 10'un "yerel Turkce TTS kalitesi olculmeden bagimliliga cevrilmez" sartina FreyaTTS icin celisiyor cevabini (islemcide gercek zamanli degil; yabanci terimlerde zayif) olcumle verir. · arastirma-notu · kat 4 · 2026-10-07
 - [[40-ic-ses/arastirma-notlari/qmd-turkce-isabet]] — Bu arastirma notu, arastirma 10'un "qmd yerel aramanin Turkce isabeti olculmeli" sorusuna dogruluyor cevabini 20 sorguluk olcumle verir. · arastirma-notu · kat 4 · 2026-10-07
 - [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — Bu arastirma notu, F-0001'in "hangi tur yazici ve kime ne satilir" sorusuna G-001 masa basi arastirmasiyla bilinmiyor cevabini (uc secenek yan yana, talep kaniti yok) kanitlariyla verir. · arastirma-notu · kat 4 · 2026-10-07
