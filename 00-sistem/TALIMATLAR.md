@@ -553,3 +553,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/testler/test_not_ve_iz.py (yeni); değişen: 00-sistem/scripts/not.py, 00-sistem/scripts/yscommon.py, DEGISIKLIKLER, nerede-kaldik 0.28
 - Kapanış notu: İki hata kapandı; yeni testler eski kodda düşüyor. Açık: T-048'de bir kez görülen kararsız test yeniden üretilemedi.
+
+## T-050 — Pano ikinci aşama: Talimatlar, Günlük, Kararlar ekranları
+- Tarih: 2026-10-07
+- Niyet: T-034'ün devamı (ISTEM: diğer ekranlar sonraki talimatlarda). Verisi temiz üç sistem ekranı: TALIMATLAR.md, GUNLUK.md, KARARLAR.md (+ kapı ve kural sayfaları). Sahibi tek komutla (4k-pano) sistemi gezebilsin.
+- Başarı ölçütü: pano.py talimatlar.html, gunluk.html, kararlar.html üretir; ray ve durum çubuğu bağları bu ekranlara gider; içerik kaynak dosyalarla aynı (testle); betik/style=/http yok; tasarım CSS'leri değiştirilmeden kopyalanır; testler `kontrol.py --test` içinde; kontrol.py --kisa → 0.
+- Sınırlar: Salt okur; yeni bağımlılık yok; diğer ekranlar (iç ses, şirket, insan, kapı, rozetler) sonraki talimat.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi ("devam et")
+- Durum: acik
+- Doğurduğu dosyalar: belirlenmedi
+- Kapanış notu: belirlenmedi (/kapat)

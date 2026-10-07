@@ -2,7 +2,7 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-049 kapandı; talimat listesi ve bulunan hatalar bitti
+aktif_talimat: T-050 — pano ikinci aşama: Talimatlar, Günlük, Kararlar
 kapi: KP-004 — KR-002 yayımı (bekliyor)
 acik_soru: ASK.md — KR-002 imzası
 siradaki: sahibinin KP-004 cevabı (ASK.md); sonra liste T-h … T-m (~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* kararı; mali müşavire metni gönder

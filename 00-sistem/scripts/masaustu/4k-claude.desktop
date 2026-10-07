@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=4K Claude
+Comment=4k-claude oturumu (korumalar yüklü, klasörde açılır)
+Exec=xdg-terminal-exec @BIN@/4k-claude
+Icon=utilities-terminal
+Terminal=false
+Categories=Development;

@@ -492,3 +492,11 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:51 [yeni] 00-sistem/testler/test_not_ve_iz.py — T-049 regresyon testleri, 2
 2026-10-07 19:51 [degisti] 40-ic-ses/nerede-kaldik.md — 0.28 — T-049
 2026-10-07 19:51 [oturum] T-049 — kapandı — not.py kapanış kaydı, yer tutucu izi
+2026-10-07 19:55 [yeni] T-050 — talimat açıldı — pano ikinci aşama
+2026-10-07 19:55 [hata] Read — EISDIR: illegal operation on a directory, read '/home/caferkaandebana/Work/4k-claude/01-gelen/ham/2026-10-07-pano-tasarim'
+2026-10-07 19:56 [hata] oturum 51b5652a-b77 — bütçe tavanı aşıldı: ≈25.52 USD / tavan 5 USD (5×)
+2026-10-07 19:57 [yeni] 00-sistem/scripts/masaustu-kur.sh — bağlar + menü girdileri + ilk test kurulumu (T-050)
+2026-10-07 19:57 [yeni] 00-sistem/scripts/masaustu — 4 menü girdisi: 4K Claude, Pano, Test, Test Pano (T-050)
+2026-10-07 19:57 [degisti] 00-sistem/scripts/pano.sh — omarchy-launch-webapp penceresi (T-050)
+2026-10-07 19:57 [degisti] 00-sistem/scripts/test-kurulum.py — pano: kopyanın pano.sh'ı (T-050)
+2026-10-07 19:57 [yeni] 00-sistem/scripts/pano-tasarim/css — + talimatlar, gunluk, kararlar CSS (T-050)

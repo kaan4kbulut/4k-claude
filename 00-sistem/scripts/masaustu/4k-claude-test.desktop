@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=4K Claude Test
+Comment=Ayrı test kopyasında 4k-claude oturumu (gerçek depoya dokunmaz)
+Exec=xdg-terminal-exec @BIN@/4k-claude-test
+Icon=applications-science
+Terminal=false
+Categories=Development;

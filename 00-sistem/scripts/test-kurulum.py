@@ -153,11 +153,9 @@ def main():
     if komut == "pano":
         if not kurulu_mu():
             return 1
-        r = subprocess.run([sys.executable, os.path.join(KASA, "00-sistem", "scripts", "pano.py")], cwd=KASA)
-        if r.returncode == 0 and "--acma" not in sys.argv:
-            subprocess.Popen(["xdg-open", os.path.join(KASA, "00-sistem", ".kosu", "pano", "pano.html")],
-                             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        return r.returncode
+        # kopyanın kendi pano.sh'ı: üretir ve uygulama penceresinde açar (gerçek panoyla aynı yol)
+        arg = ["--acma"] if "--acma" in sys.argv else []
+        return subprocess.run(["bash", os.path.join(KASA, "00-sistem", "scripts", "pano.sh"), *arg], cwd=KASA).returncode
     if komut == "ac":
         if not kurulu_mu():
             return 1

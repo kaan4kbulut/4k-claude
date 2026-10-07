@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=4K Claude Test Pano
+Comment=Test kopyasının panosu (başlıkta TEST)
+Exec=@BIN@/4k-claude-test pano
+Icon=x-office-presentation
+Terminal=false
+Categories=Development;
