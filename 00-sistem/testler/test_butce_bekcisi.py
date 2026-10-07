@@ -19,6 +19,8 @@ class ButceBekcisi(unittest.TestCase):
         self.transcript = os.path.join(self.kok, "00-sistem", ".kosu", "sahte.jsonl")
         self.mesaj = 0
         yaz(self.kok, "00-sistem/.kosu/sahte.jsonl", "")
+        self.taban = 0
+        self.taban = self.hata_satiri_sayisi()  # gerçek GUNLUK'te önceden yazılmış tavan satırları sayılmaz
 
     def tearDown(self):
         self.temizle()
@@ -37,7 +39,7 @@ class ButceBekcisi(unittest.TestCase):
         return ((veri or {}).get("hookSpecificOutput") or {}).get("additionalContext")
 
     def hata_satiri_sayisi(self):
-        return sum("bütçe tavanı aşıldı" in s for s in oku(self.kok, "00-sistem/GUNLUK.md").splitlines())
+        return sum("bütçe tavanı aşıldı" in s for s in oku(self.kok, "00-sistem/GUNLUK.md").splitlines()) - self.taban
 
     def test_tavan_altinda_sessiz(self):
         self.harca(3.0)

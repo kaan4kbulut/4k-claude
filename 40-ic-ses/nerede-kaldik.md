@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.12
+surum: 0.13
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -26,14 +26,16 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - T-032 kapandı: pano tasarım paketi 01-gelen/ham'de (sha256 35/35 aynı, Downloads zip'i de eşit); GUNLUK'teki bölünmüş kota hatası satırları tek satıra getirildi.
 - T-033 kapandı: ISTEM/TESLIM triage → 10-insan/kaynaklar/pano-tasarim-paketi (pano kapsamı, 10 tutarsızlık, 3 açık soru).
 - T-034 kapandı: pano.py (Pano + Sağlık) ve pano.sh; testler 62/62 (temiz kopyada).
+- T-035 kapandı: test kopyası komutu (test-kurulum.py); sahibi tavan aşımında devam dedi.
 - Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
 
 **Açık**
+- Sahibi: test kopyasını kur (`4k-claude-test` bağı + `guncelle`).
 - Sahibi: panoyu gözle kontrol et (`4k-pano`; zip arşivde, bağ kuruldu 2026-10-07 18:13).
 - F-0001: mali müşavire metni göndermek; fiziksel adımlar (TTS dinleme, Obsidian + Web Clipper).
 
 **Sonraki**
-- Devam istemi 4-5: test kurulumu, hatalar talimatı (oturum bütçe uyarısıyla durdu).
+- Devam istemi 5: hatalar talimatı.
 
 ### Oturum: 2026-10-07 — eksik analizi ve düzeltmeler (T-024..T-031)
 **Konuşulan**
@@ -74,3 +76,4 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.10 | 2026-10-07 | T-033 | T-033 kapanışı |
 | 0.11 | 2026-10-07 | T-034 | T-034 kapanışı; bütçe uyarısıyla durma |
 | 0.12 | 2026-10-07 | T-034 | Zip arşive taşındı ve 4k-pano bağı kuruldu (sahibi); açık listeden düştü |
+| 0.13 | 2026-10-07 | T-035 | T-035 kapanışı |

@@ -402,3 +402,14 @@ ls: '/tmp/claude-1000/*.png' ögesine erişilemedi: Böyle bir dosya ya da dizin
 2026-10-07 18:14 [ayar] ~/.local/bin/4k-pano — pano.sh bağı kuruldu (sahibi, ! komutu; T-034 açık kalemi)
 2026-10-07 18:14 [arsiv] ~/Work/arsiv/pano-tasarim-paketi/4k-claude-pano-tasarim.zip — Downloads zip'i proje dışı arşive (sahibi; T-032 açık kalemi, duzen-2026-10-07.log)
 2026-10-07 18:14 [degisti] 40-ic-ses/nerede-kaldik.md — 0.12 — zip arşivde, 4k-pano kuruldu
+2026-10-07 18:14 [hata] 00-sistem/scripts/push.sh — otomatik push başarısız: Done
+2026-10-07 18:15 [hata] oturum 51b5652a-b77 — bütçe tavanı aşıldı: ≈5.30 USD / tavan 5 USD (1×)
+2026-10-07 18:15 [karar] oturum — tavan aşıldı (≈5,30 USD / 5 USD); sahibi bilerek devam dedi (sohbet: 'devam edelim'); tavan değişmedi (A5)
+2026-10-07 18:16 [yeni] T-035 — talimat açıldı — test kopyası
+2026-10-07 18:19 [yeni] 00-sistem/scripts/test-kurulum.py — test kopyası: guncelle/geri/pano/durum (T-035)
+2026-10-07 18:19 [yeni] 00-sistem/testler/test_test_kurulum.py — test kopyası regresyon testleri, 4 (T-035)
+2026-10-07 18:19 [degisti] 00-sistem/scripts/pano.py — TEST işareti (.test-kopyasi) başlık ve durum çubuğunda (T-035)
+2026-10-07 18:19 [degisti] 00-sistem/testler/test_butce_bekcisi.py — tavan satırı sayımı tabana göre; gerçek GUNLUK satırları testi düşürüyordu (T-035)
+2026-10-07 18:19 [degisti] CLAUDE.md — komutlar += test-kurulum.py (T-035)
+2026-10-07 18:21 [degisti] 40-ic-ses/nerede-kaldik.md — 0.13 — T-035
+2026-10-07 18:21 [oturum] T-035 — kapandı — test-kurulum.py; ilk kurulum sahibinin ! komutuyla

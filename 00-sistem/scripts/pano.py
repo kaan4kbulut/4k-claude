@@ -190,7 +190,8 @@ def ray(aktif):
 
 def durum_cubugu(v):
     nokta = "ok" if v["kontrol"]["cikis"] == 0 else "err"
-    return (f'<footer class="sbar"><span><span class="dot ok"></span>4k-claude · {e(v["dal"])}</span>'
+    ad = '4k-claude <span class="tag unc">TEST</span>' if v["test"] else "4k-claude"
+    return (f'<footer class="sbar"><span><span class="dot ok"></span>{ad} · {e(v["dal"])}</span>'
             f'<span>{e(bas_ve_kuyruk(v["ilerleme"]["aktif_talimat"])[0])}</span>'
             f'<span>kapı: {e(bas_ve_kuyruk(v["ilerleme"]["kapi"])[0])}</span>'
             f'<span>açık soru: {e(bas_ve_kuyruk(v["ilerleme"]["acik_soru"])[0])}</span>'
@@ -203,7 +204,7 @@ def durum_cubugu(v):
 def sayfa(baslik, aktif, govde, v, css):
     return (f'<!doctype html>\n<html lang="tr">\n<head>\n<meta charset="utf-8">\n'
             f'<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-            f'<title>4k-claude — {e(baslik)}</title>\n'
+            f'<title>4k-claude{" TEST" if v["test"] else ""} — {e(baslik)}</title>\n'
             f'<link rel="stylesheet" href="css/4k-claude.css">\n<link rel="stylesheet" href="css/{css}">\n'
             f'</head>\n<body>\n<div class="app" data-theme="tokyo-night">\n<div class="cols">\n{ray(aktif)}\n'
             f'{govde}\n</div>\n{durum_cubugu(v)}\n</div>\n</body>\n</html>\n')
@@ -423,7 +424,8 @@ def main():
          "sorular": [(sade(s), kimlik(y)) for y, _, g in sl if yc.kat_from_yol(y) in (1, 2, 3, 4)
                      for s in re.findall(r"^- \[\?\]\s*(.*)$", g, re.M)],
          "dal": git("rev-parse", "--abbrev-ref", "HEAD"), "commit": git("rev-parse", "--short", "HEAD"),
-         "zaman": datetime.now().strftime("%Y-%m-%d %H:%M")}
+         "zaman": datetime.now().strftime("%Y-%m-%d %H:%M"),
+         "test": os.path.exists(os.path.join(KOK, ".test-kopyasi"))}  # test-kurulum.py işareti (T-035)
     os.makedirs(os.path.join(CIKTI, "css"), exist_ok=True)
     for ad in ("4k-claude.css", "pano.css", "saglik.css"):
         shutil.copyfile(os.path.join(CSS, ad), os.path.join(CIKTI, "css", ad))

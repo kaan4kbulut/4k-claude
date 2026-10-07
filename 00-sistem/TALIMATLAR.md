@@ -388,3 +388,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/pano.py, pano.sh, pano-tasarim/css/{4k-claude,pano,saglik}.css, 00-sistem/testler/test_pano.py (yeni); değişen: CLAUDE.md (komutlar), DEGISIKLIKLER, 10-insan/kaynaklar/pano-tasarim-paketi.md 0.2, nerede-kaldik 0.11
 - Kapanış notu: Pano ve Sağlık ekranları üretiliyor, ölçütlerin hepsi grep/test ile tutuyor; settings.json allow satırı gerekmedi. Açık: görsel kontrol (sandbox'ta tarayıcı çalışmadı) ve ~/.local/bin/4k-pano bağı sahibine; §9 sorusu 1 (fiziksel adımların tek kaynağı) açık, pano şimdilik 'insan noktaları' başlıklı bölümleri okuyor.
+
+## T-035 — 4k-claude test kopyası ve onu açan komut
+- Tarih: 2026-10-07
+- Niyet: Sahibinin devam istemi madde 4. Sahibi gerçek depoya dokunmadan sistemi ve panoyu ayrı bir kopyada deneyebilsin (örnek: ~/Work/4k-core/test-kurulum: izole kopya, doğrulamayı geçince geçiş, başarısızsa eskisi kalır, geri dönüş).
+- Başarı ölçütü: `00-sistem/scripts/test-kurulum.py`: `guncelle` gerçek deponun HEAD'inden yeni kopya kurar (uzak depo bağı yok, gerçek depoya push edemez), kopyada `kontrol.py --kisa` ve `--test` geçerse sabit yoldaki kopyayla yer değiştirir, geçmezse çalışan kopya değişmez; eski kopya silinmez (`surumler/`); `geri` bir önceki kopyaya döner; `pano` kopyanın panosunu açar; argümansız çağrı kopyayı (yoksa kurup) Claude Code ile açar; kopya TEST olarak işaretli ve pano bunu gösterir; testleri `kontrol.py --test` içinde; kontrol.py --kisa → 0.
+- Sınırlar: Kurulum yeri proje dışı (`~/.local/share/4k-claude-test`); bu oturumun sandbox'ı oraya yazamaz, ilk kurulum ve `~/.local/bin` bağı sahibinin `!` komutuyla. Zamanlayıcı/systemd yok (4k-core'dan farkı: elle `guncelle`). Gerçek deponun hook ve ayarları değişmez.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07: "devam edelim")
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/scripts/test-kurulum.py, 00-sistem/testler/test_test_kurulum.py (yeni); değişen: pano.py (TEST işareti), test_butce_bekcisi.py (taban), CLAUDE.md, DEGISIKLIKLER, nerede-kaldik 0.13
+- Kapanış notu: Test kopyası komutu hazır ve uçtan uca doğrulandı (geçici yerde tam doğrulama → 0). Açık: ilk kurulum ve ~/.local/bin/4k-claude-test bağı proje dışı, sahibinin ! komutuyla. Yan bulgu düzeltildi: test_butce_bekcisi gerçek tavan satırından sonra düşüyordu.

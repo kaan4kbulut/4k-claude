@@ -4,10 +4,12 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 ### Eklendi
+- `test-kurulum.py` (T-035): ayrı test kopyası `~/.local/share/4k-claude-test/kasa` — `guncelle` HEAD'den kurar, kopyada `kontrol.py --kisa --test` geçerse geçer, yoksa çalışan kopya kalır; `geri`, `pano`, `durum`; argümansız Claude Code'u kopyada açar. Kopyanın uzak depo bağı yok. Pano TEST işaretini gösterir. Testler `test_test_kurulum.py` (5).
 - `pano.py` ilk aşama (T-034): salt okur HTML pano, kabuk + Pano + Sağlık ekranları, çıktı `00-sistem/.kosu/pano/`; yalnız stdlib, ağ yok, betik/stil/http yok. Tasarım CSS'i `scripts/pano-tasarim/css/` (01-gelen/ham paketinden, değiştirilmeden). Başlatıcı `pano.sh` (üretir + `xdg-open`). Testler `test_pano.py` (7).
 ### Değişti
 - `yscommon.py` HARIC_KLASOR += `01-gelen/ham` (T-032): gelen kutusunun özgün dış dosyaları (HTML, CSS, PNG, frontmatter'sız .md) taranmaz; okunacak hâlleri `al.py` notu olarak `01-gelen/*.md`'de durur.
 ### Düzeltildi
+- `test_butce_bekcisi.py`: tavan satırı sayımı kopyadaki GUNLUK'te önceden var olan gerçek satırları da sayıyordu; gerçek bir tavan aşımından sonra 2 test düşüyordu. Sayım artık kurulumdaki tabana göre (T-035).
 - GUNLUK.md: 2026-10-07 17:04-17:06 kota hatası satırları (kapanis-kaydi hook'u çok satırlı hata özeti yazmıştı) tek satır kuralına getirildi (T-032).
 
 ## [0.10.0] — 2026-10-07 (T-024..T-031, eksik analizi)
