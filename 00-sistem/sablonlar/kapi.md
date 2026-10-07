@@ -37,6 +37,7 @@ Bu kapı kaydı, … kararı için onay sürecini, kriterleri ve sonucu tutmak i
 ## İçerik
 ### Gerekli teslimatlar
 - [[yol]] — hazır mı: evet/hayır
+- A10 (yeni araç / eklenti / mod / MCP) kapısında ek teslimat: `claude plugin validate --json <dizin>` çıktısı (çıkış kodu + hooks:/calls: satırları; eklentinin hangi hook'a bağlandığı ve neyi çağırdığı). Yerel kanıttır; içerik dışarı gönderilmez (Snyk agent-scan yerine, T-039).
 
 ### Zorunlu kriterler (ikili)
 | Kriter | Karşılandı |

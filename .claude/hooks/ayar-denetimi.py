@@ -9,6 +9,9 @@
   SessionStart      Diskteki ayarı denetler; ihlal varsa bağlama uyarı basar (SessionStart engelleyemez) ve GUNLUK'e
                     [hata] yazar. Fark tabanı için ayarların izini 00-sistem/.kosu/ayar-izi.json'a alır.
   PermissionDenied  Auto kipte reddedilen araç çağrısını GUNLUK'e yazar (retry verilmez).
+Eklenti ve mod (T-039, K-006): onaylı taban .claude/eklenti-tabani.json; taban dışı enabledPlugins (true),
+  extraKnownMarketplaces, pluginConfigs, prependPlugins ConfigChange'de değişmez ihlalidir; .claude/workflows/ altındaki
+  taban dışı dosya ve managed settings eksikliği (allowManagedModsOnly) SessionStart'ta uyarıdır. Yol: FOURK_MANAGED.
 
 İmzalı istisna: sahibi bir değişmezi bilerek gevşetmek isterse 30-devlet/kapilar/ altına sonuc: go olan bir kapı
 kaydı açar ve .claude/ayar-imzasi.json'a yazar: {"istisnalar": [{"degismez": "<kimlik>", "kapi": "<KP yolu>"}]}.
@@ -18,6 +21,7 @@ Hiçbir zaman çökme ile engellemez: kendi hatasında GUNLUK'e yazar ve geçer 
 import json
 import os
 import re
+import stat
 import sys
 from datetime import datetime
 
@@ -27,6 +31,10 @@ YEREL = os.path.join(KOK, ".claude", "settings.local.json")
 KULLANICI = os.path.join(os.path.expanduser("~"), ".claude", "settings.json")
 IMZA = os.path.join(KOK, ".claude", "ayar-imzasi.json")
 IZ = os.path.join(KOK, "00-sistem", ".kosu", "ayar-izi.json")
+TABAN = os.path.join(KOK, ".claude", "eklenti-tabani.json")
+WORKFLOWS = os.path.join(KOK, ".claude", "workflows")
+YONETILEN = os.environ.get("FOURK_MANAGED") or "/etc/claude-code/managed-settings.json"
+EKLENTI_ALANLARI = ("enabledPlugins", "extraKnownMarketplaces", "pluginConfigs", "prependPlugins")
 
 ZORUNLU_DENY = [
     "Edit(30-devlet/normlar/ANAYASA.md)", "Write(30-devlet/normlar/ANAYASA.md)",
@@ -45,6 +53,10 @@ def oku(yol):
     """(dict | None, hata | None) — dosya yoksa ({}, None)."""
     if not os.path.exists(yol):
         return {}, None
+    if stat.S_ISCHR(os.stat(yol).st_mode):
+        return {}, None  # sandbox yer tutucusu (/dev/null bağı) "ayar yok" demektir (T-039)
+    if not os.path.isfile(yol):
+        return None, "sıradan dosya değil (dizin/FIFO)"
     try:
         with open(yol, encoding="utf-8") as f:
             metin = f.read()
@@ -80,6 +92,11 @@ def degismezleri_denetle(proje, yerel, kullanici):
     for ad, d in (("proje", proje), ("yerel", yerel), ("kullanıcı", kullanici)):
         if d.get("disableAllHooks") is True:
             ihlal.append(("disableAllHooks", f"tüm hook'lar kapalı ({ad} ayarı)"))
+        for anahtar in (d.get("env") or {}) if isinstance(d.get("env"), dict) else []:
+            if str(anahtar).startswith("FOURK_"):
+                # hook'ların test/yol değişkenleri (FOURK_MANAGED, FOURK_KASA…) ayardan verilirse denetim başka
+                # dosyaya yönlendirilebilir (T-039 denetci)
+                ihlal.append((f"env:{anahtar}", f"ayar env'i hook yol değişkeni veriyor ({ad} ayarı): {anahtar}"))
         kip = (d.get("permissions") or {}).get("defaultMode")
         if kip in ("bypassPermissions",):
             ihlal.append(("permissions.defaultMode", f"izin kipi {kip} ({ad} ayarı)"))
@@ -95,6 +112,60 @@ def degismezleri_denetle(proje, yerel, kullanici):
         komutlar = [h.get("command", "") for grup in hooks.get(olay) or [] for h in grup.get("hooks") or []]
         if not any(betik in k for k in komutlar):
             ihlal.append((f"hook:{olay}", f"{olay} hook'u eksik: {betik}"))
+    return ihlal
+
+
+def eklentileri_denetle(*ayarlar):
+    """[(kimlik, açıklama)] — onaylı tabanın (.claude/eklenti-tabani.json) dışındaki eklenti alanları (T-039, K-006).
+    Mod/eklenti yolu managed olmayan PreToolUse hook'larını aşabilir; bu yüzden yeni eklenti imzasız yüklenmez."""
+    taban, hata = oku(TABAN)
+    if hata:
+        return [("eklenti:taban", f"eklenti-tabani.json okunamadı: {hata}")]
+    ihlal = []
+    for d in ayarlar:
+        for alan in EKLENTI_ALANLARI:
+            v = d.get(alan)
+            if not v:
+                continue
+            if isinstance(v, dict):
+                adlar = [k for k, x in v.items() if alan != "enabledPlugins" or x]  # kapatmak (false) gevşetme değil
+            elif isinstance(v, list):
+                adlar = [x if isinstance(x, str) else json.dumps(x, sort_keys=True) for x in v]
+            else:
+                adlar = [str(v)]
+            for ad in adlar:
+                if ad not in (taban.get(alan) or []):
+                    ihlal.append((f"eklenti:{alan}:{ad}", f"onaysız eklenti ayarı {alan}: {ad} (taban: .claude/eklenti-tabani.json)"))
+    return ihlal
+
+
+def workflowlari_denetle():
+    """[(kimlik, açıklama)] — .claude/workflows/ altında tabanda olmayan dosya (sandbox yer tutucusu dizin değildir)."""
+    if not os.path.isdir(WORKFLOWS):
+        return []
+    taban = (oku(TABAN)[0] or {}).get("workflows") or []
+    ihlal = []
+    for dizin, _, dosyalar in os.walk(WORKFLOWS):
+        for f in dosyalar:
+            g = os.path.relpath(os.path.join(dizin, f), WORKFLOWS)
+            if g not in taban:
+                ihlal.append((f"workflow:{g}", f"onaysız workflow dosyası: .claude/workflows/{g}"))
+    return ihlal
+
+
+def yonetileni_denetle():
+    """[(kimlik, açıklama)] — K-006: yalnız yönetilen mod'lar makine düzeyinde açık mı."""
+    if not os.path.exists(YONETILEN):
+        return [("managed:yok", f"managed settings yok ({YONETILEN}): kullanıcı/Claude yazımı mod'lar koruma hook'larını aşabilir (K-006)")]
+    d, hata = oku(YONETILEN)
+    if hata:
+        return [("managed:okunamadi", f"managed settings okunamadı: {hata}")]
+    secenek = (((d.get("pluginConfigs") or {}).get("cc-plugin-sec-default@builtin") or {}).get("options") or {})
+    ihlal = []
+    if secenek.get("allowManagedModsOnly") is not True:
+        ihlal.append(("managed:allowManagedModsOnly", "managed settings'te allowManagedModsOnly true değil (K-006)"))
+    if secenek.get("allowModsToOverrideDenyRules") is True:
+        ihlal.append(("managed:allowModsToOverrideDenyRules", "managed settings mod'ların deny kuralını aşmasına izin veriyor (K-006)"))
     return ihlal
 
 
@@ -179,7 +250,9 @@ def config_change(girdi):
         gunluk("ayar", goreli(dosya) or "skills", "skill dosyası değişti (denetim izi)")
         return None
     if kaynak not in ("project_settings", "local_settings", "user_settings"):
-        gunluk("ayar", goreli(dosya) or kaynak, f"{kaynak} değişti (engellenemez; denetim izi)")
+        yon = [a for _, a in yonetileni_denetle()] if kaynak == "policy_settings" else []
+        gunluk("hata" if yon else "ayar", goreli(dosya) or kaynak,
+               f"{kaynak} değişti (engellenemez; denetim izi)" + ("; " + "; ".join(yon) if yon else ""))
         return None
     dosyalar = {"project_settings": PROJE, "local_settings": YEREL, "user_settings": KULLANICI}
     okunan = {k: oku(v) for k, v in dosyalar.items()}
@@ -190,7 +263,8 @@ def config_change(girdi):
     if hatali:
         gunluk("hata", goreli(dosya), "ayar değişikliği ENGELLENDİ — " + "; ".join(hatali))
         return "Ayar dosyası okunamıyor, değişiklik bu oturuma yüklenmedi: " + "; ".join(hatali)
-    ihlal = degismezleri_denetle(*(okunan[k][0] for k in ("project_settings", "local_settings", "user_settings")))
+    ayarlar = [okunan[k][0] for k in ("project_settings", "local_settings", "user_settings")]
+    ihlal = degismezleri_denetle(*ayarlar) + eklentileri_denetle(*ayarlar)
     imzali, notlar = imzali_istisnalar()
     kalan = [(k, a) for k, a in ihlal if k not in imzali]
     if kalan:
@@ -213,7 +287,8 @@ def session_start(girdi):
     okunan = {"project_settings": oku(PROJE), "local_settings": oku(YEREL), "user_settings": oku(KULLANICI)}
     iz_yaz({k: ozet(d or {}) for k, (d, h) in okunan.items()})
     hatali = [f"{k}: {h}" for k, (d, h) in okunan.items() if h]
-    ihlal = degismezleri_denetle(*((okunan[k][0] or {}) for k in ("project_settings", "local_settings", "user_settings")))
+    ayarlar = [(okunan[k][0] or {}) for k in ("project_settings", "local_settings", "user_settings")]
+    ihlal = degismezleri_denetle(*ayarlar) + eklentileri_denetle(*ayarlar) + workflowlari_denetle() + yonetileni_denetle()
     imzali, notlar = imzali_istisnalar()
     kalan = [a for k, a in ihlal if k not in imzali] + hatali + notlar
     if not kalan:

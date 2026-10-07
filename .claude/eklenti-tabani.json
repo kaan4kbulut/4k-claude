@@ -1,0 +1,8 @@
+{
+  "_aciklama": "Onaylı eklenti/workflow tabanı (T-039, K-006). ayar-denetimi bunun dışındaki enabledPlugins (true), extraKnownMarketplaces, pluginConfigs, prependPlugins ve .claude/workflows dosyalarını imzasız değişiklik sayar. Bu dosya .claude/ altında: Bash'ten yazılamaz, Write sahibine sorulur.",
+  "enabledPlugins": ["pyright-lsp@claude-plugins-official"],
+  "extraKnownMarketplaces": [],
+  "pluginConfigs": [],
+  "prependPlugins": [],
+  "workflows": []
+}

@@ -413,3 +413,13 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:14 [degisti] 30-devlet/MOC-devlet.md — 0.7 — kararlar += K-006
 2026-10-07 19:15 [degisti] 40-ic-ses/nerede-kaldik.md — 0.16 — T-038
 2026-10-07 19:15 [oturum] T-038 — kapandı — K-006 yalnız yönetilen mod'lar; A12
+2026-10-07 19:16 [yeni] T-039 — talimat açıldı — ayar-denetimi genişletmesi (liste T-c)
+2026-10-07 19:16 [hata] .claude/settings.json — oturum açılışında ayar ihlali: local_settings: geçersiz JSON: [Errno 13] Permission denied: '/home/caferkaandebana/Work/4k-claude/.claude/settings.local.json'
+2026-10-07 19:17 [degisti] .claude/hooks/ayar-denetimi.py — eklenti tabanı, workflow, managed settings denetimi; yer tutucu = ayar yok (T-039)
+2026-10-07 19:17 [yeni] .claude/eklenti-tabani.json — onaylı eklenti/workflow tabanı: pyright-lsp (T-039)
+2026-10-07 19:17 [degisti] 00-sistem/testler/test_ayar_denetimi.py — +5 test: eklenti, marketplace, imza, managed, workflow (T-039)
+2026-10-07 19:17 [degisti] 00-sistem/sablonlar/kapi.md — A10 kanıtı: claude plugin validate --json (T-039)
+2026-10-07 19:17 [degisti] 00-sistem/GUNLUK.md — 19:16 [hata] satırı sahte: hook sandbox içinden elle koşuldu, yer tutucu settings.local.json okunamadı; kök neden düzeltildi (T-039)
+2026-10-07 19:20 [hata] Bash — Exit code 2 · /usr/bin/bash: eval: satır 1: beklenmeyen jeton `(' yakınında sözdizim hatası · /usr/bin/bash: eval: satır 1: `cd ~/Work/4k-claude && sed -i 's/Kapı şablonuna A10 kanıtı: `claude plugin vali
+2026-10-07 19:20 [degisti] 40-ic-ses/nerede-kaldik.md — 0.17 — T-039
+2026-10-07 19:20 [oturum] T-039 — kapandı — ayar-denetimi: eklenti tabanı, workflow, managed, env FOURK_*

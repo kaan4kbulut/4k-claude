@@ -432,3 +432,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/kararlar/K-006-yalniz-yonetilen-modlar.md (yeni); değişen: IMZA-MATRISI 0.2 (A12), ARAC-KAYDI 1.2, MOC-devlet 0.7, yz-teknoloji-taramasi 0.2, KARARLAR, HARITA, nerede-kaldik 0.16
 - Kapanış notu: Karar kayıtlı; tarama iddiası resmi dokümanla düzeltildi (guard varken deny kesin; asıl açık managed olmayan PreToolUse hook'larımızın mod'la aşılabilmesiydi, allowManagedModsOnly bunu kapatıyor). UNCONFIRMED: Linux dosya yolu ve debug günlüğü 'seated outermost' satırı. İzleme ayar-denetimi'ne (T-c).
+
+## T-039 — ayar-denetimi: eklenti, workflow ve managed settings denetimi (liste T-c)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-c ve K-006 izlemesi. Mod/eklenti yolu koruma hook'larını aşabildiği için (K-006) eklenti alanları ve `.claude/workflows/` imzasız değişmemeli; managed settings'in yerinde olduğu her oturumda denetlenmeli. A10 araç kapısının kanıtına yerel `claude plugin validate` çıktısı.
+- Başarı ölçütü: `.claude/eklenti-tabani.json` onaylı taban (bugünkü durum); ConfigChange'de taban dışı `enabledPlugins` (true), `extraKnownMarketplaces`, `pluginConfigs`, `prependPlugins` imzasızsa block; SessionStart'ta taban dışı workflow dosyası ve managed settings eksikliği (`allowManagedModsOnly` true değil ya da `allowModsToOverrideDenyRules` true) uyarı + GUNLUK; policy_settings değişince managed denetimi kayıt; kapı şablonuna A10 kanıt satırı; testler `kontrol.py --test` içinde, eski hook'ta düşer; kontrol.py --kisa → 0.
+- Sınırlar: Var olan değişmezler gevşemez; mevcut eklenti (pyright-lsp) tabana alınır, kapatılmaz. /etc dosyasına yazılmaz.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (talimat listesi T-c; sohbet "neyi bekliyorsun")
+- Durum: kapali
+- Doğurduğu dosyalar: .claude/eklenti-tabani.json (yeni); değişen: .claude/hooks/ayar-denetimi.py, 00-sistem/testler/test_ayar_denetimi.py (+7), 00-sistem/sablonlar/kapi.md (A10 kanıtı), DEGISIKLIKLER, nerede-kaldik 0.17
+- Kapanış notu: Eklenti/marketplace/pluginConfigs/prependPlugins taban dışıysa engellenir, workflow dosyası ve managed settings eksikliği oturum başında uyarılır. Denetci engelleyicisi (env FOURK_* ile denetimi yönlendirme) değişmezle kapandı. Not: 19:16 GUNLUK [hata] satırı sahte (hook'u sandbox içinden elle koştum), kök nedeni düzeltildi.
