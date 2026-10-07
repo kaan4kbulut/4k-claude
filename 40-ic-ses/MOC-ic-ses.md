@@ -3,7 +3,7 @@ id: 20261006-2230-moc-ic-ses
 ad: moc-ic-ses
 tur: moc
 kat: 4
-surum: 0.3
+surum: 0.4
 durum: aktif
 amac: Bu icerik haritasi, zihin katindaki fikirlerin merdiven durumunu, gozlemleri, yansimalari, kavramlari, park listesini ve haftalik metrikleri tek bakista gosterir.
 olusturma: 2026-10-06
@@ -28,8 +28,8 @@ Fikir: 1 (M0 0 · M1 1 · M2 0 · M3 0 · M4 0 · M5 0) · Gözlem: 0 · Yansım
 | Basamak | Fikirler |
 | --- | --- |
 | M0 ham | — |
-| M1 fikir | [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — yazıcı alıp iş kurma (kompleks) |
-| M2 sınanmış | — |
+| M1 fikir | — |
+| M2 sınanmış | [[40-ic-ses/fikirler/F-0001-yazici-isi-fikri]] — yazıcı alıp iş kurma (kompleks; steelman onaylı 2026-10-07) |
 | M3 araştırılmış | — |
 | M4 brif | — |
 | M5 devredildi | — |
@@ -73,3 +73,4 @@ Fikir: 1 (M0 0 · M1 1 · M2 0 · M3 0 · M4 0 · M5 0) · Gözlem: 0 · Yansım
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
 | 0.2 | 2026-10-07 | T-010 | Araştırma notları += qmd-turkce-isabet |
 | 0.3 | 2026-10-07 | T-018 | Araştırma notları += freyatts-turkce-deneme (T-016'da sürümsüz eklenmişti) ve yazici-pazar-arastirmasi |
+| 0.4 | 2026-10-07 | T-022 | Merdiven: F-0001 M1 → M2 |

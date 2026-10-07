@@ -2,10 +2,10 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar.
 
-aktif_talimat: yok — T-018 kapandı (G-001 tamam)
+aktif_talimat: yok — T-022 kapandı (KR-001 yürürlükte, F-0001 M2)
 kapi: yok
-acik_soru: yazıcı işi: hangi seçenekle 'hazır hizmetle 10 ürün' denemesi (A/B1/B2) ya da önce ZORLA modu? · K-002 onayı · hafif yol · GPU TTS denemesi
-siradaki: sahibinin cevabı (deneme seçeneği) → yeni karar/görev; sahibinin eylemleri: güven onayı, /voice, TTS örneklerini dinle, Web Clipper
+acik_soru: yok (sahibinin imza kalemleri tamamlandı)
+siradaki: sahibinin fiziksel adımları: klasörü etkileşimli açıp güven onayı, /voice, TTS örneklerini dinleme (00-sistem/.kosu/tts-ornek), Web Clipper kurulumu
 
 ## T-005 (2026-10-06)
 - [x] calistir.sh --bare · durus-kapisi dosya izi · yikici-koruma 35 test · MALIYET transcript · şema belirlenmedi · gunluk.py · git

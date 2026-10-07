@@ -247,3 +247,11 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:35 [degisti] 00-sistem/DEGISIKLIKLER.md — T-021 KR-001 / not.py
 2026-10-07 10:35 [degisti] 00-sistem/HARITA.md — T-021 KR-001 / not.py
 2026-10-07 10:35 [oturum] T-021 — kapandı — KR-001 taslak; not.py hazır ve kilitli
+2026-10-07 10:38 [kapi] 30-devlet/kapilar/KP-002-kr-001-yayimi.md — go: sahibi KR-001'i imzaladı
+2026-10-07 10:38 [karar] 30-devlet/normlar/kurallar/KR-001-hafif-yol.md — kabul: yürürlük 2026-10-07 (KP-002)
+2026-10-07 10:38 [degisti] 00-sistem/KARARLAR.md — T-022 imzalar
+2026-10-07 10:38 [degisti] 30-devlet/MOC-devlet.md — T-022 imzalar
+2026-10-07 10:38 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — T-022 imzalar
+2026-10-07 10:38 [degisti] 40-ic-ses/MOC-ic-ses.md — T-022 imzalar
+2026-10-07 10:38 [degisti] 00-sistem/HARITA.md — T-022 imzalar
+2026-10-07 10:38 [oturum] T-022 — kapandı — KR-001 yürürlükte; F-0001 M2

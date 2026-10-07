@@ -245,3 +245,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/normlar/kurallar/KR-001-hafif-yol.md, 00-sistem/scripts/not.py (yeni); değişen: MOC-devlet, sablonlar/fikir.md, CLAUDE.md, DEGISIKLIKLER, HARITA
 - Kapanış notu: KR-001 önerildi; not.py kural kabul edilmeden çıkış 3 (doğrulandı). Karalama kopyasında kural kabul varsayılarak 1 gözlem + 2 M0 fikir eklendi; sayfalar, MOC M0 satırı, gözlem listesi, talimat aç/kapa doğru. Yayım sahibinin imzası (A4).
+
+## T-022 — KR-001 yayımı ve F-0001 steelman onayı (sahibinin imzaları)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin iki imzasını işlemek: KR-001 kabul ve yürürlük (A4, kapı KP-002); F-0001 steelman onayı → merdiven 2.
+- Başarı ölçütü: KR-001 1.0 kabul, KARARLAR satırı, KP-002 go; not.py kilidi açık; F-0001 merdiven 2 ve MOC-ic-ses tablosu; kontrol.py sıfır hata.
+- Sınırlar: Yalnız imzalanan iki kalem.
+- Kat: 3
+- Kapı: tek-yonlu (kural yayımı) · imza: sahibi (sohbet, 2026-10-07)
+- Durum: kapali
+- Doğurduğu dosyalar: 30-devlet/kapilar/KP-002-kr-001-yayimi.md (yeni); değişen: KR-001 (1.0 kabul), KARARLAR, MOC-devlet, F-0001 (0.6, merdiven 2), MOC-ic-ses, HARITA
+- Kapanış notu: KR-001 yürürlükte (KP-002 go); not.py kilidi açık (boş girdi çıkış 2 = kilit geçildi). F-0001 M2 (sınanmış). Bir sonraki fikir adımı (M3: açık soru ≤2, canlı kaynaklar) ve deneme seçimi Y-001 uyarınca orkestratörde, sahibinin ilgisine bağlı tür seçimi sahibinde.

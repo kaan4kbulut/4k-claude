@@ -3,7 +3,7 @@ id: 20261006-2144-yazici-isi-fikri
 ad: yazici-isi-fikri
 tur: fikir
 kat: 4
-surum: 0.5
+surum: 0.6
 durum: taslak
 amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
 olusturma: 2026-10-06
@@ -13,12 +13,12 @@ talimat: T-001
 dayandigi: []
 besledigi: [30-devlet/kararlar/K-004-yazici-pazar-arastirmasi.md, 40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md]
 ust: 40-ic-ses/MOC-ic-ses.md
-merdiven: 1
+merdiven: 2
 cynefin: kompleks
 guven: dusuk
 kaynaklar: [40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi.md]
-dokunus_sayisi: 1
-son_dokunus: "2026-10-06"
+dokunus_sayisi: 2
+son_dokunus: "2026-10-07"
 etiketler: [is-fikri, yazici]
 ---
 
@@ -47,7 +47,7 @@ Bu atamaya uygun olarak [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] al
 - [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]] — düşük fiyat tabanı ve yoğun rekabet (ör. anahtarlık 21–250 TL), hiçbir seçenekte talep kanıtı yok, esnaf muafiyeti kapsamı belirsiz
 
 ### Steelman (M2)
-**Sahibinin onayını bekliyor.** Fikrin en güçlü hâli: Kaan'ın elinde dijital olarak her şeyi yapabilen bir sistem var; eksik olan, dünyaya dokunan bir "el". Küçük bir yazıcı işi bu el için ucuz bir deney alanıdır: kişiye özel, düşük adetli ürünlerde büyük üreticiler verimsizdir; tek kişilik, sipariş üzerine çalışan bir atölye bu boşlukta yaşayabilir. Tasarım, sipariş takibi, fiyatlama ve pazar yeri listelemesinin çoğu dijitaldir ve sistem bunları üstlenebilir; Kaan'a kalan fiziksel adımlar (baskı, paketleme, kargo) sınırlı ve öngörülebilirdir. G-001'e göre giriş maliyeti tek bir cihaz düzeyindedir (A: ~21–26 bin TL, B1: pres ~11 bin TL) ve cihaz almadan hazır hizmetle 10 ürünlük bir denemeyle talep sınanabilir; yani kaybın üst sınırı küçük tutulabilir. Kaynak: [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]].
+**Sahibi onayladı (2026-10-07).** Fikrin en güçlü hâli: Kaan'ın elinde dijital olarak her şeyi yapabilen bir sistem var; eksik olan, dünyaya dokunan bir "el". Küçük bir yazıcı işi bu el için ucuz bir deney alanıdır: kişiye özel, düşük adetli ürünlerde büyük üreticiler verimsizdir; tek kişilik, sipariş üzerine çalışan bir atölye bu boşlukta yaşayabilir. Tasarım, sipariş takibi, fiyatlama ve pazar yeri listelemesinin çoğu dijitaldir ve sistem bunları üstlenebilir; Kaan'a kalan fiziksel adımlar (baskı, paketleme, kargo) sınırlı ve öngörülebilirdir. G-001'e göre giriş maliyeti tek bir cihaz düzeyindedir (A: ~21–26 bin TL, B1: pres ~11 bin TL) ve cihaz almadan hazır hizmetle 10 ürünlük bir denemeyle talep sınanabilir; yani kaybın üst sınırı küçük tutulabilir. Kaynak: [[40-ic-ses/arastirma-notlari/yazici-pazar-arastirmasi]].
 
 ### Inversion (M2)
 Bu işin kesin başarısız olması için ne yapardık:
@@ -92,3 +92,4 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 | 0.3 | 2026-10-07 | T-017 | Açık soru 1'e sahibinin cevabı: tür henüz belli değil (eski: cevapsız) |
 | 0.4 | 2026-10-07 | T-018 | Kaynaklar, alternatifler, kanıt ve karşı-kanıt G-001 notuyla dolduruldu (eski: boş / aranmadı) |
 | 0.5 | 2026-10-07 | T-019 | ZORLA modu: steelman (sahibi onayı bekliyor), inversion 4, pre-mortem 4 olasılıklı, [konum] (eski: hepsi belirlenmedi / pozisyon yok); merdiven 1'de kalır |
+| 0.6 | 2026-10-07 | T-022 | Steelman sahibince onaylandı; merdiven 1 → 2 (sınanmış) |

@@ -3,19 +3,19 @@ id: 20261007-1115-kr-001-hafif-yol
 ad: kr-001-hafif-yol
 tur: kural
 kat: 3
-surum: 0.1
-durum: onerildi
+surum: 1.0
+durum: kabul
 amac: Bu kural, Ic Ses'e gozlem ve ham fikir (M0) notu eklenirken alti adimin tek komutla otomatik yapilmasini (hafif yol) zorunlu ve yeterli kilmak icin var; amaci kucuk not icin tören yukunun not almayi caydirmasi riskini onlemektir.
 olusturma: 2026-10-07
 guncelleme: 2026-10-07
 yazar: claude
 talimat: T-021
 dayandigi: [CLAUDE.md]
-besledigi: [00-sistem/scripts/not.py]
+besledigi: [00-sistem/scripts/not.py, 30-devlet/kapilar/KP-002-kr-001-yayimi.md]
 ust: 30-devlet/MOC-devlet.md
 kapi: tek-yonlu
 karar_veren: kaan
-yururluk: belirlenmedi
+yururluk: 2026-10-07
 yuruten: orkestrator
 sunset: 2027-01-05
 saklama: S
@@ -66,16 +66,20 @@ Anayasaya uygunluk: evet. Madde 3.2 (yol kısalır, atlanmaz) korunur; Madde 10 
 
 ### Değişiklik geçmişi (çerçeve taslak)
 - 2026-10-07: Kural taslağı oluşturuldu, sahibinin imzasına sunuldu (T-021).
+- 2026-10-07: Sahibinin imzasıyla kabul edildi ve yürürlüğe girdi (KP-002, T-022).
 
 ## Bağlar
 ### Dayandığı
 - [[CLAUDE.md]] — "Bir parçanın doğuşu (zorunlu altı adım)" kuralı; bu kural onu kapsamdaki iki tür için otomatikleştirir
 ### Beslediği
 - [[00-sistem/scripts/not.py]] — kuralın uygulayıcısı; kural kabul edilmeden çalışmaz
+- [[30-devlet/kapilar/KP-002-kr-001-yayimi]] — yayım kapısı (go)
 ### Gelen
 - ← [[30-devlet/MOC-devlet]] — normlar listesi
+- ← [[30-devlet/kapilar/KP-002-kr-001-yayimi]] — imza kaydı
 
 ## Günlük
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-07 | T-021 | Taslak (önerildi); sahibinin imzası bekleniyor |
+| 1.0 | 2026-10-07 | T-022 | Sahibinin imzasıyla kabul, yürürlük 2026-10-07 (eski: önerildi) |

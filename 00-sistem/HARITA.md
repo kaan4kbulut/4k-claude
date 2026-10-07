@@ -27,6 +27,7 @@ Her frontmatter'lı sayfa için tek satır: `- [[yol]] — amaç · tur · kat N
 ## 30-devlet
 - [[30-devlet/MOC-devlet]] — Bu icerik haritasi, irade katindaki normlari, kararlari, kapilari ve denetim kayitlarini gruplayip nedenli baglarla tek bakista gosterir. · moc · kat 3 · 2026-10-07
 - [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — Bu kapi kaydi, Claude Code Bash sandbox'inin bu projede acilmasi karari icin sahibinin onayini, kriterleri ve sonucu tutmak icin var. · kapi · kat 3 · 2026-10-06
+- [[30-devlet/kapilar/KP-002-kr-001-yayimi]] — Bu kapi kaydi, KR-001 hafif yol kuralinin yayimi karari icin sahibinin imzasini, kriterleri ve sonucu tutmak icin var. · kapi · kat 3 · 2026-10-07
 - [[30-devlet/kararlar/K-001-pilotta-kadro-yok]] — Bu karar kaydi, pilot asamasinda rol (bakanlik) ajanlari acilmamasini, yalniz okuyucu ve denetci alt ajanlarinin bulunmasini ve nedenini kalici olarak tutar. · karar · kat 3 · 2026-10-06
 - [[30-devlet/kararlar/K-002-danisman-zihin-islevi]] — Bu karar kaydi, Danisman rolunun ayri bir ajan olarak degil zihin katinin bir islevi (yonlendirme notu + steelman/pre-mortem degerlendirmesi) olarak tanimlanmasi onerisini ve alternatifleri tutar. · karar · kat 3 · 2026-10-07
 - [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — Bu karar kaydi, sistemin adinin sahibinin istegiyle Yeni Sistem yerine 4k-claude olmasini ve Anayasa'daki ad degisikliginin Madde 14 usulune dayanagini kalici olarak tutar. · karar · kat 3 · 2026-10-06
