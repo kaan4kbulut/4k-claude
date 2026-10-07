@@ -66,7 +66,7 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 - Şema: `kapi` ve `sonuc` enum'larına `belirlenmedi`; kontrol.py 14. denetim: belirlenmedi yalnız taslakta / M4 öncesi fikirde.
 ### Eklendi
 - `gunluk.py`: GUNLUK satırını sistem saatiyle yazar. kontrol.py 15. denetim: GUNLUK zaman sırası (uyarı).
-- Git deposu (temel commit e39a086).
+- Git deposu (temel commit 20bc76d).
 
 ## [0.1.0] — 2026-10-06
 ### Eklendi

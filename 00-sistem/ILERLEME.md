@@ -9,13 +9,13 @@ siradaki: T-026 GitHub açık depo + otomatik push (sahibi A6/A9 onayladı); ard
 
 ## Son kapanış
 - T-025 (2026-10-07): Kapanış kaydı artık engelle sağlanıyor: kontrol.py 16. denetim eski hâlde 2 hata verdi (nerede-kaldik T-024 yok, aktif_talimat yanlış), düzeltmeden sonra 0. Kanıt: kontrol.py --kisa önce → 1 (2 hata), sonra → 0.
-- T-024 (2026-10-07): .obsidian dar istisna (K-005), git dışı. Kanıt: `git check-ignore .obsidian/app.json` → 0; `kontrol.py --kisa` → 0 (40 sayfa, 47 bağ). Commit ede2e0a.
+- T-024 (2026-10-07): .obsidian dar istisna (K-005), git dışı. Kanıt: `git check-ignore .obsidian/app.json` → 0; `kontrol.py --kisa` → 0 (40 sayfa, 47 bağ). Commit 8451ee2.
 - T-017..T-023 kayıtları: TALIMATLAR.md kapanış notları ve GUNLUK [oturum] satırları (bu dosyaya o dönemde yazılmadı; 2026-10-07 eksik analizi).
 
 ## Eski kayıtlar
 ### T-005 (2026-10-06)
 - [x] calistir.sh --bare · durus-kapisi dosya izi · yikici-koruma 35 test · MALIYET transcript · şema belirlenmedi · gunluk.py · git
-- Değişen: bkz. DEGISIKLIKLER 0.2.0; commit e39a086 sonrası
+- Değişen: bkz. DEGISIKLIKLER 0.2.0; commit 20bc76d sonrası
 
 ### T-001 (2026-10-06)
 - [x] KAYIT (T-001 zaten açıktı) · AMAÇ+KAT (4) · YER+AD (40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md) · ŞABLON · BAĞLAR (MOC M1 + park) · KAPANIŞ (HARITA, GUNLUK, TALIMATLAR)

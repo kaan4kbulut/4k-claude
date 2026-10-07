@@ -62,7 +62,7 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 ## T-005 — Analizde bulunan eksiklerin kök neden düzeltmesi
 - Tarih: 2026-10-06
 - Niyet: 2026-10-06 analizinde bulunan eksikleri kapatmak: calistir.sh'ta hook'ları kapatan --bare; git deposu yok; durus-kapisi'nin metne dayalı (sahte kanıtla geçilebilen) kontrolü ve İç Ses sohbetiyle çatışması; yikici-koruma'nın yanlış pozitifleri ve açıkları; MALIYET.csv'nin hep 0 yazması; şablon/şema uyumsuzluğu (belirlenmedi enum dışı, tarih alanları); GUNLUK'te elle yazılan zaman damgaları.
-- Başarı ölçütü: her düzeltme için çalıştırılmış test (komut + çıkış kodu); kontrol.py sıfır hata; hook'lar örnek girdilerle beklenen kararı veriyor; git'te temel commit (e39a086) ve düzeltme commit'i.
+- Başarı ölçütü: her düzeltme için çalıştırılmış test (komut + çıkış kodu); kontrol.py sıfır hata; hook'lar örnek girdilerle beklenen kararı veriyor; git'te temel commit (20bc76d) ve düzeltme commit'i.
 - Sınırlar: Anayasa, imza matrisi ve "altı adım" kuralı değiştirilmez (sahibinin kararı; öneri olarak sunulur). F-0001 içeriğine dokunulmaz (T-004 denemesi için korunur). T-002..T-004 açık kalır.
 - Kat: 0
 - Kapı: cift-yonlu (git ile geri alınabilir)
@@ -145,7 +145,7 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Kapı: cift-yonlu · yerel araç (B7); sahibinin sıra onayı 2026-10-07
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/al.py, 00-sistem/sablonlar/web-clipper-gelen.json (yeni); değişen: kontrol.py, graf.py, settings.json (env + allow), ARAC-KAYDI (0.5), SISTEM (0.5), CLAUDE.md, DEGISIKLIKLER
-- Kapanış notu: markitdown Türkçe PDF'te kayıpsız (73 bin karakter, 0 bozuk, tablolar korunur); kötü niyetli başlık ve dosya adı frontmatter'ı bozmadı; sahte wikilink kontrolü kırmadı; sandbox içinde çalışıyor. docling kurulmadı (kanıtla). Beklenmeyen bulgu: onnxruntime 1.30 Microsoft telemetrisi (cihaz kimliği + 24 olaylık kuyruk ~/.cache/Microsoft/DeveloperTools/.onnxruntime/, sandbox'ta proje köküne ":memory:.ses"); ORT_DISABLE_TELEMETRY=1 ile durduruldu, resmi disable_telemetry_events() etkisiz. Kayıt betiği tırnak hatasıyla çalışmadan commit atıldı (215e41d); kayıtlar ayrı commit'le tamamlandı. Açık: kuyruğun silinmesi sahibinin kararı (proje dışı); Web Clipper şablonu gerçek eklentide sınanmadı.
+- Kapanış notu: markitdown Türkçe PDF'te kayıpsız (73 bin karakter, 0 bozuk, tablolar korunur); kötü niyetli başlık ve dosya adı frontmatter'ı bozmadı; sahte wikilink kontrolü kırmadı; sandbox içinde çalışıyor. docling kurulmadı (kanıtla). Beklenmeyen bulgu: onnxruntime 1.30 Microsoft telemetrisi (cihaz kimliği + 24 olaylık kuyruk ~/.cache/Microsoft/DeveloperTools/.onnxruntime/, sandbox'ta proje köküne ":memory:.ses"); ORT_DISABLE_TELEMETRY=1 ile durduruldu, resmi disable_telemetry_events() etkisiz. Kayıt betiği tırnak hatasıyla çalışmadan commit atıldı (bd868ba); kayıtlar ayrı commit'le tamamlandı. Açık: kuyruğun silinmesi sahibinin kararı (proje dışı); Web Clipper şablonu gerçek eklentide sınanmadı.
 
 ## T-013 — Bağlantı canlılığı (lychee) ve maliyet mutabakatı (ccusage) (öncelik 6)
 - Tarih: 2026-10-07
