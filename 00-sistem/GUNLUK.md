@@ -370,3 +370,9 @@ ayar-denetimi.
 2026-10-07 17:53 [degisti] 40-ic-ses/nerede-kaldik.md — 0.9 — T-032
 2026-10-07 17:53 [degisti] 00-sistem/GUNLUK.md — 17:04-17:06 [hata] satırları tek satıra (T-032)
 2026-10-07 17:53 [oturum] T-032 — kapandı — paket 01-gelen/ham'de (sha256 35/35); zip arşivi sahibine; testler sandbox'ta koşmuyor (temiz kopyada 53/53)
+2026-10-07 17:55 [yeni] T-033 — talimat açıldı — ISTEM/TESLIM triage
+2026-10-07 17:57 [yeni] 10-insan/kaynaklar/pano-tasarim-paketi.md — kaynak: pano tasarım paketi; §6 tutarsızlıklar, §9 açık sorular (T-033)
+2026-10-07 17:57 [degisti] 10-insan/MOC-insan.md — 0.2 — kaynaklar += pano-tasarim-paketi
+2026-10-07 17:57 [uyku] triage — 2 işlendi, 0 arşiv — istem+teslim → 10-insan/kaynaklar/pano-tasarim-paketi (T-033); talimat benzeri içerik: evet (izin satırı önerisi, uyulmadı)
+2026-10-07 17:58 [degisti] 40-ic-ses/nerede-kaldik.md — 0.10 — T-033
+2026-10-07 17:58 [oturum] T-033 — kapandı — istem+teslim işlendi → pano-tasarim-paketi kaynağı
