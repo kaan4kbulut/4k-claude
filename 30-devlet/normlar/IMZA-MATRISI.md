@@ -3,14 +3,14 @@ id: 20261006-2201-imza-matrisi
 ad: imza-matrisi
 tur: referans
 kat: 3
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Hangi kararin kimin imzasini istedigini, yetki devrinin kurallarini ve kayitlarini tek tabloda tutar; orkestrator her kararda buraya bakar.
 olusturma: 2026-10-06
 guncelleme: 2026-10-07
 yazar: kaan
 talimat: T-000
-dayandigi: [30-devlet/normlar/ANAYASA.md, 00-sistem/arastirma/07-devlet-yapilari.md]
+dayandigi: [30-devlet/normlar/ANAYASA.md, 00-sistem/arastirma/07-devlet-yapilari.md, 30-devlet/kararlar/K-006-yalniz-yonetilen-modlar.md]
 besledigi: [30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri.md]
 saklama: S
 etiketler: [norm/yetki]
@@ -39,6 +39,7 @@ Hangi kararın kimin imzasını istediğini, yetki devrinin kurallarını ve kay
 | A9 | Kamuya açık çıktı (web, pazar yeri listesi, duyuru) | kapı |
 | A10 | Yeni araç/MCP sunucusu ekleme (dış sisteme erişim veren) | ARAC-KAYDI + karar |
 | A11 | Kabul edilmiş kararın yerine yeni karar (supersede) | /karar + kapı |
+| A12 | Makine düzeyi yönetilen ayar (`/etc/claude-code/managed-settings.json`): mod izinleri, `allowManagedModsOnly`, `allowModsToOverrideDenyRules` | root (Claude yazamaz); K-006; ayar-denetimi izler |
 
 ### B. Orkestratör "Başkan a." imzalar (çift yönlü; kaydet, brifingde bildir)
 | # | Karar | Dayanak |
@@ -85,6 +86,7 @@ Her karar sınıfı "onay" (B/C satırı için orkestratör onayı; A için sahi
 ### Dayandığı
 - [[30-devlet/normlar/ANAYASA]] — Madde 6 (yetkinin kaynağı) ve Madde 9 (kapılar)
 - [[00-sistem/arastirma/07-devlet-yapilari]] — bakanlık imza yönergeleri, yetki devri ilkeleri, Late Notice
+- [[30-devlet/kararlar/K-006-yalniz-yonetilen-modlar]] — A12 (makine düzeyi yönetilen ayar) bu karardan
 ### Beslediği
 ### Gelen
 - ← [[30-devlet/normlar/yonergeler/Y-001-cift-yonlu-karar-yetki-devri]] — çift yönlü kararlarda orkestratöre yetki devri (A1–A11 dışı)
@@ -94,3 +96,4 @@ Her karar sınıfı "onay" (B/C satırı için orkestratör onayı; A için sahi
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-06 | T-000 | Oluşturuldu |
+| 0.2 | 2026-10-07 | T-038 | A12 eklendi: makine düzeyi yönetilen ayar (K-006); dayandigi += K-006 |

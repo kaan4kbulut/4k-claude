@@ -405,3 +405,11 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 18:46 [ayar] ~/.claude/settings.json — user_settings değişti: +enabledPlugins.pyright-lsp@claude-plugins-official; değişmezler tamam
 2026-10-07 18:46 [degisti] 40-ic-ses/nerede-kaldik.md — 0.15 — T-037
 2026-10-07 18:46 [oturum] T-037 — kapandı — tarama raporu kaynak sayfasında; iddialar UNCONFIRMED
+2026-10-07 18:47 [yeni] T-038 — talimat açıldı — mod koruması kararı (liste T-b)
+2026-10-07 19:14 [karar] 30-devlet/kararlar/K-006-yalniz-yonetilen-modlar.md — K-006 — yalnız yönetilen mod'lar (managed settings, sahibi 18:24)
+2026-10-07 19:14 [degisti] 30-devlet/normlar/IMZA-MATRISI.md — 0.2 — A12 makine düzeyi yönetilen ayar
+2026-10-07 19:14 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 1.2 — managed settings satırı (K-006)
+2026-10-07 19:14 [degisti] 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07.md — 0.2 — besledigi += K-006
+2026-10-07 19:14 [degisti] 30-devlet/MOC-devlet.md — 0.7 — kararlar += K-006
+2026-10-07 19:15 [degisti] 40-ic-ses/nerede-kaldik.md — 0.16 — T-038
+2026-10-07 19:15 [oturum] T-038 — kapandı — K-006 yalnız yönetilen mod'lar; A12

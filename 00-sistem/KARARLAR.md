@@ -9,3 +9,4 @@ Karar başına tek satır; ayrıntı `30-devlet/kararlar/K-xxx-*.md`. Bir kural 
 - Y-001 · 2026-10-07 · aktif · Yönerge: çift yönlü kararlarda orkestratöre yetki devri (Başkan a.; sahibinin yazılı talimatı) · cift-yonlu
 - K-005 · 2026-10-07 · kabul · Obsidian kasası: kök `.obsidian/` kural 7'ye dar istisna, git dışı; yeni not/ek yolu 01-gelen · cift-yonlu
 - KR-001 · 2026-10-07 · kabul · Kural: hafif yol — İç Ses gözlem ve M0 fikir için altı adım tek komutta (not.py); yayım KP-002 · tek-yonlu
+- K-006 · 2026-10-07 · kabul · Managed settings: yalnız yönetilen Claude Code mod'ları (allowManagedModsOnly); A12 · cift-yonlu

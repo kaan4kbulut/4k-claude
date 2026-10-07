@@ -3,7 +3,7 @@ id: 20261006-2220-moc-devlet
 ad: moc-devlet
 tur: moc
 kat: 3
-surum: 0.6
+surum: 0.7
 durum: aktif
 amac: Bu icerik haritasi, irade katindaki normlari, kararlari, kapilari ve denetim kayitlarini gruplayip nedenli baglarla tek bakista gosterir.
 olusturma: 2026-10-06
@@ -41,6 +41,7 @@ Normlar: 1 anayasa (kabul), 1 kural, 1 yönerge · Kararlar: 4 (4 kabul) · Aç�
 - [[30-devlet/kararlar/K-003-ad-degisikligi-4k-claude]] — sistemin adı 4k-claude (kabul)
 - [[30-devlet/kararlar/K-004-yazici-pazar-arastirmasi]] — yazıcı işinde önce pazar araştırması (kabul, 2026-10-07)
 - [[30-devlet/kararlar/K-005-obsidian-kasa-istisnasi]] — `.obsidian/` kural 7'ye dar istisna, git dışı (kabul, 2026-10-07)
+- [[30-devlet/kararlar/K-006-yalniz-yonetilen-modlar]] — managed settings: yalnız yönetilen mod'lar (kabul, 2026-10-07)
 
 ### Kapılar (KP-xxx)
 - [[30-devlet/kapilar/KP-001-sandbox-acilisi]] — Bash sandbox'ının açılışı (go, sahibi)
@@ -68,3 +69,4 @@ Normlar: 1 anayasa (kabul), 1 kural, 1 yönerge · Kararlar: 4 (4 kabul) · Aç�
 | 0.4 | 2026-10-07 | T-022 | KR-001 kabul; Kapılar += KP-002 |
 | 0.5 | 2026-10-07 | T-024 | Kararlar += K-005 |
 | 0.6 | 2026-10-07 | T-026 | Kapılar += KP-003 |
+| 0.7 | 2026-10-07 | T-038 | Kararlar += K-006 |

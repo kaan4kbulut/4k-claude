@@ -421,3 +421,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 01-gelen/2026-10-07-1844-rapor.md (al.py), 10-insan/kaynaklar/yz-teknoloji-taramasi-2026-10-07.md (yeni); değişen: 10-insan/MOC-insan.md 0.3, HARITA, nerede-kaldik 0.15
 - Kapanış notu: Rapor kaynak olarak kayıtlı; iddia başına URL olmadığı için tüm iddialar UNCONFIRMED, raporda 7 iç çelişki var. Güvenlik kalemleri (mod'lar, Routines) kural/karar olmadan birincil kaynakla doğrulanacak.
+
+## T-038 — Mod koruması (managed settings) karar kaydı (liste T-b)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-b. Sahibi 2026-10-07 18:24'te `/etc/claude-code/managed-settings.json` kurdurdu (`allowManagedModsOnly: true`); gerekçe: mod'lar managed settings olmadan deny kurallarını ve yikici-koruma'yı aşabiliyor (UNCONFIRMED → birincil kaynakla doğrulanır). Kararı kayda geçir, IMZA-MATRISI ve ARAC-KAYDI'na işle, ayar-denetimi izlemesini değerlendir.
+- Başarı ölçütü: K-006 karar kaydı (karar_veren kaan, dosya içeriği ve sürüm kanıtıyla, iddia birincil kaynak URL'siyle ya da UNCONFIRMED); KARARLAR.md satırı; IMZA-MATRISI'nde makine düzeyi yönetilen ayar satırı; ARAC-KAYDI satırı; ayar-denetimi değerlendirmesi kararda (uygulama T-c'ye); HARITA, MOC, GUNLUK; kontrol.py --kisa → 0.
+- Sınırlar: /etc dosyası değiştirilmez (root, sahibinin). Hook değişikliği bu talimatta yok.
+- Kat: 3
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07: "neyi bekliyorsun"; dosyayı kurdurma kararı sahibinin)
+- Durum: kapali
+- Doğurduğu dosyalar: 30-devlet/kararlar/K-006-yalniz-yonetilen-modlar.md (yeni); değişen: IMZA-MATRISI 0.2 (A12), ARAC-KAYDI 1.2, MOC-devlet 0.7, yz-teknoloji-taramasi 0.2, KARARLAR, HARITA, nerede-kaldik 0.16
+- Kapanış notu: Karar kayıtlı; tarama iddiası resmi dokümanla düzeltildi (guard varken deny kesin; asıl açık managed olmayan PreToolUse hook'larımızın mod'la aşılabilmesiydi, allowManagedModsOnly bunu kapatıyor). UNCONFIRMED: Linux dosya yolu ve debug günlüğü 'seated outermost' satırı. İzleme ayar-denetimi'ne (T-c).
