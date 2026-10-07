@@ -297,4 +297,6 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Sınırlar: .araclar ve .venv yayımlanmaz (git dışı kalır). Sandbox ve izin ayarları değişmez (push sandbox dışından, systemd ile). Force push yok.
 - Kat: 3
 - Kapı: tek-yonlu (A6 dış API yazımı, A9 kamuya açık çıktı) · imza: sahibi (sohbet, 2026-10-07)
-- Durum: acik
+- Durum: kapali
+- Doğurduğu dosyalar: 30-devlet/kapilar/KP-003-github-acik-depo.md, 00-sistem/scripts/push.sh (yeni); değişen: MOC-devlet 0.6, ARAC-KAYDI 1.1, HARITA, nerede-kaldik 0.3, ILERLEME, DEGISIKLIKLER, kimlik geçen kayıtlar; proje dışı: ~/.config/systemd/user/4k-claude-push.{path,service}; .git/config user.email
+- Kapanış notu: 4k-claude GitHub'da açık (kaan4kbulut/4k-claude); geçmişte gmail 0, GitHub'da 58/58 noreply; her commit'ten sonra systemd birimi push eder. Yedek: ön-yeniden-yazım bundle'ı oturum scratchpad'inde, refs/original yerelde.

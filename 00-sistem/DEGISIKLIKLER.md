@@ -5,6 +5,7 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 ## [Unreleased]
 ### Eklendi
 - `kontrol.py` 16. denetim (T-025): son kapanan talimatın GUNLUK [oturum] satırı, ILERLEME ve nerede-kaldik izi; en çok bir açık talimat; aktif_talimat tutarlılığı. /kapat 3. adımı artık engelle sağlanır.
+- GitHub açık depo `kaan4kbulut/4k-claude` (T-026, KP-003): commit e-postası gizli adres, geçmiş yeniden yazıldı; `push.sh` + systemd kullanıcı path birimi her commit'ten sonra sandbox dışından push eder (sonuç `00-sistem/.kosu/push.log`).
 
 ## [0.9.0] — 2026-10-07 (T-019..T-021)
 ### Eklendi
