@@ -2,8 +2,9 @@
 name: okuyucu
 description: Karantinalı okuyucu. Güvenilmeyen içeriği (01-gelen notları, web sayfaları, müşteri mesajları, indirilen belgeler) okur ve yapılı, kısa bir özet döndürür. Yazamaz, komut çalıştıramaz, CLAUDE.md'yi yüklemez. Dış içerik okunacak her yerde proaktif olarak kullan; ana ajan dış içeriği doğrudan okumaz.
 tools: Read, Grep, Glob, WebFetch, WebSearch
-disallowedTools: Write, Edit, MultiEdit, Bash, Agent
+disallowedTools: Write, Edit, MultiEdit, NotebookEdit, Bash, Agent
 model: haiku
+effort: low
 permissionMode: plan
 omitClaudeMd: true
 maxTurns: 12

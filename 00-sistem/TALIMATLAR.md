@@ -454,3 +454,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: .claude/hooks/model-bekcisi.py, 00-sistem/testler/test_model_bekcisi.py (yeni); değişen: .claude/settings.json (PreModelSwitch, PostModelSwitch), ayar-denetimi.py (ZORUNLU_HOOKLAR), DEGISIKLIKLER, nerede-kaldik 0.18
 - Kapanış notu: Fable/Opus'a geçiş artık sorulur ve her geçiş GUNLUK'e düşer. Olaylar resmi dokümanda var (code.claude.com/docs/en/hooks); çıktı biçimi özetten okundu, canlı geçişle doğrulanmadı — ilk /model geçişinde GUNLUK [ayar] satırı ve onay sorusu görülmeli.
+
+## T-041 — Alt ajan ön bilgisi: effort ve yazma sınırı (liste T-e)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-e. okuyucu ve denetci frontmatter'ı MODEL-POLITIKASI'na göre tam olsun (code.claude.com/docs/en/sub-agents, okundu 2026-10-07: effort low…max, maxTurns, disallowedTools, memory, omitClaudeMd destekleniyor).
+- Başarı ölçütü: okuyucu `effort: low`, denetci `effort: medium`; ikisinde NotebookEdit yasak; okuyucuda memory yok (var olan durum korunur); denetci gövdesinde Bash'in yalnız okuma/test için olduğu ve dosya yazmadığı açık kural (T-036/T-039'da denetci test dosyasına yazmıştı); kontrol.py --kisa → 0.
+- Sınırlar: `mcp__*` jokeri belgede bulunamadı, eklenmez (okuyucunun tools izin listesi MCP'yi zaten dışlıyor). Model atamaları değişmez.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (talimat listesi T-e)
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: .claude/agents/okuyucu.md, .claude/agents/denetci.md, DEGISIKLIKLER, nerede-kaldik 0.19
+- Kapanış notu: effort ve NotebookEdit yasağı eklendi; okuyucuda memory yok, omitClaudeMd açık (var olan). Denetci gövdesindeki 'dosya yazmazsın' kuralı zaten vardı ve çiğnendi: Bash açık kaldıkça teknik engel yok (sınır). Orkestratör bu oturumda okuyucuyu model: sonnet ile çağırıp haiku'yu ezdi; politika ihlali, düzeltildi.

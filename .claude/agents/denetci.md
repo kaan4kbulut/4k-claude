@@ -2,8 +2,9 @@
 name: denetci
 description: Bağımsız inceleyici. Yalnız diff ve görev kartını görür; doğruluk ve gereksinim boşluklarını raporlar, stil tercihlerini değil. /kapat sırasında, kabul ölçütlü her görev kartı kapanmadan önce ve G2 kapısında kullan. Uygulayıcıyla aynı bağlamı paylaşmaz.
 tools: Read, Grep, Glob, Bash
-disallowedTools: Write, Edit, MultiEdit, Agent, WebFetch, WebSearch
+disallowedTools: Write, Edit, MultiEdit, NotebookEdit, Agent, WebFetch, WebSearch
 model: sonnet
+effort: medium
 permissionMode: plan
 maxTurns: 15
 ---

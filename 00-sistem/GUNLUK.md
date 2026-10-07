@@ -431,3 +431,8 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:22 [yeni] 00-sistem/testler/test_model_bekcisi.py — model bekçisi testleri, 5 (T-040)
 2026-10-07 19:23 [degisti] 40-ic-ses/nerede-kaldik.md — 0.18 — T-040
 2026-10-07 19:23 [oturum] T-040 — kapandı — model bekçisi hook'u
+2026-10-07 19:24 [yeni] T-041 — talimat açıldı — alt ajan ön bilgisi (liste T-e)
+2026-10-07 19:25 [degisti] .claude/agents/okuyucu.md — effort low; NotebookEdit yasak (T-041)
+2026-10-07 19:25 [degisti] .claude/agents/denetci.md — effort medium; NotebookEdit yasak (T-041)
+2026-10-07 19:25 [degisti] 40-ic-ses/nerede-kaldik.md — 0.19 — T-041
+2026-10-07 19:25 [oturum] T-041 — kapandı — alt ajan ön bilgisi
