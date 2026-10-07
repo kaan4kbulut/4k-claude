@@ -459,3 +459,7 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:41 [degisti] 10-insan/araclar/ARAC-KAYDI.md — 1.3 — B += Tailscale, ntfy (T-044)
 2026-10-07 19:41 [degisti] 40-ic-ses/nerede-kaldik.md — 0.23 — T-044
 2026-10-07 19:41 [oturum] T-044 — kapandı — ARAC-KAYDI tazeleme ve bildirim hattı
+2026-10-07 19:41 [yeni] T-045 — talimat açıldı — haftalik skill-doctor (liste T-i)
+2026-10-07 19:41 [degisti] .claude/skills/haftalik/SKILL.md — 6. adım += skill-doctor, prompt-audit (T-045)
+2026-10-07 19:41 [degisti] 40-ic-ses/nerede-kaldik.md — 0.24 — T-045
+2026-10-07 19:41 [oturum] T-045 — kapandı — haftalik bağlam/istem denetimi

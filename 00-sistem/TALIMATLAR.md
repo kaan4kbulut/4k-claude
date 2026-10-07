@@ -498,3 +498,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: değişen: 10-insan/araclar/ARAC-KAYDI.md 1.3, nerede-kaldik 0.23
 - Kapanış notu: Ölçülenler olgu, tarama iddiaları UNCONFIRMED izleme listesinde; bildirim hattı iki satır (tailnet adı/IP/e-posta açık depoya yazılmadı). Öneri kayıtta: ASK.md yazılınca ntfy bildirimi.
+
+## T-045 — /haftalik'e bağlam ve istem denetimi (liste T-i)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin talimat listesi T-i: kullanılmayan skill'in bağlam maliyeti ve CLAUDE.md/skill'lerdeki eskimiş kalıplar haftalık ölçülsün.
+- Başarı ölçütü: haftalik SKILL.md 6. adımda `/skill-doctor` ve `/doctor prompt-audit` çıktısının brifinge girmesi (komut oturumda çalışmazsa "ölçülmedi" ve nedeni); SKILL.md ≤ 500 satır; kontrol.py --kisa → 0.
+- Sınırlar: `/doctor prompt-audit` varlığı tarama iddiası (UNCONFIRMED); `/skill-doctor` Claude Code'da mevcut. Komut çıktısındaki öneriler doğrudan uygulanmaz, /degistir ile.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (talimat listesi)
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: .claude/skills/haftalik/SKILL.md, nerede-kaldik 0.24
+- Kapanış notu: /haftalik 6. adımı skill-doctor ve prompt-audit çıktısını brifinge alır; çalışmazsa 'ölçülmedi'.

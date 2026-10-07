@@ -34,6 +34,7 @@ Hazırlık (sen önceden çıkar, sahibine okuma):
 ## 6. Metrikler (5 dk, sen yazarsın, sahibi okur)
 - Önce `python3 00-sistem/scripts/scorecard.py --yaz T-xxx`: S1–S8 dosyalardan hesaplanır, SCORECARD haftalık satırı ve Issues yazılır (aynı hafta yeniden koşarsa satır güncellenir). Hedef dışı her gösterge IDS gündemine girer.
 - Yakalanan not sayısı; 48 saatte işlenen %; basamak başına terfi; öldürülen; medyan fikir→brif gün; açık görev ve ortalama is_yasi; MALIYET.csv haftalık toplam; **flip sayacı**: senin `[konum]` değişikliklerin ve kaçının gerekçeli olduğu.
+- Bağlam ve istem sağlığı (T-045): `/skill-doctor` (kullanılmayan skill'in bağlam maliyeti) ve `/doctor prompt-audit` (CLAUDE.md ve skill'lerde eskimiş kalıp; varlığı UNCONFIRMED) çıktısının özeti brifinge girer. Komut bu oturumda çalışmazsa "ölçülmedi" ve nedenini yaz. Öneriler doğrudan uygulanmaz; değişiklik /degistir ile.
 - MOC-ic-ses "Haftalık" bölümüne tablo satırı.
 - Maliyet doğruluğu: `python3 00-sistem/scripts/maliyet.py --gunluk` (çıkış 1 = tahmin ile ccusage farkı > %5; nedenini bul). Bağlantı canlılığı: sahibine `! python3 00-sistem/scripts/canli.py` çalıştırmasını öner (ağ ister); ölü bağlantılı kaynak sayfası /degistir ile güncellenir ya da olgu UNCONFIRMED işaretlenir.
 
