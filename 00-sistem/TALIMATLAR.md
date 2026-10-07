@@ -561,6 +561,6 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Sınırlar: Salt okur; yeni bağımlılık yok; diğer ekranlar (iç ses, şirket, insan, kapı, rozetler) sonraki talimat.
 - Kat: 0
 - Kapı: cift-yonlu · onay: sahibi ("devam et")
-- Durum: acik
-- Doğurduğu dosyalar: belirlenmedi
-- Kapanış notu: belirlenmedi (/kapat)
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/scripts/masaustu-kur.sh, 00-sistem/scripts/masaustu/*.desktop (4), pano-tasarim/css/{talimatlar,gunluk,kararlar}.css (yeni); değişen: pano.py, pano.sh, test-kurulum.py, test_pano.py, DEGISIKLIKLER, nerede-kaldik 0.29
+- Kapanış notu: Üç ekran ve menü kurulumu hazır. Sahibinin isteği (menüde görmek) üzerine kapsam masaüstü kurulumunu da aldı. Açık: masaustu-kur.sh proje dışına yazdığı için sahibinin tek komutu (! ~/Work/4k-claude/00-sistem/scripts/masaustu-kur.sh); ekranlar gözle görülmedi (sandbox).

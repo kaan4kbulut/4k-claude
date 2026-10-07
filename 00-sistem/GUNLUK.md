@@ -500,3 +500,8 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 19:57 [degisti] 00-sistem/scripts/pano.sh — omarchy-launch-webapp penceresi (T-050)
 2026-10-07 19:57 [degisti] 00-sistem/scripts/test-kurulum.py — pano: kopyanın pano.sh'ı (T-050)
 2026-10-07 19:57 [yeni] 00-sistem/scripts/pano-tasarim/css — + talimatlar, gunluk, kararlar CSS (T-050)
+2026-10-07 19:57 [hata] 00-sistem/scripts/push.sh — otomatik push başarısız: Done
+2026-10-07 20:01 [degisti] 00-sistem/scripts/pano.py — Talimatlar, Günlük, Kararlar ekranları (T-050)
+2026-10-07 20:01 [degisti] 00-sistem/testler/test_pano.py — ayrıştırıcıyla HTML güvenlik denetimi; yeni ekran testleri (T-050)
+2026-10-07 20:01 [degisti] 40-ic-ses/nerede-kaldik.md — 0.29 — T-050
+2026-10-07 20:01 [oturum] T-050 — kapandı — pano ikinci aşama ve menü kurulumu

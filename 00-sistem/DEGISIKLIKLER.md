@@ -4,6 +4,7 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 
 ## [Unreleased]
 ### Eklendi
+- `pano.py` ikinci aşama (T-050): Talimatlar (tüm talimatlar, çapa bağlantılı; son talimatın günlüğü), Günlük (tür ve gün sayımları, son 400 satır, hata/durdu yan paneli), Kararlar (dizin, normlar, karar kartları + seçenek tabloları, imza matrisi). Ray 30 → Kararlar; durum çubuğu ve Sağlık düğmeleri bağlı. `test_pano`: HTML güvenlik denetimi ayrıştırıcıyla (düz metindeki URL/"style=" yanlış pozitif vermez), yeni ekranlar kaynakla eşleşir.
 - `masaustu-kur.sh` + `scripts/masaustu/*.desktop` (T-050): tek komutla `~/.local/bin` bağları (4k-claude, 4k-pano, 4k-claude-test) ve menü girdileri (4K Claude, 4K Claude Pano, 4K Claude Test, 4K Claude Test Pano); test kopyası yoksa ilk kurulum. `pano.sh` panoyu `omarchy-launch-webapp` uygulama penceresinde açar; test kopyasının panosu kopyanın kendi pano.sh'ı ile.
 - `20-sirket/gorevler/PANO.base` (T-046): Obsidian Bases görev panosu (kanban + tablo, `kanban` alanına göre). `kontrol.py` 17. denetim: kartın `kanban` değeri son commit'e göre değiştiyse GUNLUK'te o karta yeni satır zorunlu (pano sürüklemesi kayıtsız kalmaz). SEMA §11 0.5. Testler `test_kanban_kaydi.py` (2).
 - `model-bekcisi.py` (T-040): PreModelSwitch'te Fable/Opus'a geçiş `ask` (MODEL-POLITIKASI), Sonnet/Haiku serbest; Pre (sorulan) ve Post (gerçekleşen, nedenle) GUNLUK `[ayar]`. settings.json'a kayıt; ayar-denetimi ZORUNLU_HOOKLAR += PreModelSwitch. Testler `test_model_bekcisi.py` (5).

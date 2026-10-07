@@ -4,11 +4,13 @@ import os
 import re
 import sys
 import unittest
+from html.parser import HTMLParser
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ortak import betik, kopya_olustur, oku, yaz  # noqa: E402
 
 CIKTI = "00-sistem/.kosu/pano"
+EKRANLAR = ("pano.html", "saglik.html", "talimatlar.html", "gunluk.html", "kararlar.html")
 
 
 class Pano(unittest.TestCase):
@@ -29,8 +31,41 @@ class Pano(unittest.TestCase):
             self.assertTrue(os.path.isfile(os.path.join(self.kok, CIKTI, ad)), ad)
 
     def test_betik_stil_ag_yok(self):
-        for h in self.uret():
-            self.assertIsNone(re.search(r"<script|style=|https?:", h, re.I))
+        # Ayrıştırıcıyla: gerçek <script>/<style> etiketi, style ya da on* özniteliği, http(s) kaynağı (src/href) yok.
+        # Düz metindeki "style=" ya da URL (ör. talimat metni) kaçışlanmış içeriktir, kaynak değildir (T-050).
+        class Denetci(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.ihlal = []
+
+            def handle_starttag(self, etiket, oz):
+                if etiket in ("script", "style", "iframe"):
+                    self.ihlal.append(etiket)
+                for ad, deger in oz:
+                    if ad == "style" or ad.startswith("on"):
+                        self.ihlal.append(f"{etiket}[{ad}]")
+                    if ad in ("src", "href") and re.match(r"\s*(https?:|//)", deger or "", re.I):
+                        self.ihlal.append(f"{etiket}[{ad}={deger}]")
+
+        self.uret()
+        for ad in EKRANLAR:
+            d = Denetci()
+            d.feed(oku(self.kok, f"{CIKTI}/{ad}"))
+            self.assertEqual(d.ihlal, [], ad)
+
+    def test_yeni_ekranlar_kaynakla_ayni(self):
+        self.uret()
+        tal = oku(self.kok, "00-sistem/TALIMATLAR.md")
+        idler = re.findall(r"(?m)^## (T-\d+) — ", tal)
+        t = oku(self.kok, f"{CIKTI}/talimatlar.html")
+        self.assertEqual(t.count('class="card" id="T-'), len(idler))
+        self.assertIn(f'id="{idler[-1]}"', t)
+        satir = [s for s in oku(self.kok, "00-sistem/GUNLUK.md").splitlines()
+                 if re.match(r"\d{4}-\d\d-\d\d \d\d:\d\d \[\w+\] \S+", s)]
+        self.assertIn(f"· {len(satir)} satır", oku(self.kok, f"{CIKTI}/gunluk.html"))
+        k = oku(self.kok, f"{CIKTI}/kararlar.html")
+        for no in re.findall(r"(?m)^- (K-\d+) · ", oku(self.kok, "00-sistem/KARARLAR.md")):
+            self.assertIn(f'id="{no}"', k)
 
     def test_ilerleme_alanlari_panoda(self):
         il = oku(self.kok, "00-sistem/ILERLEME.md")
@@ -77,7 +112,7 @@ class Pano(unittest.TestCase):
         self.uret()
         fark = [y for y in yc.iz_farki(once, yc.dosya_izi(self.kok)) if not y.startswith(CIKTI + "/")]
         self.assertEqual(fark, [])
-        self.assertEqual(sorted(os.listdir(os.path.join(self.kok, CIKTI))), ["css", "pano.html", "saglik.html"])
+        self.assertEqual(sorted(os.listdir(os.path.join(self.kok, CIKTI))), ["css", *sorted(EKRANLAR)])
 
     def test_arguman_reddedilir(self):
         kod, _ = betik(self.kok, "pano.py", "--yaz")

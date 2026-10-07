@@ -28,7 +28,7 @@ BETIK = os.path.join(KOK, "00-sistem", "scripts")
 CIKTI = os.path.join(KOK, "00-sistem", ".kosu", "pano")
 CSS = os.path.join(BETIK, "pano-tasarim", "css")
 KATLAR = [  # (no, ad, klasör, ekran)
-    ("40", "İç ses", "40-ic-ses", None), ("30", "Devlet", "30-devlet", None), ("20", "Şirket", "20-sirket", None),
+    ("40", "İç ses", "40-ic-ses", None), ("30", "Devlet", "30-devlet", "kararlar.html"), ("20", "Şirket", "20-sirket", None),
     ("10", "İnsan", "10-insan", None), ("00", "Sistem", "00-sistem", "saglik.html"),
 ]
 ONAY = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>'
@@ -192,8 +192,8 @@ def durum_cubugu(v):
     nokta = "ok" if v["kontrol"]["cikis"] == 0 else "err"
     ad = '4k-claude <span class="tag unc">TEST</span>' if v["test"] else "4k-claude"
     return (f'<footer class="sbar"><span><span class="dot ok"></span>{ad} · {e(v["dal"])}</span>'
-            f'<span>{e(bas_ve_kuyruk(v["ilerleme"]["aktif_talimat"])[0])}</span>'
-            f'<span>kapı: {e(bas_ve_kuyruk(v["ilerleme"]["kapi"])[0])}</span>'
+            f'<a href="talimatlar.html">{e(bas_ve_kuyruk(v["ilerleme"]["aktif_talimat"])[0])}</a>'
+            f'<a href="kararlar.html">kapı: {e(bas_ve_kuyruk(v["ilerleme"]["kapi"])[0])}</a>'
             f'<span>açık soru: {e(bas_ve_kuyruk(v["ilerleme"]["acik_soru"])[0])}</span>'
             f'<a href="saglik.html"><span class="dot {nokta}"></span>bütünlük · {v["kontrol"]["sayfa"]} sayfa</a>'
             f'<span>WIP {v["wip"]}</span><span>gelen {v["gelen"]}</span>'
@@ -311,8 +311,7 @@ def saglik(v):
     harita = len(re.findall(r"^- \[\[", oku("00-sistem/HARITA.md"), re.M))
     claude_md = len(oku("CLAUDE.md").splitlines())
     L = ['<aside class="list" aria-label="Sistem">',
-         '<div class="hd"><span class="btn gh">talimatlar</span><span class="btn gh">günlük</span>'
-         '<a class="btn on" href="saglik.html" aria-current="page">sağlık</a></div>', '<div class="scr">',
+         ust_dugmeler("saglik.html"), '<div class="scr">',
          f'<div class="sec"><div class="r"><h2 class="cap gr">Harita</h2><span class="sm mu">{harita}/200</span></div>'
          f'<progress value="{harita}" max="200"></progress>']
     for no, ad, klasor, _ in KATLAR:
@@ -409,6 +408,160 @@ def saglik(v):
     return sayfa("Sağlık", "saglik", "\n".join(L + S + D), v, "saglik.css")
 
 
+# ---------- Talimatlar, Günlük, Kararlar (T-050) ----------
+
+ALANLAR = ("Niyet", "Başarı ölçütü", "Sınırlar", "Doğurduğu dosyalar", "Kapanış notu")
+GUNLUK_SATIR = re.compile(r"^(\d{4}-\d\d-\d\d) (\d\d:\d\d) \[(\w+)\] (\S+)(?:\s+(?:— )?(.*))?$")
+BD = {"acik": "run", "bekliyor": "wait", "kapali": "off", "kabul": "ok", "aktif": "ok", "onerildi": "wait",
+      "yeni": "src", "degisti": "run", "oturum": "ok", "ayar": "unc", "karar": "ok", "hata": "err", "kapi": "wait",
+      "durdu": "err", "arsiv": "off", "uyku": "rem"}
+
+
+def talimat_ayrintisi():
+    s = oku("00-sistem/TALIMATLAR.md")
+    t = []
+    for m in re.finditer(r"^## (T-\d+) — (.*?)\n(.*?)(?=^## |\Z)", s, re.M | re.S):
+        g, d = m.group(3), {"id": m.group(1), "baslik": m.group(2).strip()}
+        for ad in ("Tarih", "Durum", "Kat", "Kapı") + ALANLAR:
+            a = re.search(rf"^- {ad}:\s*(.*)$", g, re.M)
+            d[ad] = a.group(1).strip() if a else ""
+        t.append(d)
+    return t
+
+
+def gunluk_satirlari():
+    return [m.groups() for m in (GUNLUK_SATIR.match(s) for s in oku("00-sistem/GUNLUK.md").splitlines()) if m]
+
+
+def ust_dugmeler(aktif):
+    s = []
+    for ad, dosya in (("Talimatlar", "talimatlar.html"), ("Günlük", "gunluk.html"), ("Sağlık", "saglik.html")):
+        on = ' aria-current="page"' if dosya == aktif else ""
+        s.append(f'<a class="btn {"on" if on else "gh"}" href="{dosya}"{on}>{ad}</a>')
+    return '<div class="hd">' + "".join(s) + "</div>"
+
+
+def talimatlar_ekrani(v):
+    t, gl = talimat_ayrintisi(), v["gunluk"]
+    acik = sum(1 for x in t if x["Durum"] in ("acik", "bekliyor"))
+    L = ['<aside class="list" aria-label="Talimat defteri">', ust_dugmeler("talimatlar.html"), '<div class="scr">',
+         f'<div class="sec"><h2 class="cap">Talimat defteri · {len(t)} · açık {acik}</h2></div>']
+    for x in reversed(t):
+        L.append(f'<a class="row tl" href="#{x["id"]}"><span class="gr c0"><span class="b el">{e(x["id"])} '
+                 f'{e(x["baslik"])}</span><span class="sm mu">{e(x["Durum"])} · kat {e(x["Kat"])} · '
+                 f'{e(x["Kapı"].split(" ")[0])} · {e(x["Tarih"])}</span></span></a>')
+    L.append("</div></aside>")
+    S = ['<main class="stage">', f'<div class="hd"><h1 class="t gr">Talimatlar</h1><span class="sm mu">'
+         f'00-sistem/TALIMATLAR.md · {len(t)} talimat</span></div>', '<div class="scr pad c">']
+    for x in reversed(t):
+        S.append(f'<section class="card" id="{e(x["id"])}" aria-label="{e(x["id"])}"><div class="sec"><div class="r">'
+                 f'<h2 class="cap el">{e(x["id"])} · {e(x["baslik"])}</h2><span class="bd {BD.get(x["Durum"], "unc")}">'
+                 f'{e(x["Durum"] or "?")}</span></div><p class="sm mu">kat {e(x["Kat"])} · {e(x["Kapı"])} · '
+                 f'{e(x["Tarih"])}</p></div>')
+        for ad in ALANLAR:
+            if x[ad]:
+                S.append(f'<div class="sec"><h3 class="cap">{e(ad)}</h3><p>{e(sade(x[ad]))}</p></div>')
+        S.append("</section>")
+    S.append("</div></main>")
+    son = t[-1]["id"] if t else ""
+    kendi = [g for g in gl if son and re.search(rf"\b{son}\b", g[3] + " " + (g[4] or ""))]
+    D = ['<aside class="side" aria-label="Son talimatın günlüğü">',
+         f'<div class="hd"><h2 class="cap gr">{e(son)} günlüğü · {len(kendi)}</h2></div>', '<div class="scr">']
+    for g in kendi[-30:]:
+        D.append(f'<div class="ev"><span class="mu">{e(g[1])}</span><span class="c0"><span>{e(g[3])} — '
+                 f'{e(g[4] or "")}</span><span class="sm mu">[{e(g[2])}]</span></span></div>')
+    D.append("</div></aside>")
+    return sayfa("Talimatlar", "talimatlar", "\n".join(L + S + D), v, "talimatlar.css")
+
+
+def gunluk_ekrani(v, sinir=400):
+    gl = v["gunluk"]
+    turler = Counter(g[2] for g in gl)
+    gunler = Counter(g[0] for g in gl)
+    L = ['<aside class="list" aria-label="Günlük özeti">', ust_dugmeler("gunluk.html"), '<div class="scr">',
+         f'<div class="sec"><h2 class="cap">Tür · {len(gl)} satır</h2></div>']
+    for tur, n in turler.most_common():
+        L.append(f'<div class="row tl"><span class="gr"><span class="bd {BD.get(tur, "unc")}">{e(tur)}</span></span>'
+                 f'<span class="mu">{n}</span></div>')
+    L.append('<div class="sec"><h2 class="cap">Gün</h2>' + "".join(
+        f'<div class="r"><span class="gr">{e(gun)}</span><span class="mu">{n}</span></div>'
+        for gun, n in sorted(gunler.items(), reverse=True)) + "</div></div></aside>")
+    S = ['<main class="stage">', f'<div class="hd"><h1 class="t gr">Günlük</h1><span class="sm mu">00-sistem/GUNLUK.md · '
+         f'{len(gl)} satır (son {min(sinir, len(gl))})</span></div>', '<div class="scr">']
+    onceki = None
+    for g in reversed(gl[-sinir:]):
+        if g[0] != onceki:
+            S.append(f'<div class="dy"><h2 class="cap">{e(g[0])} · {gunler[g[0]]} satır</h2></div>')
+            onceki = g[0]
+        S.append(f'<div class="gl"><span class="mu">{e(g[1])}</span><span class="bd {BD.get(g[2], "unc")}">{e(g[2])}'
+                 f'</span><span class="b br el">{e(g[3])}</span><span class="el">{e(g[4] or "")}</span></div>')
+    S.append("</div></main>")
+    sorun = [g for g in gl if g[2] in ("hata", "durdu")]
+    D = ['<aside class="side" aria-label="Hata ve durdu">',
+         f'<div class="hd"><h2 class="cap gr">Hata ve durdu · {len(sorun)}</h2></div>', '<div class="scr">']
+    for g in reversed(sorun[-25:]):
+        D.append(f'<div class="ev d"><span class="mu">{e(g[0])} {e(g[1])}</span><span class="c0"><span>{e(g[3])} — '
+                 f'{e((g[4] or "")[:220])}</span><span class="sm mu">[{e(g[2])}]</span></span></div>')
+    D.append("</div></aside>")
+    return sayfa("Günlük", "gunluk", "\n".join(L + S + D), v, "gunluk.css")
+
+
+def md_tablo(metin):
+    """İlk markdown tablosu → (başlıklar, satırlar)."""
+    satir = [s for s in metin.splitlines() if s.strip().startswith("|")]
+    if len(satir) < 2:
+        return [], []
+    hucre = [[sade(c) for c in s.strip().strip("|").split("|")] for s in satir]
+    return hucre[0], [h for h in hucre[2:] if len(h) == len(hucre[0])]
+
+
+def kararlar_ekrani(v):
+    dizin = re.findall(r"^- (\S+) · (\S+) · (\S+) · (.*?)(?: · (\S+))?$", oku("00-sistem/KARARLAR.md"), re.M)
+    kararlar = sorted(((y, fm, g) for y, fm, g in v["sayfalar"] if fm.get("tur") == "karar"), key=lambda x: x[0])
+    normlar = [(y, fm) for y, fm, _ in v["sayfalar"] if fm.get("tur") in ("anayasa", "kural", "yonerge")
+               or y.endswith(("IMZA-MATRISI.md", "MODEL-POLITIKASI.md", "HAKEM-KURALLARI.md"))]
+    L = ['<aside class="list" aria-label="Kararlar dizini ve normlar">', '<div class="scr">',
+         f'<div class="sec"><h2 class="cap">Kararlar dizini · {len(dizin)}</h2></div>']
+    for no, tarih, durum, baslik, kapi in reversed(dizin):
+        hedef = f' href="#{no}"' if no.startswith("K-") else ""
+        L.append(f'<a class="row"{hedef}><span class="gr c0"><span class="el"><span class="b br">{e(no)}</span> '
+                 f'{e(sade(baslik))}</span><span class="r sm"><span class="bd {BD.get(durum, "unc")}">{e(durum)}</span>'
+                 f'<span class="mu">{e(kapi or "")} · {e(tarih)}</span></span></span></a>')
+    L.append(f'<div class="sec"><h2 class="cap">Normlar · {len(normlar)}</h2>' + "".join(
+        f'<div class="r"><span class="gr">{e(kimlik(y))}</span><span class="sm mu">{e(fm.get("durum", ""))} · '
+        f'{e(fm.get("surum", ""))}</span></div>' for y, fm in sorted(normlar)) + "</div></div></aside>")
+    S = ['<main class="stage">', f'<div class="hd"><h1 class="t gr">Kararlar</h1><span class="sm mu">30-devlet/kararlar · '
+         f'{len(kararlar)} karar</span></div>', '<div class="scr pad c">']
+    for y, fm, g in reversed(kararlar):
+        k = kimlik(y)
+        karar = re.search(r"^### Karar\n(.*?)(?=^### |\Z)", g, re.M | re.S)
+        ilk = sade(karar.group(1).strip().split("\n")[0]) if karar else sade(fm.get("amac", ""))
+        S.append(f'<section class="card" id="{e(k)}" aria-label="{e(k)}"><div class="sec"><div class="r"><h2 class="cap el">'
+                 f'{e(k)} · {e(sade(re.sub(r"^# ", "", g.splitlines()[0] if g else "")))}</h2><span class="bd '
+                 f'{BD.get(fm.get("durum"), "unc")}">{e(fm.get("durum", ""))}</span></div><p class="q">{e(ilk)}</p>'
+                 f'<dl class="kv"><dt>kapı</dt><dd>{e(fm.get("kapi", ""))}</dd><dt>karar veren</dt>'
+                 f'<dd>{e(fm.get("karar_veren", ""))}</dd><dt>danışılan</dt><dd>{e(", ".join(fm.get("danisilan") or []))}</dd>'
+                 f'<dt>kabul</dt><dd>{e(fm.get("olusturma", ""))} · {e(fm.get("talimat", ""))}</dd></dl></div>')
+        sec = re.search(r"^### Seçenekler\n(.*?)(?=^### |\Z)", g, re.M | re.S)
+        bas, satirlar = md_tablo(sec.group(1)) if sec else ([], [])
+        if bas:
+            S.append('<div class="ox"><table class="tb"><thead><tr>' + "".join(f'<th scope="col">{e(h)}</th>' for h in bas)
+                     + "</tr></thead><tbody>" + "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in r) + "</tr>"
+                                                         for r in satirlar) + "</tbody></table></div>")
+        S.append("</section>")
+    S.append("</div></main>")
+    im = oku("30-devlet/normlar/IMZA-MATRISI.md")
+    D = ['<aside class="side" aria-label="İmza matrisi">', '<div class="hd"><h2 class="cap gr">İmza matrisi</h2></div>',
+         '<div class="scr">']
+    for harf, baslik in (("A", "Sahibi bizzat"), ("B", "Orkestratör (Başkan a.)"), ("C", "Rol ajanı")):
+        satir = re.findall(rf"^\| ({harf}\d+) \| (.*?) \|", im, re.M)
+        if satir:
+            D.append(f'<div class="sec"><h3 class="cap gr">{harf} · {e(baslik)}</h3><dl class="im">' + "".join(
+                f"<dt>{e(n)}</dt><dd>{e(sade(a))}</dd>" for n, a in satir) + "</dl></div>")
+    D.append("</div></aside>")
+    return sayfa("Kararlar", "kararlar", "\n".join(L + S + D), v, "kararlar.css")
+
+
 def main():
     if len(sys.argv) > 1:
         print("pano.py argüman almaz. Çıktı: 00-sistem/.kosu/pano/", file=sys.stderr)
@@ -427,9 +580,11 @@ def main():
          "zaman": datetime.now().strftime("%Y-%m-%d %H:%M"),
          "test": os.path.exists(os.path.join(KOK, ".test-kopyasi"))}  # test-kurulum.py işareti (T-035)
     os.makedirs(os.path.join(CIKTI, "css"), exist_ok=True)
-    for ad in ("4k-claude.css", "pano.css", "saglik.css"):
+    for ad in ("4k-claude.css", "pano.css", "saglik.css", "talimatlar.css", "gunluk.css", "kararlar.css"):
         shutil.copyfile(os.path.join(CSS, ad), os.path.join(CIKTI, "css", ad))
-    for ad, icerik in (("pano.html", pano(v)), ("saglik.html", saglik(v))):
+    v["gunluk"] = gunluk_satirlari()
+    for ad, icerik in (("pano.html", pano(v)), ("saglik.html", saglik(v)), ("talimatlar.html", talimatlar_ekrani(v)),
+                       ("gunluk.html", gunluk_ekrani(v)), ("kararlar.html", kararlar_ekrani(v))):
         with open(os.path.join(CIKTI, ad), "w", encoding="utf-8") as f:
             f.write(icerik)
     print(f"Pano üretildi: {os.path.relpath(CIKTI, KOK)}/pano.html, saglik.html · bütünlük çıkışı {v['kontrol']['cikis']}")
