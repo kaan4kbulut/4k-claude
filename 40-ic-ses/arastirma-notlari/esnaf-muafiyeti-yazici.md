@@ -3,7 +3,7 @@ id: 20261007-1047-esnaf-muafiyeti-yazici
 ad: esnaf-muafiyeti-yazici
 tur: arastirma-notu
 kat: 4
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Bu arastirma notu, G-001 notundaki esnaf muafiyeti celiskisine (uc farkli limit; makineyle uretim) Gelir Vergisi Kanunu metnine dayanan dogruluyor cevabini verir; makinenin kapsam yorumu acik soru olarak kalir.
 olusturma: 2026-10-07
@@ -51,6 +51,17 @@ Kaynak: Gelir Vergisi Kanunu (193), mevzuat.gov.tr resmi metni, erişim 2026-10-
 ### Açık soru (mali müşavir ya da GİB özelgesi için)
 1. Hobi sınıfı FDM 3D yazıcı (ör. tek nozul, masaüstü) ve kupa/tişört ısı presi GVK 9/10'daki "sanayi tipi veya seri üretim yapabilen makine ve alet" kapsamında mı? (Özelge araması sonuçsuz, 2026-10-07.)
 
+### Mali müşavire gönderilecek metin (taslak, T-030)
+Göndermek sahibinin insan noktasıdır; metin vergi görüşü değil, soru listesidir. Kopyalanıp e-posta ya da mesajla gönderilebilir:
+
+> Merhaba, evde küçük ölçekli kişiye özel ürün işi kurmayı düşünüyorum ve başlamadan önce vergi durumunu netleştirmek istiyorum. Üç sorum var:
+>
+> 1. Masaüstü (hobi sınıfı) bir FDM 3D yazıcıyla ya da bir kupa/tişört ısı presiyle evde ürettiğim ürünleri internetten satarsam, GVK 9/10'daki "sanayi tipi veya seri üretim yapabilen makine ve alet kullanmaksızın" şartını sağlar mıyım? Bu konuda bildiğiniz bir özelge ya da uygulama var mı?
+> 2. Cihaz almadan önce talebi sınamak için hazır bir baskı hizmetinden yaklaşık 10 kişiye özel ürün yaptırıp satmayı düşünüyorum. Bu satışlar vergi açısından nasıl yapılmalı (muafiyet mümkün mü, yoksa şahıs şirketi mi gerekir)?
+> 3. Bu ölçekte başlamanın yıllık asgari maliyeti nedir (muhasebe ücreti, oda kaydı, beyanname)?
+>
+> Teşekkürler.
+
 ### Fikre etkisi (delta)
 - Karşı-kanıt: muafiyet otomatik değildir; 9/6 kapsam dışı, 9/10 makine yorumuna bağlı.
 - Açık sorular: F-0001'de "kime ne satılacak" yanında ikinci soru "cihaz 9/10 kapsamında mı" (toplam 2).
@@ -69,3 +80,4 @@ Kaynak: Gelir Vergisi Kanunu (193), mevzuat.gov.tr resmi metni, erişim 2026-10-
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-07 | T-023 | Oluşturuldu (GVK 9/6 ve 9/10 metniyle) |
+| 0.2 | 2026-10-07 | T-030 | Mali müşavire gönderilecek metin (3 soru: 9/10 makine yorumu, cihazsız deneme satışı, asgari maliyet) |

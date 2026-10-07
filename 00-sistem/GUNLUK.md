@@ -343,3 +343,8 @@ ayar-denetimi.
 2026-10-07 12:12 [ayar] .claude/settings.json — allow += scorecard.py (T-029); değişmezler tamam
 2026-10-07 12:12 [degisti] 40-ic-ses/nerede-kaldik.md — 0.6 — T-029
 2026-10-07 12:12 [oturum] T-029 — kapandı — scorecard.py, ilk kayıt 2026-W41
+2026-10-07 12:13 [degisti] 40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md — 0.2 — mali müşavire gönderilecek metin
+2026-10-07 12:13 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — 0.8 — sıradaki insan noktaları
+2026-10-07 12:16 [degisti] 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md — 0.9 — tür: sahibi henüz bilmiyor, önce mali müşavir
+2026-10-07 12:16 [degisti] 40-ic-ses/nerede-kaldik.md — 0.7 — T-030
+2026-10-07 12:16 [oturum] T-030 — kapandı — mali müşavir metni hazır; tür seçimi müşavir cevabından sonra

@@ -3,7 +3,7 @@ id: 20261006-2144-yazici-isi-fikri
 ad: yazici-isi-fikri
 tur: fikir
 kat: 4
-surum: 0.7
+surum: 0.9
 durum: taslak
 amac: Bu fikir, Kaan'in gelir getiren bir is kurma istegini bir yazici satin alip onunla is yapma yoluyla cozme onerisini olgunlastirmak icin var.
 olusturma: 2026-10-06
@@ -70,6 +70,11 @@ Altı ay sonra iş battı; neden (olasılıklar Claude'un tahmini, kalibrasyon i
 - [?] Ne tür bir iş: kime, ne satılacak?
 - [?] Kullanılacak cihaz GVK 9/10'daki "sanayi tipi veya seri üretim yapabilen makine" kapsamında mı? (mali müşavir / GİB özelgesi; [[40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici]])
 
+### Sıradaki insan noktaları (T-030)
+1. Mali müşavire metni gönder: [[40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici]] — "Mali müşavire gönderilecek metin" bölümü (açık soru 3'ü ve cihazsız denemenin vergi yolunu cevaplar).
+2. Deneme türünü seç (A 3D, B1 kupa, B2 tekstil): ilgi ve fiziksel saat sahibinin; seçim gelince açık soru 1 ve 2 birlikte kapanır ve brif (M4) yazılır.
+   - Cevap (2026-10-07, sahibi): **henüz bilmiyor; önce mali müşavir cevabını görmek istiyor.** Sıra: 1 → 2.
+
 ### Kapı tipi ve istenen (M4)
 kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 
@@ -97,3 +102,5 @@ kapi: belirlenmedi · istenen: belirlenmedi · brif: yok
 | 0.5 | 2026-10-07 | T-019 | ZORLA modu: steelman (sahibi onayı bekliyor), inversion 4, pre-mortem 4 olasılıklı, [konum] (eski: hepsi belirlenmedi / pozisyon yok); merdiven 1'de kalır |
 | 0.6 | 2026-10-07 | T-022 | Steelman sahibince onaylandı; merdiven 1 → 2 (sınanmış) |
 | 0.7 | 2026-10-07 | T-023 | Karşı-kanıt ve açık soru 2 (esnaf muafiyeti, GVK 9/10); M3 koşulları sağlandı (açık soru 2, canlı kaynak, çelişki cevaplandı) → merdiven 2 → 3 (Y-001) |
+| 0.8 | 2026-10-07 | T-030 | Sıradaki insan noktaları: mali müşavir metni (esnaf notu 0.2) ve deneme türü seçimi |
+| 0.9 | 2026-10-07 | T-030 | Deneme türü: sahibi henüz bilmiyor, önce mali müşavir cevabı |

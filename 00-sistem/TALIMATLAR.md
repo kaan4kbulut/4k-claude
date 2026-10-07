@@ -333,3 +333,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/scorecard.py, 00-sistem/testler/test_scorecard.py (yeni); değişen: SCORECARD 0.2 (2026-W41), haftalik SKILL, CLAUDE.md, settings.json (allow), DEGISIKLIKLER, nerede-kaldik 0.6
 - Kapanış notu: Scorecard artık ölçülüyor; ilk kayıt 2026-W41: S1 %97 (T-001 kaydı eksik), S5 67,85 USD (bir oturum tavanı 13× aştı). S7 flip sayacı ölçülmüyor ([konum] satır türü yok).
+
+## T-030 — F-0001 açık sorularını sahibinin önüne hazır koy (eksik analizi #7)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "eksikleri tamamlayalım" talimatı. Analiz: 40 sayfanın ~6'sı iş içeriği, gerçek dünyaya çıktı yok; F-0001 M3'te iki açık soruda bekliyor ve ikisi de sahibine ait (tür/iş seçimi; mali müşavir görüşü). Dijital kısmı bitirmek: mali müşavire gönderilecek metin hazır, cihazsız denemenin vergi sorusu eklenmiş, sahibinden istenen tek karar tek soru olarak sorulmuş.
+- Başarı ölçütü: esnaf-muafiyeti notunda gönderilmeye hazır mali müşavir metni (9/10 makine sorusu + cihazsız deneme satışının vergi durumu); F-0001'de insan noktaları ve sıradaki adım; sahibine tek soru (deneme türü); kontrol.py sıfır hata.
+- Sınırlar: Metni göndermek, tür seçmek, cihaz almak sahibinin. Vergi görüşü verilmez. F-0001 merdiveni değişmez.
+- Kat: 4
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07)
+- Durum: kapali
+- Doğurduğu dosyalar: değişen: 40-ic-ses/arastirma-notlari/esnaf-muafiyeti-yazici.md (0.2), 40-ic-ses/fikirler/F-0001-yazici-isi-fikri.md (0.9), nerede-kaldik 0.7
+- Kapanış notu: Mali müşavire 3 soruluk metin hazır; F-0001'de sıradaki insan noktaları yazılı. Sahibi deneme türünü henüz bilmiyor, önce müşavir cevabını görmek istiyor. Açık: metni göndermek (sahibi).
