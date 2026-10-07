@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-035 kapandı; sıradaki: hatalar talimatı (devam istemi madde 5)
+aktif_talimat: yok — T-036 kapandı; devam istemi (genel toparlama) bitti
 kapi: yok
 acik_soru: yok
-siradaki: devam istemi (~/Work/isler/2026-10-07-genel-toparlama/devam-istemi.md) madde 5 (hatalar; ek: kapanis-kaydi.py:146 çok satırlı hata özeti + GUNLUK 265-291, ortak.py sandbox /dev/null yer tutucuları). Sahibi: test kopyasını kur (! komutu brifingde), panoyu gözle kontrol (4k-pano); mali müşavire metni gönder
+siradaki: sahibine sunulacak: ~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md (13 madde, work-09 oturumundan; sıra ve imza sahibinin). Sahibi: test kopyasını kur, panoyu gözle kontrol; /tmp/claude-1000/4k-test-* (40 klasör) temizliği; mali müşavire metni gönder
 
 ## Son kapanış
+- T-036 (2026-10-07): Hatalar: test kopyalama (sızıntı + sandbox yer tutucuları), kasa-disi-koruma yanlış pozitifleri (realpath hedefli), eski yol, ara.py yeni yol, not.py metni, çok satırlı GUNLUK kök nedeni. Kanıt: kontrol.py --test gerçek depoda → 0; yeni testler eski hook'larda FAIL (14 + 1); eski/yeni karşılaştırma 116 komut → gerçek daralma 0; ara.py --yenile → 0; kontrol.py --kisa → 0; denetci 2 tur, engelleyiciler düzeltildi.
 - T-035 (2026-10-07): Ayrı test kopyası: test-kurulum.py guncelle/geri/pano/durum; doğrulamayı geçmeyen kopya geçmez, uzak depo bağı kalırsa geçmez. Açık: ilk kurulum ve bağ sahibine. Kanıt: kontrol.py --test temiz kopyada → 0; uçtan uca guncelle (tam doğrulama) → 0; uzak bağ denetimi kapatılınca test FAIL; kontrol.py --kisa → 0; denetci: engelleyici (remote) düzeltildi.
 - T-034 (2026-10-07): pano.py ilk aşaması: Pano ve Sağlık ekranları 00-sistem/.kosu/pano'da; başlatıcı pano.sh. Açık: görsel kontrol ve ~/.local/bin bağı sahibine. Kanıt: pano.py → 0; grep script/style/http → 0; kontrol.py --test temiz kopyada → 0 (62), bozuk kopyada 6 FAIL; kontrol.py --kisa → 0; denetci: engelleyici yok.
 - T-033 (2026-10-07): Pano paketinin iki notu işlendi → 10-insan/kaynaklar/pano-tasarim-paketi (kapsam, §6, §9). Talimat benzeri içerik (izin satırı önerisi) uyulmadan kaydedildi. Kanıt: harita.py --dogrula → 0 (42); kontrol.py --kisa → 0 (44 sayfa).

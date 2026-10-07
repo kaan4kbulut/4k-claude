@@ -399,3 +399,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 00-sistem/scripts/test-kurulum.py, 00-sistem/testler/test_test_kurulum.py (yeni); değişen: pano.py (TEST işareti), test_butce_bekcisi.py (taban), CLAUDE.md, DEGISIKLIKLER, nerede-kaldik 0.13
 - Kapanış notu: Test kopyası komutu hazır ve uçtan uca doğrulandı (geçici yerde tam doğrulama → 0). Açık: ilk kurulum ve ~/.local/bin/4k-claude-test bağı proje dışı, sahibinin ! komutuyla. Yan bulgu düzeltildi: test_butce_bekcisi gerçek tavan satırından sonra düşüyordu.
+
+## T-036 — Hatalar: test kopyalama, kasa-disi-koruma yanlış pozitifleri, eski yol, ara.py, not.py metni, çok satırlı GUNLUK
+- Tarih: 2026-10-07
+- Niyet: Sahibinin devam istemi madde 5 (a-e) ve bu oturumda bulunan iki ek (f, g).
+- Başarı ölçütü: (a) ortak.py kopya_olustur hata verince geçici klasörü bırakmaz; (g) sandbox yer tutucuları (karakter aygıtı) kopyalanmaz, `kontrol.py --test` gerçek depoda koşar; (b) kasa-disi-koruma yalnız gerçek depo yolu (realpath) yazma hedefiyken engeller; tırnak içi `|` boru sayılmaz; unzip -l, sha256sum, md5sum, cmp, git ls-remote okur; && zincirleri ve for döngüleri doğru sınıflanır; her senaryoya regresyon testi; (c) ~/Downloads/4k-claude: CLAUDE.md:16, hook mesajı, test:48 güncel (tarihî kayıtlar değişmez); (d) ara.py --yenile yeni yolla, arama denenmiş; (e) CLAUDE.md not.py satırı KR-001 kabulüne uygun; (f) kapanis-kaydi.py hata özetini tek satıra indirir, GUNLUK 265-291 tek satır; kontrol.py --test ve --kisa → 0.
+- Sınırlar: Hook'ların koruma kapsamı daralmaz (gerçek depoya yazım yine reddedilir); testler zayıflatılmaz.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07: "devam edelim")
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/testler/test_kapanis_kaydi.py (yeni); değişen: .claude/hooks/kasa-disi-koruma.py, .claude/hooks/kapanis-kaydi.py, 00-sistem/testler/ortak.py, test_kasa_disi_koruma.py, CLAUDE.md, GUNLUK (11:18, 11:21), DEGISIKLIKLER, nerede-kaldik 0.14; .araclar/ayar/qmd/index.yml (git dışı, ara.py --yenile)
+- Kapanış notu: Devam isteminin beş maddesi bitti. Testler artık oturum içinden gerçek depoda koşuyor; kasa-disi-koruma'nın yanlış pozitifleri gitti, iki denetci turunun bulduğu 5 daralma kapatıldı (eskinin reddettiği yazma komutlarında daralma 0). Açık: /tmp/claude-1000/4k-test-* altında eski sızıntıdan 40 klasör (141 MB; rm hook'la yasak, sahibi); qmd 'orphaned chunks' uyarısı (qmd cleanup, sahibi).

@@ -30,7 +30,8 @@ def gunluk_yaz(kok, satir):
     yol = os.path.join(kok, "00-sistem", "GUNLUK.md")
     try:
         with open(yol, "a", encoding="utf-8") as f:
-            f.write(satir.rstrip("\n") + "\n")
+            # GUNLUK satırı tek satırdır: çok satırlı hata özeti (komut çıktısı) " · " ile birleşir (T-036)
+            f.write(" · ".join(p.strip() for p in satir.splitlines() if p.strip()) + "\n")
     except Exception:  # noqa: BLE001
         pass
 

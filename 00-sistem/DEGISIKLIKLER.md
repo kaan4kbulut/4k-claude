@@ -9,6 +9,14 @@ Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikl
 ### Değişti
 - `yscommon.py` HARIC_KLASOR += `01-gelen/ham` (T-032): gelen kutusunun özgün dış dosyaları (HTML, CSS, PNG, frontmatter'sız .md) taranmaz; okunacak hâlleri `al.py` notu olarak `01-gelen/*.md`'de durur.
 ### Düzeltildi
+- `kasa-disi-koruma.py` (T-036): yalnız gerçek depoya (realpath) dokunan parça denetlenir; adında "4k-claude" geçen dış yollar (iş klasörü, zip, URL, grep deseni) artık reddedilmez. Komut tırnağa duyarlı bölünür, `cd`/`pushd` dizini izlenir, komut içi değişkenler genişletilir, glob açılır; yorumlayıcı `-c`/`-e` betiklerinde ve heredoc/`$(…)`'da depo adı temkinle ret. OKUR += sha256sum, sha1sum, md5sum, cmp, unzip -l/-t, git ls-remote, date, printf, which. Daralma denetimi: eskinin reddettiği 22 yazma komutunun hepsi yine ret.
+- `testler/ortak.py` (T-036): kopyalama düşünce geçici klasör bırakılmaz; sandbox'ın /dev/null yer tutucuları (aygıt/fifo/soket) kopyalanmaz — `kontrol.py --test` artık oturum içinden gerçek depoda koşar.
+- `kapanis-kaydi.py` (T-036): GUNLUK satırı çok satırlı hata özetinde " · " ile tek satır; GUNLUK'teki 11:18 ve 11:21 kayıtları da tek satıra indirildi.
+- CLAUDE.md: oturum açma yolu `~/Work/4k-claude` (eski `~/Downloads/4k-claude`); not.py satırı KR-001 kabulüne göre. Hook mesajındaki eski yol da düzeltildi (T-036).
+- `kasa-disi-koruma.py` yanlış pozitifleri (T-036): komutta "4k-claude" sözcüğü geçmesi artık yetmez; yalnız gerçek depoya (realpath) dokunan ve salt okur olmayan parça reddedilir. Komut tırnağa duyarlı (shlex) bölünür, tırnak içi `|` boru sayılmaz; `cd` sonraki parçaların dizinini değiştirir; `for` döngüsü ve `&&` zincirleri parça parça sınıflanır. OKUR += sha256sum, sha1sum, md5sum, cmp, date, printf, which, `unzip -l/-t/-v/-Z`, `git ls-remote`. Hook mesajı yeni yol (`~/Work/4k-claude`). 5 yeni test.
+- `ortak.py kopya_olustur` (T-036): kopyalama düşerse geçici klasör silinir; sandbox'ın depoya bağladığı `/dev/null` yer tutucuları (karakter aygıtı) kopyalanmaz — `kontrol.py --test` artık gerçek depoda koşar (73/73).
+- `kapanis-kaydi.py gunluk_yaz` (T-036): çok satırlı hata özeti tek satıra (` · `) birleşir. Test `test_kapanis_kaydi.py` (1).
+- CLAUDE.md (T-036): eski `~/Downloads/4k-claude` yolu → `~/Work/4k-claude`; not.py satırı KR-001 kabulüne göre (sunset 2027-01-05).
 - `test_butce_bekcisi.py`: tavan satırı sayımı kopyadaki GUNLUK'te önceden var olan gerçek satırları da sayıyordu; gerçek bir tavan aşımından sonra 2 test düşüyordu. Sayım artık kurulumdaki tabana göre (T-035).
 - GUNLUK.md: 2026-10-07 17:04-17:06 kota hatası satırları (kapanis-kaydi hook'u çok satırlı hata özeti yazmıştı) tek satır kuralına getirildi (T-032).
 

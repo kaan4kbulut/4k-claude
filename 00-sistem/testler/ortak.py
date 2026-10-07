@@ -6,6 +6,7 @@ Kopyaya .git, .araclar, .venv, .obsidian ve 00-sistem/.kosu alınmaz.
 import json
 import os
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
@@ -14,11 +15,33 @@ KOK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 HARIC = {".git", ".araclar", ".venv", ".obsidian", ".kosu", "__pycache__"}
 
 
+def _alinmaz(dizin, adlar):
+    """HARIC adlar ve sıradan dosya/dizin/bağ olmayanlar: sandbox okuma yasaklı yolları depoya /dev/null
+    (karakter aygıtı) olarak bağlar; bunlar depo içeriği değildir ve okunamaz (T-036)."""
+    atla = []
+    for a in adlar:
+        if a in HARIC:
+            atla.append(a)
+            continue
+        try:
+            kip = os.lstat(os.path.join(dizin, a)).st_mode
+        except OSError:
+            atla.append(a)
+            continue
+        if not (stat.S_ISREG(kip) or stat.S_ISDIR(kip) or stat.S_ISLNK(kip)):
+            atla.append(a)
+    return atla
+
+
 def kopya_olustur():
-    """Deponun geçici kopyası; (kok, temizle) döner."""
+    """Deponun geçici kopyası; (kok, temizle) döner. Kopyalama düşerse geçici klasör bırakılmaz."""
     tmp = tempfile.mkdtemp(prefix="4k-test-")
     hedef = os.path.join(tmp, "4k-claude")
-    shutil.copytree(KOK, hedef, ignore=lambda d, adlar: [a for a in adlar if a in HARIC])
+    try:
+        shutil.copytree(KOK, hedef, ignore=_alinmaz)
+    except BaseException:
+        shutil.rmtree(tmp, ignore_errors=True)
+        raise
     return hedef, lambda: shutil.rmtree(tmp, ignore_errors=True)
 
 

@@ -45,7 +45,7 @@ class KlasorDisinda(unittest.TestCase):
     def test_yazan_bash_reddedilir(self):
         for k in (f"cd {KOK} && git commit -m x",
                   f"echo x >> {KOK}/00-sistem/GUNLUK.md",
-                  "cd ~/Downloads/4k-claude && python3 00-sistem/scripts/gunluk.py yeni T-1 x",
+                  f"cd {KOK} && python3 00-sistem/scripts/gunluk.py yeni T-1 x",
                   f"sed -i s/a/b/ {KOK}/CLAUDE.md",
                   f"git -C {KOK} push origin master",
                   f"find {KOK} -name x -delete",
@@ -68,6 +68,64 @@ class KlasorDisinda(unittest.TestCase):
                   f"ls -la {KOK} 2>/dev/null"):
             with self.subTest(komut=k):
                 self.assertEqual(bash(k), "izin")
+
+    def test_adi_4k_claude_gecen_dis_yollar_serbest(self):
+        # T-036: 7 Ekim taramasında yaşanan yanlış pozitifler; hedef gerçek depo değil
+        is_klasoru = os.path.join(DIS, "Work", "isler", "2026-10-07-4k-claude-devam")
+        for k in (f"cp /tmp/istem.txt {is_klasoru}/",
+                  f"mkdir -p {DIS}/Work/arsiv/pano && mv {DIS}/Downloads/4k-claude-pano-tasarim.zip {DIS}/Work/arsiv/pano/",
+                  f"unzip -o {DIS}/Downloads/4k-claude-pano-tasarim.zip -d /tmp/x",
+                  "git ls-remote https://github.com/kaan4kbulut/4k-claude.git",
+                  f'grep -rn -e "Downloads/4k-claude" {DIS}/.config > /tmp/sonuc.txt'):
+            with self.subTest(komut=k):
+                self.assertEqual(bash(k), "izin")
+
+    def test_tirnak_ici_boru_ayirici_degil(self):
+        self.assertEqual(bash(f'grep -rn "sudo\\|rm -rf" {KOK}/.claude/hooks'), "izin")
+        self.assertEqual(bash(f"grep 'a|b' {KOK}/CLAUDE.md | wc -l"), "izin")
+        self.assertEqual(bash(f'echo "x|y" | tee {KOK}/00-sistem/x.md'), "deny")
+
+    def test_yeni_okur_komutlar(self):
+        for k in (f"unzip -l {KOK}/x.zip", f"sha256sum {KOK}/CLAUDE.md", f"md5sum {KOK}/CLAUDE.md",
+                  f"cmp {KOK}/CLAUDE.md {KOK}/AGENTS.md", f"git -C {KOK} ls-remote origin",
+                  f"cd {KOK} && sha256sum -c /tmp/once.sha | grep -c OK"):
+            with self.subTest(komut=k):
+                self.assertEqual(bash(k), "izin")
+        self.assertEqual(bash(f"unzip -o /tmp/x.zip -d {KOK}/01-gelen"), "deny")
+
+    def test_zincir_ve_dongu(self):
+        self.assertEqual(bash(f"for f in {KOK}/CLAUDE.md {KOK}/AGENTS.md; do wc -l \"$f\"; done"), "izin")
+        self.assertEqual(bash(f"for f in a b; do touch {KOK}/$f; done"), "deny")
+        self.assertEqual(bash(f"ls {KOK} && cp /tmp/x {KOK}/x"), "deny")
+        self.assertEqual(bash(f"cd {KOK} && ls && cd /tmp && touch y"), "izin")  # yazım depo dışında
+        self.assertEqual(bash(f"cd /tmp && touch y && cd {KOK} && touch z"), "deny")
+        self.assertEqual(bash("touch $HOME/x", cwd=KOK), "deny")  # dizin depoda
+
+    def test_gomulu_komut_reddedilir(self):
+        # T-036 denetci: eski sürüm ham metni tarıyordu; tırnak içi gömülü komutlar yeni ayrıştırıcıda kaçmasın
+        for k in (f"python3 -c \"open('{KOK}/x','w')\"",
+                  f"bash -c 'touch {KOK}/x'",
+                  f'sh -c "echo a > {KOK}/x"',
+                  f"awk 'BEGIN{{system(\"touch {KOK}/x\")}}'",
+                  f'cd "$(echo {KOK})" && touch x'):
+            with self.subTest(komut=k):
+                self.assertEqual(bash(k), "deny")
+        self.assertEqual(bash(f"grep -c 'x' {KOK}-test/CLAUDE.md > /tmp/x"), "izin")  # benzer ad depo değil
+        rel = os.path.relpath(KOK, DIS)
+        for k in (f"python3 -c \"open('{rel}/x','w')\"",          # göreli, tırnak içi
+                  f"sh -c 'cd {rel} && touch x'",
+                  f"D={rel}; cd $D; touch x",                      # komut içi değişken
+                  f"export D={KOK} && touch $D/x",
+                  f"touch {os.path.dirname(KOK)}/{os.path.basename(KOK)[:4]}*/x",  # glob
+                  f"echo 'touch {KOK}/a' | bash",                    # boru ile yorumlayıcıya betik
+                  f"echo 'cd {os.path.dirname(KOK)}; touch {os.path.basename(KOK)}/a' | sh"):
+            with self.subTest(komut=k):
+                self.assertEqual(bash(k), "deny")
+
+    def test_degisken_ve_esittir_ile_yol(self):
+        rel = os.path.relpath(KOK, DIS)
+        self.assertEqual(bash(f"touch $HOME/{rel}/x", ), "deny" if os.path.expanduser("~") == DIS else "izin")
+        self.assertEqual(bash(f"python3 x.py --cikti={KOK}/x.md"), "deny")
 
     def test_bozuk_girdi_sessiz(self):
         env = dict(os.environ, CLAUDE_PROJECT_DIR=DIS, FOURK_KASA=KOK)

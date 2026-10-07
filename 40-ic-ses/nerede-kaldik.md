@@ -3,7 +3,7 @@ id: 20261006-2231-nerede-kaldik
 ad: nerede-kaldik
 tur: referans
 kat: 4
-surum: 0.13
+surum: 0.14
 durum: aktif
 amac: Son oturumun uc maddesini (konusulan, acik, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldik" deyince cevap buradadir.
 olusturma: 2026-10-06
@@ -21,12 +21,25 @@ etiketler: [oturum]
 Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart okur, /kapat yazar; sahibi "nerede kaldık" deyince cevap buradadır.
 
 ## İçerik
+### Oturum: 2026-10-07 gece — hatalar talimatı (T-036)
+**Konuşulan**
+- T-036 kapandı: kasa-disi-koruma yanlış pozitifleri (yalnız gerçek depoya yazım reddedilir, tırnak duyarlı ayrıştırma, yeni okur komutlar), ortak.py temizliği ve sandbox yer tutucuları, kapanis-kaydi tek satır, eski yol, not.py metni; testler gerçek depoda 73/73.
+- ara.py: index.yml yeni yolu gösteriyor; --yenile → 0, arama sonuç veriyor. Gömme kilidini başka bir süreç tutuyordu, kendiliğinden kalktı.
+
+**Açık**
+- GUNLUK.md çok satırlı kayıtlar (11:18, 11:21, 18:04 [hata]) tek satırda; ama bu oturumun komutu reddedilmişti, birleştirmeyi oturum dışından biri yaptı (HEAD ile birebir, kayıpsız doğrulandı). Kim yaptı: sahibine soruldu.
+- Sahibi: test kopyasını kur, panoyu gözle kontrol et; F-0001 metnini mali müşavire gönder.
+
+**Sonraki**
+- Devam istemindeki maddeler bitti; yeni talimat sahibinden.
+
 ### Oturum: 2026-10-07 akşam — devralınan işler (devam istemi, T-032..)
 **Konuşulan**
 - T-032 kapandı: pano tasarım paketi 01-gelen/ham'de (sha256 35/35 aynı, Downloads zip'i de eşit); GUNLUK'teki bölünmüş kota hatası satırları tek satıra getirildi.
 - T-033 kapandı: ISTEM/TESLIM triage → 10-insan/kaynaklar/pano-tasarim-paketi (pano kapsamı, 10 tutarsızlık, 3 açık soru).
 - T-034 kapandı: pano.py (Pano + Sağlık) ve pano.sh; testler 62/62 (temiz kopyada).
 - T-035 kapandı: test kopyası komutu (test-kurulum.py); sahibi tavan aşımında devam dedi.
+- T-036 kapandı: hatalar (koruma hook'u, test kopyalama, eski yol, ara.py, GUNLUK); devam istemi bitti.
 - Bulgu: sandbox okuma yasaklı yolları depoya /dev/null olarak bağlıyor; testler gerçek depoda copytree'de düşüyor, temiz kopyada 53/53 geçiyor.
 
 **Açık**
@@ -35,7 +48,7 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 - F-0001: mali müşavire metni göndermek; fiziksel adımlar (TTS dinleme, Obsidian + Web Clipper).
 
 **Sonraki**
-- Devam istemi 5: hatalar talimatı.
+- Sahibine sun: YZ teknoloji taraması talimat listesi (13 madde, ~/Work/isler/2026-10-07-yz-teknoloji-taramasi/4k-claude-talimatlari.md).
 
 ### Oturum: 2026-10-07 — eksik analizi ve düzeltmeler (T-024..T-031)
 **Konuşulan**
@@ -77,3 +90,5 @@ Son oturumun üç maddesini (konuşulan, açık, sonraki) tutar; SessionStart ok
 | 0.11 | 2026-10-07 | T-034 | T-034 kapanışı; bütçe uyarısıyla durma |
 | 0.12 | 2026-10-07 | T-034 | Zip arşive taşındı ve 4k-pano bağı kuruldu (sahibi); açık listeden düştü |
 | 0.13 | 2026-10-07 | T-035 | T-035 kapanışı |
+| 0.14 | 2026-10-07 | T-036 | T-036 kapanışı |
+| 0.14 | 2026-10-07 | T-036 | T-036 kapanışı; devam istemi bitti |

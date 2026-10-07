@@ -262,33 +262,8 @@ Biçim: `YYYY-MM-DD HH:MM [tur] yol — not`. Türler: yeni, degisti, arsiv, kar
 2026-10-07 10:48 [degisti] 40-ic-ses/MOC-ic-ses.md — T-023 esnaf muafiyeti; F-0001 M3
 2026-10-07 10:48 [degisti] 00-sistem/HARITA.md — T-023 esnaf muafiyeti; F-0001 M3
 2026-10-07 10:48 [oturum] T-023 — kapandı — esnaf muafiyeti çözüldü; F-0001 M3
-2026-10-07 11:18 [hata] Bash — Exit code 2
-00-sistem/scripts/:
-al.py
-ara-olcum.py
-ara.py
-bayat.py
-calistir.sh
-canli.py
-graf.py
-gunluk.py
-harita.py
-kontrol.py
-maliyet.py
-not.py
-__pycache__
-yscommon.py
-
-.claude/hooks/:
-ayar-denetimi.
-2026-10-07 11:21 [hata] Bash — Exit code 2
-{
-	"schemaVersion": "0.1.0",
-	"name": "4k-claude gelen kutusu",
-	"behavior": "create",
-	"noteNameFormat": "{{date|date:\"YYYY-MM-DD-HHmm\"}}-{{title|safe_name}}",
-	"path": "01-gelen",
-	"no
+2026-10-07 11:18 [hata] Bash — Exit code 2 · 00-sistem/scripts/: · al.py · ara-olcum.py · ara.py · bayat.py · calistir.sh · canli.py · graf.py · gunluk.py · harita.py · kontrol.py · maliyet.py · not.py · __pycache__ · yscommon.py · .claude/hooks/: · ayar-denetimi.
+2026-10-07 11:21 [hata] Bash — Exit code 2 · { · "schemaVersion": "0.1.0", · "name": "4k-claude gelen kutusu", · "behavior": "create", · "noteNameFormat": "{{date|date:\"YYYY-MM-DD-HHmm\"}}-{{title|safe_name}}", · "path": "01-gelen", · "no
 2026-10-07 11:24 [degisti] T-024 — talimat açıldı: .obsidian dar istisna + git dışı
 2026-10-07 11:25 [karar] 30-devlet/kararlar/K-005-obsidian-kasa-istisnasi.md — K-005 — .obsidian/ kural 7'ye dar istisna, git dışı (kabul, sahibinin onayı)
 2026-10-07 11:25 [yeni] 30-devlet/kararlar/K-005-obsidian-kasa-istisnasi.md — karar kaydı: Obsidian kasa istisnası
@@ -377,19 +352,9 @@ ayar-denetimi.
 2026-10-07 17:58 [degisti] 40-ic-ses/nerede-kaldik.md — 0.10 — T-033
 2026-10-07 17:58 [oturum] T-033 — kapandı — istem+teslim işlendi → pano-tasarim-paketi kaynağı
 2026-10-07 17:59 [yeni] T-034 — talimat açıldı — pano.py ilk aşaması
-2026-10-07 18:04 [hata] Bash — Exit code 2
-/usr/bin/chromium
-/usr/bin/google-chrome-stable
-/usr/bin/firefox
-timeout: izlenen komut çekirdeği dökümledi
-timeout: izlenen komut çekirdeği dökümledi
-ls: '/tmp/claude-1000/*.png' ögesine 
-2026-10-07 18:04 [hata] Bash — Exit code 2
-*** You are running in headless mode.
-Could not find profile folder.
-ls: '/tmp/claude-1000/pano.png' ögesine erişilemedi: Böyle bir dosya ya da dizin yok
-2026-10-07 18:04 [hata] Bash — Exit code 2
-ls: '/tmp/claude-1000/*.png' ögesine erişilemedi: Böyle bir dosya ya da dizin yok
+2026-10-07 18:04 [hata] Bash — Exit code 2 · /usr/bin/chromium · /usr/bin/google-chrome-stable · /usr/bin/firefox · timeout: izlenen komut çekirdeği dökümledi · timeout: izlenen komut çekirdeği dökümledi · ls: '/tmp/claude-1000/*.png' ögesine
+2026-10-07 18:04 [hata] Bash — Exit code 2 · *** You are running in headless mode. · Could not find profile folder. · ls: '/tmp/claude-1000/pano.png' ögesine erişilemedi: Böyle bir dosya ya da dizin yok
+2026-10-07 18:04 [hata] Bash — Exit code 2 · ls: '/tmp/claude-1000/*.png' ögesine erişilemedi: Böyle bir dosya ya da dizin yok
 2026-10-07 18:07 [yeni] 00-sistem/scripts/pano.py — salt okur pano: kabuk, Pano, Sağlık → .kosu/pano (T-034)
 2026-10-07 18:07 [yeni] 00-sistem/scripts/pano.sh — başlatıcı: pano üret + xdg-open (T-034)
 2026-10-07 18:07 [yeni] 00-sistem/testler/test_pano.py — pano regresyon testleri, 7 (T-034)
@@ -413,3 +378,20 @@ ls: '/tmp/claude-1000/*.png' ögesine erişilemedi: Böyle bir dosya ya da dizin
 2026-10-07 18:19 [degisti] CLAUDE.md — komutlar += test-kurulum.py (T-035)
 2026-10-07 18:21 [degisti] 40-ic-ses/nerede-kaldik.md — 0.13 — T-035
 2026-10-07 18:21 [oturum] T-035 — kapandı — test-kurulum.py; ilk kurulum sahibinin ! komutuyla
+2026-10-07 18:21 [yeni] T-036 — talimat açıldı — hatalar (devam istemi 5 + iki ek)
+2026-10-07 18:23 [ayar] ~/.claude/settings.json — user_settings değişti: +language, +statusLine.command, +statusLine.type; değişmezler tamam
+2026-10-07 18:23 [ayar] ~/.claude/settings.json — user_settings değişti: ~hooks; değişmezler tamam
+2026-10-07 18:26 [hata] izin-reddi Bash — — cd ~/Work/4k-claude && python3 - <<'EOF' import re yol="00-sistem/GUNLUK.md" sat=open(yol,encoding="utf-8").read().split("\n") bas=sat[:4]; govde=sat[4:] pat=re (sınıflandırıcısız)
+2026-10-07 18:26 [ayar] ~/.claude/settings.json — user_settings değişti: +sandbox.excludedCommands; değişmezler tamam
+2026-10-07 18:26 [hata] Bash — Exit code 2 · .araclar/qmd/node_modules/@tobilu/qmd/CHANGELOG.md · .araclar/qmd/node_modules/@tobilu/qmd/dist/cli/embed-lock.js · 14:    return join(dirname(dbPath), ".qmd-embed.lock"); · 15-} · 16-function rea
+2026-10-07 18:28 [hata] Bash — Exit code 2 · mv: '.araclar/onbellek/qmd/.qmd-embed.lock' durumlanamadı: Böyle bir dosya ya da dizin yok · cikis=1 · ugrep: warning: /tmp/claude-1000/-home-caferkaandebana-Work-4k-claude/b530ee9b-ea1c-4a5b-
+2026-10-07 18:30 [oturum] b530ee9b-ea1 — kapandı (other); tur=1 in=84 out=22685 cache_okuma=3366869 usd≈1.9532
+2026-10-07 18:33 [degisti] .claude/hooks/kasa-disi-koruma.py — realpath hedefli denetim, tırnak duyarlı ayrım, değişken/glob/gömülü betik; OKUR genişledi (T-036)
+2026-10-07 18:33 [degisti] .claude/hooks/kapanis-kaydi.py — GUNLUK satırı tek satır (T-036)
+2026-10-07 18:33 [degisti] 00-sistem/testler/ortak.py — kopya düşünce geçici klasör kalmaz; sandbox yer tutucuları atlanır (T-036)
+2026-10-07 18:33 [degisti] 00-sistem/testler/test_kasa_disi_koruma.py — yanlış pozitif ve kaçak senaryoları (T-036)
+2026-10-07 18:33 [yeni] 00-sistem/testler/test_kapanis_kaydi.py — çok satırlı hata tek satır testi (T-036)
+2026-10-07 18:33 [degisti] CLAUDE.md — oturum yolu ~/Work/4k-claude; not.py satırı KR-001 kabulüne göre (T-036)
+2026-10-07 18:33 [degisti] 00-sistem/GUNLUK.md — 11:18 ve 11:21 [hata] kayıtları tek satıra (T-036)
+2026-10-07 18:35 [degisti] 40-ic-ses/nerede-kaldik.md — 0.14 — T-036
+2026-10-07 18:35 [oturum] T-036 — kapandı — hatalar; devam istemi 1-5 bitti
