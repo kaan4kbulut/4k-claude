@@ -3,6 +3,8 @@
 Biçim: Keep a Changelog 1.1.0; sürümleme SemVer. Şema ya da kural değişikliği MINOR, şablon/betik düzeltmesi PATCH, kat yapısı değişikliği MAJOR. Bu dosya sistemin kendisini anlatır; içerik sayfalarının değişiklikleri GUNLUK.md'dedir.
 
 ## [Unreleased]
+### Eklendi
+- `pano.py` ilk aşama (T-034): salt okur HTML pano, kabuk + Pano + Sağlık ekranları, çıktı `00-sistem/.kosu/pano/`; yalnız stdlib, ağ yok, betik/stil/http yok. Tasarım CSS'i `scripts/pano-tasarim/css/` (01-gelen/ham paketinden, değiştirilmeden). Başlatıcı `pano.sh` (üretir + `xdg-open`). Testler `test_pano.py` (7).
 ### Değişti
 - `yscommon.py` HARIC_KLASOR += `01-gelen/ham` (T-032): gelen kutusunun özgün dış dosyaları (HTML, CSS, PNG, frontmatter'sız .md) taranmaz; okunacak hâlleri `al.py` notu olarak `01-gelen/*.md`'de durur.
 ### Düzeltildi

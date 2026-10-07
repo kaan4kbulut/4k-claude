@@ -3,7 +3,7 @@ id: 20261007-1756-pano-tasarim-paketi
 ad: pano-tasarim-paketi
 tur: kaynak
 kat: 1
-surum: 0.1
+surum: 0.2
 durum: aktif
 amac: Bu kaynak sayfasi, pano tasarim paketi adli dis kaynagin degismez kaydini, ozetini ve guven etiketini tutar; pano.py talimatlari buradan turer.
 olusturma: 2026-10-07
@@ -11,7 +11,7 @@ guncelleme: 2026-10-07
 yazar: okuyucu
 talimat: T-033
 dayandigi: []
-besledigi: []
+besledigi: [00-sistem/scripts/pano.py]
 ust: 10-insan/MOC-insan.md
 kaynaklar: ["01-gelen/ham/2026-10-07-pano-tasarim/ISTEM.md", "01-gelen/ham/2026-10-07-pano-tasarim/TESLIM.md", "01-gelen/2026-10-07-1659-istem.md", "01-gelen/2026-10-07-1659-teslim.md"]
 guven: orta
@@ -65,11 +65,12 @@ Not: 2-8 ve 10 pano.py'nin ayrıştırıcısı için bilgi; hata değil, bilinen
 - kisisel_veri: hayır.
 
 ### Bu kaynağı kullanan sayfalar
-(besledigi ile aynı; pano.py talimatı açılınca eklenir)
+- `00-sistem/scripts/pano.py` (T-034): kabuk, Pano, Sağlık
 
 ## Bağlar
 ### Dayandığı
 ### Beslediği
+- [[00-sistem/scripts/pano.py]] — panonun ekran yapısı ve CSS'i bu paketten
 ### Gelen
 - ← [[10-insan/MOC-insan]] — eller katının kaynak listesi
 
@@ -77,3 +78,4 @@ Not: 2-8 ve 10 pano.py'nin ayrıştırıcısı için bilgi; hata değil, bilinen
 | Sürüm | Tarih | Talimat | Değişiklik |
 | --- | --- | --- | --- |
 | 0.1 | 2026-10-07 | T-033 | Oluşturuldu (okuyucu triage'ı) |
+| 0.2 | 2026-10-07 | T-034 | besledigi += pano.py (eski: boş) |

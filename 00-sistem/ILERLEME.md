@@ -2,12 +2,13 @@
 
 Bu dosya "kesintiyi varsay" ilkesinin karşılığıdır. Her oturum SessionStart hook'u ile bunu okur; /kapat ve PreCompact hook'u bunu yazar. Son kapanan talimat burada adıyla geçmezse kontrol.py hata verir (16. denetim, T-025).
 
-aktif_talimat: yok — T-033 kapandı; sıradaki: pano.py ilk aşaması
+aktif_talimat: yok — T-034 kapandı; oturum bütçe uyarısıyla (%80) durdu
 kapi: yok
 acik_soru: yok
-siradaki: devam istemi (~/Work/isler/2026-10-07-genel-toparlama/devam-istemi.md) 3-5: pano.py, test kurulumu, hatalar. Sahibi: zip'i arşive taşı; mali müşavire metni gönder (esnaf-muafiyeti notu); oturumları 4k-claude ile aç. Açık öneriler: 4k-core bağı (izinle), S7 flip ölçümü, orkestratör tavanı/modeli (A5)
+siradaki: devam istemi (~/Work/isler/2026-10-07-genel-toparlama/devam-istemi.md) madde 4 (test kurulumu) ve 5 (hatalar; ek: kapanis-kaydi.py:146 çok satırlı hata özeti + GUNLUK 265-291, ortak.py sandbox /dev/null yer tutucuları). Sahibi: zip'i arşive taşı, 4k-pano bağı, panoyu gözle kontrol; mali müşavire metni gönder
 
 ## Son kapanış
+- T-034 (2026-10-07): pano.py ilk aşaması: Pano ve Sağlık ekranları 00-sistem/.kosu/pano'da; başlatıcı pano.sh. Açık: görsel kontrol ve ~/.local/bin bağı sahibine. Kanıt: pano.py → 0; grep script/style/http → 0; kontrol.py --test temiz kopyada → 0 (62), bozuk kopyada 6 FAIL; kontrol.py --kisa → 0; denetci: engelleyici yok.
 - T-033 (2026-10-07): Pano paketinin iki notu işlendi → 10-insan/kaynaklar/pano-tasarim-paketi (kapsam, §6, §9). Talimat benzeri içerik (izin satırı önerisi) uyulmadan kaydedildi. Kanıt: harita.py --dogrula → 0 (42); kontrol.py --kisa → 0 (44 sayfa).
 - T-032 (2026-10-07): Pano tasarım paketi 01-gelen/ham'de, içerik aynı; ham dosyalar kontrol.py taramasından hariç. Açık: ~/Downloads zip'ini arşive taşımak (proje dışı, sahibi). Kanıt: sha256sum -c → 35/35 OK; zip içeriği 35/35 OK; kontrol.py --test gerçek depoda → 1 (40 hata: sandbox /dev/null yer tutucuları copytree'yi bozuyor), git ls-files kopyasında → 0 (53); kontrol.py --kisa → 0.
 - T-031 (2026-10-07): Klasör dışında açılan oturum artık 4k-claude'a yazamaz (okuma serbest); oturumlar 4k-claude ile açılır. Kurulum bu commit'ten sonra yapıldı; canlı doğrulama brifingde. Kanıt: kontrol.py --test → 0 (53); kontrol.py --kisa → 0.

@@ -377,3 +377,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 10-insan/kaynaklar/pano-tasarim-paketi.md (yeni); değişen: 01-gelen/2026-10-07-1659-{istem,teslim}.md (islendi), 10-insan/MOC-insan.md 0.2, HARITA, nerede-kaldik 0.10
 - Kapanış notu: İki not okuyucuyla işlendi; pano kapsamı, §6 (10 tutarsızlık) ve §9 (3 soru) kaynak sayfasında. İkisinde de talimat benzeri içerik var (settings.json izin satırı önerisi), uyulmadı. GUNLUK 265-291'de iki çok satırlı [hata] kaydı daha bulundu (hatalar talimatına).
+
+## T-034 — pano.py ilk aşaması: kabuk, Pano ve Sağlık ekranları
+- Tarih: 2026-10-07
+- Niyet: Sahibinin devam istemi madde 3. Sistemin durumunu sahibine tek sayfada gösteren salt okur pano; tasarım [[10-insan/kaynaklar/pano-tasarim-paketi]] (01-gelen/ham/2026-10-07-pano-tasarim). Sahibi tek komutla açar.
+- Başarı ölçütü: `python3 00-sistem/scripts/pano.py` (argümansız, yalnız stdlib, ağ yok) `00-sistem/.kosu/pano/` altında pano.html ve saglik.html üretir, çıkış 0; Pano'daki 4 alan ILERLEME.md ile, 3 blok nerede-kaldik.md ile aynı; Sağlık özet satırı kontrol.py çıktısıyla aynı (kontrol.py ve bayat.py `--json`, frontmatter yscommon); üretilen HTML'de satır içi betik, `style=` ve http(s) kaynağı yok (grep); `.kosu` git status'ta görünmez; testleri `kontrol.py --test` içinde; başlatıcı `00-sistem/scripts/pano.sh` (üretir + tarayıcıda açar); kontrol.py --kisa → 0.
+- Sınırlar: Diğer ekranlar sonraki talimatlarda. Var olan betiklerin davranışı değişmez, proje dışına yazılmaz (~/.local/bin bağı sahibine kalır, komutu brifingde), yeni bağımlılık yok. settings.json allow satırı gerekirse sahibine sorulur, kendiliğinden eklenmez.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07: "devam istemi dosyasını uygula")
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/scripts/pano.py, pano.sh, pano-tasarim/css/{4k-claude,pano,saglik}.css, 00-sistem/testler/test_pano.py (yeni); değişen: CLAUDE.md (komutlar), DEGISIKLIKLER, 10-insan/kaynaklar/pano-tasarim-paketi.md 0.2, nerede-kaldik 0.11
+- Kapanış notu: Pano ve Sağlık ekranları üretiliyor, ölçütlerin hepsi grep/test ile tutuyor; settings.json allow satırı gerekmedi. Açık: görsel kontrol (sandbox'ta tarayıcı çalışmadı) ve ~/.local/bin/4k-pano bağı sahibine; §9 sorusu 1 (fiziksel adımların tek kaynağı) açık, pano şimdilik 'insan noktaları' başlıklı bölümleri okuyor.

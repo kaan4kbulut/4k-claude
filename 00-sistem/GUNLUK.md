@@ -376,3 +376,25 @@ ayar-denetimi.
 2026-10-07 17:57 [uyku] triage — 2 işlendi, 0 arşiv — istem+teslim → 10-insan/kaynaklar/pano-tasarim-paketi (T-033); talimat benzeri içerik: evet (izin satırı önerisi, uyulmadı)
 2026-10-07 17:58 [degisti] 40-ic-ses/nerede-kaldik.md — 0.10 — T-033
 2026-10-07 17:58 [oturum] T-033 — kapandı — istem+teslim işlendi → pano-tasarim-paketi kaynağı
+2026-10-07 17:59 [yeni] T-034 — talimat açıldı — pano.py ilk aşaması
+2026-10-07 18:04 [hata] Bash — Exit code 2
+/usr/bin/chromium
+/usr/bin/google-chrome-stable
+/usr/bin/firefox
+timeout: izlenen komut çekirdeği dökümledi
+timeout: izlenen komut çekirdeği dökümledi
+ls: '/tmp/claude-1000/*.png' ögesine 
+2026-10-07 18:04 [hata] Bash — Exit code 2
+*** You are running in headless mode.
+Could not find profile folder.
+ls: '/tmp/claude-1000/pano.png' ögesine erişilemedi: Böyle bir dosya ya da dizin yok
+2026-10-07 18:04 [hata] Bash — Exit code 2
+ls: '/tmp/claude-1000/*.png' ögesine erişilemedi: Böyle bir dosya ya da dizin yok
+2026-10-07 18:07 [yeni] 00-sistem/scripts/pano.py — salt okur pano: kabuk, Pano, Sağlık → .kosu/pano (T-034)
+2026-10-07 18:07 [yeni] 00-sistem/scripts/pano.sh — başlatıcı: pano üret + xdg-open (T-034)
+2026-10-07 18:07 [yeni] 00-sistem/testler/test_pano.py — pano regresyon testleri, 7 (T-034)
+2026-10-07 18:07 [yeni] 00-sistem/scripts/pano-tasarim/css — tasarım CSS'i (4k-claude, pano, saglik) 01-gelen/ham'den değiştirilmeden (T-034)
+2026-10-07 18:07 [degisti] CLAUDE.md — komutlar += pano.py (T-034)
+2026-10-07 18:07 [degisti] 10-insan/kaynaklar/pano-tasarim-paketi.md — 0.2 — besledigi += pano.py
+2026-10-07 18:08 [degisti] 40-ic-ses/nerede-kaldik.md — 0.11 — T-034
+2026-10-07 18:08 [oturum] T-034 — kapandı — pano.py Pano+Sağlık, pano.sh; 62 test; bütçe %80 uyarısı: madde 4-5 sonraki oturuma

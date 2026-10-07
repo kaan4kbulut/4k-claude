@@ -63,6 +63,7 @@ KAYIT (TALIMATLAR.md'ye T-xxx) → AMAÇ + KAT → YER + AD → ŞABLON → BAĞ
 - `python3 00-sistem/scripts/maliyet.py` MALIYET.csv ↔ ccusage mutabakatı · `python3 00-sistem/scripts/canli.py` web bağlantı canlılığı (ağ ister)
 - `python3 00-sistem/scripts/not.py <gozlem|fikir> "<başlık>" "<metin>"` hafif yol (KR-001; kural kabul edilene kadar kilitli)
 - `python3 00-sistem/scripts/graf.py` bağ grafı: kopuk küme, yetim, merkez, sınır aşan bağ; HTML `00-sistem/.kosu/graf/` (LLM yok)
+- `python3 00-sistem/scripts/pano.py` salt okur pano (Pano, Sağlık) → `00-sistem/.kosu/pano/`; sahibi `00-sistem/scripts/pano.sh` ile üretip açar
 - `/yeni-parca` · `/degistir` · `/kapat` · `/brifing` · `/kapi` · `/karar` · `/uyku` · `/alan-paketi` · `/haftalik` · `/inbox-triage`
 
 ## Compact instructions
