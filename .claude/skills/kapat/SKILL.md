@@ -17,7 +17,7 @@ Aktif talimat: `$0` (boşsa ILERLEME.md'deki `aktif_talimat`).
 
 ## 1. Kanıt topla
 - Bu oturumda değişen dosyalar: `git status --short`, `git diff --stat`.
-- Çalıştırılan kontroller: kontrol.py çıkışı; görev kartı varsa `kabul_olcutleri`ndeki kanıt komutlarını tek tek çalıştır ve çıkış kodlarını yaz.
+- Çalıştırılan kontroller: kontrol.py çıkışı; hook, betik ya da ayar değiştiyse `kontrol.py --test` çıkışı; görev kartı varsa `kabul_olcutleri`ndeki kanıt komutlarını tek tek çalıştır ve çıkış kodlarını yaz.
 - Görev kartı varsa `kanit` listesini doldur (komut, çıkış kodu, çıktı özeti ≤ 5 satır). Boş `kanit` ile `durum: tamam` yazma.
 
 ## 2. Bağımsız inceleme

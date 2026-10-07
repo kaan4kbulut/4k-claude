@@ -315,3 +315,13 @@ ayar-denetimi.
 2026-10-07 12:04 [degisti] 40-ic-ses/nerede-kaldik.md — 0.3 — T-026 GitHub tamam
 2026-10-07 12:04 [yeni] 00-sistem/scripts/push.sh — otomatik push betiği (systemd path birimi çağırır; KP-003)
 2026-10-07 12:04 [oturum] T-026 — kapandı — GitHub açık depo, gizli e-posta, otomatik push
+2026-10-07 12:05 [yeni] T-027 — talimat açıldı — hook ve betik regresyon testleri
+2026-10-07 12:08 [yeni] 00-sistem/testler/ortak.py — regresyon testi (T-027)
+2026-10-07 12:08 [yeni] 00-sistem/testler/test_yikici_koruma.py — regresyon testi (T-027)
+2026-10-07 12:08 [yeni] 00-sistem/testler/test_durus_kapisi.py — regresyon testi (T-027)
+2026-10-07 12:08 [yeni] 00-sistem/testler/test_ayar_denetimi.py — regresyon testi (T-027)
+2026-10-07 12:08 [yeni] 00-sistem/testler/test_betikler.py — regresyon testi (T-027)
+2026-10-07 12:08 [degisti] 00-sistem/scripts/kontrol.py — --test seçeneği (T-027)
+2026-10-07 12:08 [degisti] CLAUDE.md — komutlar += kontrol.py --test
+2026-10-07 12:08 [degisti] 40-ic-ses/nerede-kaldik.md — 0.4 — T-027
+2026-10-07 12:08 [oturum] T-027 — kapandı — 35 regresyon testi, kontrol.py --test

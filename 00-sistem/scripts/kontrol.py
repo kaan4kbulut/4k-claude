@@ -6,9 +6,10 @@ Kullanım:
   python3 00-sistem/scripts/kontrol.py --kisa     yalnız özet ve ilk 15 hata
   python3 00-sistem/scripts/kontrol.py --json     JSON çıktı
   python3 00-sistem/scripts/kontrol.py --strict   uyarıları da hata say
+  python3 00-sistem/scripts/kontrol.py --test     hook ve betik regresyon testleri (00-sistem/testler; depo kopyasında koşar)
 Çıkış kodu: 0 temiz, 1 hata var (Stop hook'u bunu kullanır).
 
-13 denetim (SEMA.md §11):
+16 denetim (SEMA.md §11; 14-16 aşağıda numaralı yorumlarda):
  1 frontmatter: var, ayrıştırılır, zorunlu alanlar türe göre tam, enum geçerli, tarih ISO
  2 id tekil
  3 kat ↔ klasör ve tür ↔ klasör uyumu
@@ -119,6 +120,10 @@ def sema_dogrula(fm, sema):
 
 def main():
     arg = sys.argv[1:]
+    if "--test" in arg:  # T-027: hook'lar bozulursa sessizce susmasın
+        import subprocess
+        testler = os.path.join(yc.kok_bul(), "00-sistem", "testler")
+        sys.exit(subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", testler, "-p", "test_*.py"]).returncode)
     kisa, as_json, strict = "--kisa" in arg, "--json" in arg, "--strict" in arg
     kok = yc.kok_bul()
     bugun = date.today()

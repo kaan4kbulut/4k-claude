@@ -300,3 +300,14 @@ Her istek numaralı bir talimattır. Biçim `00-sistem/sablonlar/talimat.md`. Du
 - Durum: kapali
 - Doğurduğu dosyalar: 30-devlet/kapilar/KP-003-github-acik-depo.md, 00-sistem/scripts/push.sh (yeni); değişen: MOC-devlet 0.6, ARAC-KAYDI 1.1, HARITA, nerede-kaldik 0.3, ILERLEME, DEGISIKLIKLER, kimlik geçen kayıtlar; proje dışı: ~/.config/systemd/user/4k-claude-push.{path,service}; .git/config user.email
 - Kapanış notu: 4k-claude GitHub'da açık (kaan4kbulut/4k-claude); geçmişte gmail 0, GitHub'da 58/58 noreply; her commit'ten sonra systemd birimi push eder. Yedek: ön-yeniden-yazım bundle'ı oturum scratchpad'inde, refs/original yerelde.
+
+## T-027 — Hook ve betik regresyon testleri (eksik analizi #3)
+- Tarih: 2026-10-07
+- Niyet: Sahibinin "eksikleri tamamlayalım" talimatı. 2.677 satır hook/betik Python'unun tek testi yok; T-005'teki "yikici-koruma 35 test" depoya girmemiş. Bir hook bozulursa sessizce susar ve koruma yok olur.
+- Başarı ölçütü: `00-sistem/testler/` altında yikici-koruma (red/sor/izin, yanlış pozitif), durus-kapisi (iz, kanıt, wiki, ara soru, döngü koruması), ayar-denetimi (değişmezler), kontrol.py (16 denetimden bozma senaryoları), gunluk.py testleri; testler depo kopyasında koşar, depoya yazmaz; `kontrol.py --test` hepsini koşar ve çıkış 0; en az bir testin kasıtlı bozulan hook'ta düştüğü gösterilir (negatif kanıt).
+- Sınırlar: Hook davranışı değişmez (test bir hata bulursa ayrı talimat önerilir). Sandbox ve izin ayarları değişmez.
+- Kat: 0
+- Kapı: cift-yonlu · onay: sahibi (sohbet, 2026-10-07)
+- Durum: kapali
+- Doğurduğu dosyalar: 00-sistem/testler/{ortak,test_yikici_koruma,test_durus_kapisi,test_ayar_denetimi,test_betikler}.py (yeni); değişen: kontrol.py (--test), CLAUDE.md, kapat SKILL, DEGISIKLIKLER, nerede-kaldik 0.4
+- Kapanış notu: 35 regresyon testi; kontrol.py --test → 0. Negatif kanıt: kopyada sudo kuralı, kanıt denetimi ve zorunlu deny bozulunca 6 test düştü. Hook davranışında hata bulunmadı.
